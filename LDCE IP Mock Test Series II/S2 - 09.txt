@@ -1,0 +1,964 @@
+Q1. What is the prescribed retention period for the Acquittance Rolls of Gramin Dak Sevaks (GDS) maintained for the verification of service?
+A. 25 years from the date of final payment
+B. 35 years from the close of the official year
+C. 45 years for the purpose of service verification
+D. Permanent preservation under departmental rules
+Answer: C
+Explanation:
+Under Appendix 5 of P&T Financial Hand Book Volume I and the Department of Posts Compendium on Preservation and Disposal of Records, the Acquittance Rolls of Gramin Dak Sevaks (GDS) must be preserved for 45 years specifically to facilitate the official verification of past service during terminal benefit settlements.
+
+Q2. Which of the following postal records is classified as a permanent record and must never be destroyed?
+A. Head Office Cash Book (Form ACG-18)
+B. Register of Destruction of Records (Form ACG-91)
+C. Stock Register of Post Office Cheque Books
+D. Monthly Statements of Fluctuating Charges
+Answer: B
+Explanation:
+As per Rule 69 of P&T Financial Hand Book Volume I and Rule 25 of Postal Manual Volume VI (Part I), the Register of Destruction of Records in Form ACG-91 is a permanent record and must be maintained indefinitely in every post office to record particulars of all destroyed records.
+
+Q3. Consider the following records generated in a postal division:
+
+1. Post Office Order Book (except in Branch Offices)
+2. Character sheets of officials in active service
+3. Works papers connected with cases not fully decided
+Which of the records given above CANNOT be destroyed without obtaining the prior permission of the Head of Circle?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+According to Rule 25(3) of Postal Manual Volume VI (Part I) and Rule 17(2) of Postal Manual Volume VII, records such as the Post Office Order Book, character sheets of serving officials, and works papers or correspondence related to undecided or pending enquiry cases strictly require the Head of Circle's explicit permission before destruction.
+
+Q4. A Divisional Superintendent intends to order the destruction of financial records whose prescribed retention period expired two years ago. However, an audit objection pertaining to those accounting years remains unsettled. What is the correct procedural course of action?
+A. Destroy the records as the prescribed minimum retention period has elapsed
+B. Retain the records until final settlement of the pending audit objection
+C. Transfer the records to the National Archives of India for safe keeping
+D. Destroy the records after obtaining written concurrence from the Head of Office
+Answer: B
+Explanation:
+In accordance with the Note below Rule 94 of P&T Financial Hand Book Volume I, accounting records against which audit objections or financial queries are pending shall not be destroyed under any circumstances until the final settlement of such objections, regardless of whether the standard preservation period has expired.
+
+Q5. What is the mandated preservation period for the Pay Bill Register (PBR) and the Book of Establishment in a Head Post Office?
+A. 10 years from the end of the financial year
+B. 25 years after completion of departmental audit
+C. 35 years from the period to which they pertain
+D. Permanent retention in the departmental record wing
+Answer: C
+Explanation:
+Under Appendix 5 of P&T Financial Hand Book Volume I and the DoP Compendium on Preservation of Records, the Pay Bill Register and the Annual Establishment Return (Book of Establishment) must be preserved for 35 years to safeguard records relating to pay fixation and pension calculations.
+
+Q6. Which of the following specified records in a Post Office must be destroyed by fire rather than being sold as waste paper?
+A. Unused blank Cheque Books
+B. Book of Postmarks (Form MS-18)
+C. Registered and Parcel Lists
+D. Sub Office Daily Accounts
+Answer: B
+Explanation:
+Under Rule 25 of Postal Manual Volume VI (Part I), while general old records are torn up and sold as waste paper to contractors, confidential records and the Book of Postmarks (Form MS-18) must be completely destroyed by fire to prevent misuse or illegal re-use.
+
+Q7. Which of the following statements regarding record preservation in the Core Banking Solution (CBS) / Finacle environment is/are correct?
+
+1. Electronic soft-copy long books and lists of transactions carry the same retention period as paper records.
+2. Account Opening Forms (AOF) with KYC documents must be preserved for 5 years after closure of the account.
+Select the correct answer using the code given below:
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation:
+Under Master Circular No. 1 on AML/CFT (SB Order 14/2012 amended vide SB Order 08/2013), soft-copy long books, LOTs, and ledger details in CBS carry identical retention periods as physical records, and AOFs with CDD/KYC documents must be retained for 5 years following account closure.
+
+Q8. An applicant was paid the proceeds of a deceased depositor's savings account on execution of a Bond of Indemnity without legal representation. What is the required retention period for the relevant claim file and records after account closure?
+A. 3 years after the account is closed
+B. 5 years after the date of payment
+C. 6 years after the account is closed
+D. 10 years from the date of final payment
+Answer: C
+Explanation:
+As per Appendix 5 of P&T Financial Hand Book Volume I and the POSB Manual, while standard files of deceased depositors' claim cases are preserved for 3 years after account closure, cases where payment is made on execution of an indemnity bond must be preserved for 6 years.
+
+Q9. What is the prescribed preservation period for Money Order Journals of MOs issued (MO.2) and List of MOs Paid (MO.4) in Head and Sub Post Offices?
+A. 12 months from the month of issue
+B. 18 months from the month of transaction
+C. 24 months from the close of the year
+D. 36 months after completion of audit
+Answer: B
+Explanation:
+Under Appendix 5 (Annexure A) of P&T Financial Hand Book Volume I, Money Order records including Journals of MOs issued (MO.2), Register of MOs received (MO.3), and List of MOs Paid (MO.4) carry a standard retention period of 18 months.
+
+Q10. Which of the following records are explicitly barred from destruction under Appendix 5 of P&T Financial Hand Book Volume I, regardless of any general retention schedule?
+
+1. Records connected with expenditure within the period of limitation fixed by law
+2. Records connected with incomplete projects, schemes, or public works
+3. Sanctions and orders of a permanent character that have not been revised
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Appendix 5, Part I of P&T Financial Hand Book Volume I mandates that records linked to expenditure within legal limitation periods, incomplete projects/works (even beyond limitation), and orders/sanctions of a permanent character shall not be destroyed on any account until properly revised or settled.
+
+Q11. What is the retention period for unclaimed Savings Certificates held in the safe custody of the Postal Accounts Office (PAO)?
+A. 10 years from the date of issue
+B. 18 years from the date of registration
+C. 23 years from the date of investment
+D. 30 years from the date of maturity
+Answer: D
+Explanation:
+According to the POSB Manual and P&T Financial Hand Book Volume I, Appendix 5, unclaimed National Savings Certificates kept in the custody of the Postal Accounts Office (PAO) must be preserved for 30 years calculated from their respective dates of maturity.
+
+Q12. What is the total preservation period for Bonds of Indemnity executed for the issue of duplicate 5-year National Savings Certificates (NSCs)?
+A. 18 years from the date of issue
+B. 21 years from the date of issue
+C. 23 years from the date of issue
+D. 25 years from the date of issue
+Answer: C
+Explanation:
+Under POSB Manual Volume II and Appendix 5 of P&T FHB Vol. I, indemnity bonds for duplicate certificates are preserved for 6 years beyond maturity/extended maturity. For 5-year NSCs, 5 years maturity plus 12 years extension plus 6 years equals 23 years from date of issue.
+
+Q13. In a Foreign Post Office, an international postal article is under active dispute regarding customs duty assessment. The standard 18-month preservation period for foreign post records expires while the inquiry is pending. How should the case records be handled?
+A. Destroyed as per the general 18-month schedule for foreign post
+B. Retained until the case is fully settled, exceeding 18 months
+C. Referred immediately to the Universal Postal Union for destruction
+D. Returned to the sender along with all administrative assessment files
+Answer: B
+Explanation:
+As per Rule 11 of the Foreign Post Manual, any foreign post article or record under dispute or pending inquiry must be preserved until the matter is fully and finally settled, even if the prescribed 18-month standard preservation period is exceeded.
+
+Q14. Consider the following preservation periods for Savings Bank Control Organisation (SBCO) records:
+
+1. Lists of Transactions (LOT): 2 years after agreement of binder balances
+2. SB Vouchers (including SB-3 applications of closed accounts): 6 years
+3. Certified lists of accounts and balances: Permanent
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Under Rules 25, 42, and 81 of the Postal Manual of SB Control, Pairing & ICO, LOTs are preserved for 2 years after binder balance agreement, SB vouchers are kept for 6 years, and certified lists of accounts/balances are permanent records.
+
+Q15. What is the prescribed retention period for Account Opening Forms (AOF) accompanied by KYC documents for Post Office Savings Bank accounts after the account has been closed?
+A. 2 years from the date of closure
+B. 3 years from the date of closure
+C. 5 years from the date of closure
+D. 10 years from the date of closure
+Answer: C
+Explanation:
+According to Master Circular No. 1 on AML/CFT (SB Order 14/2012 and SB Order 08/2013), all account opening forms, customer due diligence (CDD) records, and KYC documents must be retained for exactly 5 years from the date of account closure.
+
+Q16. Which of the following procedures regarding the maintenance of old files in a Postal Record Room is correct under the Manual of Office Procedure?
+A. Requisition slips are not required for temporary retrieval of recorded files
+B. Sectional Record Review Registers are maintained year-wise by year of destruction
+C. Recorded files are arranged strictly by alphabetical order of the section heads
+D. Ephemeral files are recorded permanently before being reviewed after five years
+Answer: B
+Explanation:
+Under Chapter VII of the Manual of Office Procedure (P&T Circle Offices), recorded files are arranged section-wise and chronologically in the Record Room, controlled by a requisition-slip system, and monitored via a Record Review Register organized year-wise by year of destruction.
+
+Q17. What is the retention period for Inspection Reports issued by the Audit or Accounts Office to a postal administrative office?
+A. 1 year after the next inspection, provided all audit items are settled
+B. 3 years from the date of issue of the final inspection report
+C. 5 years after completion of the corresponding financial year
+D. Permanent retention along with the compliance report file
+Answer: A
+Explanation:
+As per Appendix 5 of P&T Financial Hand Book Volume I, Inspection Reports received from Audit/Accounts Offices must be preserved for 1 year after the next inspection, subject to the compulsory condition that all audit items and objections are fully settled.
+
+Q18. What is the preservation period for Sub Office Daily Accounts and Branch Office Summaries received in a Head Post Office?
+A. 12 months
+B. 18 months
+C. 24 months
+D. 36 months
+Answer: B
+Explanation:
+Under Appendix 5 (Annexure A) of P&T Financial Hand Book Volume I, Sub Office Daily Accounts, Sub Office Slips, Sub Office Summaries, and Branch Office Summaries carry a uniform preservation period of 18 months.
+
+Q19. In a Head Post Office, spoiled passbooks, undeliverable passbooks, and unused cheque foils are sent to the SBCO/ICO wing. How are these items disposed of upon expiry of their prescribed period?
+A. Sold as waste paper after tearing into small pieces by the Postmaster
+B. Transferred to the Postal Accounts Office for permanent storage
+C. Completely destroyed by burning by the Inspecting Officer/Internal Check Officer
+D. Returned to the depositor or account holder via registered post
+Answer: C
+Explanation:
+According to Rule 25 of Postal Manual Volume VI (Part I) and SBCO/ICO rules, vouchers, spoiled/undeliverable passbooks, and unused cheque foils in SBCO/ICO are destroyed specifically by burning, whereas other non-confidential paper records are torn and sold as waste.
+
+Q20. When can Post Office Savings Bank (POSB) Ledgers maintained at a Head Post Office be destroyed by the Postmaster?
+A. Immediately after 5 years from the date of opening the ledger binder
+B. Forthwith after all accounts are closed/transferred and PAO certifies settlement of discrepant items
+C. After 10 years, provided no active account remains in the ledger sheet
+D. Only after obtaining specific written sanction from the Directorate
+Answer: B
+Explanation:
+As per POSB Manual Volume I and DoP Preservation Schedules, HO SB Ledgers are destroyed forthwith by the Postmaster after all accounts therein are closed, transferred, or recopied, and the Postal Accounts Office certifies that all discrepant items are settled.
+
+Q21. What is the prescribed preservation period for the Attendance Register (Form S.37) in a Post Office or RMS office?
+A. 1 year
+B. 2 years
+C. 3 years
+D. 5 years
+Answer: D
+Explanation:
+Under Appendix 5 of P&T Financial Hand Book Volume I and the DoP Compendium on Preservation of Records, the official Attendance Register (Form S.37) carries a mandatory retention period of 5 years.
+
+Q22. Consider the following Franking Machine records:
+
+1. Multi-Value Franking Machine Register (FM.1): 3 years from date of last entry
+2. Licensee's Franking Machine Posting Register (FM.10): 3 years from date of last entry
+3. Daily Docket for Franking Machine (FM.12): 2 years
+Which of the statements given above are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Under the DoP Compendium on Preservation of Records and Franking Machine Rules, FM.1 and FM.10 registers are preserved for 3 years from the date of the last entry, whereas FM.12 daily dockets are preserved for 2 years.
+
+Q23. During monthly recording in a administrative section, a supervisor encounters purely ephemeral files containing routine acknowledgments and casual reminders. What is the rule governing their retention?
+A. They must be recorded and preserved for 3 years in the Section
+B. They are not recorded and are destroyed as soon as they are 1 year old
+C. They must be sent to the Record Room for permanent preservation
+D. They are retained for 5 years after entering in Form ACG-91
+Answer: B
+Explanation:
+Under Chapter VII of the Manual of Office Procedure, purely ephemeral files (such as routine reminders and acknowledgments) are not assigned a recording file number and are destroyed as soon as they become 1 year old without entering the formal record room.
+
+Q24. What is the prescribed retention period for the Register of Security Deposits or Bonds maintained in a Postal Division?
+A. 5 years after expiry of the bond
+B. 10 years from the date of execution
+C. 15 years after termination of service
+D. Permanent retention in the Head Office
+Answer: B
+Explanation:
+According to Appendix 5 of P&T Financial Hand Book Volume I, the Register of Security Deposits or Security Bonds must be preserved for a period of 10 years.
+
+Q25. Under Rule 11 of the Foreign Post Manual read with Article 107 of UPU documents, what is the general preservation period for foreign post records and international UPU forms?
+A. 12 months from the end of the calendar year
+B. 18 months from the day following the date to which they refer
+C. 24 months from the date of despatch of the mail bag
+D. 36 months after completion of international accounts
+Answer: B
+Explanation:
+Rule 11 of the Foreign Post Manual and Article 107 of UPU provisions lay down that general foreign post records and international UPU forms carry a minimum retention period of 18 months counting from the day following the date to which they refer.
+
+---
+
+Q26. Under the second proviso to Rule 1(3) of the CCS (Conduct) Rules, 1964, non-gazetted employees in specified establishments (like factories or ports) are exempt from certain rules if their monthly pay does not exceed which ceiling?
+A. ₹ 500 per mensem
+B. ₹ 1,500 per mensem
+C. ₹ 3,500 per mensem
+D. ₹ 5,000 per mensem
+Answer: A
+Explanation:
+Under the second proviso to Rule 1(3) of the CCS (Conduct) Rules, 1964, low-paid non-gazetted staff in specified establishments (ports, factories, mines, etc.) drawing pay not exceeding ₹500 per mensem are exempt from Rules 4, 6, 7, 12, 14, 15(3), 16, 18(1)-(3), 19, 20, and 21.
+
+Q27. The Central Civil Services (Conduct) (Third Amendment) Rules, 2014 significantly expanded Rule 3(1) by inserting additional clauses laying down general duties of civil servants. What is the total number of sub-clauses under Rule 3(1) following this amendment?
+A. 12 clauses
+B. 15 clauses
+C. 18 clauses
+D. 21 clauses
+Answer: D
+Explanation:
+Vide Notification dated 27.11.2014 [CCS (Conduct) (Third Amendment) Rules, 2014], clauses (iv) to (xxi) were added to Rule 3(1). Together with the original three clauses (integrity, devotion to duty, unbecoming conduct), Rule 3(1) now contains exactly 21 clauses.
+
+Q28. Under Rule 18-A of the CCS (Conduct) Rules, 1964, what is the deemed-permission time limit if no communication is received from the prescribed authority regarding a request to acquire immovable property outside India?
+A. 30 days
+B. 45 days
+C. 60 days
+D. 90 days
+Answer: C
+Explanation:
+While standard property transactions under Rule 18 carry a 30-day deemed sanction period, Rule 18-A (transactions in immovable property outside India or with foreigners) specifically provides a 60-day window after which permission is assumed to be granted.
+
+Q29. A Central Government employee participated in a cultural event organized by the Rashtriya Swayamsevak Sangh (RSS). Following the DoP&T Office Memorandum dated 9th July 2024, how is this action evaluated under Rule 5 of the CCS (Conduct) Rules, 1964?
+A. It attracts immediate major penalty proceedings as RSS remains a banned political body
+B. It does not by itself attract disciplinary action as RSS was removed from the restricted list
+C. It requires previous written sanction of the Head of Department under all circumstances
+D. It is permissible only if the employee obtains prior clearance from the Ministry of Home Affairs
+Answer: B
+Explanation:
+Vide DoP&T OM No. 34013/1(S)/2016-Estt.(B) dated 09.07.2024, earlier instructions of 1966, 1970, and 1980 were reviewed and mentions of RSS were removed. Consequently, participation in RSS activities does not automatically attract disciplinary action under Rule 5, though Jamaat-e-Islami remains restricted.
+
+Q30. Under Rule 13(2) of the CCS (Conduct) Rules, 1964 (as substituted vide GSR 531(E) dated 29.07.2019), what are the monetary thresholds beyond which a Government servant must report gifts received from near relatives on social/ceremonial occasions?
+A. Group 'A': ₹25,000; Group 'B': ₹15,000; Group 'C': ₹7,500
+B. Group 'A': ₹15,000; Group 'B': ₹10,000; Group 'C': ₹5,000
+C. Group 'A': ₹50,000; Group 'B': ₹25,000; Group 'C': ₹10,000
+D. Group 'A': ₹20,000; Group 'B': ₹10,000; Group 'C': ₹2,500
+Answer: A
+Explanation:
+Vide GSR 531(E) dated 29.07.2019, sub-rule (2) of Rule 13 prescribes that gifts from near relatives or personal friends on social/ceremonial occasions must be reported if the value exceeds ₹25,000 for Group 'A', ₹15,000 for Group 'B', and ₹7,500 for Group 'C'.
+
+Q31. By which date are Group 'A' and Group 'B' officers required to submit their Annual Immovable Property Return (IPR) for the preceding calendar year under Rule 18(1)(ii)?
+A. 31st December
+B. 15th January
+C. 31st January
+D. 31st March
+Answer: C
+Explanation:
+Under DoP&T instructions below Rule 18(1)(ii), all Group 'A' and Group 'B' Government servants must submit their Annual Immovable Property Return (IPR) reflecting the position as on 1st January by 31st January of every year.
+
+Q32. Who is the "Prescribed Authority" under Rule 18 of the CCS (Conduct) Rules, 1964 for a Group 'B' Government servant?
+A. The Central Government
+B. Head of the Department
+C. Head of the Office
+D. Secretary of the Ministry
+Answer: B
+Explanation:
+According to Explanation II below Rule 18(5) of the CCS (Conduct) Rules, 1964, "Prescribed Authority" means: (a) Government for Group 'A'; (b) Head of Department for Group 'B'; and (c) Head of Office for Group 'C'.
+
+Q33. An official holding a Group 'A' post executes multiple transactions in shares and mutual funds during a calendar year. Under DoP&T GIDs under Rule 16, at what cumulative annual threshold is an intimation to the prescribed authority mandatory?
+A. Exceeding ₹ 50,000 in a calendar year
+B. Exceeding two months' basic pay of the official
+C. Exceeding six months' basic pay of the official
+D. Exceeding ₹ 5,000,00 in a single financial year
+Answer: C
+Explanation:
+Under Government Decisions under Rule 16 of the CCS (Conduct) Rules, 1964, intimation to the prescribed authority is required when the total transaction in shares, debentures, or mutual funds in a calendar year exceeds six months' basic pay of the Government servant.
+
+Q34. Which of the following statements regarding Rule 3-C (Prohibition of Sexual Harassment) and Internal Complaints Committees (ICC) is correct?
+A. Findings of the ICC are advisory and require a fresh inquiry under Rule 14 of CCS (CCA) Rules
+B. The ICC report is deemed to be an inquiry report under Rule 14 of CCS (CCA) Rules, 1965
+C. An ICC can only be headed by an officer of the rank of Joint Secretary or above
+D. Rule 3-C protection applies exclusively to regular female civil servants, excluding trainees
+Answer: B
+Explanation:
+Under GIDs below Rule 3-C of CCS (Conduct) Rules, 1964 and the Sexual Harassment of Women at Workplace Act, 2013, the findings/report of the Internal Complaints Committee (ICC) are deemed to be an inquiry report under Rule 14 of CCS (CCA) Rules, 1965 without requiring a fresh inquiry.
+
+Q35. A Government servant seeks permission from the Government to take recourse to a Court of Law to vindicate an official act criticized in the media. Under Rule 19(1), after what period of silence from the Government may deemed permission be assumed?
+A. 30 days
+B. 45 days
+C. 60 days
+D. Three months
+Answer: D
+Explanation:
+The proviso to Rule 19(1) of the CCS (Conduct) Rules, 1964 explicitly provides that if no sanction is received by the Government servant within a period of three months from the date of receipt of his request, he is free to assume that permission has been granted.
+
+Q36. Under Rule 22-A of the CCS (Conduct) Rules, 1964 read with the Child and Adolescent Labour Amendment Act, 2016, employing a child below what age is prohibited, and what is the maximum initial imprisonment term?
+A. Below 12 years; imprisonment up to 1 year
+B. Below 14 years; imprisonment up to 2 years
+C. Below 16 years; imprisonment up to 3 years
+D. Below 18 years; imprisonment up to 5 years
+Answer: B
+Explanation:
+Rule 22-A prohibits employing children below 14 years. Under the amended penal provisions of the Child Labour (Prohibition & Regulation) Act, 2016, contravention attracts imprisonment from 6 months up to 2 years, or fine of ₹20,000 to ₹50,000, or both.
+
+Q37. A Group 'A' officer's dependent son accepts employment in a private company. Under Rule 4(2)(i), when is the previous sanction of the Government mandatory for such acceptance?
+A. In all cases of private employment irrespective of the company's profile
+B. Only if the annual remuneration of the son exceeds ₹ 10,00,000
+C. If the company has official dealings with the officer or the Government
+D. Only if the officer holds a post equivalent to Joint Secretary or above
+Answer: C
+Explanation:
+Under Rule 4(2)(i) of the CCS (Conduct) Rules, 1964, no Group 'A' officer shall, except with the previous sanction of the Government, permit his son, daughter, or dependent to accept employment in any firm with which he has official dealings or which has official dealings with the Government.
+
+Q38. Which of the following private activities can be undertaken by a Government servant WITHOUT previous sanction of the Government under Rule 15(2)?
+
+1. Honorary work of a social or charitable nature
+2. Occasional work of a literary, artistic, or scientific character
+3. Holding an elective office in a cooperative society
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Under Rule 15(2), honorary social/charitable work and occasional literary/artistic/scientific work require no previous sanction. However, holding an elective office in any body (including a cooperative society) requires prior sanction under Rule 15(1)(c) read with Rule 15(2)(e).
+
+Q39. According to Government Decisions under the Conduct & Office Decorum cluster, what are the prescribed timelines for acknowledging and replying to communications received from Members of Parliament?
+A. Acknowledge within 7 days; reply within 7 days thereafter
+B. Acknowledge within 15 days; reply within next 15 days
+C. Acknowledge within 30 days; reply within 60 days
+D. Acknowledge within 10 days; reply within 20 days
+Answer: B
+Explanation:
+Under Office Decorum GIDs, communications from MPs, public, or recognized associations must be acknowledged within 15 days of receipt and replied to within the next 15 days of acknowledgment. An interim reply must go within one month if delay occurs.
+
+Q40. How does the definition of "members of family" under DoP&T O.M. dated 27.04.2011 for the purposes of Rule 4 differ from the general definition in Rule 2(c)?
+A. It excludes the spouse and dependent children residing away
+B. It includes parents, brothers, and sisters whether dependent or not
+C. It restricts family strictly to financial dependents living in the same house
+D. It includes only step-children legally adopted through court decrees
+Answer: B
+Explanation:
+While Rule 2(c) requires non-spouse/child relatives to be "wholly dependent," DoP&T OM dated 27.04.2011 expands "family" for Rule 4(1) & 4(3) to include wife/husband, son/daughter, parents, brothers, or sisters (or relatives by blood/marriage) whether dependent or not.
+
+Q41. An official sublets allotted Government accommodation to an unauthorized private person. Under Rule 15-A and associated GIDs, what consequences does this act attract?
+A. Imposition of nominal fine equal to one month's basic pay only
+B. Initiation of major penalty proceedings under Rule 14 of CCS (CCA) Rules
+C. Transfer to a non-sensitive post without any monetary recovery
+D. Deduction of 10% TRCA for a period not exceeding six months
+Answer: B
+Explanation:
+Under Rule 15-A and GIDs thereunder, subletting Government accommodation is treated as grave misconduct. It invites disciplinary proceedings for major penalty under Rule 14 of CCS (CCA) Rules, 1965, besides penal rent under the Public Premises (Eviction) Act, 1971.
+
+Q42. Which of the following online activities by a Central Government servant constitutes a violation of Rule 9 (Criticism of Government)?
+
+1. Liking or re-sharing a social media post that adversely criticizes current Government policy
+2. Participating in a live TV debate on Government policy without prior sanction
+3. Publishing an article under a pseudonym making derogatory remarks on State policy
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Under Rule 9 and DoP&T GIDs on social media usage, posting, forwarding, liking, or sharing posts criticizing Government policy, participating in un-sanctioned policy debates, or publishing anonymous/pseudonymous adverse comments all constitute violations of Rule 9.
+
+Q43. Under Rule 18(3) of the CCS (Conduct) Rules, 1964, what is the monetary threshold beyond which a transaction in movable property must be reported to the prescribed authority within one month?
+A. Exceeding ₹ 50,000
+B. Exceeding one month's basic pay
+C. Exceeding two months' basic pay
+D. Exceeding six months' basic pay
+Answer: C
+Explanation:
+Rule 18(3) lays down that where a Government servant enters into a transaction in movable property (in his own name or family member's name), he shall report it within one month if the value exceeds two months' basic pay.
+
+Q44. Under Rule 14 of the CCS (Conduct) Rules, 1964, which of the following public entertainments in honor of a retiring official DOES NOT require prior sanction of the Government?
+A. A costly public banquet sponsored by a major private contractor firm
+B. A farewell entertainment of a substantially private and informal character
+C. A public address arranged by an un-recognized political organization
+D. A lavish ceremonial dinner hosted by foreign commercial representatives
+Answer: B
+Explanation:
+Rule 14 explicitly exempts a farewell entertainment of a substantially private and informal character held in honor of a Government servant on the occasion of retirement or transfer, as well as simple, inexpensive entertainments arranged by public bodies.
+
+Q45. Under Rule 21 of the CCS (Conduct) Rules, 1964, when can a Government servant be permitted by the Central Government to contract a marriage with a person having a living spouse?
+A. Upon paying a prescribed exemption fee to the Ministry of Law
+B. If permissible under personal law and sufficient other grounds exist
+C. If the second spouse agrees in writing before a District Magistrate
+D. Automatically upon completing 15 years of continuous service
+Answer: B
+Explanation:
+The proviso to Rule 21 permits the Central Government to grant an exemption if it is satisfied that such marriage is permissible under the personal law applicable to the official and the other party, and there are other valid grounds for doing so.
+
+Q46. Which of the following forms of protest are included under the definition of "strike" under Rule 7 and DoP&T GIDs?
+
+1. Mass abstention from work without permission ("casual leave strike")
+2. Refusal to work overtime when mandated in public interest
+3. Resorting to 'go-slow', 'pen-down', or 'stay-in' tactics
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Under DoP&T GIDs below Rule 7, "strike" includes mass casual leave abstention, refusal of mandatory public-interest overtime, 'go-slow', 'sit-down', 'pen-down', 'stay-in', 'token', sympathetic, or any practice retarding work.
+
+Q47. According to Government Decisions on Conduct & Office Decorum, indoor games shall not be played in office buildings after what time in the evening?
+A. 6:00 P.M.
+B. 6:30 P.M.
+C. 7:00 P.M.
+D. 8:00 P.M.
+Answer: C
+Explanation:
+Under Office Decorum GIDs appended to Rule 3 cluster, indoor games shall not be played in office buildings after 7:00 P.M., except on special occasions such as tournaments approved by the administration.
+
+Q48. How does Rule 11 of the CCS (Conduct) Rules, 1964 frame the general communication of official information?
+A. It totally prohibits any disclosure of official information under all laws
+B. It directs communication in good faith in accordance with the RTI Act, 2005
+C. It allows free disclosure of classified documents to any private media person
+D. It requires prior Cabinet sanction for sharing any non-classified file
+Answer: B
+Explanation:
+Rule 11 was updated to state that every Government servant shall, in performance of his duties in good faith, communicate information in accordance with the Right to Information Act, 2005 (22 of 2005) and rules made thereunder, subject to proviso against unauthorized classified leaks.
+
+Q49. A civil servant is offered a complimentary gift by a foreign contracting firm that currently holds an active procurement contract with his Ministry. Under Rule 13(5), how is this gift proposal treated?
+A. Allowed if the value of the gift is below ₹ 5,000
+B. Strictly prohibited and permission is normally not granted
+C. Permitted provided it is declared in the annual property return
+D. Allowed if approved by the Head of Office within 30 days
+Answer: B
+Explanation:
+Rule 13(5) explicitly prohibits accepting gifts from foreign firms contracting with the Government. Associated GIDs reiterate that no permission is normally granted for accepting gifts from firms (foreign or indigenous) having official dealings.
+
+Q50. Under Rule 12 of the CCS (Conduct) Rules, 1964, which of the following fund-raising collections DOES NOT require prior sanction of the Government?
+
+1. Collections made by members of a recognized service union among themselves
+2. Flag Day collections for the welfare of ex-servicemen
+3. Collections for the Prime Minister's National Relief Fund
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Under Government Decisions under Rule 12, internal collections among members of recognized service unions for welfare, Flag Day collections for ex-servicemen, and notified national funds like the PM National Relief Fund are exempted from prior sanction.
+
+---
+
+Q51. What is the exact date of commencement of the Central Civil Services (Classification, Control and Appeal) Rules, 1965?
+A. 12th December 1964
+B. 1st December 1965
+C. 20th November 1965
+D. 1st January 1966
+Answer: B
+Explanation:
+Under Rule 1(2) of the CCS (CCA) Rules, 1965, the rules came into force on 1st December 1965. (Note: CCS Conduct Rules came into force on 12th December 1964).
+
+Q52. Under the CCS (CCA) Amendment Rules, 2022 (GSR 156(E) dated 19.10.2022), what is the maximum outer limit of suspension under Rule 10(1)(a) if no charge sheet is issued?
+A. 90 days
+B. 180 days
+C. 270 days
+D. 2 years
+Answer: C
+Explanation:
+Vide CCS (CCA) Amendment Rules, 2022 (GSR 156(E) dt. 19.10.2022), provisos to Rule 10(7) were substituted. The outer validity limit of suspension where no charge sheet is issued is 270 days for Rule 10(1)(a) cases, and 2 years for Rule 10(1)(aa)/(b) and deemed suspension cases.
+
+Q53. A Government servant is detained in police custody on a criminal charge. Under Rule 10(2)(a), what minimum duration of detention triggers automatic ("deemed") suspension?
+A. Exceeding 12 hours
+B. Exceeding 24 hours
+C. Exceeding 48 hours
+D. Exceeding 72 hours
+Answer: C
+Explanation:
+Rule 10(2)(a) of CCS (CCA) Rules, 1965 mandates that a Government servant shall be deemed to have been placed under suspension from the date of detention if he is detained in custody for a period exceeding 48 hours.
+
+Q54. Under Rule 10(6) and 10(7) of the CCS (CCA) Rules, 1965, what are the time limits for mandatory review of suspension and maximum extension at one time?
+A. Review within 30 days; extension up to 90 days at a time
+B. Review within 60 days; extension up to 120 days at a time
+C. Review within 90 days; extension up to 180 days at a time
+D. Review within 180 days; extension up to 365 days at a time
+Answer: C
+Explanation:
+Rule 10(6) & (7) specify that an order of suspension must be reviewed before expiry of 90 days. If not reviewed within 90 days, it becomes invalid. Each extension granted on review shall not exceed 180 days at a time.
+
+Q55. Which of the following penalties specified under Rule 11 of the CCS (CCA) Rules, 1965 is classified as a MINOR penalty?
+A. Reduction to a lower stage in pay scale for 2 years with cumulative effect
+B. Reduction to a lower stage by one stage for max 3 years without cumulative effect
+C. Reduction to a lower time-scale of pay, grade, or post
+D. Compulsory retirement from service
+Answer: B
+Explanation:
+Rule 11(iii)(a) defines "Reduction to a lower stage in the time-scale of pay by one stage for a period not exceeding three years, without cumulative effect and not adversely affecting pension" specifically as a MINOR penalty. All other options are major penalties.
+
+Q56. What is the fundamental distinction between the major penalty of 'Removal from service' [clause (viii)] and 'Dismissal from service' [clause (ix)] under Rule 11?
+A. Removal is imposed by Head of Office, whereas Dismissal is imposed by President
+B. Removal does not disqualify from future Govt. employment; Dismissal ordinarily does
+C. Removal allows 50% pension, whereas Dismissal results in total forfeiture of GPF
+D. Removal requires a Rule 14 inquiry, whereas Dismissal can be done without inquiry
+Answer: B
+Explanation:
+Under Rule 11 of the CCS (CCA) Rules, 1965, Removal from service [clause (viii)] shall not be a disqualification for future employment under the Government, whereas Dismissal from service [clause (ix)] ordinarily acts as a disqualification for future employment.
+
+Q57. What is the maximum period for which the minor penalty of reduction by one stage under Rule 11(iii)(a) can be imposed?
+A. Not exceeding 1 year
+B. Not exceeding 2 years
+C. Not exceeding 3 years
+D. Not exceeding 5 years
+Answer: C
+Explanation:
+Clause (iii)(a) of Rule 11 specifies that reduction to a lower stage in the time-scale of pay by one stage shall be for "a period not exceeding three years, without cumulative effect."
+
+Q58. Can a Disciplinary Authority competent only to impose minor penalties institute major penalty proceedings under the CCS (CCA) Rules, 1965?
+A. No, major penalty proceedings can only be instituted by the Appointing Authority
+B. Yes, under Rule 13(2), it may institute major penalty proceedings against a Government servant
+C. No, unless specifically delegated by an order of the Central Administrative Tribunal
+D. Yes, but only if the Government servant consents in writing before the charge sheet
+Answer: B
+Explanation:
+Under Rule 13(2) of CCS (CCA) Rules, 1965, a disciplinary authority competent to impose minor penalties may institute disciplinary proceedings for the imposition of major penalties, though the final major penalty must be passed by the competent higher authority.
+
+Q59. Which of the following actions DOES NOT amount to a penalty within the meaning of Rule 11 of the CCS (CCA) Rules, 1965?
+
+1. Stoppage of increment for failure to pass a mandatory departmental examination
+2. Reversion of a probationer to a lower post during or at the end of probation
+3. Compulsory retirement under superannuation rules
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Under Explanation to Rule 11, stoppage at efficiency bar, withholding increments for failing exam, reversion of probationer, reversion on administrative unsuitability, and compulsory retirement under retirement rules do not amount to a penalty.
+
+Q60. When a copy of the Inquiry Officer's report is forwarded to the charged Government servant under Rule 15(2), what is the time limit for submitting a written representation?
+A. 7 days
+B. 10 days
+C. 15 days
+D. 30 days
+Answer: C
+Explanation:
+Rule 15(2) of CCS (CCA) Rules, 1965 provides that the disciplinary authority shall forward a copy of the inquiry report to the Government servant, who shall be given a period of 15 days to submit his written representation or submission.
+
+Q61. Under the mandatory penalty proviso to Rule 11 of the CCS (CCA) Rules, 1965, which penalties MUST be imposed if a charge of possessing disproportionate assets or illegal gratification is established?
+A. Censure or Withholding of Promotion
+B. Reduction to a lower stage or lower time-scale
+C. Removal or Dismissal from service
+D. Compulsory retirement with reduced pension
+Answer: C
+Explanation:
+The mandatory proviso below Rule 11 states that in any case where the charge of possessing assets disproportionate to known sources of income or accepting illegal gratification is established, the penalty of removal (viii) or dismissal (ix) MUST be imposed.
+
+Q62. When is a full inquiry under Rule 14 mandatory even if the Disciplinary Authority proposes to impose only a MINOR penalty under Rule 16?
+A. In all cases where the employee belongs to Group 'A' service
+B. If the penalty proposed is withholding of promotion for 2 years
+C. If the proposed penalty is recovery of loss or reduction under clause (iii)(a)
+D. Whenever the charged official submits a written denial of allegations
+Answer: C
+Explanation:
+Under Rule 16(1-A) of CCS (CCA) Rules, 1965, if the minor penalty proposed is recovery of pecuniary loss [clause (iii)] or reduction by one stage [clause (iii)(a)], holding a full Rule 14 inquiry is mandatory.
+
+Q63. Under Rule 19 of the CCS (CCA) Rules, 1965, a regular inquiry under Rules 14 to 18 may be dispensed with in which of the following circumstances?
+
+1. Where a penalty is imposed on conduct leading to conviction on a criminal charge
+2. Where the disciplinary authority records in writing that an inquiry is not reasonably practicable
+3. Where the President is satisfied that in the interest of State security it is not expedient
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Rule 19 (Special procedure in certain cases) allows dispensing with regular inquiry under three conditions: (i) conviction on a criminal charge; (ii) practical impracticability recorded in writing; or (iii) security of the State interest as certified by the President.
+
+Q64. What is the period of limitation for preferring an appeal against an order under Rule 25 of the CCS (CCA) Rules, 1965?
+A. 30 days from the date of the order
+B. 45 days from the date of delivery of the order
+C. 60 days from the date of receipt of the order
+D. 90 days from the date of communication
+Answer: B
+Explanation:
+Rule 25 of CCS (CCA) Rules, 1965 provides that no appeal preferred under Part VII shall be entertained unless it is preferred within a period of 45 days from the date on which a copy of the order appealed against is delivered to the appellant.
+
+Q65. Under Rule 22 of the CCS (CCA) Rules, 1965, against which of the following orders DOES NO appeal lie?
+A. An order of suspension passed under Rule 10
+B. Any order made by the President
+C. An order enhancing a penalty in revision
+D. An order reducing pension admissible to a retired official
+Answer: B
+Explanation:
+Rule 22 explicitly states that no appeal lies against: (i) any order made by the President; (ii) any order of an interlocutory nature or step-in-aid (other than suspension); and (iii) orders passed by inquiring authorities during inquiry.
+
+Q66. In the Department of Posts, who functions as the Disciplinary Authority and Appellate Authority for a Group 'B' Non-Gazetted official (Inspector Posts / IRM)?
+A. Disciplinary: SPOs; Appellate: DPS
+B. Disciplinary: DPS; Appellate: PMG / CPMG
+C. Disciplinary: CPMG; Appellate: Member (P)
+D. Disciplinary: DG (Posts); Appellate: President
+Answer: B
+Explanation:
+As per the Schedule of Authorities in Department of Posts under CCS (CCA) Rules, 1965, for Group 'B' Non-Gazetted staff (IP/IRM), the Director Postal Services (DPS) is the Disciplinary Authority and PMG/CPMG is the Appellate Authority.
+
+Q67. An Appellate Authority intends to exercise revisionary powers under Rule 29(1) to revise an order passed by itself or a subordinate authority. Within what time limit must it act?
+A. Within 45 days of the original order
+B. Within 90 days of the appellate order
+C. Within six months of the date of the order proposed to be revised
+D. Within one year from the date of completion of inquiry
+Answer: C
+Explanation:
+Rule 29(1) proviso specifies that where the appellate authority itself proposes to revise an order, it must do so within six months of the date of the order proposed to be revised.
+
+Q68. According to DoP&T guidelines on disciplinary proceedings, what is the target time-limit for concluding a major penalty proceeding from the date of issue of charge sheet?
+A. 6 months
+B. 12 months
+C. 18 months
+D. 24 months
+Answer: C
+Explanation:
+As per DoP&T instructions (and Hota Committee recommendations) under Rule 14, the overall target timeline for concluding major penalty disciplinary proceedings is 18 months from the date of serving the charge sheet.
+
+Q69. Under Rule 29-A of the CCS (CCA) Rules, 1965, who is empowered to review any order when new material or evidence comes to notice?
+A. The Head of Department
+B. The Central Administrative Tribunal
+C. The Comptroller and Auditor-General
+D. The President
+Answer: D
+Explanation:
+Rule 29-A specifically empowers the President, at any time, on his own motion or otherwise, to review any order passed under these rules when new material/evidence (not available earlier) comes to notice.
+
+Q70. Where two or more Government servants are involved in the same disciplinary case, which rule governs Common Proceedings and who orders them?
+A. Rule 14; ordered by Head of Office
+B. Rule 18; ordered by President or competent authority to dismiss all of them
+C. Rule 19; ordered by the Inquiry Officer
+D. Rule 20; ordered by the borrowing authority
+Answer: B
+Explanation:
+Rule 18 of CCS (CCA) Rules, 1965 governs Common Proceedings. It provides that where two or more Government servants are involved in the same case, the President or any authority competent to impose dismissal on all of them may direct common proceedings.
+
+Q71. Under DoP norms regarding engagement of Inquiry Officers, what is the maximum ceiling of cases a retired official can handle as Inquiry Officer at one time?
+A. Not more than 2 cases at a time
+B. Not more than 4 cases at a time
+C. Not more than 6 cases at a time
+D. Not more than 8 cases at a time
+Answer: B
+Explanation:
+As per DoP/DoP&T norms for Inquiry Officers, a retired official appointed as IO can handle a maximum of 8 cases in a year and not more than 4 cases at a time.
+
+Q72. In a case of deemed suspension under Rule 10(2) due to police detention, how is the 90-day period for mandatory review under Rule 10(6) calculated?
+A. From the original date of arrest
+B. From the date of filing the FIR
+C. From the date of release from detention or intimation thereof
+D. From the date of commencement of criminal trial
+Answer: C
+Explanation:
+For deemed suspension under Rule 10(2), no review is necessary while in detention. Under Rule 10(7), the 90-day period for review is counted from the date the official is released from detention (or intimation thereof), whichever is later.
+
+Q73. Which of the following authorities falls under the definition of "Appointing Authority" under Rule 2(a) of the CCS (CCA) Rules, 1965?
+A. Authority empowered to make appointments to the Service
+B. Authority empowered to make appointments to the post
+C. Authority that actually appointed the Government servant
+D. Whichever of the above authorities is the highest authority
+Answer: D
+Explanation:
+Rule 2(a) defines "Appointing Authority" as (i) authority empowered to appoint to the Service, or (ii) authority empowered to appoint to the post, or (iii) authority that actually appointed him — whichever of these authorities is the highest authority.
+
+Q74. An official lent to a State Government commits misconduct. If the borrowing authority proposes to impose a MAJOR penalty, what procedure must it follow under Rule 20?
+A. Impose the major penalty directly after consulting UPSC
+B. Place the officer's services back at the disposal of the lending authority
+C. Request the Governor of the State to issue a dismissal notification
+D. Convert the proceedings into a minor penalty proceeding automatically
+Answer: B
+Explanation:
+Under Rule 20(1) of CCS (CCA) Rules, 1965, if the borrowing authority is of the opinion that a major penalty [clauses v to ix] should be imposed, it must place the services of the lent officer at the disposal of the lending authority.
+
+Q75. Under DoP&T O.M. dated 15.09.2017 regarding honorarium to Inquiry Officers, what percentage of the honorarium is paid on submission of the inquiry report?
+A. 25% of the total honorarium
+B. 50% of the total honorarium
+C. 75% of the total honorarium
+D. 100% of the total honorarium
+Answer: B
+Explanation:
+Under DoP&T OM No. 142/40/2015-AVD.I dated 15.09.2017, the payment of honorarium to Inquiry Officers is staged: 50% is paid upon submission of the inquiry report, and the remaining 50% is paid within 45 days.
+
+---
+
+Q76. Under the amended Rule 7 of the GDS (Conduct & Engagement) Rules, 2020 (vide OM dated 30.12.2025 effective 01.01.2026), what is the maximum carry-forward limit for paid leave and encashment provision?
+A. Carry forward up to 30 days; 50% encashment allowed on discharge
+B. Carry forward up to 45 days; NO encashment allowed
+C. Carry forward up to 60 days; full encashment allowed on discharge
+D. No carry forward permitted; all unavailed leave lapses half-yearly
+Answer: B
+Explanation:
+Vide OM No. 17-12/2025-GDS dated 30.12.2025 (effective 01.01.2026), amended Rule 7 permits GDS to carry forward unavailed paid leave up to a maximum cap of 45 days at any given time. There is strictly NO encashment of paid leave.
+
+Q77. Which of the following features accurately describes the "e-Engagement Roll" introduced for GDS vide OM dated 30.12.2025 (rollout target 01.04.2026)?
+
+1. Maintained electronically in HRMS under IT 2.0 comprising 14 modules
+2. Maintained by the Drawing and Disbursing Officer (DDO)
+3. Annual verification must be completed by 30th June every year
+Select the correct answer using the code given below:
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation:
+Vide OM dated 30.12.2025, the e-Engagement Roll replaces paper personal files, contains 14 modules in HRMS IT 2.0, is maintained by the DDO, and requires mandatory annual digital verification by 30th June.
+
+Q78. Under the Revised SEDA issued vide OM dated 26.11.2025, who is the Disciplinary Authority for ALL penalties (i to ix) for GDS in a Division headed by PSs Group 'B' / STS officers?
+A. Sub-Divisional Head (Inspector Posts)
+B. Head of Division / Unit
+C. Director Postal Services (DPS)
+D. Postmaster General (PMG)
+Answer: B
+Explanation:
+Under Category 1 of the Revised SEDA (OM dated 26.11.2025), for GDS in Divisions headed by PSs Group 'B' up to STS level, the Head of Division/Unit is the Engaging Authority and Disciplinary Authority for ALL penalties (i to ix).
+
+Q79. Vide OM dated 30.12.2025, the Department granted a one-time relaxation for compassionate engagement of dependents of deceased GDS/employees. What is the valid period of this relaxation?
+A. Valid for 6 months up to 30.06.2026
+B. Valid for 1 year up to 30.12.2026
+C. Valid for 2 years up to 31.12.2027
+D. Valid for 3 years up to 30.12.2028
+Answer: B
+Explanation:
+Vide OM No. 19-19/2024-GDS dated 30.12.2025, a one-time relaxation was granted for deaths between 01.01.2020 and 24.02.2025, relaxing the 2-year time limit. This scheme is valid for ONE year up to 30.12.2026.
+
+Q80. Under Rule 3(a) of the GDS (Conduct & Engagement) Rules, 2020, which three distinct categories comprise the Gramin Dak Sevak engagement?
+A. Branch Postmaster, Assistant Branch Postmaster, Dak Sevak
+B. Sub Postmaster, Mail Deliverer, Stamp Vendor
+C. Branch Postmaster, Mail Carrier, Mail Messenger
+D. Gramin Dak Postmaster, Postal Assistant, Sorting Assistant
+Answer: A
+Explanation:
+Rule 3(a) of GDS (Conduct and Engagement) Rules, 2020 categorizes GDS into three posts: (1) Branch Postmaster (BPM), (2) Assistant Branch Postmaster (ABPM), and (3) Dak Sevak.
+
+Q81. Under the Voluntary Discharge Scheme on Medical Grounds (revised vide OM dated 25.02.2025 and Addendum-IV), what is the maximum age cap for a GDS to be eligible for compassionate engagement of a dependent upon medical discharge?
+A. Discharged before attaining 58 years of age
+B. Discharged before attaining 60 years of age
+C. Discharged before attaining 62 years of age
+D. Discharged before attaining 65 years of age
+Answer: C
+Explanation:
+Vide OM dated 25.02.2025 (Addendum-IV to Compassionate Engagement Scheme 2023), dependents of GDS discharged under VDS on Medical Grounds are eligible for compassionate engagement provided the GDS is discharged on medical grounds before attaining 62 years.
+
+Q82. Under Rule 3-C (Voluntary Discharge Scheme-1), what is the minimum qualifying engagement period and notice period required for a GDS to seek voluntary discharge?
+A. Minimum 10 years service; 1 month notice
+B. Minimum 15 years service; 2 months notice
+C. Minimum 20 years service; 3 months notice
+D. Minimum 25 years service; 6 months notice
+Answer: C
+Explanation:
+Scheme-1 under Rule 3-C specifies a minimum qualifying engagement period of 20 years and a notice period of 3 months. (Note: Scheme-2 Medical Grounds requires 10 years).
+
+Q83. A GDS is placed under put-off duty under Rule 12. What is the initial ex-gratia compensation payable, and how can it be varied after 90 days if delay is NOT directly attributable to the GDS?
+A. Initial 25% TRCA+DA; increased by up to 50% of initial ex-gratia
+B. Initial 50% TRCA+DA; increased by up to 25% of initial ex-gratia
+C. Initial 30% TRCA+DA; increased up to 75% of basic TRCA
+D. Initial 25% TRCA+DA; reduced by 50% automatically after 90 days
+Answer: A
+Explanation:
+Under Rule 12, initial ex-gratia is 25% of TRCA plus DA. After 90 days, if delay is not directly attributable to the GDS, the authority may increase compensation by an amount not exceeding 50% of the compensation admissible during the first 90 days.
+
+Q84. In a fraud case, an Inspector of Post Offices (IP) who is NOT the Engaging Authority places a GDS on put-off duty. Under Rule 12, when does this order automatically cease to be effective if not confirmed?
+A. On expiry of 7 days from the date of order
+B. On expiry of 15 days from the date of order
+C. On expiry of 30 days from the date of order
+D. On expiry of 45 days from the date of order
+Answer: B
+Explanation:
+Special provision under Rule 12 lays down that where an IP/ASP who is not the Engaging Authority puts a GDS off duty, the order ceases to be effective on expiry of 15 days unless earlier confirmed or cancelled by the Engaging Authority.
+
+Q85. Which of the following penalties specified under Rule 9 of the GDS (Conduct & Engagement) Rules, 2020 is classified as a MAJOR penalty?
+A. Recovery from TRCA of pecuniary loss caused by negligence [Clause 4]
+B. Withholding of annual increase in TRCA without cumulative effect [Clause 5]
+C. Compulsory Discharge from engagement with monetary benefits [Clause 7]
+D. Debarring from appearing in recruitment exam for MTS/Postman [Clause 2]
+Answer: C
+Explanation:
+Under Rule 9 of GDS Rules 2020, Clauses (1) to (5) are Minor Penalties, while Clauses (6) to (9) — Reduction in TRCA slab >3 yrs (6), Compulsory Discharge (7), Removal (8), and Dismissal (9) — are Major Penalties.
+
+Q86. Under the GDS (Grant of Financial Upgradation) Scheme, 2024 (GDSFU in force from 15.03.2024), what are the fixed monthly additions to TRCA on completion of 12, 24, and 36 years of continuous engagement?
+A. ₹200, ₹400, and ₹600 per month
+B. ₹360, ₹460, and ₹600 per month
+C. ₹500, ₹1,000, and ₹1,500 per month
+D. ₹250, ₹500, and ₹750 per month
+Answer: B
+Explanation:
+GDSFU Scheme 2024 provides fixed monthly additions: ₹360 p.m. at 12 years, ₹460 p.m. at 24 years, and ₹600 p.m. at 36 years (yielding cumulative additions of ₹360, ₹820, and ₹1,420 p.m. respectively).
+
+Q87. Under Rule 10-D of the GDS Rules 2020, is a formal inquiry required when a major penalty is proposed and the GDS accepts the charges?
+A. Inquiry is mandatory in all cases, even if charges are accepted unconditionally
+B. Inquiry is not required if the GDS accepts the charges unconditionally
+C. Inquiry is discretionary at the option of the Sub-Divisional Officer
+D. Inquiry must be conducted by a retired judicial officer within 30 days
+Answer: B
+Explanation:
+Rule 10-D states that inquiry must be conducted even if charges are accepted, primarily to afford defence opportunity; however, if the charge is accepted by the GDS unconditionally, there is no need for holding an inquiry.
+
+Q88. A GDS is discharged on attaining 65 years. Disciplinary proceedings were NOT instituted during engagement, but monetary loss is suspected. Under Rule 10-G, what conditions govern post-discharge proceedings?
+A. Can be instituted by SPOs directly for events up to 10 years old
+B. Can only be instituted with President's sanction for events < 4 years old
+C. Cannot be instituted under any circumstances after 65 years
+D. Requires approval of Central Administrative Tribunal within 30 days
+Answer: B
+Explanation:
+Under Rule 10-G, departmental proceedings not instituted before discharge shall NOT be instituted save with the sanction of the President, and shall NOT be in respect of any event which took place more than four years before such institution.
+
+Q89. What is the period of limitation for filing an Appeal against a penalty order under Rule 14 of the GDS (Conduct & Engagement) Rules, 2020?
+A. 45 days from receipt of order
+B. 60 days from receipt of order
+C. 3 months from receipt of order
+D. 6 months from receipt of order
+Answer: C
+Explanation:
+Rule 14 of the GDS (Conduct and Engagement) Rules, 2020 explicitly prescribes that no appeal shall be entertained unless submitted within a period of 3 months from the date on which the appellant receives the order.
+
+Q90. What is the time limit for filing or initiating a Revision under Rule 19 of the GDS Rules, 2020 (except by Government/HOC/PMG)?
+A. 3 months from date of order
+B. 6 months from date of order
+C. 1 year from date of order
+D. 2 years from date of order
+Answer: B
+Explanation:
+Proviso to Rule 19(1) lays down that no case shall be reopened for revision after the expiry of six months from the date of the order to be revised (except by Govt, HOC, or PMG), and not before expiry of 3 months appeal period.
+
+Q91. Under the Limited Transfer Facility (LTF) for GDS, what is the minimum continuous engagement requirement, and how many transfer chances are allowed for male and female GDS?
+A. 1 year service; 1 chance for Male, 2 for Female
+B. 2 years service; 2 chances for Male, 3 for Female
+C. 3 years service; 2 chances for Male, 2 for Female
+D. 5 years service; 3 chances for Male, 5 for Female
+Answer: B
+Explanation:
+LTF rules mandate a minimum of 2 years of continuous engagement to apply. Male GDS are allowed maximum 2 chances and female GDS maximum 3 chances in their entire career, with a 1-year cooling-off period.
+
+Q92. Under Rule 29-A of the GDS (Conduct & Engagement) Rules, 2020, what restriction is placed on GDS regarding outside business activities?
+A. Allowed to act as private insurance agents without any reporting
+B. Prohibited from engaging in business detrimental to Post Office / IPPB
+C. Permitted to run commercial courier services after office hours
+D. Allowed to work as full-time agents for private banking institutions
+Answer: B
+Explanation:
+Rule 29-A specifically prohibits a Gramin Dak Sevak from engaging in any activity or business with any outside agency which would be detrimental to the business or financial interest of the Post Office or IPPB.
+
+Q93. What is the annual rate of Children Education Facilitation Allowance (CEFA) payable to a GDS per child, and what is the upper age limit for a Divyaang child?
+A. ₹3,000 p.a.; upper age limit 18 years
+B. ₹6,000 p.a. fixed; upper age limit 22 years
+C. ₹12,000 p.a.; upper age limit 20 years
+D. ₹4,500 p.a.; upper age limit 25 years
+Answer: B
+Explanation:
+Under GDS allowance orders, Children Education Facilitation Allowance (CEFA) is ₹6,000 per annum (fixed) per child for up to two eldest surviving children. Upper age limit is 20 years for normal children and 22 years for Divyaang children.
+
+Q94. What is the maximum ceiling for GDS Gratuity and Severance Amount payable to a GDS upon discharge (w.e.f. 01.01.2016)?
+A. Maximum ₹ 60,000 each
+B. Maximum ₹ 1,000,00 each
+C. Maximum ₹ 1,50,000 each
+D. Maximum ₹ 2,50,000 each
+Answer: C
+Explanation:
+Following the Kamlesh Chandra Committee implementation (w.e.f. 01.01.2016), the maximum ceiling for both GDS Gratuity and Severance Amount was enhanced from ₹60,000 to ₹1,50,000 (subject to 10 years minimum continuous service).
+
+Q95. Under the Service Discharge Benefit Scheme (SDBS), what is the current monthly contribution payable by the Government and the GDS w.e.f. 01.07.2018?
+A. ₹ 200 p.m. by Govt. only (nil by GDS)
+B. ₹ 300 p.m. each by Government and GDS
+C. ₹ 500 p.m. each by Government and GDS
+D. 10% of basic TRCA by each party
+Answer: B
+Explanation:
+Effective 01.07.2018, the subscription under SDBS (utilizing NPS-Lite platform) was revised to an equal contribution of ₹300 per month by the Government of India and ₹300 per month by the GDS.
+
+Q96. Who is competent to approve a substitute arrangement in place of a regular GDS against a long-term vacancy exceeding 45 days up to one year?
+A. Sub-Divisional Head (Inspector Posts)
+B. Divisional Head (Superintendent of Post Offices)
+C. Regional Postmaster General
+D. Chief Postmaster General
+Answer: B
+Explanation:
+While Sub-Divisional Heads can approve substitute arrangements up to 45 days for short-term vacancies, continuation of substitute arrangements beyond 45 days up to 1 year requires the approval of the Divisional Head. Beyond 1 year requires HoR/HoC approval.
+
+Q97. Under Rule 7-A of the GDS Rules 2020, what is the annual entitlement of Emergency Leave for a GDS, and what is the maximum duration granted at a time?
+A. 3 days per year; max 1 day at a time
+B. 5 days per year; max 2 days at a time
+C. 8 days per year; max 3 days at a time
+D. 10 days per year; max 5 days at a time
+Answer: B
+Explanation:
+Rule 7-A provides that GDS are entitled to Emergency Leave for a maximum of 5 days in a calendar year. Not more than two days of emergency leave can be granted at a time, and it cannot be combined with paid leave.
+
+Q98. What is the validity period of an Identity Card issued to a Gramin Dak Sevak, and what is the fee charged for issuing a duplicate card if lost?
+A. Validity 3 years; duplicate fee ₹ 20
+B. Validity 5 years (or till discharge); duplicate fee ₹ 50
+C. Validity 10 years; duplicate fee ₹ 100
+D. Permanent validity; duplicate fee ₹ 250
+Answer: B
+Explanation:
+GDS Identity Cards are issued free initially, valid for 5 years or till date of discharge (whichever is earlier). If lost or damaged due to carelessness, a duplicate card is issued on payment of a ₹50 fee.
+
+Q99. A regularly engaged GDS is absorbed into a regular departmental post (Multi-Tasking Staff). Per Directorate OM dated 26.11.2024, how are his GDS terminal benefits treated?
+A. Paid full GDS Gratuity and full Severance Amount in cash
+B. NOT eligible for GDS Gratuity; Severance Amount paid if 10 yrs completed
+C. SDBS corpus is forfeited and credited to Government revenue
+D. Receives double pension under both GDS rules and CCS Pension rules
+Answer: B
+Explanation:
+Vide Directorate Order dated 26.11.2024, a GDS absorbed on a regular departmental post is NOT eligible for GDS Gratuity. However, Severance Amount is paid in cash if 10 years continuous service was rendered (or SDBS corpus migrates to NPS Tier-1).
+
+Q100. Under Rule 8 of the GDS (Conduct & Engagement) Rules, 2020, what notice period is required for termination of engagement of a GDS who has rendered less than 3 years continuous service?
+A. 15 days notice or pay in lieu
+B. One month notice or pay in lieu
+C. Two months notice or pay in lieu
+D. Three months notice or pay in lieu
+Answer: B
+Explanation:
+Rule 8 specifies that the engagement of a GDS who has not rendered more than 3 years continuous engagement is liable to be terminated at any time by one month's notice in writing (or payment of one month TRCA+DA in lieu of notice).

@@ -23,6 +23,7 @@ import { WEEKLY_MOCK_S2_05_QUESTIONS } from "@/data/weekly_mock_data_s2_05";
 import { WEEKLY_MOCK_S2_06_QUESTIONS } from "@/data/weekly_mock_data_s2_06";
 import { WEEKLY_MOCK_S2_07_QUESTIONS } from "@/data/weekly_mock_data_s2_07";
 import { WEEKLY_MOCK_S2_08_QUESTIONS } from "@/data/weekly_mock_data_s2_08";
+import { WEEKLY_MOCK_S2_09_QUESTIONS } from "@/data/weekly_mock_data_s2_09";
 
 import { LIVE_MOCK_QUESTIONS } from "@/data/live_mock_data";
 import { PSGB_MOCK_01_QUESTIONS } from "@/data/psgb_mock_data_01";
@@ -68,6 +69,7 @@ export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-s2-2026-07-04": WEEKLY_MOCK_S2_06_QUESTIONS,
     "mock-s2-2026-07-11": WEEKLY_MOCK_S2_07_QUESTIONS,
     "mock-s2-2026-07-18": WEEKLY_MOCK_S2_08_QUESTIONS,
+    "mock-s2-2026-07-25": WEEKLY_MOCK_S2_09_QUESTIONS,
     "live-sample": LIVE_MOCK_QUESTIONS,
     "psgb-mock-2026-04-05": PSGB_MOCK_01_QUESTIONS,
     "psgb-mock-2026-04-12": PSGB_MOCK_02_QUESTIONS,

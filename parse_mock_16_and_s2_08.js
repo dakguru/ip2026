@@ -125,8 +125,8 @@ parseMockTest(
 );
 
 parseMockTest(
-    'D:\\IP 2026\\LDCE IP Mock Test Series II\\S2 - 08.txt',
-    'D:\\IP 2026\\study-planner\\src\\data\\weekly_mock_data_s2_08.ts',
-    'WEEKLY_MOCK_S2_08_QUESTIONS',
-    's2-08'
+    'D:\\IP 2026\\LDCE IP Mock Test Series II\\S2 - 09.txt',
+    'D:\\IP 2026\\study-planner\\src\\data\\weekly_mock_data_s2_09.ts',
+    'WEEKLY_MOCK_S2_09_QUESTIONS',
+    's2-09'
 );
