@@ -16,6 +16,20 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "24.07.2026",
+        items: [
+            {
+                title: "📝 Weekly Mock Test & PDF Notes Updates",
+                desc: (
+                    <div className="space-y-4">
+                        <p><strong>Integrated LDCE IP Weekly Mock Test - S2-09</strong>.</p>
+                        <p><strong>Updated PDF Notes</strong> on <strong>Constitution of India</strong> for the LDCE IP Course mode.</p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "23.07.2026",
         items: [
             {
