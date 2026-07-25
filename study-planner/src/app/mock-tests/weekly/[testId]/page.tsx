@@ -277,6 +277,41 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-07-18T00:00:00+05:30"),
         endDate: new Date("2026-07-19T23:59:59+05:30"),
         title: "PS Gr B - Weekly Mock Test 16"
+    },
+    "mock-s2-2026-07-25": {
+        startDate: new Date("2026-07-25T00:00:00+05:30"),
+        endDate: new Date("2026-07-26T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-09"
+    },
+    "mock-s2-2026-08-01": {
+        startDate: new Date("2026-08-01T00:00:00+05:30"),
+        endDate: new Date("2026-08-02T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-10"
+    },
+    "mock-s2-2026-08-08": {
+        startDate: new Date("2026-08-08T00:00:00+05:30"),
+        endDate: new Date("2026-08-09T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-11"
+    },
+    "mock-s2-2026-08-15": {
+        startDate: new Date("2026-08-15T00:00:00+05:30"),
+        endDate: new Date("2026-08-16T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-12"
+    },
+    "mock-s2-2026-08-22": {
+        startDate: new Date("2026-08-22T00:00:00+05:30"),
+        endDate: new Date("2026-08-23T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-13"
+    },
+    "mock-s2-2026-08-29": {
+        startDate: new Date("2026-08-29T00:00:00+05:30"),
+        endDate: new Date("2026-08-30T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-14"
+    },
+    "mock-s2-2026-09-05": {
+        startDate: new Date("2026-09-05T00:00:00+05:30"),
+        endDate: new Date("2026-09-06T23:59:59+05:30"),
+        title: "Weekly Mock Test - S2-15"
     }
 };
 
