@@ -16,6 +16,26 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "26.07.2026",
+        items: [
+            {
+                title: "📚 Medical Attendance Rules Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p>Updated <strong>CS (Medical Attendance) Rules, 1944</strong> PDF Notes for PS Group B Course Mode.</p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-indigo-50/50 dark:bg-indigo-900/10 p-3 rounded-xl border border-indigo-100 dark:border-indigo-800/50">
+                                <p className="font-bold text-indigo-700 dark:text-indigo-300 text-[10px] uppercase tracking-wide">Paper II (PS Group B)</p>
+                                <p className="text-zinc-600 dark:text-zinc-400 mt-1 text-[11px]">Latest study materials with all recent amendments on medical attendance rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "24.07.2026",
         items: [
             {
