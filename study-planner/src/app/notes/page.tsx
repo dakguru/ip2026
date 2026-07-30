@@ -92,7 +92,8 @@ const SCHEDULE_MAPPING: Record<string, string> = {
     "Brochure on Casual Labourers": "28-04-2026",
     "Maintenance of APAR": "29-04-2026",
     "Service Discharge Benefit Scheme, 2010": "30-04-2026",
-    "Schedule of Financial Powers": "01-05-2026",
+    "Schedule of Financial Powers": "08-09-2025",
+    "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.": "08-09-2025",
     "Welfare Measures": "02-05-2026",
     "P&T FHB Vol I": "05-05-2026",
     "Postal FHB Vol II": "07-05-2026",
@@ -658,8 +659,8 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "Schedule of Financial Powers",
             description: "Divisional Heads, Heads of Circle.",
-            filename: "Schedule_of_Financial_Powers.pdf",
-            path: "/notes/paper-3/Schedule_of_Financial_Powers.pdf",
+            filename: "Schedule_of_Financial_Powers_Study_Notes_Updated_08-09-2025.pdf",
+            path: "/notes/paper-3/Schedule_of_Financial_Powers_Study_Notes_Updated_08-09-2025.pdf",
             size: "4.7 MB",
             color: "blue",
             topic: "Financial & Procurement"
