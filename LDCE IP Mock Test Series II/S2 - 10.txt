@@ -1,0 +1,937 @@
+Q1. What is the official Enactment Date of the Bharatiya Nagarik Suraksha Sanhita, 2023?
+A. 25 December 2023
+B. 01 January 2024
+C. 23 February 2024
+D. 01 July 2024
+Answer: A
+Explanation: The Bharatiya Nagarik Suraksha Sanhita, 2023 (Act No. 46 of 2023) was officially enacted on 25 December 2023. The date of commencement, however, is 1 July 2024.
+
+Q2. Which of the following statements is/are correct regarding the application of the Bharatiya Nagarik Suraksha Sanhita, 2023?
+
+1. The provisions of this Sanhita apply completely and uniformly to all tribal areas across India without exception.
+2. The concerned State Government may, by notification, apply provisions to the State of Nagaland with necessary modifications.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The provisions of BNSS (other than Chapters IX, XI and XII) shall not generally apply to the State of Nagaland and tribal areas. However, the concerned State Government may, by notification, apply such provisions with supplemental or incidental modifications.
+
+
+
+Q3. Under Section 2 of the BNSS, 2023, the definition of "Audio-video electronic means" explicitly includes which of the following purposes?
+A. Only the recording of telephonic conversations for preliminary inquiries
+B. Video conferencing, recording of identification processes, search and seizure, or evidence
+C. Merely the transmission of written electronic communication between two police stations
+D. Only audio recordings obtained through court-approved wiretapping methods
+Answer: B
+Explanation: According to Section 2(1)(a) of BNSS 2023, "Audio-video electronic means" includes the use of communication devices for video conferencing, recording of processes of identification, search and seizure or evidence, and transmission of electronic communication.
+
+Q4. Consider the following situation: A Magistrate requires an accused person to provide an undertaking for release without providing any surety. Under BNSS 2023, this specific undertaking is legally termed as:
+A. A Bail Bond
+B. A Personal Surety
+C. A Bond
+D. A Bail Undertaking
+Answer: C
+Explanation: Section 2(1)(e) of the BNSS 2023 defines a "Bond" as a personal bond or an undertaking for release without surety. A "Bail Bond" is an undertaking for release with surety.
+
+Q5. Which of the following statements is/are correct regarding the definitions of offences under BNSS 2023?
+
+1. A cognizable offence means a police officer has no authority to arrest without a warrant.
+2. A non-cognizable offence means a police officer may arrest without a warrant.
+3. A bailable offence is one shown as bailable in the First Schedule.
+A. 1 and 2 only
+B. 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: A cognizable offence allows a police officer to arrest without a warrant, while a non-cognizable offence gives no authority to arrest without a warrant. A bailable offence is shown as bailable in the First Schedule.
+
+
+
+Q6. According to Section 2 of the BNSS 2023, what is the legal status of a report made by a police officer in a case which discloses, after investigation, the commission of a non-cognizable offence?
+A. It shall be deemed to be a completely void and invalid investigative report.
+B. It shall be deemed to be an official police report requiring judicial cognizance.
+C. It shall be deemed to be a formal charge-sheet for subsequent prosecution.
+D. It shall be deemed to be a complaint, and the officer deemed the complainant.
+Answer: D
+Explanation: As per the Explanation in Section 2(1)(h) of BNSS 2023, a report made by a police officer disclosing a non-cognizable offence after investigation shall be deemed to be a complaint, and the officer shall be deemed the complainant.
+
+Q7. What is the minimum time period that must be provided in a written proclamation requiring an absconding person to appear under Section 84 of BNSS 2023?
+A. Not less than 15 days from the date of publishing the proclamation
+B. Not less than 30 days from the date of publishing the proclamation
+C. Not less than 60 days from the date of publishing the proclamation
+D. Not less than 90 days from the date of publishing the proclamation
+Answer: B
+Explanation: Section 84(1) of the BNSS 2023 states that the Court may publish a written proclamation requiring the person to appear at a specified place and at a specified time not less than 30 days from the date of publishing such proclamation.
+
+Q8. Which of the following statements is/are not correct regarding the publication of a proclamation under Section 84 of BNSS 2023?
+
+1. It must be publicly read in a conspicuous place of the town or village where the person resides.
+2. A copy must be affixed to a conspicuous part of the nearest police station exclusively.
+3. The Court has no power to direct publication in a daily newspaper under any circumstances.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: A copy must be affixed to some conspicuous part of the house/homestead and the Court-house, not exclusively the police station. Furthermore, the Court may direct publication in a daily newspaper circulating in the place where the person resides. Statements 2 and 3 are incorrect.
+
+
+
+Q9. In a scenario where an accused absconds in an offence punishable with imprisonment of 10 years or more, life imprisonment, or death, what specific declaration can the Court make if the person fails to appear?
+A. The Court can issue a summary conviction for the absconding individual.
+B. The Court may pronounce him a proclaimed offender and make a declaration.
+C. The Court must immediately order the attachment of all ancestral properties.
+D. The Court can sentence him in absentia to a term not exceeding three years.
+Answer: B
+Explanation: Under Section 84(4) of BNSS 2023, if a person accused of an offence punishable with 10 years or more, life imprisonment, or death fails to appear, the Court may pronounce him a proclaimed offender and make a declaration to that effect.
+
+Q10. As per Section 2 of BNSS 2023, the definition of "Place" includes which of the following?
+A. Only a legally registered house or formal commercial building
+B. A house, building, tent, vehicle, and vessel without limitation
+C. Only structures permanently affixed to the earth's surface
+D. Any open ground, public street, or temporarily barricaded area
+Answer: B
+Explanation: Section 2(1)(s) of the BNSS 2023 explicitly defines "Place" to include a house, building, tent, vehicle and vessel.
+
+Q11. Under the definitions provided in BNSS 2023, what does "Sub-division" signify?
+A. A sub-division of a recognized metropolitan area exclusively
+B. A sub-division of a legally designated police station limit
+C. A sub-division of a geographically defined state territory
+D. A sub-division of a constituted administrative district
+Answer: D
+Explanation: According to Section 2(1)(w) of the BNSS 2023, "Sub-division" simply means a sub-division of a district.
+
+Q12. What constitutes a "Warrant-case" under the provisions of the BNSS 2023?
+A. An offence punishable with imprisonment for a term up to one year
+B. An offence punishable with imprisonment for a term exceeding two years
+C. An offence punishable with simple imprisonment not exceeding two years
+D. An offence punishable with any term of imprisonment alongside a fine
+Answer: B
+Explanation: Section 2(1)(z) of BNSS 2023 defines a "Warrant-case" as a case relating to an offence punishable with death, imprisonment for life, or imprisonment for a term exceeding two years.
+
+Q13. Consider the following statements regarding the definition of "High Court" under BNSS 2023:
+
+1. In relation to a State, it means the High Court for that State.
+2. In relation to a Union territory to which the jurisdiction of a State High Court is extended, it means that State High Court.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under Section 2(1)(j) of BNSS 2023, "High Court" means the High Court for that State, and in relation to a Union territory where jurisdiction is extended by law, it means that specific High Court.
+
+
+
+Q14. How does BNSS 2023 distinguish an "Inquiry" from a trial?
+A. An inquiry is conducted exclusively by a police officer before taking cognizance.
+B. An inquiry is every inquiry, other than a trial, conducted by a Magistrate or Court.
+C. An inquiry is a proceeding conducted solely by the Public Prosecutor in court.
+D. An inquiry involves the collection of evidence by any authorized private citizen.
+Answer: B
+Explanation: Section 2(1)(k) of the BNSS 2023 defines "Inquiry" as every inquiry, other than a trial, conducted under this Sanhita by a Magistrate or Court.
+
+Q15. If the designated officer in charge of a police station is absent due to illness, who is legally authorized to perform his duties under BNSS 2023?
+A. Any police officer present at the station-house regardless of their official rank.
+B. The police officer present who is next in rank and is above the rank of constable.
+C. Only an officer of the rank of Deputy Superintendent of Police or above.
+D. The senior-most executive magistrate holding jurisdiction over the local area.
+Answer: B
+Explanation: Under Section 2(1)(r) of BNSS 2023, the definition includes the police officer present at the station-house who is next in rank to the officer in charge and is above the rank of constable.
+
+Q16. According to Section 2 of BNSS 2023, to whom must a police officer forward a "Police report"?
+A. To the Superintendent of Police having jurisdiction
+B. To a Magistrate under sub-section (3) of section 193
+C. To the State Government's Home Department directly
+D. To the designated Public Prosecutor of the district
+Answer: B
+Explanation: Section 2(1)(t) of the BNSS 2023 defines "Police report" as a report forwarded by a police officer to a Magistrate under sub-section (3) of section 193.
+
+Q17. Which of the following statements is/are correct regarding a "Public Prosecutor" under BNSS 2023?
+
+1. It means any person appointed under section 18 of the Sanhita.
+2. It explicitly excludes any person acting under the directions of a Public Prosecutor.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Section 2(1)(v) of BNSS 2023 defines "Public Prosecutor" as any person appointed under section 18, and explicitly includes any person acting under the directions of a Public Prosecutor. Statement 2 is incorrect.
+
+
+
+Q18. An accused fails to appear despite a proclamation for an offence punishable with 7 years of imprisonment. Can the Court pronounce him a "proclaimed offender" under Section 84(4) of BNSS 2023?
+A. Yes, because any failure to appear after a proclamation justifies this declaration.
+B. Yes, provided the Magistrate records the specific reasons in writing immediately.
+C. No, because the offence must be punishable with imprisonment of 10 years or more.
+D. No, because this declaration can only be made by the High Court of the State.
+Answer: C
+Explanation: Section 84(4) of BNSS 2023 explicitly restricts the declaration of a "proclaimed offender" to persons accused of an offence punishable with imprisonment of 10 years or more, imprisonment for life, or death.
+
+Q19. Under BNSS 2023, the definition of "Victim" explicitly includes which of the following individuals?
+A. Only the person who suffered direct physical injury from the act.
+B. The person who suffered loss/injury, including their guardian or legal heir.
+C. Any eyewitness who suffered psychological trauma during the incident.
+D. The police officer investigating the crime and facing resistance.
+Answer: B
+Explanation: Section 2(1)(y) of BNSS 2023 defines "Victim" as a person who has suffered any loss or injury caused by the accused's act/omission, and the expression includes his or her guardian or legal heir.
+
+Q20. Which electronic devices are explicitly mentioned in the definition of "electronic communication" under Section 2 of BNSS 2023?
+A. Telephone, mobile phone, computer, audio-video player, or camera
+B. Only telephonic and mobile phone devices connected to a cellular network
+C. Exclusively computers and dedicated servers maintained by the government
+D. Only devices capable of recording high-definition video and storing biometric data
+Answer: A
+Explanation: Section 2(1)(i) of BNSS 2023 defines "electronic communication" and explicitly includes devices such as a telephone, mobile phone, or other wireless telecommunication device, or a computer, or audio-video player or camera.
+
+Q21. Consider the following statement: Words and expressions used in BNSS 2023 but not defined therein shall have the meanings assigned to them in the Indian Penal Code, 1860. Is this statement correct?
+A. Yes, because the IPC remains the primary substantive criminal law.
+B. Yes, provided the State Government issues a specific notification.
+C. No, they shall have the meanings assigned in the BNS 2023 and IT Act 2000.
+D. No, undefined words are interpreted exclusively by the Supreme Court.
+Answer: C
+Explanation: Section 2(2) of BNSS 2023 states that undefined words and expressions shall have the meanings assigned to them in the Information Technology Act 2000 and the Bharatiya Nyaya Sanhita (BNS) 2023.
+
+Q22. What constitutes conclusive evidence that the requirements of publishing a proclamation under Section 84 have been complied with?
+A. A sworn affidavit filed by the investigating police officer in the designated court.
+B. A statement in writing by the Court to the effect that it was duly published.
+C. The physical submission of the newspaper clipping to the district magistrate.
+D. The oral testimony of the village headman recorded during the court proceedings.
+Answer: B
+Explanation: Section 84(3) of BNSS 2023 provides that a statement in writing by the Court issuing the proclamation to the effect that it was duly published on a specified day shall be conclusive evidence of compliance.
+
+Q23. Which of the following statements is/are correct regarding "Local jurisdiction" under BNSS 2023?
+
+1. It means the local area within which a Court or Magistrate may exercise powers.
+2. The local area may comprise the whole State, or any part, as specified by the State Government.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 2(1)(n) of BNSS 2023 defines "Local jurisdiction" as the local area within which the Court or Magistrate exercises powers, which may comprise the whole State or a part thereof, as specified by the State Government by notification.
+
+
+
+Q24. In the context of BNSS 2023, a "Notification" fundamentally refers to a notification published in which of the following?
+A. Any daily newspaper with wide circulation in the district
+B. The official website of the concerned State Police Department
+C. The Official Gazette of the respective government
+D. The public notice board of the High Court premises
+Answer: C
+Explanation: Section 2(1)(p) of BNSS 2023 clearly defines "Notification" to mean a notification published in the Official Gazette.
+
+Q25. Which of the following best defines a "Summons-case" under Section 2 of BNSS 2023?
+A. A case relating to an offence punishable with death or life imprisonment
+B. A case relating to an offence punishable with imprisonment exceeding two years
+C. A case relating to any cognizable offence triable exclusively by a Sessions Court
+D. A case relating to an offence, and not being a warrant-case
+Answer: D
+Explanation: Section 2(1)(x) of BNSS 2023 defines "Summons-case" simply as a case relating to an offence, and not being a warrant-case.
+
+Q26. Which of the following statements is/are correct regarding the applicability of the Administrative Tribunals Act, 1985?
+
+1. It applies to members of the naval, military, or air forces of the Union.
+2. It applies to any officer or servant of the Supreme Court or High Courts.
+3. It does not apply to persons on the secretarial staff of Parliament.
+A. 1 and 2 only
+B. 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Section 2 of the Administrative Tribunals Act, 1985 explicitly states that the Act shall not apply to members of the armed forces, officers and servants of the Supreme Court or High Courts, and the secretarial staff of Parliament or State Legislatures.
+
+
+
+Q27. Under Section 3 of the CAT Act, 1985, what does the term "Appointed Day" signify in relation to a Tribunal?
+A. The date on which the Chairman assumes his official duties.
+B. The date from which the Tribunal is established by notification under Section 4.
+C. The date on which the Act received the official assent of the President.
+D. The date on which the first Original Application is officially filed.
+Answer: B
+Explanation: Section 3(c) of the CAT Act, 1985 defines "Appointed Day" in relation to a Tribunal as the date with effect from which it is established, by notification, under Section 4.
+
+Q28. In relation to the CAT Act, 1985, the definition of "Service Matters" explicitly includes disputes concerning which of the following?
+A. Only disputes related to remuneration, pension, and retirement benefits.
+B. Remuneration, tenure, leave, disciplinary matters, and any other matter whatsoever.
+C. Only matters related to initial recruitment and pre-appointment medical tests.
+D. Disputes arising strictly from criminal charges filed against the employee.
+Answer: B
+Explanation: Section 3(q) of the CAT Act defines "Service Matters" comprehensively to include remuneration, tenure (confirmation, seniority, promotion, etc.), leave of any kind, disciplinary matters, and any other matter whatsoever relating to conditions of service.
+
+Q29. What is the maximum prescribed fee for filing an Original Application before the Central Administrative Tribunal under Section 19?
+A. Not exceeding fifty rupees
+B. Not exceeding one hundred rupees
+C. Not exceeding five hundred rupees
+D. Not exceeding one thousand rupees
+Answer: B
+Explanation: Section 19 of the CAT Act, 1985 mandates that every application must be accompanied by a prescribed fee for filing, which is statutorily capped at not exceeding one hundred rupees.
+
+Q30. Consider the following statements regarding the Central Administrative Tribunal:
+
+1. The Tribunal is bound by the strict procedure outlined in the Code of Civil Procedure, 1908.
+2. The Tribunal is guided by the principles of natural justice.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 22 of the CAT Act explicitly states that a Tribunal is not bound by the procedure in the Code of Civil Procedure, 1908, but is guided by the principles of natural justice and may regulate its own procedure.
+
+
+
+Q31. In the event of a vacancy in the office of the Chairman of the CAT, who authorizes a Member to act as Chairman?
+A. The Chief Justice of India by an administrative order
+B. The appropriate Government by publishing a notification
+C. The senior-most Judicial Member automatically assumes the role
+D. The President of India through a direct constitutional warrant
+Answer: B
+Explanation: Section 7 of the CAT Act provides that in the event of a vacancy, such one of the Members as the appropriate Government may, by notification, authorise shall act as the Chairman until a new Chairman assumes office.
+
+Q32. Under Section 21 of the CAT Act, 1985, what is the standard limitation period for admitting an application after a final order rejecting an appeal/representation has been made?
+A. Within ninety days from the date of the final order
+B. Within six months from the date of the final order
+C. Within one year from the date of the final order
+D. Within three years from the date of the final order
+Answer: C
+Explanation: Section 21(a) of the CAT Act stipulates that a Tribunal shall not admit an application unless made within one year from the date of the final order rejecting the appeal or representation.
+
+Q33. Which of the following statements is/are not correct regarding the exhaustion of remedies under Section 20 of the CAT Act?
+
+1. A Tribunal shall immediately admit an application even if internal service remedies are pending.
+2. A memorial submitted to the President is universally treated as a mandatory exhausted remedy.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 20 states a Tribunal shall not ordinarily admit an application unless the applicant has exhausted available remedies. A memorial to the President is not treated as one of these remedies unless the applicant elected to submit it. Both statements are incorrect.
+
+
+
+Q34. An exceptional interim order made by the CAT without prior notice and hearing to the opposing party ceases to have effect after how many days, unless requirements are complied with?
+A. Seven days from the date it is made
+B. Fourteen days from the date it is made
+C. Thirty days from the date it is made
+D. Sixty days from the date it is made
+Answer: B
+Explanation: Under Section 24 of the CAT Act, an exceptional interim order made to prevent uncompensable loss ceases to have effect on the expiry of fourteen days from the date it is made, unless hearing requirements are met.
+
+Q35. Who holds the statutory power to transfer a pending case from one Bench of the CAT to another Bench for disposal?
+A. The Registrar of the Principal Bench acting administratively
+B. The Chairman of the Central Administrative Tribunal
+C. The Central Government through a gazette notification
+D. The High Court within whose jurisdiction the Bench operates
+Answer: B
+Explanation: Section 25 of the CAT Act states that on the application of any party or on his own motion, the Chairman may transfer any case pending before one Bench to any other Bench for disposal.
+
+Q36. How is a point of difference decided if the Members of a Bench of the CAT are equally divided in their opinion?
+A. The application is dismissed and the applicant must file a fresh case.
+B. The point is referred to the High Court for an authoritative interpretation.
+C. The matter is referred to the Chairman, who hears it or refers it to other Members.
+D. The opinion of the Judicial Member prevails over the Administrative Member.
+Answer: C
+Explanation: Under Section 26 of the CAT Act, if Members are equally divided, they state the points of difference and refer the matter to the Chairman, who either hears it himself or refers it to one or more other Members; it is then decided by a majority.
+
+Q37. Ordinarily, a Bench of the Central Administrative Tribunal shall consist of:
+A. One Judicial Member and two Administrative Members
+B. One Judicial Member and one Administrative Member
+C. Two Judicial Members and one Administrative Member
+D. Three Members appointed at the Chairman's discretion
+Answer: B
+Explanation: Section 5 of the CAT Act, 1985 mandates that ordinarily, a Bench shall consist of one Judicial Member and one Administrative Member.
+
+Q38. Consider the following statements regarding the jurisdiction of courts over CAT orders:
+
+1. Section 28 of the CAT Act entirely excludes the jurisdiction of High Courts over service matters.
+2. Under the Supreme Court's decision in L. Chandra Kumar, CAT orders are subject to writ jurisdiction of the High Court.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: While Section 28 originally purported to exclude court jurisdiction, the Supreme Court in L. Chandra Kumar v. Union of India (1997) held that Tribunal orders are subject to judicial review by a Division Bench of the High Court under Article 226/227. Statement 1 is conceptually outdated/incorrect post-judgment.
+
+
+
+Q39. How is an order of the Central Administrative Tribunal finally disposing of an application executed?
+A. It is executed purely as an administrative directive to the concerned department.
+B. It is executed in the same manner as a decree of a civil court.
+C. It is executed exclusively through the filing of a contempt petition.
+D. It is executed by the District Magistrate upon receiving the order copy.
+Answer: B
+Explanation: Section 27 of the CAT Act states that an order of a Tribunal finally disposing of an application or appeal is executed in the same manner as a decree of a civil court, and the Tribunal has all powers of a civil court for this purpose.
+
+Q40. An employee files an application before the CAT three years after the final order rejecting his representation. Can the Tribunal admit this application?
+A. Yes, applications can be admitted at any time if fundamental rights are violated.
+B. Yes, if the applicant satisfies the Tribunal that he had sufficient cause for the delay.
+C. No, the limitation period of one year is absolute and cannot be condoned.
+D. No, delays beyond two years require special permission from the Central Government.
+Answer: B
+Explanation: Under Section 21 of the CAT Act, notwithstanding the one-year limitation, an application may be admitted after one year if the applicant satisfies the Tribunal that he had sufficient cause for the delay.
+
+Q41. Which of the following statements is/are correct regarding the holding of office upon ceasing to be the Chairman of the CAT?
+
+1. The Chairman of the CAT is eligible for further employment under the Central Government.
+2. The Chairman of the CAT is ineligible for further employment under the Central or any State Government.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 11 of the CAT Act mandates that the Chairman of the CAT shall be ineligible for further employment under the Central or any State Government.
+
+
+
+Q42. Under Section 29-A of the CAT Act, within what period must an appeal be filed to the CAT against a decree made by a subordinate court before the Tribunal's establishment?
+A. Within thirty days of receipt of the copy of the decree or order
+B. Within sixty days of the President's assent to the Amendment Act
+C. Within ninety days of the amendment assent or receipt of the decree copy, whichever is later
+D. Within one year of the establishment of the concerned Tribunal Bench
+Answer: C
+Explanation: Section 29-A specifies that an appeal lies to the CAT within ninety days of the President’s assent to the 1986 Amendment Act, or within ninety days of receipt of the copy of the decree/order, whichever is later.
+
+Q43. Under Section 17 of the CAT Act, 1985, a Tribunal exercises the power to punish for contempt of itself equivalent to the jurisdiction and authority of:
+A. A District Court
+B. A High Court
+C. The Supreme Court
+D. A Chief Judicial Magistrate
+Answer: B
+Explanation: Section 17 of the CAT Act provides that a Tribunal has, and may exercise, the same jurisdiction, powers and authority in respect of contempt of itself as a High Court.
+
+Q44. Which of the following statements is/are correct regarding legal representation under Section 23 of the CAT Act?
+
+1. An applicant is strictly required to engage a legal practitioner and cannot appear in person.
+2. The Government may authorise its officers to act as presenting officers before the Tribunal.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 23 of the CAT Act states that an applicant may appear in person or take the assistance of a legal practitioner. It also allows the Government to authorise officers to act as presenting officers. Statement 1 is incorrect.
+
+
+
+Q45. According to the CAT Act, members and staff of a Tribunal are deemed to be:
+A. Judicial Officers strictly immune from administrative rules
+B. Public Servants under the law
+C. Constitutional authorities with sovereign immunity
+D. Employees of the Ministry of Personnel exclusively
+Answer: B
+Explanation: Section 31 of the CAT Act explicitly states that Members and staff of a Tribunal are deemed to be public servants.
+
+Q46. If Benches of a State Administrative Tribunal are established, who specifies the sitting places of these Benches?
+A. The Chairman of the Central Administrative Tribunal
+B. The Chief Justice of the State High Court
+C. The State Government by notification
+D. The Central Government on the Governor's advice
+Answer: C
+Explanation: Section 5 of the CAT Act provides that the sitting places of the Benches of a State Administrative Tribunal shall be specified by the State Government by notification.
+
+Q47. If an employee makes an appeal under service rules and no final order is passed, how long must they wait before being deemed to have exhausted remedies to approach the CAT?
+A. Three months from the date the appeal was made
+B. Six months from the date the appeal was made
+C. Nine months from the date the appeal was made
+D. One year from the date the appeal was made
+Answer: B
+Explanation: Section 20 of the CAT Act states a person is deemed to have availed of all remedies if no final order has been passed and a period of six months has expired from the date the appeal/representation was made.
+
+Q48. Under the CAT Act, 1985, who holds the statutory power to remove difficulties arising in giving effect to the provisions of the Act?
+A. The President of India
+B. The Supreme Court of India
+C. The appropriate Government
+D. The Central Government
+Answer: D
+Explanation: Section 34 of the CAT Act vests the power to remove difficulties in the Central Government, which may make orders not inconsistent with the Act to remove the difficulty.
+
+Q49. Consider the following statements regarding the transfer of pending cases under Section 29 of the CAT Act:
+
+1. Every suit or proceeding pending before any court immediately before the Tribunal's establishment stands transferred to it.
+2. Cases pending before a High Court are excluded from this automatic transfer provision.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 29 of the CAT Act transfers pending suits/proceedings to the Tribunal, but explicitly exempts appeals/proceedings pending before a High Court from this transfer requirement.
+
+
+
+Q50. A litigant is aggrieved by a final order of the Central Administrative Tribunal. What is the correct judicial remedy available to challenge this order?
+A. File a Special Leave Petition directly to the Supreme Court under Article 136.
+B. File a statutory appeal before the Chairman of the CAT within thirty days.
+C. File a writ petition under Article 226/227 before a Division Bench of the High Court.
+D. File a review application before a larger bench of three Members of the CAT.
+Answer: C
+Explanation: Following the Supreme Court’s decision in L. Chandra Kumar v. Union of India (1997), orders of the CAT are challenged by way of a writ petition under Article 226/227 before a Division Bench of the High Court within whose territorial jurisdiction the Bench is situated.
+
+Q51. Which of the following statements is/are correct regarding the territorial extent of the Revenue Recovery Act, 1890?
+
+1. The bare Act text explicitly states it extends to the whole of India including Jammu and Kashmir.
+2. The Act was made applicable to the UTs of J&K and Ladakh with effect from 31-10-2019 via a specific notification.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The bare-Act text still literally reads "except the State of Jammu and Kashmir" (Section 1). However, the Act was made applicable to the UT of J&K and UT of Ladakh w.e.f. 31-10-2019 by Notification S.O. 3912(E). Statement 1 is incorrect.
+
+
+
+Q52. Under Section 2 of the Revenue Recovery Act, 1890, the definition of "Defaulter" explicitly includes which of the following?
+A. Only the principal debtor from whom land-revenue is directly due.
+B. A person responsible as guarantor (surety) for the payment of the arrear.
+C. The local authority requesting the recovery of the public demand.
+D. The legal heir of the debtor, regardless of inherited assets.
+Answer: B
+Explanation: Section 2(3) of the Revenue Recovery Act defines "Defaulter" as a person from whom an arrear of land-revenue is due, and explicitly includes a surety—a person responsible as guarantor for payment of such arrear.
+
+Q53. As per the Revenue Recovery Act, 1890, the definition of "District" explicitly includes:
+A. A municipality
+B. A presidency-town
+C. A revenue sub-division
+D. A centrally administered area
+Answer: B
+Explanation: Section 2(1) of the Revenue Recovery Act defines "District" and explicitly includes a presidency-town (e.g., the old presidency capitals of Calcutta, Madras, and Bombay).
+
+Q54. On what date did the Revenue Recovery Act, 1890 receive the formal assent of the Governor-General of India?
+A. 1st July 1890
+B. 14th February 1890
+C. 26th January 1890
+D. 31st October 1890
+Answer: B
+Explanation: The Preamble and enacting words of the Revenue Recovery Act, 1890 (Act No. 1 of 1890) show that it received assent/enactment on 14th February 1890.
+
+Q55. A defaulter owes land-revenue in District A but has property in District B. To facilitate recovery, the Collector of District A sends a certificate to the Collector of District B. Under Section 3(2) of the Act, this certificate is treated as:
+A. A preliminary estimate subject to the receiving Collector's verification
+B. Conclusive proof of the matters stated within it
+C. An administrative request requiring a fresh judicial decree
+D. Prima facie evidence rebuttable before the receiving Collector
+Answer: B
+Explanation: Section 3(2) of the Revenue Recovery Act mandates that the certificate, signed by the Collector or a delegated officer, is conclusive proof of the matters stated in it, meaning the receiving Collector cannot go behind it to verify the debt.
+
+Q56. Which of the following statements is/are correct regarding the delegation of signing the certificate under Section 3 of the Revenue Recovery Act?
+
+1. The certificate must only be signed by the Collector personally and cannot be delegated.
+2. The certificate may be signed by any officer to whom the Collector delegates this duty by order in writing.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 3(2) of the Revenue Recovery Act states that the certificate must be signed by the Collector making it, or by any officer to whom he delegates this duty by an order in writing.
+
+
+
+Q57. A person facing recovery proceedings under Section 3 denies liability for the debt. What is the mandatory legal precondition for this person to institute a civil suit for repayment under Section 4?
+A. He must file an injunction application before the recovering Collector.
+B. He must pay the amount under a written protest made at the time of payment.
+C. He must surrender his passport and travel documents to the local police.
+D. He must obtain a prior stay order from the State Revenue Board.
+Answer: B
+Explanation: Section 4(1) of the Revenue Recovery Act states that a person denying liability may institute a civil suit for repayment only if he pays the amount under protest, the protest being in writing, made at the time of payment, and signed by him.
+
+Q58. Under Section 5 of the Revenue Recovery Act, 1890, the Collector may proceed to recover sums as if they were arrears of land-revenue on the request of:
+A. Any private financial institution or recognized banking company
+B. Only the Central Government’s direct revenue collection agencies
+C. Any public officer (other than a Collector) or a local authority
+D. Only registered cooperative societies and agricultural boards
+Answer: C
+Explanation: Section 5 of the Act allows the Collector to recover sums as arrears of land-revenue on the request of any public officer (other than a Collector) or by a local authority, letting them "borrow" the Collector's recovery machinery.
+
+Q59. Consider the following statements regarding the property liable to sale under Section 6 of the Revenue Recovery Act:
+
+1. The Collector may issue a proclamation prohibiting the transfer of the defaulter's movable property only.
+2. Any private alienation of the property made after the proclamation is void against the Government.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 6(1) empowers the Collector to issue a proclamation prohibiting the transfer of any immovable property (not movable) of the defaulter. Section 6(3) makes any private alienation after the proclamation void against the Government.
+
+
+
+Q60. When is the proclamation prohibiting the transfer of property deemed to be withdrawn under Section 6(2) of the Revenue Recovery Act?
+A. Automatically after a period of six months from its issuance
+B. Once the certificate amount is recovered, or the property is sold for that recovery
+C. When the defaulter files a civil suit denying liability under Section 4
+D. Immediately upon the defaulter submitting a written apology to the Collector
+Answer: B
+Explanation: Section 6(2) of the Act states that the Collector may withdraw the proclamation at any time, and it is deemed withdrawn once either the certificate amount is recovered, or the property is sold for that recovery.
+
+Q61. Under Section 7 of the Revenue Recovery Act, 1890, the Act explicitly does NOT authorize the arrest of any person for the recovery of which of the following?
+A. Income-tax arrears forwarded by Central agencies
+B. Land-revenue arrears exceeding fifty thousand rupees
+C. Any tax payable to a municipality or local authority
+D. Penalties imposed by the District Magistrate's court
+Answer: C
+Explanation: Section 7(b) of the Revenue Recovery Act is a saving clause explicitly stating that the Act does not authorise the arrest of any person for the recovery of any tax payable to a corporation, municipality, or local authority.
+
+Q62. Under the specific State Amendment to the Revenue Recovery Act introduced by Uttarakhand (Act 28 of 2013), the "costs of recovery" are capped at what percentage of the certificate amount?
+A. 5 percent
+B. 10 percent
+C. 15 percent
+D. 20 percent
+Answer: B
+Explanation: The Uttarakhand State Amendment (Uttarakhand Act 28 of 2013) introduced the recovery of "costs of recovery" and explicitly capped them at 10% of the certificate amount.
+
+Q63. Which of the following statements is/are correct regarding the remittance of recovered moneys under Section 10 of the Revenue Recovery Act?
+
+1. The recovering Collector retains 50% of the recovered sum as a mandatory service fee.
+2. The recovering Collector must remit the recovered sum to the issuing Collector after deducting his expenses.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 10 of the Act dictates that the recovering Collector shall remit any sum recovered by virtue of the certificate to the issuing Collector, after deducting his expenses in connection with the matter.
+
+
+
+Q64. According to Section 6(5) of the Revenue Recovery Act, how must the proclamation prohibiting property transfer be publicized?
+A. Exclusively through publication in the State's Official Gazette
+B. By beat of drum and by posting a copy at a conspicuous place near the property
+C. By sending a registered letter to the defaulter's last known residential address
+D. By broadcasting the notice on regional radio and local television channels
+Answer: B
+Explanation: Section 6(5) mandates that a proclamation must be made by beat of drum (or other customary method) and by posting a copy at a conspicuous place in or near the property concerned.
+
+Q65. A civil suit for repayment filed by a person under Section 4 of the Revenue Recovery Act must be instituted in a Civil Court having jurisdiction in which specific local area?
+A. The area where the defaulter currently resides or operates his business
+B. The area where the office of the Collector who made the certificate is situated
+C. The area where the recovering Collector executed the attachment order
+D. The area where the State's principal High Court is physically located
+Answer: B
+Explanation: Section 4(2) of the Act specifies that such a suit must be filed in a Civil Court having jurisdiction in the local area where the office of the Collector who made the certificate is situated.
+
+Q66. How does Section 6(4) of the Revenue Recovery Act protect third parties dealing with the defaulter's property?
+A. It entirely exempts ancestral property from any recovery proceedings.
+B. It states encumbrances created by the defaulter in good faith are not invalidated.
+C. It allows tenants to claim ownership if rent was paid for over three years.
+D. It prevents the sale of any property mortgaged to a nationalized bank.
+Answer: B
+Explanation: Section 6(4) of the Act protects third parties by specifying that encumbrances created, grants made, or contracts entered into by the defaulter in good faith are not invalidated merely because proceedings are taken against the defaulter's interests.
+
+Q67. Consider the following statements regarding historical extra-territorial recovery provisions in the Revenue Recovery Act:
+
+1. Section 9 allows recovery in India of land-revenues accruing in Burma, subject to reciprocity.
+2. Sub-section 9(3) extends the Burma provision to apply identically in relation to Pakistan.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 9(1) of the Act allows recovery of Burma arrears in India provided reciprocal remedies exist, and Section 9(3) explicitly extends these Burma provisions to Pakistan.
+
+
+
+Q68. Under the Schedule of the Revenue Recovery Act, what specific information MUST be filled in the prescribed Certificate form?
+A. The precise GPS coordinates of the defaulter's ancestral immovable property
+B. The name of the defaulter, the amount payable, and the account on which it is due
+C. A complete list of the defaulter's bank accounts and fixed deposit details
+D. The exact penal sections under which the defaulter was originally charged
+Answer: B
+Explanation: The Schedule to the Revenue Recovery Act provides a Certificate form that requires stating the name of the defaulter (and identifying particulars), the amount payable, and the account on which it is due.
+
+Q69. According to Section 2 of the Revenue Recovery Act, who is defined as the "Collector"?
+A. Any officer authorized by the State Government to collect income tax
+B. The chief officer in charge of the land-revenue administration of a district
+C. The presiding officer of the district's principal civil court
+D. The executive head of the local municipal corporation or council
+Answer: B
+Explanation: Section 2(2) of the Revenue Recovery Act clearly defines "Collector" as the chief officer in charge of the land-revenue administration of a district.
+
+Q70. In the civil suit instituted under Section 4 of the Revenue Recovery Act by a person denying liability, which of the following evidentiary rules applies?
+A. The plaintiff cannot challenge the facts stated in the certificate under any circumstances.
+B. The plaintiff must deposit twice the disputed amount before giving evidence.
+C. The plaintiff may give evidence on any matter stated in the certificate.
+D. The burden of proof rests entirely on the Collector who issued the certificate.
+Answer: C
+Explanation: Section 4(3) of the Act provides that in the civil suit, the plaintiff may give evidence on any matter stated in the certificate, notwithstanding the "conclusive proof" rule applicable before the recovering Collector.
+
+Q71. How many sections (excluding the Schedule) are there in the Revenue Recovery Act, 1890?
+A. 8 Sections
+B. 10 Sections
+C. 12 Sections
+D. 15 Sections
+Answer: B
+Explanation: The Revenue Recovery Act, 1890 is a short, procedural Central Act containing exactly 10 Sections plus The Schedule (Certificate form).
+
+Q72. A person pays a demanded arrear under the Revenue Recovery Act, but registers an oral protest with the Collector's clerk at the time of payment. Can he institute a suit for repayment under Section 4?
+A. Yes, an oral protest is sufficient if recorded in the clerk's daily register.
+B. Yes, provided he files the civil suit within a strict thirty-day window.
+C. No, because the protest must necessarily be made in writing and signed by him.
+D. No, because civil courts have no jurisdiction over revenue recovery matters.
+Answer: C
+Explanation: Section 4(1) of the Act mandates that the protest must be in writing, made at the time of payment, and signed by the person or his agent. An oral protest is legally invalid for this purpose.
+
+Q73. Which of the following statements is/are correct regarding the application of the Revenue Recovery Act, 1890?
+
+1. The Act is fundamentally a substantive law creating new tax liabilities.
+2. The Act is a procedural, machinery law designed for recovering public demands.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: The Preamble and the overall structure of the Act indicate it is a machinery/recovery law intended to create a uniform procedure for recovering existing public demands, not a substantive law creating new taxes.
+
+
+
+Q74. A State Government modifies the Revenue Recovery Act to allow an Assistant Collector to perform the functions of a Collector. This amendment is:
+A. Invalid, because Central Acts cannot be amended by State Governments under any circumstances.
+B. Valid across India, automatically updating the Central Act for all other States and Territories.
+C. Valid only within that specific State, without altering the Central Act as applied elsewhere.
+D. Valid only if explicitly approved by a two-thirds majority in both Houses of Parliament.
+Answer: C
+Explanation: State amendments (like the U.P. Act 11 of 1965 widening the definition of Collector) operate only within that State and do not alter the Central Act as applied elsewhere.
+
+Q75. Under Section 8 of the Revenue Recovery Act, public demands arising in centrally-administered areas lying outside India:
+A. Cannot be recovered within India under any legal circumstances
+B. Must be recovered through the International Court of Justice
+C. May be recovered under this Act within the territory of India
+D. Require a separate extradition treaty for valid enforcement
+Answer: C
+Explanation: Section 8 allows cross-border recovery, stating that a demand that arose outside India in a centrally-administered area can still be recovered inside India using this Act's machinery.
+
+Q76. Which of the following statements is/are correct regarding the extent of the Prevention of Corruption Act, 1988?
+
+1. It applies to all citizens of India outside India.
+2. Following the 2019 reorganization, it now extends to the Union Territory of Jammu & Kashmir.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Section 1(2) states the Act extends to the whole of India and applies to all citizens of India outside India. The 2019 Reorganisation Act removed the J&K exclusion, making it applicable to the UTs of J&K and Ladakh.
+
+
+
+Q77. Under Section 2(d) of the Prevention of Corruption Act, 1988 (as amended in 2018), "Undue advantage" is defined as:
+A. Any pecuniary gratification exceeding ten thousand rupees
+B. Any gratification whatever, other than legal remuneration
+C. Only high-value physical assets obtained through corruption
+D. Any promotion or official favour granted out of turn
+Answer: B
+Explanation: Section 2(d), inserted by the 2018 Amendment, defines "Undue advantage" broadly as any gratification whatever, other than legal remuneration.
+
+Q78. According to Section 4 of the Prevention of Corruption Act, a trial by a Special Judge should endeavour to be concluded within a period of:
+A. Six months from the date of filing the charge-sheet
+B. One year from the date of the first judicial hearing
+C. Two years, extendable up to a maximum aggregate of four years
+D. Three years, extendable up to a maximum aggregate of five years
+Answer: C
+Explanation: Section 4(4) mandates that the trial shall endeavour to be concluded within two years, which may be extended by six months at a time, not exceeding four years in the aggregate.
+
+Q79. Who among the following is legally qualified to be appointed as a Special Judge under the Prevention of Corruption Act, 1988?
+A. Any advocate with at least ten years of active practice in criminal courts
+B. A person who is or has been a Sessions Judge or Additional/Assistant Sessions Judge
+C. An executive magistrate with five years of administrative experience
+D. A retired police officer of the rank of Inspector General or above
+Answer: B
+Explanation: Section 3(2) of the Act specifies that a person is qualified for appointment as a Special Judge only if he is, or has been, a Sessions Judge, Additional Sessions Judge or Assistant Sessions Judge under the CrPC.
+
+Q80. A public servant contravenes an order under Section 12A of the Essential Commodities Act, 1955. If the Special Judge tries this offence summarily, what is the maximum sentence of imprisonment that can be imposed?
+A. Imprisonment up to one month
+B. Imprisonment up to six months
+C. Imprisonment up to one year
+D. Imprisonment up to three years
+Answer: C
+Explanation: Section 6 of the PCA states that on a summary conviction for such an offence, the maximum sentence is imprisonment up to one year.
+
+Q81. Consider the following statements regarding Section 8 of the PCA (Bribing of a public servant):
+
+1. A person compelled to give a bribe is exempt from punishment if he reports the matter within seven days.
+2. The offence of giving a bribe carries a mandatory minimum imprisonment of three years.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Proviso 2 to Section 8(1) protects a compelled giver if he reports within 7 days. However, Section 8 punishment is imprisonment up to 7 years or fine or both; it carries no minimum imprisonment term. Statement 2 is incorrect.
+
+
+
+Q82. Under Section 9 of the Prevention of Corruption Act, if a commercial organisation is found guilty of bribing a public servant to obtain business, what is the prescribed punishment for the organisation?
+A. Imprisonment of its top executives for a minimum of 3 years
+B. Mandatory cancellation of its corporate registration
+C. Confiscation of all its movable and immovable assets
+D. The commercial organisation is punishable with fine
+Answer: D
+Explanation: Section 9(1) of the Act specifies that where an offence is committed by a commercial organisation, the organisation itself is punishable with fine. Imprisonment applies to individuals under Section 10.
+
+Q83. Which statutory defence is available to a commercial organisation charged under Section 9 of the Prevention of Corruption Act?
+A. Proving that the bribe amount was less than fifty thousand rupees.
+B. Proving that the public servant initiated the demand for the bribe.
+C. Proving it had adequate procedures in place to prevent associated persons from bribing.
+D. Proving that the company suffered financial losses during the financial year.
+Answer: C
+Explanation: The proviso to Section 9(1) explicitly states it is a defence for the organisation to prove that it had in place adequate procedures (in compliance with prescribed guidelines) to prevent associated persons from such conduct.
+
+Q84. For an officer (e.g., director or manager) of a commercial organisation to be prosecuted and punished under Section 10 of the PCA, the prosecution must prove that the offence under Section 9 was committed:
+A. With the consent or connivance of that specific officer
+B. By an employee directly reporting to that officer
+C. Within the physical premises of the commercial organisation
+D. During the official working hours of the commercial organisation
+Answer: A
+Explanation: Section 10 fixes liability on the responsible human being (director/manager/officer) only if the offence under Section 9 was committed with the consent or connivance of that person.
+
+Q85. Which of the following limbs constitute "Criminal misconduct" by a public servant under Section 13 of the PCA (post-2018 amendment)?
+
+1. Habitual acceptance of bribes
+2. Fraudulent misappropriation of entrusted property
+3. Intentional illicit enrichment (disproportionate assets)
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Following the 2018 Amendment, Section 13 covers only two limbs: (a) misappropriation of property, and (b) intentional illicit enrichment (disproportionate assets). The older limb of "habitual acceptance" was removed.
+
+
+
+Q86. What is the prescribed punishment for criminal misconduct under Section 13(2) of the Prevention of Corruption Act?
+A. Imprisonment of not less than 2 years, which may extend to 5 years, and fine
+B. Imprisonment of not less than 3 years, which may extend to 7 years, and fine
+C. Imprisonment of not less than 4 years, which may extend to 10 years, and fine
+D. Imprisonment of not less than 5 years, which may extend to 10 years, and fine
+Answer: C
+Explanation: Section 13(2) provides the highest punishment in the Act: imprisonment of not less than 4 years, which may extend to 10 years, and also fine.
+
+Q87. Under Section 17A of the PCA, previous approval to conduct an enquiry or investigation is required when the alleged offence is relatable to:
+A. A public servant caught red-handed accepting a bribe on the spot.
+B. Any recommendation made or decision taken by the public servant in discharge of official functions.
+C. A private dispute between the public servant and a commercial organisation.
+D. A public servant absconding from the jurisdiction of the investigating agency.
+Answer: B
+Explanation: Section 17A requires prior approval where the alleged offence is relatable to any recommendation made or decision taken by the public servant in discharge of his official functions/duties. Proviso 1 exempts spot arrests.
+
+Q88. What is the statutory time limit within which the competent authority must convey its decision regarding prior approval for investigation under Section 17A?
+A. One month, extendable by a further fifteen days
+B. Three months, extendable by a further one month for recorded reasons
+C. Six months, extendable by a further two months for recorded reasons
+D. One year, with no provision for any further extension
+Answer: B
+Explanation: Proviso 2 to Section 17A dictates that the authority must convey its decision within three months, extendable (for reasons recorded in writing) by a further one month.
+
+Q89. Consider the following statements regarding Section 19 (Previous sanction for prosecution):
+
+1. Sanction is required before a court takes cognizance of offences under sections 7, 11, 13, and 15.
+2. The requirement for previous sanction explicitly excludes public servants who have retired or ceased to hold office.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Sanction is required for sections 7, 11, 13 and 15. The Explanation to Section 19(1) expressly states that "public servant" includes a person who has ceased to hold office (a retired official). Statement 2 is incorrect.
+
+
+
+Q90. A private person wishes to ask the competent authority for sanction to prosecute a public servant under Section 19. What conditions must be fulfilled?
+A. He must file an RTI application and obtain a vigilance clearance certificate.
+B. He must submit a sworn affidavit to the local Superintendent of Police.
+C. He must file a complaint in court, and the court must direct him to obtain sanction.
+D. He must obtain written permission from the Central Vigilance Commission directly.
+Answer: C
+Explanation: The proviso to Section 19(1) states a private person cannot ask for sanction unless he has filed a complaint in a competent court and the court has directed him to obtain sanction without dismissing it under section 203 CrPC.
+
+Q91. What is the prescribed punishment for a person convicted as a "habitual offender" under Section 14 of the Prevention of Corruption Act?
+A. Imprisonment of not less than 3 years, which may extend to 7 years, and fine
+B. Imprisonment of not less than 4 years, which may extend to 10 years, and fine
+C. Imprisonment of not less than 5 years, which may extend to 10 years, and fine
+D. Imprisonment for life, accompanied by total forfeiture of properties
+Answer: C
+Explanation: Section 14 punishes a habitual offender with imprisonment of not less than 5 years, which may extend to 10 years, and also fine.
+
+Q92. Under Section 15 of the Prevention of Corruption Act, an attempt to commit an offence is punishable only if it relates to which specific provision?
+A. Section 7 (Public servant being bribed)
+B. Section 8 (Bribing of a public servant)
+C. Section 11 (Undue advantage without consideration)
+D. Section 13(1)(a) (Misappropriation of property)
+Answer: D
+Explanation: Section 15 explicitly covers an attempt to commit an offence only under clause (a) of section 13(1), which is the misappropriation of property.
+
+Q93. Which ordinance applies to the attachment and forfeiture of property procured by means of an offence under Chapter IVA (Section 18A) of the PCA?
+A. The Prevention of Money-Laundering Ordinance, 2002
+B. The Criminal Law Amendment Ordinance, 1944
+C. The Fugitive Economic Offenders Ordinance, 2018
+D. The Smugglers and Foreign Exchange Manipulators Ordinance, 1976
+Answer: B
+Explanation: Section 18A(1), inserted by the 2018 Amendment, applies the provisions of the Criminal Law Amendment Ordinance, 1944 to the attachment and confiscation of property procured by offences under the Act.
+
+Q94. Which of the following statements is/are correct regarding the presumption under Section 20 of the PCA?
+
+1. If a public servant accepts an undue advantage, it is presumed he did so as a motive or reward under Section 7.
+2. The accused is barred from leading any evidence to prove the contrary.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Section 20 creates a presumption that the undue advantage was accepted as a motive/reward, but this presumption applies "unless the contrary is proved," meaning the accused can lead evidence to rebut it. Statement 2 is incorrect.
+
+
+
+Q95. According to Section 21 of the PCA, an accused person is a competent witness for the defence. However, which of the following conditions applies?
+A. The accused must be compelled to testify by the Special Judge.
+B. His failure to give evidence shall raise a strong legal presumption against him.
+C. He is not called as a witness except at his own explicit request.
+D. He must testify before any other defence witness is allowed to speak.
+Answer: C
+Explanation: Section 21(a) clearly stipulates that an accused is not called as a witness except at his own request. Furthermore, Section 21(b) ensures his failure to give evidence is not commented on nor raises any presumption.
+
+Q96. What is the minimum rank of a police officer authorized to investigate an offence under the PCA in the Delhi Special Police Establishment (CBI) without a Magistrate's order?
+A. Sub-Inspector of Police
+B. Inspector of Police
+C. Deputy Superintendent of Police
+D. Assistant Commissioner of Police
+Answer: B
+Explanation: Section 17(a) authorizes an Inspector of Police of the Delhi Special Police Establishment (CBI) to investigate without a Magistrate's order.
+
+Q97. To investigate an offence of intentional illicit enrichment (disproportionate assets) under Section 13(1)(b), the order must come from a police officer not below the rank of:
+A. Inspector of Police
+B. Deputy Superintendent of Police
+C. Superintendent of Police
+D. Inspector General of Police
+Answer: C
+Explanation: Proviso 2 to Section 17 explicitly mandates that an offence under Section 13(1)(b) shall not be investigated without the order of a police officer not below the rank of a Superintendent of Police.
+
+Q98. Consider the following statements regarding an error or omission in the sanction for prosecution under Section 19:
+
+1. Any minor error in the sanction automatically voids the entire trial process.
+2. No finding or sentence is reversed merely for an error in sanction unless a failure of justice has in fact resulted.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation: Section 19(3) explicitly states that no finding, sentence or order shall be reversed or altered merely on the ground of any error, omission or irregularity in the sanction unless a failure of justice has in fact resulted.
+
+
+
+Q99. Under Section 7A (Taking undue advantage to influence a public servant), the offender who takes the money to peddle influence:
+A. Must necessarily be a public servant himself
+B. Must be a registered agent of a commercial organisation
+C. Need not be a public servant himself
+D. Cannot be prosecuted if the public servant refuses the influence
+Answer: C
+Explanation: Section 7A targets the "middleman" or influence-peddler who induces a public servant. The middleman (private person) need not be a public servant himself to be prosecuted under this section.
+
+Q100. A person gives an undue advantage to a public servant to assist an investigating agency in a trap case, after informing the law-enforcement authority. Is this person guilty of an offence under Section 8?
+A. Yes, because giving a bribe is an absolute strict liability offence.
+B. Yes, but the sentence will be reduced to a maximum of one year.
+C. No, because Section 8(2) explicitly protects persons assisting investigations.
+D. No, provided the person obtains written immunity from the High Court first.
+Answer: C
+Explanation: Section 8(2) expressly exempts a person from the offence of bribery if they, after informing a law-enforcement authority, give or promise an undue advantage in order to assist that agency in its investigation.
