@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
     ArrowLeft, FileText, KeyRound, Loader2, ShieldAlert, Shuffle,
     CheckCircle2, AlertCircle, Clock, ListChecks, BrainCircuit, Trophy, Calendar,
-    Columns,
 } from "lucide-react";
 import { useCourse, CourseMode } from "@/contexts/CourseContext";
 import { getQuestionPaperTopicById } from "@/lib/question-paper-data";
@@ -13,9 +12,8 @@ import { getMockTestMetaById, getMockTestQuestions } from "@/lib/mock-test-catal
 import {
     downloadQuestionPaperPDF, downloadAnswerKeyPDF, QuestionPaperOptions,
 } from "@/lib/pdf-generator-question-paper";
-import { downloadLDCEFormatPDF } from "@/lib/pdf-generator-ldce-format";
 
-type BusyKind = "qp" | "ak" | "ldce" | null;
+type BusyKind = "qp" | "ak" | null;
 type Source = "topics" | "mocks";
 
 const COURSE_LABELS: Record<CourseMode, string> = {
@@ -122,7 +120,7 @@ export default function QuestionPaperPDFClient() {
         return Array.from(map.entries());
     }, [items]);
 
-    const handleGenerate = async (id: string, kind: "qp" | "ak" | "ldce") => {
+    const handleGenerate = async (id: string, kind: "qp" | "ak") => {
         setBusy((b) => ({ ...b, [id]: kind }));
         setErrors((e) => ({ ...e, [id]: null }));
         try {
@@ -137,16 +135,20 @@ export default function QuestionPaperPDFClient() {
                 const m = getMockTestMetaById(id);
                 questions = getMockTestQuestions(id);
                 if (!m || questions.length === 0) throw new Error("No questions available");
-                meta = { topicName: m.title, paperName: m.examName, totalQuestions: questions.length };
+                meta = {
+                    topicName: m.title,
+                    paperName: m.examName,
+                    totalQuestions: questions.length,
+                    scheduleDate: m.scheduleLabel,
+                    topicsCovered: m.topics,
+                };
             }
 
             const opts: QuestionPaperOptions = { shuffle, shuffleSeed };
             if (kind === "qp") {
                 await downloadQuestionPaperPDF(questions, id, meta, opts);
-            } else if (kind === "ak") {
-                await downloadAnswerKeyPDF(questions, id, meta, opts);
             } else {
-                await downloadLDCEFormatPDF(questions, id, meta, opts);
+                await downloadAnswerKeyPDF(questions, id, meta, opts);
             }
         } catch (err) {
             console.error("Question Paper PDF generation failed", err);
@@ -350,17 +352,6 @@ function PaperCard({
                             <><Loader2 className="w-4 h-4 animate-spin" /> Generating PDF...</>
                         ) : (
                             <><KeyRound className="w-4 h-4" /> Answer Key PDF</>
-                        )}
-                    </button>
-                    <button
-                        onClick={() => onGenerate(item.id, "ldce")}
-                        disabled={disabled || isBusy}
-                        className="inline-flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                    >
-                        {busy === "ldce" ? (
-                            <><Loader2 className="w-4 h-4 animate-spin" /> Generating PDF...</>
-                        ) : (
-                            <><Columns className="w-4 h-4" /> LDCE Format PDF</>
                         )}
                     </button>
                 </div>

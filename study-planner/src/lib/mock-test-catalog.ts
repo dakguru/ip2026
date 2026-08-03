@@ -23,7 +23,9 @@ export interface MockTestMeta {
     title: string;        // test title (rendered as "Topic" in the PDF)
     examName: string;     // rendered as "Paper" in the PDF
     group: string;        // section heading on the page (and PAPER chip label)
-    dateLabel: string;    // dd.mm.yyyy of the test
+    dateLabel: string;    // dd.mm.yyyy of the test (start of window)
+    scheduleLabel: string; // dd.mm.yyyy - dd.mm.yyyy schedule window (PDF header)
+    topics: string[];     // syllabus topics covered by the test (PDF header)
     completed: boolean;
     questionCount: number;
 }
@@ -75,6 +77,7 @@ function buildMeta(id: string, questionCount: number): MockTestMeta | null {
         const sunday = dateFromId(id);
         if (!sunday) return null;
         const end = endOfDay(sunday);
+        const saturday = week ? new Date(week.saturdayDate + "T00:00:00") : null;
         return {
             id,
             course: "PS_GR_B",
@@ -82,6 +85,8 @@ function buildMeta(id: string, questionCount: number): MockTestMeta | null {
             examName: "PS Group B Mock Test",
             group: "PS Group B - Weekly Series",
             dateLabel: ddmmyyyy(sunday),
+            scheduleLabel: saturday ? `${ddmmyyyy(saturday)} - ${ddmmyyyy(sunday)}` : ddmmyyyy(sunday),
+            topics: week?.topics ?? [],
             completed: now > end.getTime(),
             questionCount,
         };
@@ -100,6 +105,8 @@ function buildMeta(id: string, questionCount: number): MockTestMeta | null {
             examName: "LDCE IP Mock Test - Series II",
             group: "LDCE IP - Series II",
             dateLabel: ddmmyyyy(start),
+            scheduleLabel: `${ddmmyyyy(start)} - ${ddmmyyyy(endBase)}`,
+            topics: test?.topics ?? [],
             completed: now > endOfDay(endBase).getTime(),
             questionCount,
         };
@@ -120,6 +127,8 @@ function buildMeta(id: string, questionCount: number): MockTestMeta | null {
             examName: "LDCE IP Mock Test - Series I",
             group: "LDCE IP - Series I",
             dateLabel: ddmmyyyy(saturday),
+            scheduleLabel: `${ddmmyyyy(saturday)} - ${ddmmyyyy(sunday)}`,
+            topics: [],
             completed: now > endOfDay(sunday).getTime(),
             questionCount,
         };
