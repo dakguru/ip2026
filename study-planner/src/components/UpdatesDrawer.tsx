@@ -16,6 +16,41 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "05.08.2026",
+        items: [
+            {
+                title: "✨ PDF Notes: Schedule of Financial Powers Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            We have updated the <strong className="text-violet-600 dark:text-violet-400">Schedule of Financial Powers</strong> PDF notes for both <strong className="text-zinc-900 dark:text-zinc-100">PS Group B</strong> and <strong className="text-zinc-900 dark:text-zinc-100">LDCE IP</strong> Course modes!
+                        </p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-gradient-to-r from-violet-50 to-fuchsia-50 dark:from-violet-900/20 dark:to-fuchsia-900/20 p-4 rounded-xl border border-violet-200 dark:border-violet-800/50 shadow-sm relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-2 opacity-20 pointer-events-none">
+                                    <img src="/dak-guru-new-logo.png" alt="" className="w-16 h-16 object-contain mix-blend-multiply dark:mix-blend-screen grayscale" />
+                                </div>
+                                <p className="font-bold text-violet-700 dark:text-violet-300 text-[10px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
+                                    Latest Update
+                                </p>
+                                <p className="text-zinc-800 dark:text-zinc-200 text-[12px] font-medium leading-relaxed relative z-10">
+                                    Updated PDF Notes on <strong>SCHEDULE OF FINANCIAL POWERS</strong> as per Addendum III — F.No.6-2/2025-FA(P) dated 09.06.2026 (latest).
+                                </p>
+                            </div>
+                        </div>
+
+                        <p className="pt-2 text-[11px] text-violet-600 dark:text-violet-400 font-bold flex items-center gap-1.5">
+                            <span className="bg-violet-100 dark:bg-violet-900/30 p-1.5 rounded-full flex items-center justify-center">🚀</span> 
+                            <span>Access now in the Notes section!</span>
+                        </p>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "30.07.2026",
         items: [
             {
