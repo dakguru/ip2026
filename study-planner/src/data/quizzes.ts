@@ -5662,8 +5662,8 @@ export const ALL_SETS_DATA: Record<number, any[]> = {
         "Divisional Head",
         "Postmaster General"
       ],
-      "a": 1,
-      "e": "The schedule lists Senior Postmaster (Gr B), ASP, ASRM, IP, or IRM as the Engaging Authority for Dak Sevaks."
+      "a": 2,
+      "e": "The engaging authority for Dak Sevaks was elevated to the Head of Division / Unit / Independent Unit (Divisional Head) as per O.M. No. 17-31/2016-GDS (Pt) dated November 26, 2025."
     },
     {
       "q": "Rule 11 states that the provisions of Rule 10 (Procedure) do NOT apply when:",

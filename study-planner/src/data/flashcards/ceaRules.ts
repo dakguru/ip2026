@@ -63,9 +63,9 @@ export const cea_rules_set1: RawQuestion[] = [
     },
     {
         q: "From which stage of education is the Children Education Allowance admissible?",
-        o: ["From Class 1 only", "From two classes prior to Class 1 up to Class 12", "Only for higher secondary education", "Only for technical and professional courses"],
+        o: ["From Class 1 only", "From three classes prior to Class 1 up to Class 12", "Only for higher secondary education", "Only for technical and professional courses"],
         a: 1,
-        e: "• Admissible for two classes prior to Class 1 (Nursery/LKG/UKG) up to the 12th standard."
+        e: "• Admissible for three classes prior to Class 1 up to the 12th standard."
     },
     {
         q: "Is Children Education Allowance admissible for a child who fails in a particular class?",
@@ -129,9 +129,9 @@ export const cea_rules_set1: RawQuestion[] = [
     },
     {
         q: "What happens to the admissibility of CEA if a government servant is 'Dismissed' or 'Removed' from service?",
-        o: ["It continues till the end of the year.", "It ceases from the date of dismissal or removal.", "It continues for 6 months.", "It is paid as a one-time lump sum."],
-        a: 1,
-        e: "• Eligibility stops on the date of dismissal/removal."
+        o: ["It continues till the end of the academic year.", "It ceases from the date of dismissal or removal.", "It continues for 6 months.", "It is paid as a one-time lump sum."],
+        a: 0,
+        e: "• The CEA and Hostel Subsidy remain admissible till the end of the academic year in which the dismissal or removal occurs."
     },
     {
         q: "Can CEA be claimed for a child who is 'Married' but still below 20 years of age?",

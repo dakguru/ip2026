@@ -67,7 +67,13 @@
       "Bash(pip3 install *)",
       "Bash(python3 -c ' *)",
       "Bash(npx tsx -e ' *)",
-      "Bash(curl -s -o /dev/null -w \"flashcards route: HTTP %{http_code}\\\\n\" http://localhost:3000/flashcards --max-time 40)"
+      "Bash(curl -s -o /dev/null -w \"flashcards route: HTTP %{http_code}\\\\n\" http://localhost:3000/flashcards --max-time 40)",
+      "Read(//c/Windows/Fonts/**)",
+      "Read(//c/Windows/Fonts//**)",
+      "Bash(cp /c/Windows/Fonts/pala.ttf \"D:/IP 2026/study-planner/public/fonts/PalatinoLinotype-Regular.ttf\")",
+      "Bash(cp /c/Windows/Fonts/palab.ttf \"D:/IP 2026/study-planner/public/fonts/PalatinoLinotype-Bold.ttf\")",
+      "Bash(npx tsc *)",
+      "Bash(node font-test.js)"
     ]
   }
 }

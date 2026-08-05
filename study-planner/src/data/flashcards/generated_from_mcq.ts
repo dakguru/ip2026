@@ -21035,8 +21035,8 @@ export const p1_33: FlashCard[] = [
         "topic": "Paper I",
         "card_no": 21,
         "question": "For a Dak Sevak, who is the Engaging Authority?",
-        "answer": "Sr. Postmaster (Gr. B) / ASP / ASRM / IP / IRM",
-        "explanation": "The schedule lists Senior Postmaster (Gr B), ASP, ASRM, IP, or IRM as the Engaging Authority for Dak Sevaks.",
+        "answer": "Divisional Head",
+        "explanation": "The engaging authority for Dak Sevaks was elevated to the Head of Division / Unit / Independent Unit (Divisional Head) as per O.M. No. 17-31/2016-GDS (Pt) dated November 26, 2025.",
         "exam_weight": "Medium",
         "keywords": [
             "sevak",
