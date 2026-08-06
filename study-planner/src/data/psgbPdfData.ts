@@ -26,9 +26,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "PMLA Act, 2002",
             "description": "Prevention of Money Laundering Act, 2002",
-            "filename": "PMLA_2002.pdf",
-            "path": "/notes/paper-1/PMLA_2002.pdf",
-            "size": "0.3 MB",
+            "filename": "PMLA_2002_LDCE_IP_PSGroupB_2026.pdf",
+            "path": "/notes/paper-1/PMLA_2002_LDCE_IP_PSGroupB_2026.pdf",
+            "size": "0.9 MB",
             "color": "purple",
             "topic": "Acts"
         },
@@ -183,8 +183,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Annual Reports and Book of Information of D/o Posts",
             "description": "Department of Posts annual data.",
-            "filename": "Annual_Report_and_Book_of_Information.pdf",
-            "path": "/notes/paper-1/Annual_Report_and_Book_of_Information.pdf",
+            "filename": "Annual_Report_Book_of_Information_2024-25_2025-26.pdf",
+            "path": "/notes/paper-1/Annual_Report_Book_of_Information_2024-25_2025-26.pdf",
             "size": "4.5 MB",
             "color": "sky",
             "topic": "Reports & Misc"
