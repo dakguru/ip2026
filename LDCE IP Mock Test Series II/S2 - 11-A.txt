@@ -1,0 +1,886 @@
+Q1. Under the Right to Information Act, 2005, what is the maximum time limit for a Public Information Officer to provide information if the request concerns the life or liberty of a person?
+A. Within forty-eight hours of receipt of the request
+B. Within seventy-two hours of receipt of the request
+C. Within twenty-four hours of receipt of the request
+D. Within ninety-six hours of receipt of the request
+Answer: A
+Explanation: Where the information sought concerns the life or liberty of a person, it must be provided within 48 hours of the receipt of the request as per the proviso to Section 7(1) of the Act.
+
+Q2. What is the current term of office for the Chief Information Commissioner as per the Right to Information Rules, 2019?
+A. Five years from the date of entering office
+B. Three years from the date of entering office
+C. Four years from the date of entering office
+D. Six years from the date of entering office
+Answer: B
+Explanation: Under Rule 3 of the RTI (Term of Office, Salaries, Allowances and Other Terms and Conditions of Service...) Rules, 2019, the CIC holds office for a fixed term of three years from entering office.
+
+Q3. As per Section 44(3) of the Digital Personal Data Protection Act, 2023, which of the following modifications was made to Section 8(1)(j) of the RTI Act?
+A. It added a new public interest override for foreign data
+B. It restricted the disclosure of any third-party records
+C. It deleted the internal public interest override proviso
+D. It exempted all biometric information from disclosure
+Answer: C
+Explanation: The DPDP Act, 2023 amended Section 8(1)(j) by deleting the internal "larger public interest" override and the Parliament proviso, simplifying the clause to exempt "information which relates to personal information."
+
+Q4. Consider the following statements regarding the third-party information procedure under Section 11 of the RTI Act:
+
+1. The PIO must give written notice to the third party within 5 days.
+2. The third party has a 10-day window to make a representation.
+3. The PIO must decide within 40 days of the original request.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Section 11 of the Act strictly prescribes a 5-day limit for notice, a 10-day representation window for the third party, and a 40-day overall limit from the original request for the PIO's decision.
+
+
+
+Q5. A person belonging to the Below Poverty Line (BPL) category applies for information involving 50 pages of photocopies. How much fee is chargeable?
+A. No fee is chargeable provided a valid BPL certificate is submitted
+B. Rupees two per page is chargeable for the requested photocopies
+C. Only the application fee is waived, but copy charges are payable
+D. A flat concession of fifty percent is applicable to the total fee
+Answer: A
+Explanation: Under Rule 5 of the RTI Rules, 2012, no fee (neither the application fee under Rule 3 nor the provision fee under Rule 4) shall be charged from any person who is below poverty line.
+
+Q6. What is the maximum monetary penalty that the Central Information Commission can impose on a PIO for malafidely denying a request?
+A. Rupees 10,000 maximum cap
+B. Rupees 25,000 maximum cap
+C. Rupees 50,000 maximum cap
+D. Rupees 15,000 maximum cap
+Answer: B
+Explanation: Under Section 20(1) of the RTI Act, the Commission shall impose a penalty of ₹250 per day until the application is received or information furnished, subject to a maximum cap of ₹25,000.
+
+Q7. If an RTI request is submitted for information that is held by another public authority, within what maximum time frame must the application be transferred?
+A. Within three days of receipt
+B. Within seven days of receipt
+C. Within five days of receipt
+D. Within ten days of receipt
+Answer: C
+Explanation: As per Section 6(3) of the RTI Act, where information is held by another public authority, the transfer shall be made as soon as practicable and in any case within five days of receipt.
+
+Q8. Which of the following statements is/are not correct regarding the Second Schedule of the RTI Act?
+
+1. It applies to specified intelligence and security organizations.
+2. Information on corruption allegations is fully exempted.
+3. Human rights violation information requires CIC approval.
+A. 1 and 3 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 2 only
+Answer: D
+Explanation: Statement 2 is incorrect because the first proviso to Section 24(1) explicitly states that information pertaining to allegations of corruption and human rights violations is not excluded from disclosure.
+
+
+
+Q9. Which provision allows a Public Information Officer to grant partial access to a record by separating exempt and non-exempt information?
+A. Section 10 of the RTI Act
+B. Section 11 of the RTI Act
+C. Section 08 of the RTI Act
+D. Section 09 of the RTI Act
+Answer: A
+Explanation: Section 10(1) of the RTI Act allows for severability, providing access to that part of the record which does not contain exempt information and which can reasonably be severed from any part that is exempt.
+
+Q10. According to the Right to Information Rules, 2012, what is the prescribed word limit guideline for an RTI application?
+A. Ordinarily not more than two hundred words
+B. Ordinarily not more than five hundred words
+C. Ordinarily not more than three hundred words
+D. Ordinarily not more than four hundred words
+Answer: B
+Explanation: Rule 3 of the RTI Rules, 2012 states that an application shall ordinarily not contain more than 500 words, but no application shall be rejected solely on the ground of exceeding this limit.
+
+Q11. Under Section 19(6) of the RTI Act, within what extended time limit must the First Appellate Authority ideally dispose of a first appeal for recorded reasons?
+A. Maximum sixty days from filing
+B. Maximum ninety days from filing
+C. Maximum forty-five days from filing
+D. Maximum thirty days from filing
+Answer: C
+Explanation: Under Section 19(6), a first appeal shall be disposed of within 30 days of receipt, or within an extended period not exceeding 45 days in total from the date of filing, for reasons recorded in writing.
+
+Q12. Subject to Section 8(3), information relating to any occurrence, event, or matter which took place 20 years before the request must be provided. Which exemptions still apply?
+A. Clauses (a), (b) and (d) of Section 8(1)
+B. Clauses (b), (e) and (g) of Section 8(1)
+C. Clauses (c), (h) and (j) of Section 8(1)
+D. Clauses (a), (c) and (i) of Section 8(1)
+Answer: D
+Explanation: Section 8(3) mandates that the 20-year rule is subject only to the exemptions listed in clauses (a), (c), and (i) of Section 8(1), which protect sovereignty, parliamentary privilege, and Cabinet papers respectively.
+
+Q13. In the context of a Union Territory, who is defined as the "Competent Authority" under Section 2(e) of the Right to Information Act, 2005?
+A. The Administrator appointed under Article 239
+B. The Chief Minister of the Union Territory
+C. The Chief Secretary of the Union Territory
+D. The Lieutenant Governor's Principal Secretary
+Answer: A
+Explanation: Section 2(e) defines the "Competent Authority" for a Union Territory as the Administrator appointed under Article 239 of the Constitution.
+
+Q14. Within what period from the enactment of the RTI Act were public authorities required to publish the specified categories of proactive disclosures?
+A. Within one hundred days of enactment
+B. Within one hundred and twenty days
+C. Within one hundred and fifty days
+D. Within one hundred and eighty days
+Answer: B
+Explanation: Under Section 4(1)(b) of the RTI Act, every public authority was required to publish the specified proactive disclosure particulars within 120 days of the enactment of the Act.
+
+Q15. Consider the following statements about the appointment of State Information Commissioners:
+
+1. They are appointed by the Governor.
+2. The selection committee includes the Chief Justice of the High Court.
+3. The committee includes a State Cabinet Minister nominated by the CM.
+Which is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statement 2 is incorrect. Under Section 15(3), the selection committee consists of the Chief Minister, the Leader of Opposition in the Legislative Assembly, and a State Cabinet Minister. It does not include the Chief Justice.
+
+
+
+Q16. What is the statutory time limit for filing a second appeal to the Information Commission against the decision of a First Appellate Authority?
+A. Sixty days from the date of the decision
+B. Forty-five days from the date of decision
+C. Thirty days from the date of the decision
+D. Ninety days from the date of the decision
+Answer: D
+Explanation: Section 19(3) stipulates that a second appeal lies to the CIC or SIC within 90 days from the date on which the first-appellate decision should have been made or was actually received.
+
+Q17. Under Rule 10(3)(b) of the RTI Rules, 2012, when is an appellant deemed to have availed of all remedies if the First Appellate Authority has made no final order?
+A. After forty-five days from filing the appeal
+B. After thirty days from filing the first appeal
+C. After sixty days from filing the first appeal
+D. After ninety days from filing the first appeal
+Answer: A
+Explanation: Under Rule 10(3)(b), a person is deemed to have availed of all remedies where no final order has been made and a period of 45 days from the date the appeal was preferred has elapsed.
+
+Q18. What is the fixed monthly salary of the Chief Information Commissioner as prescribed under the RTI (Term of Office, Salaries, Allowances...) Rules, 2019?
+A. Rupees 2,25,000 per month (fixed)
+B. Rupees 2,50,000 per month (fixed)
+C. Rupees 2,75,000 per month (fixed)
+D. Rupees 3,00,000 per month (fixed)
+Answer: B
+Explanation: According to Rule 5 of the RTI Rules, 2019, the Chief Information Commissioner receives a fixed pay of ₹2,50,000 per month. Information Commissioners receive ₹2,25,000 per month.
+
+Q19. A citizen requests RTI information to be provided on an electronic diskette. What is the prescribed fee for providing information in this specific format?
+A. Rupees twenty per diskette or floppy
+B. Rupees thirty per diskette or floppy
+C. Rupees fifty per diskette or floppy
+D. Rupees hundred per diskette or floppy
+Answer: C
+Explanation: Under Rule 4(d) of the RTI Rules, 2012, the fee for providing information on a diskette or floppy is explicitly prescribed as rupees fifty per unit.
+
+Q20. Consider the following statements regarding the presence of the appellant before the Commission under Rule 12:
+
+1. The appellant must be informed of the hearing date at least 15 clear days prior.
+2. The appellant may attend through video conferencing where available.
+Which is/are correct?
+A. 1 only
+B. Both 1 and 2
+C. Neither 1 nor 2
+D. 2 only
+Answer: D
+Explanation: Statement 1 is incorrect because Rule 12(1) requires the appellant to be informed of the date of hearing at least 7 clear days before that date, not 15 days. Rule 12(2) expressly permits video conferencing.
+
+
+
+Q21. Which of the following is NOT a prescribed mode for the Commission to serve a notice under Rule 14 of the RTI Rules, 2012?
+A. Speed post with tracking receipt
+B. Electronic mail where address is available
+C. Hand delivery through a Process Server
+D. Service by the party itself (dasti mode)
+Answer: A
+Explanation: Rule 14 allows service by the party itself, by hand delivery (dasti), by registered post with acknowledgement due, or by electronic mail. Speed post is not a listed mode.
+
+Q22. In the Format of Appeal to the Commission (Appendix, RTI Rules 2012), which distinct details must be provided regarding the Public Information Officers?
+A. Only the name of the CPIO who gave the final reply
+B. The CPIO addressed and the CPIO who gave the reply
+C. The designated nodal CPIO of the entire department
+D. Only the CPIO who rejected the initial application
+Answer: B
+Explanation: Items 2 and 3 of the Appendix mandate separate particulars: the name and address of the CPIO to whom the application was addressed, and the CPIO who gave the reply to the application.
+
+Q23. Which of the following statements regarding the removal of an Information Commissioner is/are correct?
+
+1. Removal on grounds of proved misbehaviour requires a Supreme Court inquiry.
+2. The President can directly remove a member adjudged as an insolvent.
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Both are correct. Section 14(1) requires a Supreme Court inquiry for proved misbehaviour or incapacity. Section 14(3) allows the President to directly remove a member for specific grounds like insolvency or conviction.
+
+
+
+Q24. An appellant submits a second appeal missing the required index of documents. Under which rule can the Commission return this appeal for removing deficiencies?
+A. Rule 8 of the RTI Rules, 2012
+B. Rule 10 of the RTI Rules, 2012
+C. Rule 11 of the RTI Rules, 2012
+D. Rule 9 of the RTI Rules, 2012
+Answer: D
+Explanation: Rule 9 of the RTI Rules, 2012 allows an appeal to be returned to the appellant if it is not accompanied by the documents specified in Rule 8, for removing deficiencies and filing it completely.
+
+Q25. If the dispatch of requested information involves postal charges of ₹85, how much is the public authority permitted to recover from the applicant?
+A. Rupees 35 (the excess over rupees 50)
+B. Rupees 85 (the actual postal cost incurred)
+C. Rupees 50 (the flat maximum recovery limit)
+D. Nil (postal charges cannot be recovered)
+Answer: A
+Explanation: Rule 4(g) of the RTI Rules, 2012 states that fee shall be charged for "so much of the postal charge involved in supply of information as exceeds fifty rupees." Thus, ₹85 - ₹50 = ₹35.
+
+Q26. Consider the following documents for filing a second appeal:
+
+1. Copy of the application submitted to the CPIO.
+2. Copy of the reply from the CPIO.
+3. Certificate of clearance from the Nodal Officer.
+Which is/are explicitly required under Rule 8?
+A. 1 and 3 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Rule 8 lists specific documents, including the original application and the CPIO's reply. There is no requirement for a "Certificate of clearance from the Nodal Officer" in the 2012 Rules.
+
+
+
+Q27. What is the prescribed fee for providing information in the form of a photocopy on A-3 or smaller size paper?
+A. Rupees three for each page of photocopy
+B. Rupees five for each page of photocopy
+C. Rupees two for each page of photocopy
+D. Actual cost of copying for each page
+Answer: C
+Explanation: Rule 4(a) of the RTI Rules, 2012 specifies that the fee for providing information shall be charged at "rupees two for each page in A-3 or smaller size paper."
+
+Q28. An RTI application is submitted to a Central Assistant Public Information Officer (CAPIO). How many days are added to the statutory response time?
+A. Three days are added to the response time
+B. Seven days are added to the response time
+C. Ten days are added to the response time
+D. Five days are added to the response time
+Answer: D
+Explanation: Section 5(3) of the RTI Act explicitly states that where an application or appeal is given to a CAPIO, a period of five days shall be added to the standard response time.
+
+Q29. While inquiring into a complaint under Section 18 of the RTI Act, the Information Commission possesses the powers of which of the following entities?
+A. A civil court under the Code of Civil Procedure
+B. A judicial magistrate of the first class
+C. A high court under writ jurisdiction rules
+D. An administrative tribunal for service matters
+Answer: A
+Explanation: Section 18(3) grants the Information Commission, while inquiring into any matter, the powers of a civil court under the Code of Civil Procedure, 1908, regarding summoning, discovery, and receiving evidence.
+
+Q30. Under Section 23 of the RTI Act, which of the following proceedings are barred from being entertained by courts in respect of any order made under the Act?
+A. Only criminal prosecutions against the PIO
+B. Any suit, application or proceeding
+C. Only civil suits claiming monetary damages
+D. Judicial review petitions under Article 226
+Answer: B
+Explanation: Section 23 dictates a bar of jurisdiction, stating that "no court shall entertain any suit, application or proceeding in respect of any order made under this Act." (Writ jurisdiction under the Constitution remains intact).
+
+Q31. Consider the following statements regarding the Second Schedule:
+
+1. It contains State-level intelligence organizations.
+2. The Central Government can amend it by notification.
+3. Notifications amending it must be laid before Parliament.
+Which is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statement 1 is incorrect because the Second Schedule lists only Central-Government organizations. State-level units are specified by separate State notifications under Section 24(4), not in the Central Second Schedule.
+
+
+
+Q32. If a State Information Commissioner wishes to resign from office, to whom must the resignation letter be addressed according to the RTI Act?
+A. The Chief Minister of the respective State
+B. The Chief Information Commissioner of India
+C. The President of the Republic of India
+D. The Governor of the respective State
+Answer: D
+Explanation: Section 16(4) of the RTI Act specifies that the State Chief Information Commissioner or a State Information Commissioner may resign their office by writing under their hand addressed to the Governor.
+
+Q33. Which of the following is specifically included in the definition of "Information" under Section 2(f) of the RTI Act?
+A. Information relating to any private body accessible by a public authority under any other law
+B. Internal thoughts, undocumented opinions, and verbal discussions of administrative officers
+C. Personal information of public servants explicitly exempted under the Official Secrets Act
+D. Only the final printed Gazette notifications published directly by the central government
+Answer: A
+Explanation: Section 2(f) defines "Information" to include "information relating to any private body which can be accessed by a public authority under any other law for the time being in force."
+
+Q34. Based on the 10.07.2024 amendment to the General Financial Rules, 2017, what is the revised threshold above which Open Tender Enquiry (OTE) should generally be adopted?
+A. Rupees 25 lakh and above
+B. Rupees 50 lakh and above
+C. Rupees 10 lakh and above
+D. Rupees 100 lakh and above
+Answer: B
+Explanation: The DoE OM dated 10.07.2024 revised the threshold for Open Tender Enquiry (Rule 161) from ₹25 lakh to ₹50 lakh and above.
+
+Q35. Under Rule 149 of GFR 2017, what is the threshold above which mandatory online bidding or reverse auction on GeM must be utilized for procurement?
+A. Above Rupees 2,50,000
+B. Above Rupees 5,00,000
+C. Above Rupees 10,00,000
+D. Above Rupees 15,00,000
+Answer: C
+Explanation: The 10.07.2024 amendment to Rule 149(iii) mandates that for procurements above ₹10,00,000, purchases must be made after mandatorily obtaining bids using online bidding or reverse auction on GeM.
+
+Q36. According to the DoE OM dated 01.01.2024, what is the revised range for Performance Security for the procurement of Goods and Services?
+A. 2% to 5% of the contract value
+B. 5% to 10% of the contract value
+C. 3% to 10% of the contract value
+D. 3% to 5% of the contract value
+Answer: D
+Explanation: The DoE OM dated 01.01.2024 revised the Performance Security requirement for Goods and Consultancy/Non-Consultancy Services to 3% to 5% of the value of the contract.
+
+Q37. Under the Public Procurement (Preference to Make in India) Order, 2017, what is the exact margin of purchase preference provided to a Class-I local supplier?
+A. L1 + 20% margin
+B. L1 + 10% margin
+C. L1 + 15% margin
+D. L1 + 25% margin
+Answer: A
+Explanation: The margin of purchase preference under the PPP-MII Order, 2017 (including the 19.07.2024 revision) is fixed at 20% (L1 + 20%), allowing a Class-I supplier within this margin to match L1.
+
+Q38. What is the maximum advance payment ceiling ordinarily permissible for private firms in fabrication contracts, without special relaxation?
+A. 20% of the contract value
+B. 30% of the contract value
+C. 40% of the contract value
+D. 50% of the contract value
+Answer: B
+Explanation: Rule 172 of the GFR restricts advance payments to private firms to a maximum of 30% of the contract value. For State/Central Government Agencies or PSUs, it is 40%.
+
+Q39. Consider the following statements regarding the MSE Procurement Policy:
+
+1. The mandatory minimum procurement target from MSEs is 25%.
+2. Out of this 25%, a 3% sub-target is earmarked for SC/ST owned MSEs.
+3. Participating MSEs quoting within L1 + 15% can match the L1 price.
+Which is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statement 2 is incorrect because the sub-target for SC/ST owned MSEs is 4%, while the 3% sub-target is earmarked for Women entrepreneurs. Statements 1 and 3 are correct.
+
+
+
+Q40. Under Rule 154 (Direct Procurement without Quotation), what is the revised monetary limit per case for purchasing off-the-shelf goods not available on GeM?
+A. Up to Rupees 25,000 per case
+B. Up to Rupees 1,00,000 per case
+C. Up to Rupees 75,000 per case
+D. Up to Rupees 50,000 per case
+Answer: D
+Explanation: The 10.07.2024 amendment revised the limit for petty purchases without quotation (Rule 154) from ₹25,000 to ₹50,000.
+
+Q41. What is the financial limit for Direct Procurement by a Local Purchase Committee consisting of three members, as revised on 10.07.2024?
+A. Between ₹50,000 and ₹5,00,000
+B. Between ₹25,000 and ₹2,50,000
+C. Between ₹10,000 and ₹1,00,000
+D. Between ₹50,000 and ₹10,00,000
+Answer: A
+Explanation: Under Rule 155, the Local Purchase Committee mode is applicable for purchases of goods costing above ₹50,000 and up to ₹5,00,000 on each occasion, following the 10.07.2024 amendment.
+
+Q42. Which of the following conditions justifies the use of a Single Tender Enquiry (STE) without a Proprietary Article Certificate?
+
+1. Existing or prospective emergency relating to operational requirements.
+2. Standardization of machinery to be compatible with existing equipment.
+3. Need to award a contract to an unverified new supplier for testing.
+A. 1 and 3 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 3 only
+Answer: B
+Explanation: Under Rule 166, STE without PAC is justified only during emergencies for operational/technical requirements or for standardizing machinery/components with existing equipment.
+
+
+
+Q43. What is the maximum duration for which an item may be procured continuously on a Proprietary Article Certificate (PAC) basis before a mandatory Open Tender Enquiry must be conducted?
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Answer: C
+Explanation: The Manual for Procurement of Goods dictates that no item should be procured on a PAC basis for more than 3 years, after which a mandatory OTE must be done to test the market.
+
+Q44. What is the standard rate of Liquidated Damages (LD) recovered per week of delay when stores are accepted after the original delivery period expires?
+A. 0.25% of the delayed portion's delivered price
+B. 1.00% of the delayed portion's delivered price
+C. 2.00% of the delayed portion's delivered price
+D. 0.50% of the delayed portion's delivered price
+Answer: D
+Explanation: The standard quantum of Liquidated Damages for late delivery is 0.5% (half percent) per week or part thereof of delay, calculated on the delivered price of the late-delivered portion.
+
+Q45. Under the standard Force Majeure (FM) clause, after how many days of continuous prevention or delay can either party terminate the contract without financial repercussion?
+A. Exceeding 90 days
+B. Exceeding 60 days
+C. Exceeding 45 days
+D. Exceeding 120 days
+Answer: A
+Explanation: The Force Majeure clause stipulates that if performance is prevented or delayed by an FM event for a period exceeding 90 days, either party may terminate the contract without financial repercussion.
+
+Q46. What is the minimum required gap between the advertisement date and the bid-opening date for a Global Tender Enquiry (GTE)?
+A. Three weeks
+B. Four weeks
+C. Six weeks
+D. Eight weeks
+Answer: B
+Explanation: For a Global Tender Enquiry (GTE), the minimum gap between the advertisement and bid opening is 4 weeks, which can be extended with Competent Authority approval.
+
+Q47. In tenders for raw materials of recurrent requirement above ₹50 lakh, what is the typically recommended percentage limit for the Option Clause?
+A. Plus or minus 15 percent
+B. Plus or minus 10 percent
+C. Plus or minus 25 percent
+D. Plus or minus 50 percent
+Answer: C
+Explanation: The Option Clause typically allows the purchaser to increase or decrease the ordered quantity by up to 25 percent (± 25%) at the same rates and terms.
+
+Q48. Up to what financial limit (per case) can scrap be disposed of via direct sale to local scrap dealers on a summary-quotation basis?
+A. Up to Rupees 5,000
+B. Up to Rupees 10,000
+C. Up to Rupees 25,000
+D. Up to Rupees 15,000
+Answer: D
+Explanation: The Manual prescribes direct sale to local scrap dealers on a summary-quotation basis for scrap or surplus goods with a value up to ₹15,000 in each case.
+
+Q49. Consider the procurement of goods on GeM between ₹50,000 and ₹10,00,000. Which condition must be satisfied to select the L1 seller?
+A. The L1 seller must be among available sellers of at least three different manufacturers.
+B. The L1 seller must possess a valid Class-I Local Supplier certification.
+C. The L1 seller must have a history of at least five successful GeM transactions.
+D. The L1 seller must offer a delivery period shorter than fifteen working days.
+Answer: A
+Explanation: Rule 149(ii) requires that for purchases between ₹50,000 and ₹10,00,000 on GeM, the buyer selects the lowest price (L1) among available sellers of at least 3 different manufacturers.
+
+Q50. How does the requirement for Bid Security and Performance Security differ between a standard Limited Tender Enquiry (LTE) and a Special Limited Tender Enquiry (SLTE)?
+A. Both modes strictly exempt bidders from providing any form of security.
+B. SLTE requires both securities, whereas standard LTE usually does not.
+C. Standard LTE requires both securities, whereas SLTE strictly exempts them.
+D. Both modes mandate identical security deposits regardless of bidder registration.
+Answer: B
+Explanation: In standard LTE, selected bidders are usually registered, so Bid and Performance Securities are normally not taken. In SLTE (used at OTE-level values), Bid Security and Performance Security are mandated.
+
+Q51. What is the minimum gap required between the date of advertisement and the date of bid-opening in an Open Tender Enquiry (OTE)?
+A. 14 days
+B. 30 days
+C. 21 days
+D. 28 days
+Answer: C
+Explanation: Rule 161 mandates that the minimum gap between the advertisement date and the bid-opening date for an Open Tender Enquiry (OTE) shall be 21 days.
+
+Q52. If the bid validity period is not explicitly mentioned in the tender document, what is the default validity period of a bid?
+A. 30 days
+B. 60 days
+C. 120 days
+D. 90 days
+Answer: D
+Explanation: According to the Manual for Procurement, a bid shall remain valid for the period mentioned in the tender document; if not so specified, the default validity period is 90 days.
+
+Q53. How long must a Performance Security remain valid according to the procurement rules?
+A. 60 days beyond the date of completion of all contractual obligations
+B. 30 days beyond the date of completion of all contractual obligations
+C. 90 days beyond the date of completion of all contractual obligations
+D. 45 days beyond the date of completion of all contractual obligations
+Answer: A
+Explanation: Performance security is required to remain valid for a period of 60 days beyond the date of completion of all contractual obligations, including warranty obligations.
+
+Q54. Under the GFR provisions for Bid Security (Earnest Money Deposit), what is the threshold below which EMD is entirely exempted?
+A. Tender value up to Rupees 2 lakh
+B. Tender value up to Rupees 5 lakh
+C. Tender value up to Rupees 10 lakh
+D. Tender value up to Rupees 1 lakh
+Answer: B
+Explanation: Rule 170 specifies that Bid Security (Earnest Money Deposit - EMD) is not required if the tender value is up to ₹5 lakh.
+
+Q55. Consider the following statements regarding timely payments to MSEs under the MSMED Act, 2006:
+
+1. The agreed payment period cannot exceed 45 days from deemed acceptance.
+2. The buyer must raise discrepancies within 30 days of receiving materials.
+3. Delayed payment attracts compound interest at three times the RBI bank rate.
+Which is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: C
+Explanation: Statement 2 is incorrect because the procuring entity must raise an objection within 15 days of the receipt of materials, not 30 days. Statements 1 and 3 correctly reflect Sections 15 and 16.
+
+
+
+Q56. Under the 2024 revision of the Make in India Order, how is a manufacturer producing an item under a Production-Linked Incentive (PLI) Scheme treated if their local content is below the Class-I threshold?
+A. Treated as a Non-Local Supplier restricted to GTEs
+B. Automatically elevated to a Class-I Local Supplier
+C. Permanently banned from participating in any GeM bids
+D. Treated as a deemed Class-II local supplier for that item
+Answer: D
+Explanation: Para 1A of the revised PPP-MII Order grants a PLI manufacturer deemed Class-II local supplier status for that item, provided they receive the incentive and fall below the Class-I threshold.
+
+Q57. What is the fundamental change regarding advance payments highlighted in the Manual for Procurement of Goods, 2nd Edition 2024?
+A. Advance payments must now generally be interest-free by default
+B. Advance payments are strictly barred for any private fabrication contracts
+C. Advance payments must always carry interest at three times the bank rate
+D. Advance payments to State PSUs are capped at thirty percent of value
+Answer: A
+Explanation: The 2024 Manual clarifies that advance payments may be considered interest-free (with CA approval and finance concurrence). The interest-bearing fallback applies only if the contractor defaults.
+
+Q58. Which of the following is specifically excluded from the definition of "Goods" under Rule 143 of GFR 2017?
+A. Intangible products like software and technology transfer
+B. Books, publications, and periodicals for a library
+C. Spare parts, instruments, and industrial plant equipment
+D. Live animals, livestock, and necessary medical supplies
+Answer: B
+Explanation: Rule 143 defines "Goods" broadly but explicitly excludes books, publications, periodicals, etc., when procured for a library. Software and livestock are included in the definition.
+
+Q59. To ensure energy efficiency, what is the minimum Bureau of Energy Efficiency (BEE) star rating required for Split Air Conditioners intended for limited use (e.g., conference rooms)?
+A. 2 Star
+B. 5 Star
+C. 3 Star
+D. 4 Star
+Answer: C
+Explanation: For Split ACs intended for limited use (like conference rooms), the prescribed minimum BEE star rating is 3 Star, whereas for annual usage over 1,000 hours, it is 5 Star.
+
+Q60. According to the DoE OM dated 03.08.2021, up to what estimated procurement value is a Global Tender Enquiry (GTE) strictly restricted without special exemption?
+A. Procurements up to ₹100 crore
+B. Procurements up to ₹50 crore
+C. Procurements up to ₹500 crore
+D. Procurements up to ₹200 crore
+Answer: D
+Explanation: The Department of Expenditure mandated that no GTE is to be invited for procurements up to ₹200 crore, aiming to promote domestic industry unless specific bona-fide exemptions apply.
+
+Q61. What is the direct-purchase financial ceiling for automobiles on the Government e-Marketplace (GeM)?
+A. Up to Rupees 30 lakh
+B. Up to Rupees 50 lakh
+C. Up to Rupees 10 lakh
+D. Up to Rupees 25 lakh
+Answer: A
+Explanation: The direct-purchase ceiling for automobiles on GeM continues to be ₹30 lakh. This specific ceiling was not altered by the 10.07.2024 general limit amendments.
+
+Q62. What is the standard maximum deduction cap for Liquidated Damages (LD) as a percentage of the total contract value, excluding cases of inordinate delay?
+A. 10% of the total contract value
+B. 5% of the total contract value
+C. 15% of the total contract value
+D. 2% of the total contract value
+Answer: B
+Explanation: The standard maximum deduction for Liquidated Damages is 5% of the total contract value. It is raised to 10% only in cases of inordinate delay.
+
+Q63. Under contract management guidelines, what constitutes an "inordinate delay" that triggers a maximum Liquidated Damages deduction of 10%?
+A. Delay exceeding 10% of the total completion period
+B. Delay exceeding 50% of the total completion period
+C. Delay exceeding 25% of the total completion period
+D. Delay exceeding 15% of the total completion period
+Answer: C
+Explanation: Inordinate delay is defined as an inexcusable delay of more than one-fourth (25%) of the total completion period, which raises the maximum LD deduction to 10%.
+
+Q64. When the scrap value of goods exceeds ₹4 lakh, which disposal mode is explicitly preferred by the Manual for Procurement?
+A. Direct sale to local scrap dealers on summary quotation
+B. Limited Tender Enquiry to known regional scrap dealers
+C. Direct inter-departmental transfer at the book value
+D. E-auction using NIC, MSTC, or another appropriate portal
+Answer: D
+Explanation: For scrap or surplus goods valued above ₹4 lakh, the preferred mode of disposal is e-auction (using portals like NIC or MSTC), tender for disposal, or traditional public auction.
+
+Q65. Within the 25% mandatory procurement target from Micro and Small Enterprises (MSEs), what specific percentage is earmarked for MSEs owned by Women entrepreneurs?
+A. 3% of the total annual procurement
+B. 4% of the total annual procurement
+C. 5% of the total annual procurement
+D. 2% of the total annual procurement
+Answer: A
+Explanation: As per the 2018 Amendment to the MSE Policy (effective 01.04.2019), out of the 25% target, 3% is specifically earmarked for MSEs owned by Women entrepreneurs.
+
+Q66. When must the bid security (EMD) of an unsuccessful bidder ordinarily be returned by the procuring entity?
+A. Only after the successful bidder completes all warranty obligations
+B. At the earliest after bid validity expires and latest by the 30th day after award
+C. Immediately upon the opening of the initial techno-commercial bids
+D. Within 60 days of the physical delivery of the procured materials
+Answer: B
+Explanation: Rule 170 mandates that bid securities of unsuccessful bidders be returned at the earliest after the expiry of the final bid validity, and latest by the 30th day after the award of the contract.
+
+Q67. Under Rule 26 of the CCS (Leave) Rules, 1972, what is the absolute lifetime accumulation ceiling for Earned Leave for a Central Government servant?
+A. 180 days
+B. 240 days
+C. 300 days
+D. 360 days
+Answer: C
+Explanation: Earned Leave (EL) can be accumulated up to a maximum ceiling of 300 days. Any credit that pushes the balance above this limit is set off against leave taken in that half-year.
+
+Q68. A government servant is removed from service in the month of October. Up to which month will Half Pay Leave (HPL) be calculated for their final half-year credit?
+A. Up to the end of October
+B. Up to the exact date of removal
+C. Up to the end of December
+D. Up to the end of September
+Answer: D
+Explanation: For removal or dismissal, HPL (and EL) is calculated at the regular rate per completed month up to the end of the month preceding the removal/dismissal (i.e., September).
+
+Q69. What is the maximum number of days of Child Care Leave (CCL) a female government servant can avail during her entire service?
+A. 730 days
+B. 365 days
+C. 180 days
+D. 540 days
+Answer: A
+Explanation: Under Rule 43-C, the maximum limit for Child Care Leave during the entire service is 730 days, granted for the two eldest surviving children.
+
+Q70. Consider the following statements about Earned Leave in a Vacation Department (Rule 28):
+
+1. EL is credited in two instalments of 10 days each.
+2. The total EL credited in a calendar year cannot exceed 30 days.
+3. If no vacation is availed, EL is admissible as under Rule 26.
+Which is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation: Statement 1 is incorrect because EL in a Vacation Department is credited in two instalments of 5 days each (on 1 Jan and 1 Jul), not 10 days. Statements 2 and 3 are correct.
+
+
+
+Q71. Under the Work-Related Illness and Injury Leave (WRIIL) rules, what is the specific leave salary entitlement beyond hospitalisation for personnel below officer rank of the CAPF?
+A. Full pay for 6 months, then half pay for 12 months
+B. Full pay for 6 months, then full pay only for 24 months
+C. Full pay and allowances, with no limit on the period
+D. Half pay and allowances restricted to a maximum of 36 months
+Answer: C
+Explanation: Rule 44 specifies that for personnel below officer rank of the CAPF, WRIIL is granted with full pay and allowances beyond hospitalisation, with no limit on the period.
+
+Q72. According to the 2024 surrogacy amendment to the CCS (Leave) Rules, what is the duration of Maternity Leave granted to a commissioning mother?
+A. 90 days from the date of commencement
+B. 120 days from the date of commencement
+C. 135 days from the date of commencement
+D. 180 days from the date of commencement
+Answer: D
+Explanation: Rule 43(6), inserted by G.S.R. 331(E) dated 18.06.2024, grants Maternity Leave of 180 days to both the surrogate mother and the commissioning mother (if they have less than two surviving children).
+
+Q73. What is the maximum age of the adopted child for a female government servant to be eligible for 180 days of Child Adoption Leave under Rule 43-B?
+A. Below one year
+B. Below two years
+C. Below three years
+D. Below five years
+Answer: A
+Explanation: Rule 43-B grants 180 days of Child Adoption Leave to a female servant with less than two surviving children on the valid adoption of a child below one year of age.
+
+Q74. What is the lifetime maximum limit for Leave Not Due (LND) that can be granted to a permanent government servant on a medical certificate?
+A. 180 days during the whole service
+B. 360 days during the whole service
+C. 240 days during the whole service
+D. 730 days during the whole service
+Answer: B
+Explanation: Rule 31 specifies that Leave Not Due may be granted up to a lifetime maximum of 360 days during the entire service, debited against future HPL.
+
+Q75. Unless specifically exempted by the President, what is the absolute maximum period of continuous leave of any kind that a government servant can be granted?
+A. 2 years
+B. 3 years
+C. 5 years
+D. 7 years
+Answer: C
+Explanation: Rule 12 dictates that no government servant shall be granted leave of any kind for a continuous period exceeding 5 years. Absence beyond this is treated as deemed resignation.
+
+Q76. A government servant with 200 days of Earned Leave and 120 days of Half Pay Leave resigns from service. What is the maximum encashment they are entitled to?
+A. 300 days (200 days EL + 100 days HPL)
+B. 200 days (Full EL only, no HPL)
+C. 100 days (Half of EL, no HPL)
+D. 150 days (Half of EL, capped at 150)
+Answer: C
+Explanation: On resignation, only Earned Leave is encashed, restricted to half of the EL at credit, subject to a maximum of 150 days. Half of 200 is 100 days. HPL is not encashed on resignation.
+*(Self-correction: The math is 200/2 = 100. So 100 days is the answer. Option C fits perfectly.)* Wait, option length parity. I will ensure they are balanced.
+
+Q77. Without a medical certificate, what is the maximum amount of Half Pay Leave (HPL) that can be commuted for an approved course of study in the public interest?
+A. Up to 180 days HPL during the whole service
+B. Up to 120 days HPL during the whole service
+C. Up to 90 days HPL during the whole service
+D. Up to 240 days HPL during the whole service
+Answer: A
+Explanation: Under Rule 30, up to 180 days of HPL may be commuted without a medical certificate during the entire service if utilized for an approved course of study in the public interest.
+
+Q78. What is the maximum limit of Extraordinary Leave (EXOL) on any one occasion for a non-permanent servant undergoing treatment for pulmonary tuberculosis?
+A. 6 months
+B. 18 months
+C. 24 months
+D. 12 months
+Answer: B
+Explanation: Rule 32 permits a non-permanent servant with at least one year's service to take up to 18 months of EXOL for the treatment of pulmonary tuberculosis, leprosy, cancer, or mental illness.
+
+Q79. How many days of Paternity Leave for Child Adoption are admissible to a male government servant under Rule 43-AA?
+A. 30 days within six months of adoption
+B. 45 days within six months of adoption
+C. 15 days within six months of adoption
+D. 60 days within six months of adoption
+Answer: C
+Explanation: Rule 43-AA (amended in 2023) grants 15 days of Paternity Leave to a male servant on the valid adoption of a child below one year, to be availed within 6 months from the date of adoption.
+
+Q80. Under the DoPT O.M. dated 02.09.2022, how many days of Special Maternity Leave are granted to a female servant in the event of stillbirth or death of a child soon after birth?
+A. 30 days
+B. 45 days
+C. 90 days
+D. 60 days
+Answer: D
+Explanation: A female servant with less than two surviving children is entitled to 60 days of Special Maternity Leave if a child dies soon after birth (within 28 days) or in the case of stillbirth.
+
+Q81. What is the maximum number of days of Special Casual Leave (SCL) granted for donating an organ to another human being, according to the 2023 guidelines?
+A. Up to 42 days taken in one stretch
+B. Up to 30 days taken in one stretch
+C. Up to 60 days taken in one stretch
+D. Up to 15 days taken in one stretch
+Answer: A
+Explanation: Under DoPT O.M. dated 25.04.2023, Special Casual Leave up to 42 days may be granted to an employee donating an organ, notwithstanding the standard 30-day SCL ceiling for other matters.
+
+Q82. How many days of Special Casual Leave are permitted to a female government servant undergoing a tubectomy operation?
+A. Up to 10 days
+B. Up to 14 days
+C. Up to 21 days
+D. Up to 7 days
+Answer: B
+Explanation: The DoPT Brochure specifies that up to 14 days of Special Casual Leave is granted to a female servant undergoing tubectomy/salpingectomy (first or second time, including laparoscopic/post-MTP).
+
+Q83. Over an entire career, what is the maximum cumulative number of days of Earned Leave a government servant can encash while availing Leave Travel Concession (LTC)?
+A. 30 days
+B. 90 days
+C. 60 days
+D. 120 days
+Answer: C
+Explanation: Rule 38-A allows encashment of up to 10 days of EL on each LTC occasion, subject to a lifetime cumulative maximum of 60 days, provided a balance of 30 days remains.
+
+Q84. Consider the following categories of employees:
+
+1. Railway servants.
+2. Persons employed in work-charged establishments.
+3. Members of the All India Services (IAS, IPS).
+Which of these are excluded from the CCS (Leave) Rules, 1972?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: D
+Explanation: Rule 2 explicitly excludes Railway servants, persons in work-charged establishments, and members of the All India Services (among others) from the application of the CCS (Leave) Rules.
+
+
+
+Q85. What is the maximum amount of Earned Leave (EL) that can be granted at a time to a government servant employed in India?
+A. 180 days
+B. 240 days
+C. 300 days
+D. 150 days
+Answer: A
+Explanation: Under Rule 26, the maximum amount of Earned Leave that can be granted at a time is 180 days. A relaxation up to 300 days exists for Group A/B officers spending leave abroad.
+
+Q86. A government servant has 85 days of unauthorized absence treated as dies-non during a half-year. How many days will be deducted from their next Half Pay Leave (HPL) credit?
+A. 8 days
+B. 5 days
+C. 10 days
+D. 4 days
+Answer: B
+Explanation: Dies-non reduces the next half-year's HPL credit by 1/18th of the period, max 10 days. 85 × 1/18 = 4.72, which is rounded to the nearest day, resulting in a reduction of 5 days.
+
+Q87. Which of the following statements correctly describes the rule regarding leave for a government servant placed under suspension?
+A. They can avail only Half Pay Leave during the suspension
+B. They can avail Earned Leave up to a maximum of 30 days
+C. Leave is strictly not granted to a servant under suspension
+D. Leave Not Due may be granted on medical certificate only
+Answer: C
+Explanation: According to the Government Decisions under Rule 17 of the CCS (Leave) Rules, leave is not to be granted to a government servant who is under suspension.
+
+Q88. How many days of special leave can be granted to an aggrieved female servant during the pendency of an inquiry under the Sexual Harassment Act, 2013?
+A. Up to 45 days
+B. Up to 60 days
+C. Up to 180 days
+D. Up to 90 days
+Answer: D
+Explanation: Rule 48 states that on the recommendation of the Internal/Local Committee, an aggrieved female servant may be granted up to 90 days of leave, which is not debited to her leave account.
+
+Q89. What is the maximum duration of Study Leave (excluding CHS medical officers) that can be granted to a government servant during their entire service?
+A. 24 months
+B. 36 months
+C. 12 months
+D. 48 months
+Answer: A
+Explanation: Under Rule 51, the maximum amount of Study Leave is 12 months at any one time, and 24 months during the entire service. (Central Health Service medical officers may get up to 36 months).
+
+Q90. What is the total annual Casual Leave (CL) entitlement for a Central Government employee with disabilities?
+A. 8 days per calendar year
+B. 12 days per calendar year
+C. 10 days per calendar year
+D. 15 days per calendar year
+Answer: B
+Explanation: The DoPT Casual Leave rules grant employees with disabilities 12 days of CL per year, which consists of the standard 8 days plus 4 additional days specifically for them.
+
+Q91. How many working days of Special Casual Leave (SCL) are initially granted to a male government servant undergoing a vasectomy operation?
+A. 3 working days
+B. 10 working days
+C. 6 working days
+D. 14 working days
+Answer: C
+Explanation: The current DoPT Brochure grants up to 6 working days of Special Casual Leave for a male servant undergoing a vasectomy (and a further 6 days if a second operation is needed).
+
+Q92. Under Rule 43-C, how many spells of Child Care Leave (CCL) are permitted in a calendar year for a single female government servant?
+A. 2 spells
+B. 3 spells
+C. 4 spells
+D. 6 spells
+Answer: D
+Explanation: Normally, CCL is not granted in more than 3 spells in a calendar year. However, for a single female servant, this is extended to a maximum of 6 spells per calendar year.
+
+Q93. Consider the following statements about Work-Related Illness and Injury Leave (WRIIL):
+
+1. It replaced the old Special Disability Leave regime.
+2. Full pay and allowances are given during hospitalisation.
+3. It is debited against Earned Leave and Half Pay Leave accounts.
+Which is/are correct?
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Statement 3 is incorrect because WRIIL is not debited to the standard leave account, and no EL or HPL is credited during the WRIIL period. Statements 1 and 2 are accurate.
+
+
+
+Q94. If a servant resigns voluntarily without returning to duty after availing Commuted Leave, how is the leave treated?
+A. It is ignored and no recovery of leave salary is made
+B. It is treated as HPL and the salary difference is recovered
+C. It is converted into Extraordinary Leave retrospectively
+D. It is deducted from the final encashment of Earned Leave
+Answer: B
+Explanation: Under Rule 30, if a servant resigns without returning, the commuted leave is treated as Half Pay Leave (HPL), and the difference in leave salary between commuted leave and HPL is recovered.
+
+Q95. A servant avails 84 days of extraordinary leave (EXOL) during the July-December half-year. How many days will be reduced from the Earned Leave credit on January 1?
+A. 4 days
+B. 10 days
+C. 8 days
+D. 15 days
+Answer: C
+Explanation: Rule 27 dictates that EL credit is reduced by 1/10th of the EXOL/dies-non period. 84 × 1/10 = 8.4, which is rounded to 8 days. So, 8 days are deducted from the 15-day advance credit.
+
+Q96. What is the maximum age limit of a child with a minimum 40% disability for the purpose of granting Child Care Leave?
+A. Below 18 years
+B. Below 22 years
+C. Below 25 years
+D. There is no age cap
+Answer: D
+Explanation: Though Rule 43-C historically mentioned 22 years, DoPT O.M. No. 13018/6/2013-Estt.(L) removed the 22-year age limit. In practice, CCL for a disabled child has no age cap.
+
+Q97. In the event of death in service, to whom is the cash equivalent of leave (Rule 39-C) paid first?
+A. Widow or husband
+B. Eldest surviving son
+C. Eldest unmarried daughter
+D. Dependent parents
+Answer: A
+Explanation: Rule 39-C establishes the order of precedence for payment of the cash equivalent upon death in service. The first in the order is the widow or husband, followed by the eldest surviving/adopted son.
+
+Q98. Within what time frame must a male government servant avail the 15-day Paternity Leave surrounding his wife's confinement?
+A. Up to 15 days before, or up to 3 months from delivery
+B. Up to 15 days before, or up to 6 months from delivery
+C. Up to 30 days before, or up to 6 months from delivery
+D. Up to 15 days before, or up to 12 months from delivery
+Answer: B
+Explanation: Rule 43-A stipulates that Paternity Leave must be availed during the wife's confinement—specifically, up to 15 days before, or up to 6 months from, the date of delivery.
+
+Q99. Consider the provisions for proxy submission of a leave application under Rule 14. Which of the following relatives is NOT explicitly authorized to sign if the servant is disabled?
+A. The spouse of the disabled servant
+B. A child who has attained majority
+C. A minor sibling of the disabled servant
+D. The parents if the servant is unmarried
+Answer: C
+Explanation: Rule 14 allows proxy submission by a spouse, parents (if unmarried), a child who has attained majority, or a sibling who has attained majority. A minor sibling is not authorized.
+
+Q100. Under Rule 49, what is the maximum duration of Departmental Leave that can be granted at a time to Survey of India staff in normal circumstances?
+A. Not more than 3 months at a time
+B. Not more than 12 months at a time
+C. Not more than 9 months at a time
+D. Not more than 6 months at a time
+Answer: D
+Explanation: Rule 49 specifies that Departmental Leave for Survey of India staff shall not exceed 6 months at a time, though it is extendable to 18 months in special cases.
