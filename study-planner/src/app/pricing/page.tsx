@@ -119,7 +119,7 @@ export default function PricingPage() {
         if (!couponCode.trim()) return;
 
         if (isUpgradeMode) {
-            alert("No 50% discount code is applicable for plan upgrades.");
+            alert("No 30% discount code is applicable for plan upgrades.");
             setCouponCode("");
             setDiscount(0);
             return;
@@ -139,7 +139,7 @@ export default function PricingPage() {
             if (res.ok && data.valid) {
                 // Determine base price for discount: if upgrading, use effectivePrice, otherwise full price
                 const baseForDiscount = isUpgradeMode ? effectivePrice : selectedPlan.price;
-                const percentage = (data.discount || 50) / 100;
+                const percentage = (data.discount || 30) / 100;
                 const discountAmount = Math.round(baseForDiscount * percentage);
                 setDiscount(discountAmount);
                 alert(`Coupon Applied! You saved ₹${discountAmount}`);
@@ -164,7 +164,7 @@ export default function PricingPage() {
             });
             const data = await res.json();
             if (res.ok && data.valid) {
-                return { valid: true, discount: data.discount || 50 };
+                return { valid: true, discount: data.discount || 30 };
             } else {
                 return { valid: false, discount: 0, error: data.error || "Invalid Coupon" };
             }

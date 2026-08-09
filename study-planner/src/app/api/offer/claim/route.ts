@@ -85,7 +85,7 @@ async function sendCouponEmail(email: string, name: string, code: string) {
   const mailOptions = {
     from: `Dak Guru Offers <${process.env.EMAIL_USER}>`,
     to: email,
-    subject: '🎉 Congratulations! Here is your 50% OFF Launch Offer Code',
+    subject: '🎉 Congratulations! Here is your 30% OFF Discount Code',
     html: `
 <!DOCTYPE html>
 <html>
@@ -163,7 +163,7 @@ async function sendCouponEmail(email: string, name: string, code: string) {
     <div class="content">
       <p class="greeting">Hello, <strong>${name}</strong>!</p>
       <p class="message">
-        Thank you for being one of our first supporters. As a token of our appreciation, we are thrilled to present you with this exclusive <strong>50% Discount Code</strong> for our Gold & Silver Plans.
+        Thank you for being one of our first supporters. As a token of our appreciation, we are thrilled to present you with this exclusive <strong>30% Discount Code</strong> for our Diamond & Platinum Plans.
       </p>
       
       <div class="coupon-box">

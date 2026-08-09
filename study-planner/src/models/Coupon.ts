@@ -8,7 +8,7 @@ const CouponSchema = new mongoose.Schema({
     assignedToName: { type: String },
     assignedToMobile: { type: String },
     assignedAt: { type: Date },
-    discountPercentage: { type: Number, default: 50 },
+    discountPercentage: { type: Number, default: 30 },
     isValid: { type: Boolean, default: true }, // Admin can manually invalidate
 
     // Redemption Tracking
