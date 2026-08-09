@@ -16,6 +16,36 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "09.08.2026",
+        items: [
+            {
+                title: "✨ PDF Notes: The Post Office Act, 2023 & Rules, 2024 Updated",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            We have updated the <strong className="text-violet-600 dark:text-violet-400">Post Office Act, 2023 and PO Rules, 2024</strong> PDF notes for both <strong className="text-zinc-900 dark:text-zinc-100">PS Group B</strong> and <strong className="text-zinc-900 dark:text-zinc-100">LDCE IP</strong> Course modes!
+                        </p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-gradient-to-r from-violet-50 to-fuchsia-50 dark:from-violet-900/20 dark:to-fuchsia-900/20 p-4 rounded-xl border border-violet-200 dark:border-violet-800/50 shadow-sm relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-2 opacity-20 pointer-events-none">
+                                    <img src="/dak-guru-new-logo.png" alt="" className="w-16 h-16 object-contain mix-blend-multiply dark:mix-blend-screen grayscale" />
+                                </div>
+                                <p className="font-bold text-violet-700 dark:text-violet-300 text-[10px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
+                                    Latest Update
+                                </p>
+                                <p className="text-zinc-800 dark:text-zinc-200 text-[12px] font-medium leading-relaxed relative z-10">
+                                    Updated PDF Notes on <strong>The Post Office Act, 2023 & The Post Office Rules, 2024</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "06.08.2026",
         items: [
             {

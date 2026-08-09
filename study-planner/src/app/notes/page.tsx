@@ -115,11 +115,11 @@ const PDF_DATA: Record<string, Note[]> = {
         },
         // 1. Acts
         {
-            title: "The Post Office Act, 2023",
-            description: "Act No.43 of 2023. Comprehensive notes on the new Post Office legal framework.",
-            filename: "PO_Act_2023_Rules_2024.pdf",
-            path: "/notes/paper-1/PO_Act_2023_Rules_2024.pdf",
-            size: "8.7 MB",
+            title: "The Post Office Act, 2023 and PO Rules, 2024",
+            description: "The Post Office Act, 2023 & The Post Office Rules, 2024",
+            filename: "PO_Act_2023_Rules_2024_FINAL.pdf",
+            path: "/notes/paper-1/PO_Act_2023_Rules_2024_FINAL.pdf",
+            size: "0.6 MB",
             color: "blue",
             topic: "Acts"
         },
@@ -505,9 +505,9 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "RTI Act, 2005 and RTI Rules, 2012",
             description: "Right to Information framework.",
-            filename: "RTI_Act_2005_and_RTI_Rules_2012.pdf",
-            path: "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
-            size: "0.5 MB",
+            filename: "RTI_Act_2005_and_Rules_2012.pdf",
+            path: "/notes/paper-3/RTI_Act_2005_and_Rules_2012.pdf",
+            size: "0.6 MB",
             color: "cyan",
             topic: "Constitution & Laws"
         },
