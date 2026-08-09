@@ -557,9 +557,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "RTI Act, 2005 and RTI Rules, 2012",
             "description": "Right to Information Act 2005 and RTI Rules 2012",
-            "filename": "RTI_Act_2005_and_RTI_Rules_2012.pdf",
-            "path": "/notes/paper-3/RTI_Act_2005_and_RTI_Rules_2012.pdf",
-            "size": "0.5 MB",
+            "filename": "RTI_Act_2005_and_Rules_2012.pdf",
+            "path": "/notes/paper-3/RTI_Act_2005_and_Rules_2012.pdf",
+            "size": "0.6 MB",
             "color": "cyan",
             "topic": "Constitution & Laws"
         },
