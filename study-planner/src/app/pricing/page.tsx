@@ -588,75 +588,65 @@ export default function PricingPage() {
                         {/* Launch Offer Banner */}
                         {isPsGroupB ? (
                             <div
-                                className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer hover:scale-[1.005] active:scale-[0.99] transition-transform duration-200"
+                                className="relative overflow-hidden rounded-2xl shadow-[0_4px_20px_rgba(16,185,129,0.3)] group cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500"
                                 onClick={() => setIsOfferModalOpen(true)}
                             >
-                                {/* Gradient border */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 rounded-xl"></div>
+                                {/* Animated shine sweep */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
 
-                                <div className="relative m-[2px] bg-gradient-to-r from-slate-900 to-slate-800 rounded-[10px] px-3.5 py-3 overflow-hidden">
-                                    {/* Subtle glow */}
-                                    <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                                <div className="relative px-4 py-3.5 flex items-center gap-3">
+                                    {/* 30% OFF badge */}
+                                    <div className="shrink-0 bg-white rounded-xl px-3 py-1.5 text-center shadow-md">
+                                        <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br from-emerald-600 to-teal-600 leading-none">30%</div>
+                                        <div className="text-[10px] font-black text-emerald-600 leading-none mt-0.5 tracking-wide">OFF</div>
+                                    </div>
 
-                                    <div className="flex items-center gap-3 relative z-10">
-                                        {/* 30% OFF badge */}
-                                        <div className="shrink-0 bg-emerald-500/15 border border-emerald-500/30 rounded-xl px-3 py-2 text-center">
-                                            <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br from-emerald-300 to-cyan-300 leading-none">30%</div>
-                                            <div className="text-xs font-black text-emerald-400 leading-none mt-0.5">OFF</div>
+                                    {/* Details */}
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-center gap-1.5 mb-0.5">
+                                            <Sparkles className="w-3.5 h-3.5 text-yellow-200 fill-yellow-200 shrink-0" />
+                                            <span className="text-[10px] font-bold tracking-wider uppercase text-white/90">Limited-Time Offer</span>
                                         </div>
+                                        <p className="text-white text-xs font-semibold leading-snug">
+                                            Diamond @ <span className="text-yellow-200">₹6,895</span> · Platinum @ <span className="text-yellow-200">₹3,850</span>
+                                        </p>
+                                    </div>
 
-                                        {/* Details */}
-                                        <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-1.5 mb-1">
-                                                <Sparkles className="w-3 h-3 text-emerald-400 fill-emerald-400 shrink-0" />
-                                                <span className="text-[9px] font-bold tracking-widest uppercase text-emerald-300/80">Limited-Time Offer</span>
-                                            </div>
-                                            <p className="text-white/60 text-[11px] leading-snug">
-                                                Diamond @ <span className="text-emerald-300 font-semibold">₹6,895</span> · Platinum @ <span className="text-teal-300 font-semibold">₹3,850</span>
-                                            </p>
-                                        </div>
-
-                                        {/* CTA arrow */}
-                                        <div className="shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-md shadow-emerald-500/30 group-hover:bg-emerald-400 transition-colors">
-                                            <span className="text-white text-sm font-bold">→</span>
-                                        </div>
+                                    {/* CTA */}
+                                    <div className="shrink-0 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+                                        <span className="text-emerald-600 text-base font-bold">→</span>
                                     </div>
                                 </div>
                             </div>
                         ) : (
                             <div
-                                className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer hover:scale-[1.005] active:scale-[0.99] transition-transform duration-200"
+                                className="relative overflow-hidden rounded-2xl shadow-[0_4px_20px_rgba(249,115,22,0.3)] group cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500"
                                 onClick={() => setIsOfferModalOpen(true)}
                             >
-                                {/* Gradient border */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-xl"></div>
+                                {/* Animated shine sweep */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
 
-                                <div className="relative m-[2px] bg-gradient-to-r from-slate-900 to-slate-800 rounded-[10px] px-3.5 py-3 overflow-hidden">
-                                    {/* Subtle glow */}
-                                    <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                                <div className="relative px-4 py-3.5 flex items-center gap-3">
+                                    {/* 30% OFF badge */}
+                                    <div className="shrink-0 bg-white rounded-xl px-3 py-1.5 text-center shadow-md">
+                                        <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br from-orange-600 to-red-600 leading-none">30%</div>
+                                        <div className="text-[10px] font-black text-orange-600 leading-none mt-0.5 tracking-wide">OFF</div>
+                                    </div>
 
-                                    <div className="flex items-center gap-3 relative z-10">
-                                        {/* 30% OFF badge */}
-                                        <div className="shrink-0 bg-orange-500/15 border border-orange-500/30 rounded-xl px-3 py-2 text-center">
-                                            <div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-orange-300 leading-none">30%</div>
-                                            <div className="text-xs font-black text-orange-400 leading-none mt-0.5">OFF</div>
+                                    {/* Details */}
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-center gap-1.5 mb-0.5">
+                                            <Sparkles className="w-3.5 h-3.5 text-yellow-100 fill-yellow-100 shrink-0" />
+                                            <span className="text-[10px] font-bold tracking-wider uppercase text-white/90">Limited-Time Offer</span>
                                         </div>
+                                        <p className="text-white text-xs font-semibold leading-snug">
+                                            Gold @ <span className="text-yellow-100">₹5,250</span> · Silver @ <span className="text-yellow-100">₹2,800</span>
+                                        </p>
+                                    </div>
 
-                                        {/* Details */}
-                                        <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-1.5 mb-1">
-                                                <Sparkles className="w-3 h-3 text-orange-400 fill-orange-400 shrink-0" />
-                                                <span className="text-[9px] font-bold tracking-widest uppercase text-orange-300/80">Limited-Time Offer</span>
-                                            </div>
-                                            <p className="text-white/60 text-[11px] leading-snug">
-                                                Gold @ <span className="text-yellow-300 font-semibold">₹5,250</span> · Silver @ <span className="text-orange-300 font-semibold">₹2,800</span>
-                                            </p>
-                                        </div>
-
-                                        {/* CTA arrow */}
-                                        <div className="shrink-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center shadow-md shadow-orange-500/30 group-hover:bg-orange-400 transition-colors">
-                                            <span className="text-white text-sm font-bold">→</span>
-                                        </div>
+                                    {/* CTA */}
+                                    <div className="shrink-0 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+                                        <span className="text-orange-600 text-base font-bold">→</span>
                                     </div>
                                 </div>
                             </div>
