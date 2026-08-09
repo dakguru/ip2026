@@ -586,38 +586,95 @@ export default function PricingPage() {
                         </div>
 
                         {/* Launch Offer Banner */}
-                        <div className={`relative overflow-hidden rounded-2xl p-1 shadow-lg group cursor-pointer hover:scale-[1.01] transition-transform duration-300 ${isPsGroupB
-                            ? 'bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 shadow-purple-500/20'
-                            : 'bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 shadow-orange-500/20'
-                            }`}>
-                            <div className="absolute top-0 right-0 -mt-4 -mr-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
-                            <div className="bg-white dark:bg-zinc-900 rounded-xl p-4 flex flex-col gap-3 relative z-10 h-full">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <Sparkles className={`w-5 h-5 animate-spin-slow ${isPsGroupB ? 'text-purple-500 fill-purple-500' : 'text-yellow-500 fill-yellow-500'}`} />
-                                    <span className={`text-xs font-black tracking-widest uppercase ${isPsGroupB ? 'text-purple-600' : 'text-orange-600'}`}>
-                                        {isPsGroupB ? 'Course Mode Introduction Offer' : 'Limited Time Launch Offer'}
-                                    </span>
+                        {isPsGroupB ? (
+                            <div
+                                className="relative overflow-hidden rounded-2xl shadow-xl group cursor-pointer hover:scale-[1.01] transition-transform duration-300"
+                                onClick={() => setIsOfferModalOpen(true)}
+                            >
+                                {/* Animated gradient border */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 rounded-2xl animate-pulse opacity-90"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/30 via-transparent to-emerald-600/30 rounded-2xl"></div>
+
+                                <div className="relative m-[3px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[13px] p-5 overflow-hidden">
+                                    {/* Decorative background elements */}
+                                    <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-500/10 rounded-full blur-3xl -ml-8 -mb-8"></div>
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-cyan-500/5 rounded-full blur-3xl"></div>
+
+                                    {/* Floating sparkle dots */}
+                                    <div className="absolute top-3 right-8 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></div>
+                                    <div className="absolute top-8 right-4 w-1 h-1 bg-teal-300 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                                    <div className="absolute bottom-6 left-6 w-1 h-1 bg-cyan-400 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+
+                                    {/* Top label */}
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <div className="flex items-center gap-1.5 bg-emerald-500/20 border border-emerald-500/30 px-3 py-1 rounded-full">
+                                            <Sparkles className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400 animate-spin-slow" />
+                                            <span className="text-[10px] font-black tracking-[0.2em] uppercase text-emerald-300">
+                                                Limited-Time Offer
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Main hero: 30% OFF */}
+                                    <div className="flex items-center gap-4 mb-3">
+                                        <div className="relative">
+                                            <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-emerald-300 via-teal-200 to-cyan-300 leading-none tracking-tight" style={{ fontFamily: '"Inter", "Helvetica", sans-serif' }}>
+                                                30%
+                                            </div>
+                                            <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-teal-400 leading-none -mt-1" style={{ fontFamily: '"Inter", "Helvetica", sans-serif' }}>
+                                                OFF
+                                            </div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="text-white/90 text-[13px] font-bold leading-snug">
+                                                NOW 30% OFF
+                                            </div>
+                                            <div className="w-10 h-0.5 bg-gradient-to-r from-emerald-400 to-transparent my-1.5 rounded-full"></div>
+                                            <div className="text-white/60 text-[11px] leading-relaxed">
+                                                Diamond @ <span className="text-emerald-300 font-bold">Rs. 6,895/-</span> and Platinum @ <span className="text-teal-300 font-bold">Rs. 3,850/-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Description */}
+                                    <p className="text-white/50 text-xs mb-4 leading-relaxed">
+                                        Submit your details to check your eligibility and claim your discount now.
+                                    </p>
+
+                                    {/* CTA Button */}
+                                    <button
+                                        className="w-full py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all flex items-center justify-center gap-2 group-hover:gap-3 text-sm"
+                                    >
+                                        Claim 30% OFF Now <span className="text-lg group-hover:translate-x-1 transition-transform">🎁</span>
+                                    </button>
                                 </div>
-                                <h3 className={`text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r leading-tight ${isPsGroupB
-                                    ? 'from-purple-600 to-fuchsia-600'
-                                    : 'from-yellow-600 to-red-600'
-                                    }`}>
-                                    {isPsGroupB ? 'EARLY BIRD PRICING — LIMITED SLOTS!' : '50% Discount Offer is only for Limited Period and Ending Soon.'}
-                                </h3>
-                                <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
-                                    {isPsGroupB
-                                        ? 'Diamond @ Rs. 4,925/- and Platinum @ Rs. 2,750/-. Submit your details to check your eligibility and claim your discount now.'
-                                        : 'Gold @ Rs. 3,750/- and Silver @ Rs. 2,000/-. Submit your details check your eligibility and claim your discount now.'
-                                    }
-                                </p>
-                                <button
-                                    onClick={() => setIsOfferModalOpen(true)}
-                                    className="mt-2 w-full py-3 bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-white dark:to-zinc-200 text-white dark:text-black font-bold rounded-lg shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 group-hover:gap-3"
-                                >
-                                    Check Eligibility <span className="text-lg group-hover:rotate-45 transition-transform">→</span>
-                                </button>
                             </div>
-                        </div>
+                        ) : (
+                            <div className="relative overflow-hidden rounded-2xl p-1 shadow-lg group cursor-pointer hover:scale-[1.01] transition-transform duration-300 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 shadow-orange-500/20">
+                                <div className="absolute top-0 right-0 -mt-4 -mr-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+                                <div className="bg-white dark:bg-zinc-900 rounded-xl p-4 flex flex-col gap-3 relative z-10 h-full">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <Sparkles className="w-5 h-5 animate-spin-slow text-yellow-500 fill-yellow-500" />
+                                        <span className="text-xs font-black tracking-widest uppercase text-orange-600">
+                                            Limited Time Launch Offer
+                                        </span>
+                                    </div>
+                                    <h3 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r leading-tight from-yellow-600 to-red-600">
+                                        50% Discount Offer is only for Limited Period and Ending Soon.
+                                    </h3>
+                                    <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                                        Gold @ Rs. 3,750/- and Silver @ Rs. 2,000/-. Submit your details check your eligibility and claim your discount now.
+                                    </p>
+                                    <button
+                                        onClick={() => setIsOfferModalOpen(true)}
+                                        className="mt-2 w-full py-3 bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-white dark:to-zinc-200 text-white dark:text-black font-bold rounded-lg shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 group-hover:gap-3"
+                                    >
+                                        Check Eligibility <span className="text-lg group-hover:rotate-45 transition-transform">→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        )}
 
                         {/* Plan Selection Cards */}
                         <div className="space-y-4">

@@ -136,7 +136,7 @@ export const DiscountRequestModal = ({ isOpen, onClose, userEmail, userName, use
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
-                                Please provide your details. Valid for the <span className="font-bold text-orange-600">First 50 Subscribers</span> only!
+                                Please provide your details & Claim your <span className="font-bold text-orange-600">30% Discount Code</span>!
                             </p>
 
                             <div>
