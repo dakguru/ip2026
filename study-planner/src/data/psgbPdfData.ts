@@ -229,9 +229,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Instructions issued by Directorate and DoP&T on maintenance of APAR.",
             "description": "Instructions on Maintenance of Annual Performance Assessment Report (APAR)",
-            "filename": "Instructions_Maintenance_APAR.pdf",
-            "path": "/notes/paper-1/Instructions_Maintenance_APAR.pdf",
-            "size": "0.6 MB",
+            "filename": "APAR (Maintenance of Annual Performance Assessment Report).pdf",
+            "path": "/notes/paper-1/APAR (Maintenance of Annual Performance Assessment Report).pdf",
+            "size": "0.5 MB",
             "color": "violet",
             "topic": "Reports & Misc"
         },
