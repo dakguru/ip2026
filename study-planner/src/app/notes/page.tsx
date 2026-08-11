@@ -126,9 +126,9 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "Government Savings Promotion Act, 1873",
             description: "Key provisions of the GSPA 1873 governing savings schemes.",
-            filename: "GSPA_1873.pdf",
-            path: "/notes/paper-1/GSPA_1873.pdf",
-            size: "8.7 MB",
+            filename: "GSPA, 1873 FINAL.pdf",
+            path: "/notes/paper-1/GSPA, 1873 FINAL.pdf",
+            size: "0.6 MB",
             color: "indigo",
             topic: "Acts"
         },
