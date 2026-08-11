@@ -171,7 +171,7 @@ export default function NativePricing({
     const finalPrice = Math.max(0, effectivePrice - discount);
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white font-sans pb-64">
+        <div className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white font-sans pb-44">
 
 
             <div className="p-4 space-y-6">
