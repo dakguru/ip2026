@@ -21,6 +21,10 @@ export default function AppLoadingScreen() {
     useEffect(() => {
         const initApp = async () => {
             if (Capacitor.isNativePlatform()) {
+                // 0. Tag the root element so CSS can scope native-only styling
+                //    (footer removal, no overscroll glow, no text-selection on chrome).
+                document.documentElement.classList.add('native-app');
+
                 try {
                     // 1. Hide Capacitor's splash plugin layer (separate from our native overlay)
                     await CapacitorSplashScreen.hide();

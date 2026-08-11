@@ -65,6 +65,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Enables crisp tap haptics via the Web Vibration API (navigator.vibrate)
+         used by the native-feel interaction feedback. No runtime prompt needed. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
     <!-- Required so DownloadManager can enqueue a download with VISIBILITY_HIDDEN
          when the user has not granted POST_NOTIFICATIONS. Without this, enqueue()
          throws a SecurityException and the PDF download fails. -->

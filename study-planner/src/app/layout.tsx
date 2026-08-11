@@ -7,9 +7,12 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { CourseProvider } from "@/contexts/CourseContext";
 import GlobalNavigation from "@/components/GlobalNavigation";
 
-import Footer from "@/components/Footer";
+import ConditionalFooter from "@/components/ConditionalFooter";
 import MobileBottomNav from "@/components/MobileBottomNav";
 import NativeMobileSpacer from "@/components/NativeMobileSpacer";
+import NativePageTransition from "@/components/NativePageTransition";
+import NativeInteractions from "@/components/NativeInteractions";
+import NativeStatusBar from "@/components/NativeStatusBar";
 import UserActivityTracker from "@/components/UserActivityTracker";
 import BackButtonHandler from "@/components/BackButtonHandler";
 import AppLoadingScreen from "@/components/AppLoadingScreen";
@@ -59,13 +62,15 @@ export default function RootLayout({
         >
           <CourseProvider>
             <AppLoadingScreen />
+            <NativeStatusBar />
             <UserActivityTracker />
+            <NativeInteractions />
             <BackButtonHandler />
             <PushNotificationManager />
             <GlobalNavigation />
             <NativeMobileSpacer>
-              {children}
-              <Footer />
+              <NativePageTransition>{children}</NativePageTransition>
+              <ConditionalFooter />
             </NativeMobileSpacer>
             <MobileBottomNav />
 

@@ -309,6 +309,97 @@ textarea {
   scrollbar-width: none;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   NATIVE APP ONLY  (.native-app is added to <html> inside Capacitor)
+   These rules make the WebView feel like a real Kotlin Android app and
+   never apply to the desktop / mobile-browser experience.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* 1. Remove the web marketing/legal footer entirely inside the app.
+      ConditionalFooter already skips rendering it — this is a backstop so
+      no page-level footer can ever leak the website chrome into the app. */
+.native-app footer {
+  display: none !important;
+}
+
+/* 2. Kill the overscroll glow / rubber-band bounce at the page edges.
+      Native Android content stops crisply at the top and bottom. */
+.native-app,
+.native-app body {
+  overscroll-behavior: none;
+}
+
+/* 3. No long-press callout menus (image save, link preview, "copy link").
+      Real apps don't surface the browser's context menu on a long press. */
+.native-app * {
+  -webkit-touch-callout: none;
+}
+
+/* 4. Interactive chrome behaves like native widgets — not selectable text.
+      Body copy, quiz questions and notes stay selectable so users can still
+      copy study content; only buttons / links / nav lose the text cursor. */
+.native-app button,
+.native-app a,
+.native-app nav,
+.native-app label,
+.native-app [role="button"],
+.native-app [role="tab"] {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 5. Momentum scrolling for a smooth, native-weight scroll feel. */
+.native-app {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 6. Route enter animation — a soft native fade as each screen mounts.
+      Opacity only (no transform) so it never offsets position:fixed children. */
+@keyframes native-page-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.native-app .native-page-enter {
+  animation: native-page-in 200ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+/* 7. Global tactile press feedback — every control dips slightly on touch,
+      the way native Material widgets respond. Scoped to the app so the web
+      hover-driven experience is untouched. */
+.native-app button,
+.native-app a[href],
+.native-app [role="button"],
+.native-app [role="tab"],
+.native-app .native-card,
+.native-app .touch-feedback {
+  transition: transform 120ms cubic-bezier(0.2, 0, 0, 1), opacity 120ms ease;
+}
+.native-app button:active,
+.native-app a[href]:active,
+.native-app [role="button"]:active,
+.native-app [role="tab"]:active,
+.native-app .native-card:active,
+.native-app .touch-feedback:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* Respect reduced-motion preferences inside the app too. */
+@media (prefers-reduced-motion: reduce) {
+  .native-app .native-page-enter {
+    animation: none;
+  }
+  .native-app button:active,
+  .native-app a[href]:active,
+  .native-app [role="button"]:active,
+  .native-app [role="tab"]:active,
+  .native-app .native-card:active,
+  .native-app .touch-feedback:active {
+    transform: none;
+  }
+}
+
 /* ── Native surface card ── */
 .native-card {
   background: var(--surface);
