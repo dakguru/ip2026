@@ -49,7 +49,7 @@ export default function NativeFlashcardsHomeV2({
     // And "Floating Filter Chips".
 
     return (
-        <div className="h-[100dvh] overflow-hidden flex flex-col bg-[#f8f9fb] dark:bg-[#0a0a0a] text-slate-900 dark:text-white font-sans selection:bg-indigo-500/30 transition-colors duration-300">
+        <div className="h-screen-dvh overflow-hidden flex flex-col bg-[#f8f9fb] dark:bg-[#0a0a0a] text-slate-900 dark:text-white font-sans selection:bg-indigo-500/30 transition-colors duration-300">
 
             {/* 1. HERO HEADER (Fixed) */}
             <div className="shrink-0 relative pt-[max(12px,calc(env(safe-area-inset-top)+4px))] pb-2 px-6 overflow-hidden">

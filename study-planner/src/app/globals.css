@@ -300,6 +300,27 @@ textarea {
   animation: m3-indicator-in 250ms cubic-bezier(0.2, 0, 0, 1);
 }
 
+/* ── Full-viewport height with a legacy fallback ──
+   App-shell screens use a fixed viewport height + overflow-hidden with an
+   inner scroll area. `100dvh` is only valid on Android System WebView 108+.
+   On older WebViews `height:100dvh` is invalid and the container COLLAPSES to
+   its content height; the outer overflow-hidden then clips everything below
+   the first screen and nothing scrolls ("pages stuck"). The `100vh` line is a
+   universal fallback — old engines keep it, modern engines override it with
+   `100dvh`. In the native app there is no dynamic browser toolbar, so
+   100vh == 100dvh visually. */
+.h-screen-dvh {
+  height: 100vh; /* universal base — every WebView understands this */
+}
+@supports (height: 100dvh) {
+  /* Separate rule (not a duplicate declaration) so the production CSS
+     minifier can never collapse the fallback away. Only WebView 108+ enters
+     here and upgrades to the dynamic viewport unit. */
+  .h-screen-dvh {
+    height: 100dvh;
+  }
+}
+
 /* ── Hide scrollbar utility ── */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

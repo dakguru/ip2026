@@ -123,7 +123,7 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
     return (
         <div
-            className="h-[100dvh] overflow-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
+            className="h-screen-dvh overflow-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col font-sans selection:bg-blue-100 dark:selection:bg-blue-900"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}

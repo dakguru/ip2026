@@ -26,7 +26,7 @@ export default function AppScreenWrapper({
     return (
         <div className={cn(
             "w-full overflow-x-hidden bg-[#f8f9fb] dark:bg-[#0a0a0a] flex flex-col transition-colors duration-200",
-            scrollableContent ? "h-[100dvh] overflow-hidden" : "min-h-screen",
+            scrollableContent ? "h-screen-dvh overflow-hidden" : "min-h-screen",
             className
         )}>
             {/* Status Bar / Safe Area Top Padding - Only applied if there is no header or explicitly requested */}
