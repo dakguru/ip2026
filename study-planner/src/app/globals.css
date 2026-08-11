@@ -344,9 +344,17 @@ textarea {
 }
 
 /* 2. Kill the overscroll glow / rubber-band bounce at the page edges.
-      Native Android content stops crisply at the top and bottom. */
-.native-app,
-.native-app body {
+      Native Android content stops crisply at the top and bottom.
+
+      IMPORTANT: only on the <html> root — NOT on <body>. On document-scroll
+      pages (AppScreenWrapper scrollableContent={false}, e.g. Notes & Mock
+      Tests) `body` is itself a scroll container (globals `body { overflow-y:
+      auto }`) but with content-height it has zero scroll range. Putting
+      `overscroll-behavior: none` on that zero-range body swallows the gesture
+      instead of chaining it to the viewport → the page can't scroll at all.
+      Scoping this to the root suppresses the page glow while letting body
+      chain its scroll up to the viewport normally. */
+.native-app {
   overscroll-behavior: none;
 }
 
