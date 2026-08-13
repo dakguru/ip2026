@@ -211,8 +211,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Manual for Procurement of Goods & Services",
             "description": "Procurement Manual Part I, II & III",
-            "filename": "Manual_Procurement_Goods_Services.pdf",
-            "path": "/notes/paper-1/Manual_Procurement_Goods_Services.pdf",
+            "filename": "Manual for Procurement of Goods & Services.pdf",
+            "path": "/notes/paper-3/Manual for Procurement of Goods & Services.pdf",
             "size": "4.3 MB",
             "color": "purple",
             "topic": "Financial & Procurement"
