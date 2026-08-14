@@ -566,8 +566,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Sexual Harassment of Women at Workplace Act, 2013",
             "description": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
-            "filename": "POSH_Rules_2013.pdf",
-            "path": "/notes/paper-3/POSH_Rules_2013.pdf",
+            "filename": "POSH_Act_2013.pdf",
+            "path": "/notes/paper-3/POSH_Act_2013.pdf",
             "size": "0.5 MB",
             "color": "pink",
             "topic": "Constitution & Laws"
