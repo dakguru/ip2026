@@ -44,8 +44,8 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "The PO Regulations, 2024",
             "description": "The Post Office Regulations, 2024",
-            "filename": "PO_Regulations_2024.pdf",
-            "path": "/notes/paper-1/PO_Regulations_2024.pdf",
+            "filename": "PO_Regulations_2024_Sixth_Amendment_Aug_2026.pdf",
+            "path": "/notes/paper-1/PO_Regulations_2024_Sixth_Amendment_Aug_2026.pdf",
             "size": "0.9 MB",
             "color": "emerald",
             "isFree": true,
