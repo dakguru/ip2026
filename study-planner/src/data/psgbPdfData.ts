@@ -178,6 +178,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-1/Manual_of_Office_Procedure.pdf",
             "size": "4.7 MB",
             "color": "slate",
+            "subtitle": "Date: or before 31.03.2026",
             "topic": "Reports & Misc"
         },
         {
@@ -426,6 +427,7 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
             "path": "/notes/paper-3/CCS_RP_Rules_2016.pdf",
             "size": "4.1 MB",
             "color": "blue",
+            "subtitle": "Date: or before 31.03.2026",
             "topic": "CCS Rules & Establishment"
         },
         {
