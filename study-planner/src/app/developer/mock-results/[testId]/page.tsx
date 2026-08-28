@@ -120,10 +120,55 @@ export default function MockTestDetailResultsPage() {
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const countdownRef = useRef<NodeJS.Timeout | null>(null);
 
+    // Modal state
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [formData, setFormData] = useState({
+        userName: '',
+        userEmail: '',
+        score: 0,
+        attemptedOn: new Date().toISOString().slice(0, 16)
+    });
+
     // Determine if this test is currently live
     const schedule = TEST_SCHEDULE_MAP[testId];
     const now = new Date();
     const isLive = schedule ? now >= schedule.start && now <= schedule.end : false;
+
+    const handleAddResult = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        try {
+            const totalQuestions = TEST_QUESTIONS_MAP[testId]?.length || 100;
+            const res = await fetch('/api/admin/mock-test/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    testId,
+                    userName: formData.userName,
+                    userEmail: formData.userEmail,
+                    score: Number(formData.score),
+                    totalQuestions,
+                    submittedAt: new Date(formData.attemptedOn).toISOString()
+                })
+            });
+
+            if (res.ok) {
+                setIsAddModalOpen(false);
+                setFormData({ userName: '', userEmail: '', score: 0, attemptedOn: new Date().toISOString().slice(0, 16) });
+                fetchResults(true);
+                setShowNotification(true);
+            } else {
+                const data = await res.json();
+                alert(`Error: ${data.error}`);
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Failed to submit result");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     useEffect(() => {
         if (showNotification) {
@@ -391,6 +436,12 @@ export default function MockTestDetailResultsPage() {
                             >
                                 <Download className="w-4 h-4" /> Export CSV
                             </button>
+                            <button
+                                onClick={() => setIsAddModalOpen(true)}
+                                className="flex items-center gap-2 px-4 py-2.5 bg-green-600 text-white rounded-xl font-semibold text-sm hover:bg-green-700 transition-colors"
+                            >
+                                Add Result
+                            </button>
                         </div>
                     </div>
 
@@ -594,8 +645,46 @@ export default function MockTestDetailResultsPage() {
                 <div className="fixed top-6 left-1/2 -translate-x-1/2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-6 py-3 rounded-full shadow-2xl z-50 flex items-center gap-3 animate-in fade-in slide-in-from-top-4 duration-300">
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
                     <div>
-                        <p className="font-bold text-sm">Answer Sheet Generated</p>
-                        <p className="text-xs opacity-80">Check your Downloads folder</p>
+                        <p className="font-bold text-sm">Action Successful</p>
+                    </div>
+                </div>
+            )}
+
+            {/* Add Result Modal */}
+            {isAddModalOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+                    <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-800 w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
+                        <div className="px-6 py-4 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">Add Mock Result</h3>
+                            <button onClick={() => setIsAddModalOpen(false)} className="text-zinc-400 hover:text-zinc-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                        <form onSubmit={handleAddResult} className="p-6 space-y-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Aspirant Name</label>
+                                <input type="text" required value={formData.userName} onChange={e => setFormData({ ...formData, userName: e.target.value })} className="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500/50" />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Email ID</label>
+                                <input type="email" required value={formData.userEmail} onChange={e => setFormData({ ...formData, userEmail: e.target.value })} className="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500/50" />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Score</label>
+                                <input type="number" required min="0" max="200" value={formData.score} onChange={e => setFormData({ ...formData, score: parseInt(e.target.value) })} className="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500/50" />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Attempted On</label>
+                                <input type="datetime-local" required value={formData.attemptedOn} onChange={e => setFormData({ ...formData, attemptedOn: e.target.value })} className="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-indigo-500/50" />
+                            </div>
+                            
+                            <div className="pt-4 flex items-center justify-end gap-3">
+                                <button type="button" onClick={() => setIsAddModalOpen(false)} className="px-4 py-2 text-sm font-semibold text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 transition-colors">Cancel</button>
+                                <button type="submit" disabled={isSubmitting} className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold rounded-lg transition-colors disabled:opacity-50">
+                                    {isSubmitting ? 'Saving...' : 'Save Result'}
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             )}

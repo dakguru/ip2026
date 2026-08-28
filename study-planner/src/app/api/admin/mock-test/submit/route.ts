@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
         await dbConnect();
 
         const body = await req.json();
-        const { userId, userEmail, score, totalQuestions, answers } = body;
+        const { userId, userEmail, userName, score, totalQuestions, answers, testId, submittedAt } = body;
 
         let user;
         if (userId) {
@@ -19,28 +19,46 @@ export async function POST(req: NextRequest) {
             user = await User.findOne({ email: userEmail });
         }
 
-        if (!user) {
-            return NextResponse.json({ error: "User not found" }, { status: 404 });
+        const finalUserId = user ? user._id.toString() : "manual-entry";
+        const finalUserName = user ? user.name : (userName || "Unknown Aspirant");
+        const finalUserEmail = user ? user.email : userEmail;
+
+        if (!finalUserEmail) {
+            return NextResponse.json({ error: "Email is required" }, { status: 400 });
         }
 
-        const newResult = new MockResult({
-            userId: user._id.toString(),
-            userName: user.name,
-            userEmail: user.email,
-            score,
-            totalQuestions,
-            answers,
-            submittedAt: new Date()
-        });
+        // Check if an existing result exists to update, or create a new one
+        let newResult = await MockResult.findOne({ userEmail: finalUserEmail, testId: testId || 'admin-sample' });
+        
+        if (newResult) {
+            newResult.score = score;
+            newResult.totalQuestions = totalQuestions;
+            if (answers) newResult.answers = answers;
+            if (submittedAt) newResult.submittedAt = new Date(submittedAt);
+            if (userName && !user) newResult.userName = userName; // update name if manual
+        } else {
+            newResult = new MockResult({
+                userId: finalUserId,
+                userName: finalUserName,
+                userEmail: finalUserEmail,
+                score,
+                totalQuestions,
+                answers: answers || {},
+                testId: testId || 'admin-sample',
+                submittedAt: submittedAt ? new Date(submittedAt) : new Date()
+            });
+        }
 
         await newResult.save();
 
-        await createNotification(
-            'mock_test',
-            `Admin Mock Test Submitted`,
-            `${user.name} (${user.email}) submitted an admin mock test scoring ${score}/${totalQuestions}.`,
-            { userId: user._id.toString(), email: user.email, score }
-        );
+        if (user) {
+            await createNotification(
+                'mock_test',
+                `Admin Mock Test Submitted`,
+                `${finalUserName} (${finalUserEmail}) submitted an admin mock test scoring ${score}/${totalQuestions}.`,
+                { userId: finalUserId, email: finalUserEmail, score }
+            );
+        }
 
         return NextResponse.json({ message: "Result saved successfully" }, { status: 201 });
 
