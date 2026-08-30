@@ -1,0 +1,974 @@
+Q1. Under Rule 2 of the Central Civil Services (Implementation of National Pension System) Rules, 2021, which of the following categories of personnel is covered under these rules?
+A. Civilian employees appointed substantively in the Defence Services on or after 01.01.2004
+B. Persons appointed on a regular contract basis in various Union Government Ministries
+C. Personnel locally recruited in foreign countries for service in Indian diplomatic missions
+D. Members of the All-India Services appointed to civil posts under the Union Government
+Answer: A
+Explanation:
+Rule 2 provides that the CCS (Implementation of NPS) Rules, 2021 apply to Government servants, including civilian Government servants in the Defence Services, appointed substantively on or after 01.01.2004. Contract employees, foreign local recruits, and All-India Services members are expressly excluded under Rule 2.
+
+Q2. What is the prescribed time limit under Rule 4 of the CCS (Implementation of NPS) Rules, 2021 for the Head of Office to countersign and forward the Common Subscriber Registration Form (CSRF) to the Drawing and Disbursing Officer (DDO)?
+A. Within seven working days from the date of receipt of the application
+B. Within three working days from the date of joining of the employee
+C. Within five working days from the date of receipt of the application
+D. Within ten working days from the date of joining of the employee
+Answer: B
+Explanation:
+Under Rule 4(2) of the CCS (Implementation of NPS) Rules, 2021, the Head of Office shall countersign the registration application indicating the date of receipt and forward it to the DDO within three working days of the Government servant joining service.
+
+Q3. Under Rule 4(8) of the CCS (Implementation of NPS) Rules, 2021, what is the statutory outer time limit for crediting the first monthly contribution into the Individual Pension Account of a newly joined Government servant?
+A. Within fifteen days of submission or by tenth of the next month, whichever is earlier
+B. Within thirty days of submission or by fifteenth of the next month, whichever is later
+C. Within twenty days of submission or by the last date of joining month, whichever is later
+D. Within thirty days of submission or by the last date of joining month, whichever is earlier
+Answer: C
+Explanation:
+Rule 4(8) stipulates that the first contribution shall be credited to the Individual Pension Account within twenty days of the date of submission of the registration application or by the last date of the month in which the Government servant joined, whichever is later.
+
+Q4. For the purpose of deducting monthly contributions under Rule 5 of the CCS (Implementation of NPS) Rules, 2021, what constitutes 'Emoluments' for an employee actively on duty?
+A. Basic Pay along with Dearness Allowance and applicable House Rent Allowance
+B. Basic Pay along with applicable Transport Allowance and Dearness Allowance
+C. Basic Pay along with applicable Non-Practising Allowance and Dearness Allowance
+D. Basic Pay along with Special Allowance, Personal Pay and Dearness Allowance
+Answer: C
+Explanation:
+Rule 5 of the CCS (Implementation of NPS) Rules, 2021 defines emoluments on duty as Basic Pay plus Non-Practising Allowance (NPA), where applicable, plus Dearness Allowance (DA). Allowances such as HRA, Transport Allowance, or special allowances do not form part of emoluments.
+
+Q5. Consider the following statements regarding subscriber contributions under Rule 6 of the CCS (Implementation of NPS) Rules, 2021:
+
+1. The monthly employee contribution is 10% of emoluments, rounded off to the next higher rupee.
+2. Contribution during the period of suspension is mandatory and recovered from subsistence allowance.
+3. No contribution is payable for any spell of absence for which no pay or leave salary is admissible.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statements 1 and 3 are correct under Rule 6(1) and Rule 6(3). Statement 2 is incorrect because Rule 6(2) provides that contribution during suspension is optional at the subscriber’s choice; it is not mandatory.
+
+Q6. By which date of each month is the Pay and Accounts Officer (PAO) required to upload the Subscription Contribution File (SCF) and generate a Transaction ID under Rule 6 of the CCS (Implementation of NPS) Rules, 2021?
+A. By the twentieth day of each month
+B. By the twenty-second day of each month
+C. By the twenty-fifth day of each month
+D. By the last working day of each month
+Answer: C
+Explanation:
+Rule 6(9) of the CCS (Implementation of NPS) Rules, 2021 mandates that the PAO or Cheque DDO shall prepare and upload the Subscription Contribution File (SCF) and generate the Transaction ID by the 25th day of each month.
+
+Q7. Under Rule 7 of the CCS (Implementation of NPS) Rules, 2021, how is the Government contribution regulated when a subscriber is on medical leave without leave salary?
+A. Government contributes 14% based on the average subsistence allowance drawn in preceding months
+B. Government contributes 10% based on the minimum basic pay of the corresponding pay level
+C. Government contributes 14% based on notional emoluments the employee would draw on full pay
+D. Government contribution remains entirely suspended till the employee rejoins substantive duty
+Answer: C
+Explanation:
+The proviso to Rule 7 provides that where leave is granted on medical grounds without leave salary or at reduced rates, the Government contributes 14% of notional emoluments (Pay + NPA + DA) that the subscriber would have drawn had he been on full pay.
+
+Q8. Where the crediting of monthly NPS contributions is delayed due to factors not attributable to the subscriber, under Rule 8 of the CCS (Implementation of NPS) Rules, 2021, interest is payable:
+A. At General Provident Fund (GPF) rate and credited within forty-five days of contribution credit
+B. At Public Provident Fund (PPF) rate and credited within thirty days of contribution credit
+C. At Reserve Bank of India repo rate and credited within fifteen days of contribution credit
+D. At State Bank of India savings rate and credited within sixty days of contribution credit
+Answer: B
+Explanation:
+Rule 8 provides that interest for the delayed period shall be credited to the subscriber's Individual Pension Account within thirty days of crediting the delayed contribution, calculated at the rate applicable to Public Provident Fund (PPF) deposits.
+
+Q9. Consider the following statements regarding the option for benefits on death or invalidation under Rule 10 of the CCS (Implementation of NPS) Rules, 2021:
+
+1. Every Government servant covered under NPS must exercise an option in Form 1 at the time of joining service.
+2. The option exercised in Form 1 can be revised any number of times before retirement by submitting a fresh option.
+3. In case of death while in service, the family of the deceased has full right to revise the option exercised by him.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct per Rule 10(1) and Rule 10(7). Statement 3 is incorrect because Rule 10(9) specifies that the last option exercised by the subscriber before death is final and the family has no right to revise it.
+
+Q10. An NPS employee with 8 years of regular service died in service in 2025 without submitting Form 1. Under Rule 10 of the CCS (Implementation of NPS) Rules, 2021, how will the family's claim be settled?
+A. The claim will be regulated strictly under PFRDA (Exits and Withdrawals under NPS) Regulations
+B. The claim will be processed for family pension under the Central Civil Services (Pension) Rules, 2021
+C. The claim will be settled by granting compassionate allowance along with the full accumulated corpus
+D. The claim will be rejected and deferred until a Succession Certificate is obtained from a civil court
+Answer: B
+Explanation:
+Under Rule 10(10), if a subscriber dies before completing fifteen years of service and had not exercised an option, the family is granted family pension under CCS (Pension) Rules, 2021 or CCS (EOP) Rules, 2023 as the default statutory option.
+
+Q11. Under Rule 12 of the CCS (Implementation of NPS) Rules, 2021, which condition must be satisfied for a Government servant to seek voluntary retirement?
+A. Completion of 15 years of regular service and giving not less than 2 months of notice in writing
+B. Completion of 20 years of regular service and giving not less than 3 months of notice in writing
+C. Completion of 25 years of regular service and giving not less than 1 month of notice in writing
+D. Completion of 10 years of regular service and giving not less than 6 months of notice in writing
+Answer: B
+Explanation:
+Rule 12(1) allows a subscriber to voluntarily retire from service at any time after completing twenty years of regular service by giving a notice of not less than three months in writing to the appointing authority.
+
+Q12. Under Rule 12 of the CCS (Implementation of NPS) Rules, 2021, voluntary retirement provisions do not apply to which of the following subscribers?
+A. A subscriber who has been placed under suspension pending a departmental inquiry into misconduct
+B. A subscriber who has taken extraordinary leave on medical grounds for more than one year
+C. A scientist or technical expert serving abroad on an Indian Technical and Economic Cooperation assignment
+D. A subscriber who was appointed through immediate absorption from a State Government department
+Answer: C
+Explanation:
+Rule 12(2) explicitly excludes subscribers (including scientists or technical experts) serving on assignments under the Indian Technical and Economic Cooperation (ITEC) Programme or posted in foreign-based offices, unless they have resumed charge in India and served for at least one year.
+
+Q13. Consider the following statements regarding resignation from service under Rule 14 of the CCS (Implementation of NPS) Rules, 2021:
+
+1. On resignation, NPS exit benefits cannot be paid before ninety days from the date resignation takes effect.
+2. If the subscriber dies within the ninety-day waiting period, payment is made to the eligible legal heir.
+3. On technical resignation to join an NPS-covered post, the PRAN is closed and a new PRAN is generated.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 1 and 2 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statements 1 and 2 are correct per Rule 14(1) and 14(2). Statement 3 is incorrect because on technical resignation to join another NPS-covered post, the subscriber continues with the same PRAN under Rule 14(3).
+
+Q14. Under Rule 22 of the CCS (Implementation of NPS) Rules, 2021, when must the Head of Office write to the Directorate of Estates for issuing a 'No Demand Certificate' for an allottee retiring on superannuation?
+A. At least six months before anticipated retirement for the period preceding six months
+B. At least one year before anticipated retirement for the period preceding eight months
+C. At least eight months before anticipated retirement for the period preceding four months
+D. At least two years before anticipated retirement for the period preceding twelve months
+Answer: B
+Explanation:
+Rule 22 prescribes that the Head of Office shall write to the Directorate of Estates at least one year before the anticipated retirement date for issuing a 'No Demand Certificate' for the period preceding eight months of retirement.
+
+Q15. Under Rule 23 of the CCS (Implementation of NPS) Rules, 2021, how many months prior to the date of superannuation must a subscriber submit the withdrawal form prescribed by PFRDA?
+A. Eight months before retirement
+B. Six months before retirement
+C. Three months before retirement
+D. Two months before retirement
+Answer: B
+Explanation:
+Rule 23(2) mandates that every subscriber shall submit the duly filled withdrawal form along with supporting documents six months before the date of retirement on superannuation or on proceeding on leave preparatory to retirement, whichever is earlier.
+
+Q16. Match the mode of retirement/exit with the corresponding Form of covering letter prescribed under Rule 24 of the CCS (Implementation of NPS) Rules, 2021:
+A. Superannuation — Form 4-A; Resignation/Dismissal — Form 4-B; Technical Resignation — Form 4-C
+B. Superannuation — Form 4-A; Technical Resignation/Absorption — Form 4-B; Resignation/Dismissal — Form 4-C
+C. Superannuation — Form 4-B; Technical Resignation/Absorption — Form 4-A; Death in service — Form 4-C
+D. Superannuation — Form 4-C; Technical Resignation/Absorption — Form 4-D; Invalidation — Form 4-E
+Answer: B
+Explanation:
+Rule 24 specifies: Form 4-A for Superannuation/VRS/FR 56; Form 4-B for Technical Resignation/Absorption; Form 4-C for Resignation/Dismissal/Compulsory Retirement; Form 4-D for Invalidation/Disablement; Form 4-E for Death during service.
+
+Q17. Under the Unified Pension Scheme (UPS) notified in 2025, what is the eligibility criteria and quantum for the full assured pension payout?
+A. 50% of last drawn basic pay on completion of a minimum of 20 years of qualifying service
+B. 50% of the average basic pay of last 12 months on completion of minimum 25 years of qualifying service
+C. 60% of the average basic pay of last 10 months on completion of minimum 30 years of qualifying service
+D. 40% of the average basic pay of last 24 months on completion of minimum 25 years of qualifying service
+Answer: B
+Explanation:
+Under UPS notified by DFS on 24.01.2025, the full assured payout is 50% of the average basic pay drawn during the last 12 months immediately preceding superannuation, requiring a minimum of 25 years (300 months) of qualifying service.
+
+Q18. An employee covered under the Unified Pension Scheme (UPS) retires on superannuation after completing exactly 20 years (240 months) of qualifying service. If his last 12 months' average basic pay is ₹60,000, what is his admissible monthly assured payout?
+A. ₹30,000 per month
+B. ₹24,000 per month
+C. ₹20,000 per month
+D. ₹18,000 per month
+Answer: B
+Explanation:
+Full payout = 50% of ₹60,000 = ₹30,000. For service between 10 and 25 years, proportionate payout applies: ₹30,000 × (240 ÷ 300) = ₹30,000 × 0.8 = ₹24,000 per month.
+
+Q19. Under the Unified Pension Scheme (UPS), what is the minimum guaranteed pension after 10 years of qualifying service, and what is the family payout percentage to the spouse on the retiree's death?
+A. Minimum ₹9,000 per month and family payout of 50% of the subscriber's admissible payout
+B. Minimum ₹10,000 per month and family payout of 60% of the subscriber's admissible payout
+C. Minimum ₹12,000 per month and family payout of 60% of the subscriber's admissible payout
+D. Minimum ₹10,000 per month and family payout of 50% of the subscriber's admissible payout
+Answer: B
+Explanation:
+Under UPS, a minimum guaranteed payout of ₹10,000 per month is assured on superannuation after at least 10 years of qualifying service, and the family payout to the spouse is 60% of the admissible payout drawn by the subscriber before demise.
+
+Q20. What is the formula for the separate lump sum payment payable on retirement under the Unified Pension Scheme (UPS) notified in 2025?
+A. (1/6) × (Last Basic Pay + DA) × (Number of completed six-month periods of qualifying service)
+B. (1/10) × (Last Basic Pay + DA) × (Number of completed six-month periods of qualifying service)
+C. (1/4) × (Last Basic Pay + DA) × (Number of completed six-month periods of qualifying service)
+D. (1/2) × (Last Basic Pay + DA) × (Number of completed twelve-month periods of qualifying service)
+Answer: B
+Explanation:
+Under UPS, a lump sum retirement payout is admissible in addition to pension: Lump Sum = (1/10) × (Last Drawn Basic Pay + DA) × (Number of completed six-month periods of qualifying service). It does not reduce the assured monthly payout.
+
+Q21. Consider the following statements regarding the option window for the Unified Pension Scheme (UPS):
+
+1. New recruits joining Central Government service on or after 01.04.2025 must exercise their option within 30 days of joining.
+2. If an eligible existing Central Government employee does not submit any option, UPS is applied automatically as the default.
+3. Central Government employees removed or dismissed from service as a disciplinary penalty are not eligible for UPS benefits.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statements 1 and 3 are correct. Statement 2 is incorrect because NPS remains the default scheme; if an existing employee does not exercise an option, the employee continues under NPS.
+
+Q22. Under the Department of Financial Services O.M. dated 25.08.2025, what are the conditions governing a one-time switch from UPS back to NPS?
+A. It can be exercised at any time up to six months prior to the date of superannuation
+B. It can be exercised not later than one year before superannuation or three months before voluntary retirement
+C. It can be exercised only after completing twenty-five years of regular qualifying service
+D. It can be exercised even when major penalty disciplinary proceedings are actively pending
+Answer: B
+Explanation:
+DFS OM dated 25.08.2025 provides that a one-time, one-way switch from UPS back to NPS is exercisable not later than one year before superannuation or three months before voluntary retirement. It is barred where disciplinary proceedings are pending.
+
+Q23. Which of the following categories is strictly NOT eligible to opt for the Unified Pension Scheme (UPS) under the 2025 notifications?
+A. Existing Central Government civilian employees who joined service between 2004 and 2020
+B. Retired NPS employees who superannuated before 31.03.2025 with 12 years of qualifying service
+C. Central Government employees compulsorily retired from service as a measure of disciplinary penalty
+D. New recruits joining Central Government civil posts with substantive appointments after 01.04.2025
+Answer: C
+Explanation:
+Under the UPS statutory notification and CCS (Implementation of UPS under NPS) Rules, 2025, UPS is not available to employees removed, dismissed, or compulsorily retired as a disciplinary penalty, nor to those with less than 10 years of qualifying service.
+
+Q24. Under the PFRDA (Exits and Withdrawals) Regulations as amended up to December 2025, what is the exit slab for a Government sector subscriber on superannuation?
+A. APW ≤ ₹5 lakh: 100% lump sum; APW > ₹5 lakh: up to 60% lump sum and at least 40% annuity
+B. APW ≤ ₹8 lakh: 100% lump sum; APW > ₹8 lakh: up to 60% lump sum and at least 40% annuity
+C. APW ≤ ₹10 lakh: 100% lump sum; APW > ₹10 lakh: up to 80% lump sum and at least 20% annuity
+D. APW ≤ ₹8 lakh: 100% lump sum; APW > ₹8 lakh: up to 50% lump sum and at least 50% annuity
+Answer: B
+Explanation:
+The December 2025 PFRDA Amendment Regulations raised the 100% lump sum withdrawal threshold for Government sector subscribers on superannuation from ₹5 lakh to ₹8 lakh. For corpus exceeding ₹8 lakh, maximum 60% lump sum and minimum 40% annuitisation applies.
+
+Q25. If a Government sector NPS subscriber resigns from service where the accumulated corpus is ₹7,50,000, what is the exit entitlement under the amended PFRDA Regulations?
+A. 100% lump sum withdrawal without any mandatory purchase of annuity
+B. Up to 60% lump sum withdrawal and at least 40% mandatory annuity purchase
+C. Up to 20% lump sum withdrawal and at least 80% mandatory annuity purchase
+D. Complete forfeiture of the Government contribution with refund of own contribution
+Answer: C
+Explanation:
+Under amended PFRDA Exit Regulations (December 2025), on resignation/premature exit from the Government sector, if the accumulated pension wealth exceeds ₹5 lakh, the subscriber can withdraw up to 20% as lump sum and must annuitise at least 80%.
+
+Q26. Following the PFRDA (Exits and Withdrawals) Amendment Regulations notified in December 2025, what is the maximum age limit up to which an NPS subscriber can continue contributing or defer exit?
+A. Up to 70 years of age
+B. Up to 75 years of age
+C. Up to 80 years of age
+D. Up to 85 years of age
+Answer: D
+Explanation:
+The December 2025 PFRDA Amendment Regulations enhanced the maximum entry age and the age limit for deferment/continuation in NPS from 75 years to 85 years for both Government and non-Government subscribers.
+
+Q27. Under the amended PFRDA Regulations (December 2025), where a Government servant dies in service and the NPS option is operative, what is the exit threshold for 100% lump sum payout to nominees?
+A. Accumulated Pension Wealth up to ₹5 lakh
+B. Accumulated Pension Wealth up to ₹8 lakh
+C. Accumulated Pension Wealth up to ₹10 lakh
+D. Accumulated Pension Wealth up to ₹12 lakh
+Answer: B
+Explanation:
+For death during service under the NPS option, if the Accumulated Pension Wealth is ₹8 lakh or less, the entire amount (100%) is paid as lump sum to nominee/family. If it exceeds ₹8 lakh, minimum 80% must be annuitised and up to 20% is paid as lump sum.
+
+Q28. Under the PFRDA Amendment Regulations, 2025, what is the annuitisation requirement for a non-Government subscriber on normal exit when the corpus exceeds ₹8 lakh?
+A. Mandatory annuitisation of at least 40% of the accumulated corpus
+B. Mandatory annuitisation of at least 50% of the accumulated corpus
+C. Mandatory annuitisation of at least 20% of the accumulated corpus
+D. Mandatory annuitisation of at least 10% of the accumulated corpus
+Answer: C
+Explanation:
+For non-Government subscribers on normal exit, the December 2025 PFRDA Amendment reduced the minimum mandatory annuity purchase requirement to 20%, allowing up to 80% lump sum withdrawal (or Systematic Unit Redemption over a minimum of 6 years).
+
+Q29. Consider the following statements regarding permissible purposes for Tier-I partial withdrawal under the amended PFRDA Regulations:
+
+1. Medical treatment and hospitalisation of self, spouse, children, or dependent parents.
+2. One-time purchase or construction of a residential flat where the subscriber owns no other house.
+3. Expenses incurred towards establishing an independent business start-up or venture.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are valid purposes. Statement 3 is incorrect because the December 2025 PFRDA Amendment Regulations removed start-up establishment and skill development from the list of permissible partial withdrawal purposes.
+
+Q30. Under the amended PFRDA Partial Withdrawal Regulations (December 2025), what are the limits on frequency and mandatory interval between withdrawals prior to age 60?
+A. Maximum 3 withdrawals with a mandatory minimum interval of 3 years
+B. Maximum 3 withdrawals with a mandatory minimum interval of 5 years
+C. Maximum 4 withdrawals with a mandatory minimum interval of 4 years
+D. Maximum 4 withdrawals with a mandatory minimum interval of 2 years
+Answer: C
+Explanation:
+The December 2025 amendments increased the maximum number of partial withdrawals before age 60 from three to four times during the entire subscription tenure, with a mandatory interval of four years between successive withdrawals (except for medical emergencies).
+
+Q31. Pursuant to the PFRDA Amendment Regulations, 2025, a subscriber can create a lien or charge on the Individual Pension Account for financial assistance from a regulated lender up to:
+A. 50% of the subscriber's own accumulated contributions
+B. 25% of the subscriber's own accumulated contributions
+C. 25% of the total accumulated pension wealth
+D. 10% of the total accumulated pension wealth
+Answer: B
+Explanation:
+The December 2025 PFRDA amendments allow regulated financial institutions to mark a lien/charge on an Individual Pension Account for loan assistance, restricted to a maximum of 25% of the subscriber’s own contributions (excluding employer contribution).
+
+Q32. Consider the following statements regarding the NPS Tier-II Tax Saver Scheme, 2020:
+
+1. It is available exclusively to Central Government employees covered under NPS.
+2. Contributions made under this scheme have a mandatory lock-in period of three years.
+3. The minimum initial contribution required to activate this specific account is ₹500.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct. Statement 3 is incorrect because the minimum initial contribution to activate the Tier-II Tax Saver account is ₹1,000 (with subsequent minimum contributions of ₹250), not ₹500.
+
+Q33. What is the statutory tenure and age limit for Whole-time Members of PFRDA under Section 4 of the PFRDA Act, 2013?
+A. 5 years or till attaining 65 years of age, whichever is earlier
+B. 3 years or till attaining 62 years of age, whichever is earlier
+C. 5 years or till attaining 62 years of age, whichever is earlier
+D. 5 years or till attaining 60 years of age, whichever is earlier
+Answer: C
+Explanation:
+Under Section 4 of the PFRDA Act, 2013, Whole-time Members hold office for a term of 5 years or till attaining the age of 62 years, whichever is earlier. (The Chairperson holds office for 5 years or till 65 years).
+
+Q34. Under the New Tax Regime (Section 115BAC) as amended by the Finance Act, 2024, what is the ceiling for deduction of employer's contribution to NPS under Section 80CCD(2)?
+A. Up to 10% of (Basic Pay + DA) for Government employees and 10% for non-Government employees
+B. Up to 14% of (Basic Pay + DA) for Government employees and 10% for non-Government employees
+C. Up to 14% of (Basic Pay + DA) for both Government and non-Government employees
+D. Up to 12% of (Basic Pay + DA) for both Government and non-Government employees
+Answer: C
+Explanation:
+The Finance Act, 2024 amended Section 80CCD(2) under the New Tax Regime to allow deduction up to 14% of (Basic + DA) for both Government and non-Government employees, establishing parity across sectors under Section 115BAC.
+
+Q35. Under the CCS (Payment of Gratuity under NPS) Rules, 2021 read with DoPPW O.M. dated 24.10.2025, which category of employees is covered under these statutory rules?
+A. Central Government civilian employees appointed substantively on or after 01.01.2004
+B. Regular employees of Central Public Sector Undertakings governed by CPSE Guidelines
+C. Permanent faculty and staff of Central Autonomous Bodies and Central Universities
+D. Officers and staff of the Reserve Bank of India and Nationalised Public Sector Banks
+Answer: A
+Explanation:
+Rule 2 and DoPPW OM dated 24.10.2025 clarify that the CCS (Payment of Gratuity under NPS) Rules, 2021 apply strictly to Central Government civilian employees. Autonomous bodies, PSUs, RBI, and universities are excluded and governed by their respective bylaws.
+
+Q36. Under Rule 3(h) of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended by G.S.R. 258(E) dated 24.04.2025, 'gratuity' includes which of the following?
+A. Retirement gratuity and death gratuity only
+B. Retirement gratuity, death gratuity, and residuary gratuity
+C. Superannuation gratuity, invalid gratuity, and special ex-gratia
+D. Service gratuity, pensionary ex-gratia, and retirement gratuity
+Answer: B
+Explanation:
+The 2025 Amendment (G.S.R. 258(E)) substituted Rule 3(h) to explicitly define "gratuity" as including retirement gratuity, death gratuity, and residuary gratuity payable under these rules.
+
+Q37. Consider the following statements regarding the regulation of claims under Rule 4 of the CCS (Payment of Gratuity under NPS) Rules, 2021:
+
+1. The day on which a Government servant retires or is discharged is treated as his last working day.
+2. The date of death of a Government servant while in service is treated as a non-working holiday.
+3. If an employee dies while on sanctioned leave, the day of death forms part of such leave.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statements 1 and 3 are correct per Rule 4(2) and its 2025 proviso. Statement 2 is incorrect because Rule 4(2) specifically mandates that the date of death shall also be treated as a working day.
+
+Q38. Under Rule 4A of the CCS (Payment of Gratuity under NPS) Rules, 2021 (inserted in 2025) and DoPPW O.M. dated 26.12.2025, how is gratuity regulated for re-employed military pensioners?
+A. Civil gratuity is capped such that military plus civil gratuity cannot exceed ₹25 lakh
+B. Gratuity drawn for military service is completely ignored when computing subsequent civil gratuity
+C. Military pension is deducted from emoluments before calculating retirement gratuity
+D. No retirement gratuity is admissible for re-employed civil service under any circumstances
+Answer: B
+Explanation:
+DoPPW OM dated 26.12.2025 clarifies under Rule 4A that gratuity drawn for past military service shall not be subject to any limitation or combined ceiling with reference to gratuity payable for subsequent civil service.
+
+Q39. Under the second proviso to Rule 4A of the CCS (Payment of Gratuity under NPS) Rules, 2021, an employee appointed in Government service with proper permission after service in a PSU/Autonomous Body:
+A. Receives dual gratuity without any combined financial ceiling
+B. Forfeits all previous gratuity rights earned in the PSU/Autonomous Body
+C. Is subject to a combined ceiling based on total combined service and final Government pay
+D. Must refund the PSU gratuity to the Central Government in one lump sum
+Answer: C
+Explanation:
+Rule 4A proviso provides that total gratuity for service in an autonomous body/PSU and Central Government service shall not exceed the amount admissible taking into account entire combined service and emoluments on retirement from Government.
+
+Q40. Under Rule 5(1) of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, who is the competent authority to order withholding of gratuity for an officer whose appointing authority is subordinate to the President?
+A. The Head of Office in consultation with the Pay and Accounts Officer
+B. The Secretary of the Administrative Ministry or Department
+C. The Central Vigilance Commissioner in consultation with DoPT
+D. The President of India with mandatory concurrence of UPSC
+Answer: B
+Explanation:
+The 2025 amendment to Rule 5(1)(b) designates the Secretary of the Administrative Ministry or Department as the competent authority to withhold gratuity where an authority subordinate to the President is the appointing authority (and C&AG for IA&AD).
+
+Q41. Under Rule 5 of the CCS (Payment of Gratuity under NPS) Rules, 2021, where an order withholding gratuity is passed by the Secretary of an Administrative Department, an appeal against such order lies to:
+A. The Central Administrative Tribunal within ninety days of order receipt
+B. The President of India, who decides in consultation with UPSC
+C. The Department of Pension and Pensioners' Welfare for administrative review
+D. A High-Level Committee headed by the Cabinet Secretary
+Answer: B
+Explanation:
+Rule 5(2)(d), inserted in 2025, provides that an appeal against an order passed by an authority other than the President lies to the President, who shall pass orders in consultation with the Union Public Service Commission.
+
+Q42. Under Rule 6 of the CCS (Payment of Gratuity under NPS) Rules, 2021, how is the pay drawn by an employee while on deputation to a State Government treated for computing emoluments?
+A. Actual pay drawn in the State Government including State special allowance is treated as emoluments
+B. Average of pay drawn in the State Government and parent Central post is treated as emoluments
+C. Pay drawn under the State Government is ignored; notional Central Government pay is treated as emoluments
+D. State pay is treated as emoluments provided foreign service contributions were deposited
+Answer: C
+Explanation:
+Rule 6(5) (as amended in 2025) provides that pay drawn on deputation to a State Government or foreign service shall not be treated as emoluments; only the pay he would have drawn under the Central Government had he not been on deputation is treated as emoluments.
+
+Q43. An employee dies during the currency of a minor penalty of reduction to a lower stage without cumulative effect. Under Rule 6(10) of the CCS (Payment of Gratuity under NPS) Rules, 2021, his emoluments for death gratuity will be:
+A. The reduced basic pay actually drawn on the date of death
+B. The average emoluments drawn during the last ten months of service
+C. The notional pay on the date of death ignoring the effect of the penalty
+D. The minimum basic pay of the corresponding pay band and grade pay
+Answer: C
+Explanation:
+Rule 6(10) (inserted by the 2025 Amendment) provides that where an employee dies during the currency of a penalty reducing pay temporarily, the notional pay on the date of death ignoring the impact of such penalty shall be treated as emoluments.
+
+Q44. Under Rule 7 of the CCS (Payment of Gratuity under NPS) Rules, 2021, if an employee retires on 16th July, how are the fractional periods of September (14 days) and July (16 days) calculated in the 10-month average emoluments?
+A. Emoluments multiplied by 14/30 and 16/31 respectively based on actual days
+B. Emoluments multiplied by 14/30 and 16/30 irrespective of actual calendar days
+C. Emoluments multiplied by 14/365 and 16/365 on an annualized calendar basis
+D. Emoluments rounded up to full months and divided equally by ten
+Answer: B
+Explanation:
+The illustration inserted in Rule 7 by the 2025 Amendment specifies that fractional periods are computed by multiplying the emoluments by the factors 14/30 and 16/30 irrespective of the number of days in the calendar month (including February).
+
+Q45. Under Rule 9A of the CCS (Payment of Gratuity under NPS) Rules, 2021 (inserted in 2025), where a State Government employee is appointed in Central Government with proper permission:
+A. State service counts and the gratuity liability is shared proportionately between State and Centre
+B. State service counts and the entire gratuity liability is borne by the Central Government
+C. State service does not count unless the State Government pays a capitalized lump sum
+D. State service counts only if the employee surrenders all pensionary benefits from the State
+Answer: B
+Explanation:
+Rule 9A(3) explicitly provides that the gratuity liability for past qualifying State Government service shall be borne entirely by the Central Government, and no recovery of proportionate gratuity shall be made from the State Government.
+
+Q46. Under Rule 9B of the CCS (Payment of Gratuity under NPS) Rules, 2021 (inserted in 2025), service rendered in which of the following bodies prior to appointment in Central Government strictly CANNOT be counted as qualifying service?
+A. A Central Autonomous Body with similar gratuity provisions discharging liability
+B. A State Autonomous Body with similar gratuity rules paying capitalized gratuity
+C. A Public Sector Undertaking including a Nationalised Bank or Financial Institution
+D. A Central Statutory Corporation created under an Act of Parliament
+Answer: C
+Explanation:
+Rule 9B(2) unequivocally states that service rendered in a Public Sector Undertaking, including a nationalised bank and financial institution, before appointment in the Central Government shall not count as qualifying service.
+
+Q47. Under Rule 11 of the CCS (Payment of Gratuity under NPS) Rules, 2021, apprentice service is admissible as qualifying service in which specific case?
+A. Trade apprentices engaged under the Apprentices Act, 1961 in railway workshops
+B. S.A.S. apprentices in Indian Audit and Accounts Department or Defence Accounts Department
+C. Graduate engineering apprentices in Central Public Works Department
+D. Management apprentices in Central Government printing presses
+Answer: B
+Explanation:
+Rule 11 provides that service as an apprentice does not qualify, except in the case of a Subordinate Audit or Accounts Services (S.A.S.) apprentice in the Indian Audit and Accounts Department or the Defence Accounts Department.
+
+Q48. Consider the following statements regarding counting of Extraordinary Leave (EOL) under Rule 12 of the CCS (Payment of Gratuity under NPS) Rules, 2021:
+
+1. All EOL granted on medical certificate counts as qualifying service.
+2. EOL granted for pursuing higher scientific and technical studies may be allowed to count.
+3. If no entry is made in the service book regarding non-counting of EOL, it defaults to non-qualifying.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct under Rule 12. Statement 3 is incorrect because the Explanation inserted in 2025 provides that if no definite entry is made in the service book, the period of extraordinary leave shall be treated as qualifying service.
+
+Q49. Under Rule 13 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as substituted in 2025, how is pre-appointment training counted for Group C posts?
+A. It qualifies only if specifically approved by a special order of the Administrative Ministry
+B. It qualifies as of right if the candidate received pay, stipend, or a nominal allowance
+C. It qualifies only if the training period was longer than six calendar months
+D. It qualifies only if the employee pays pensionary contribution for the training duration
+Answer: B
+Explanation:
+Rule 13(1) mandates that pre-appointment departmental training for a Group C post counts as qualifying service if the Government servant was in receipt of pay in a scale of pay, a stipend, or a nominal allowance during such training.
+
+Q50. Under Rule 14 of the CCS (Payment of Gratuity under NPS) Rules, 2021, the period of suspension counts as qualifying service when:
+A. A major penalty other than dismissal or removal is imposed upon the Government servant
+B. The inquiry concludes with exoneration or imposition of a minor penalty
+C. The employee remains suspended for a continuous duration exceeding two years
+D. The disciplinary authority fails to issue a final charge sheet within six months
+Answer: B
+Explanation:
+Rule 14(1) provides that time spent under suspension counts as qualifying service where, on conclusion of the inquiry, the employee has been fully exonerated, or a minor penalty is imposed, or the suspension is held wholly unjustified.
+
+Q51. An NPS employee with 14 years of regular service resigns to join a private multinational company. Under Rule 17 of the Gratuity Rules read with DoPPW O.M. dated 24.10.2025, what gratuity is admissible?
+A. Full retirement gratuity based on 14 years of completed service
+B. Compassionate gratuity equal to two-thirds of retirement gratuity
+C. Proportionate retirement gratuity subject to a ceiling of ₹10 lakh
+D. No gratuity is payable as resignation entails forfeiture of past service
+Answer: D
+Explanation:
+DoPPW OM dated 24.10.2025 and Rule 17 clarify that resignation (other than technical resignation, deemed retirement, or absorption) entails forfeiture of past service, and no retirement gratuity is payable regardless of qualifying service length.
+
+Q52. Under Rule 19 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, before an appointing authority passes an order deciding NOT to condone an interruption in service:
+A. Prior mandatory concurrence of the Union Public Service Commission must be obtained
+B. Prior concurrence of the Department of Expenditure, Ministry of Finance is required
+C. The Government servant must be extended a reasonable opportunity of representation and being heard
+D. A formal chargesheet for major penalty under CCS (CCA) Rules must be issued
+Answer: C
+Explanation:
+Rule 19(6) (inserted by 2025 Amendment) provides that no order against condonation of interruption in service shall be passed by the appointing authority without extending to the Government servant a reasonable opportunity of representation and being heard in person.
+
+Q53. Under Rule 21 of the CCS (Payment of Gratuity under NPS) Rules, 2021, when must the Head of Office verify service and communicate the qualifying service in Form 1 to the employee?
+A. After completion of 10 years of service and 3 years before superannuation
+B. After completion of 15 years of service and 2 years before superannuation
+C. After completion of 18 years of service and 5 years before superannuation
+D. After completion of 20 years of service and 1 year before superannuation
+Answer: C
+Explanation:
+Rule 21(1) prescribes that verification of service and communication in Form 1 shall be done on completing 18 years of service, and again on being left with 5 years of service before the date of superannuation.
+
+Q54. Under Rule 22 of the CCS (Payment of Gratuity under NPS) Rules, 2021 read with DoPPW O.M. dated 30.05.2024 and 2025 amendments, what is the maximum ceiling on Retirement Gratuity and Death Gratuity?
+A. ₹20 lakh w.e.f. 01.01.2024
+B. ₹25 lakh w.e.f. 01.01.2024
+C. ₹30 lakh w.e.f. 01.04.2025
+D. ₹25 lakh w.e.f. 24.04.2025
+Answer: B
+Explanation:
+DoPPW OM dated 30.05.2024 and G.S.R. 258(E) dated 24.04.2025 enhanced the maximum ceiling of Retirement Gratuity and Death Gratuity from ₹20 lakh to ₹25 lakh with retrospective effect from 01.01.2024, following Dearness Allowance reaching 50%.
+
+Q55. A Central Government employee covered under NPS retires on superannuation after rendering 4 years and 9 months of regular qualifying service. What is his gratuity entitlement under Rule 22 Explanation (1A)?
+A. Ineligible for gratuity as he has not completed the mandatory 5 years
+B. Eligible for retirement gratuity treating his service as 5 qualifying years
+C. Eligible only for service gratuity equal to half month pay per completed year
+D. Eligible for proportionate death-cum-retirement gratuity of 4 years only
+Answer: B
+Explanation:
+Explanation (1A) to Rule 22 (inserted by 2025 Amendment) provides that where qualifying service is 4 years and 9 months or more but less than 5 years, it shall be deemed to be 5 years, making him eligible for retirement gratuity under Rule 22(1).
+
+Q56. An NPS employee dies in service after completing 7 years of qualifying service. If his last emoluments (Basic + DA) were ₹50,000, what is the amount of death gratuity payable to his family under Rule 22(2)?
+A. ₹3,00,000 (6 times emoluments)
+B. ₹6,00,000 (12 times emoluments)
+C. ₹10,00,000 (20 times emoluments)
+D. ₹16,50,000 (33 times emoluments)
+Answer: B
+Explanation:
+Under the death gratuity table in Rule 22(2), for qualifying service of 5 years or more but less than 11 years, the death gratuity rate is 12 times of emoluments: 12 × ₹50,000 = ₹6,00,000.
+
+Q57. Under Rule 22(4) of the CCS (Payment of Gratuity under NPS) Rules, 2021, when is 'Residuary Gratuity' admissible to the family of a retired Government servant?
+A. If the pensioner dies within 3 years of retirement and total benefits fall short of 10 times emoluments
+B. If the pensioner dies within 5 years of retirement and total benefits fall short of 12 times emoluments
+C. If the pensioner dies within 7 years of retirement and total benefits fall short of 20 times emoluments
+D. If the pensioner dies within 2 years of retirement and total benefits fall short of 6 times emoluments
+Answer: B
+Explanation:
+Rule 22(4) provides that if an employee eligible for retirement gratuity dies within 5 years from retirement, and the annuity receipts plus gratuity fall short of twelve times his emoluments, a residuary gratuity equal to the deficiency is granted to his family.
+
+Q58. Consider the following statements regarding the definition of 'Family' under Rule 22(5) of the Gratuity Rules (as amended in 2025):
+
+1. Brothers suffering from disability of mind or physically crippled are included without any age limit.
+2. Brothers below the age of eighteen years are included in the family definition.
+3. Unmarried and widowed sisters are included, but divorced sisters are strictly excluded.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct per Rule 22(5)(viii). Statement 3 is incorrect because the 2025 amendment to Rule 22(5)(ix) explicitly includes unmarried, widowed, and divorced sisters.
+
+Q59. Under Rule 23(4) of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, what happens to a nomination made by an unmarried employee in favour of his parents upon his subsequent marriage?
+A. The nomination becomes automatically null and void on the date of marriage
+B. The nomination remains valid until the Government servant cancels it and files a fresh nomination
+C. The nomination automatically transfers 50% share to the newly wedded spouse
+D. The nomination is suspended until the Head of Office re-verifies family details
+Answer: B
+Explanation:
+Rule 23(4)(c) (substituted in 2025) provides that a nomination made by an unmarried Government servant in favour of a family member (like parents) shall NOT become invalid on marriage unless the employee cancels it and files a fresh nomination.
+
+Q60. Where a deceased Government servant left no nomination and is survived by his wife, a minor son, a married daughter, and dependent father, how is death gratuity distributed under Rule 24?
+A. Distributed equally among wife, minor son, married daughter, and father (1/4th each)
+B. Distributed equally between wife and minor son only (1/2 each)
+C. Paid entirely to the wife as the primary surviving spouse
+D. Distributed equally among wife, minor son, and dependent father (1/3rd each)
+Answer: B
+Explanation:
+Under Rule 24(2), members in clauses (i) to (v) of Rule 22(5) (wife and minor son) share equally to the complete exclusion of members in clauses (vi) to (xi) (father, married daughter). Thus, wife and minor son receive equal shares.
+
+Q61. Under Rule 25 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, a person's claim to receive death gratuity remains suspended if charged with:
+A. Cheating and criminal breach of trust under the Bharatiya Nyaya Sanhita
+B. Murder, abetment of murder, or abetting death by suicide of the Government servant
+C. Unauthorised occupation of Government accommodation beyond permissible period
+D. Wilful destruction of official Government records or misappropriation of revenue
+Answer: B
+Explanation:
+Rule 25 read with its Explanation (inserted in 2025) provides that where an eligible claimant is charged with murdering the Government servant, abetting murder, or abetting death by suicide, his claim to gratuity remains suspended till conclusion of criminal proceedings.
+
+Q62. Under Rule 30 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, where an order fixing final gratuity is not issued simultaneously with compulsory retirement:
+A. No gratuity is payable until the appellate authority decides the appeal
+B. Full superannuation gratuity is sanctioned on a provisional basis
+C. Provisional gratuity at two-thirds rate is sanctioned immediately, and final order issued within 3 months
+D. Provisional gratuity at one-half rate is sanctioned, and final order issued within 6 months
+Answer: C
+Explanation:
+Rule 30(3) and 30(4) (inserted in 2025) provide that where final quantum is not fixed simultaneously, provisional gratuity at two-thirds of full superannuation gratuity shall be sanctioned immediately, and final order issued (in consultation with UPSC, if necessary) within 3 months.
+
+Q63. Under Rule 31 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, what is the maximum compassionate gratuity on dismissal/removal and the time limit for deciding it?
+A. Up to one-half of retirement gratuity, to be decided within six months
+B. Up to two-thirds of retirement gratuity, to be decided within three months
+C. Up to one-third of retirement gratuity, to be decided within two months
+D. Up to three-fourths of retirement gratuity, to be decided within one month
+Answer: B
+Explanation:
+Rule 31(1) and 31(2) (inserted in 2025) provide that the competent authority may sanction compassionate gratuity not exceeding two-thirds of retirement gratuity, and must examine and take a decision not later than 3 months after the dismissal/removal order.
+
+Q64. Consider the following statements regarding gratuity for a missing employee under Rule 33 as substituted in 2025:
+
+1. Retirement gratuity is payable after expiry of six months from lodging the police report.
+2. Death gratuity becomes payable after death is established or on expiry of seven years from police report.
+3. The provisions of Rule 33 apply equally to employees who disappeared facing fraud allegations.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct per Rule 33(4)(a) and 33(4)(b). Statement 3 is incorrect because Rule 33(6) specifically bars applicability where a Government servant disappears facing fraud, embezzlement, or criminal charges.
+
+Q65. Under Rule 36 of the CCS (Payment of Gratuity under NPS) Rules, 2021, which of the following represents the correct statutory time markers?
+A. Verification completed 8 months before superannuation; lookback for emoluments 24 months; dispute window 2 months
+B. Verification completed 6 months before superannuation; lookback for emoluments 12 months; dispute window 1 month
+C. Verification completed 4 months before superannuation; lookback for emoluments 36 months; dispute window 3 months
+D. Verification completed 12 months before superannuation; lookback for emoluments 10 months; dispute window 2 months
+Answer: A
+Explanation:
+Rule 36 mandates: First-stage verification completed 8 months prior to retirement (sub-clause vii); Second-stage verification of emoluments looks back 24 months (sub-clause v); Third-stage certificate issued 8 months prior, with 2 months allowed for employee dispute.
+
+Q66. Under Rule 41 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, where gratuity cannot be settled before retirement for administrative reasons:
+A. Head of Office sanctions 100% provisional gratuity withholding 10%; provisional becomes final after 6 months
+B. Head of Office sanctions 80% provisional gratuity; provisional becomes final after 3 months
+C. Head of Office sanctions 50% provisional gratuity; excess amount must be refunded by pensioner
+D. Accounts Officer sanctions 100% provisional gratuity without any withholding margin
+Answer: A
+Explanation:
+Rule 41 provides that the Head of Office sanctions 100% provisional gratuity withholding 10%. Under Rule 41(6), if not finalized within six months, provisional gratuity is treated as final. Under Rule 41(5)(b)(i), excess disbursement is not recoverable from the retiree.
+
+Q67. Under Rule 44 of the CCS (Payment of Gratuity under NPS) Rules, 2021 as amended in 2025, interest on delayed payment of retirement gratuity due to administrative lapses:
+A. Is payable at GPF rate from the date of retirement and sanctioned by the President of India
+B. Is payable at PPF rate after expiry of 3 months from retirement and sanctioned by the Secretary/JS
+C. Is payable at SBI savings rate after expiry of 6 months and sanctioned by the Accounts Officer
+D. Is payable at Treasury Bill rate from the date following retirement and sanctioned by DoPT
+Answer: B
+Explanation:
+Rule 44 provides that interest at the PPF rate is payable from the date following expiry of 3 months from retirement up to payment date, sanctioned by the Secretary of the Ministry/Department (or authorized Joint Secretary), and paid within 2 months of sanction.
+
+Q68. Under Rules 7 and 8 of the General Financial Rules (GFR), 2017, moneys received by civil courts within Union Territories (other than High Courts) must be credited to:
+A. The Consolidated Fund of India under Article 266(1)
+B. The Contingency Fund of India under Article 267(1)
+C. The Public Account of India under Article 284
+D. The Revenue Deposit Account of the respective Ministry
+Answer: C
+Explanation:
+Rule 8(1)(ii) of GFR 2017 provides that under Article 284 of the Constitution, all moneys received by or deposited with the Supreme Court of India or with any other Court, other than a High Court, within a Union Territory, shall be paid into the Public Account.
+
+Q69. Under Rule 19 of GFR 2017, what is the prescribed date and monetary threshold for submitting the annual statement of remissions of revenue to Audit and Accounts Officers?
+A. Annually on 1st April; individual remissions below ₹5,000 are omitted
+B. Annually on 1st June; individual remissions below ₹1,000 are omitted
+C. Annually on 31st March; individual remissions below ₹10,000 are omitted
+D. Annually on 1st July; individual remissions below ₹2,500 are omitted
+Answer: B
+Explanation:
+Rule 19(1) of GFR 2017 specifies that Central Government Departments (other than Department of Posts) shall submit annually, on the 1st of June, a statement of remissions of revenue and abandonment of claims. Individual remissions below ₹1,000 need not be included.
+
+Q70. Consider the following statements regarding the Standards of Financial Propriety under Rule 21 of GFR 2017:
+
+1. Every officer should exercise the same vigilance as a person of ordinary prudence would exercise for his own money.
+2. The expenditure incurred should not be prima-facie more than what the occasion demands.
+3. An authority can exercise sanctioning powers to pass an order directly or indirectly to its own advantage.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 represent core canons under Rule 21(i) and 21(ii). Statement 3 is incorrect because Rule 21(iii) explicitly prohibits any authority from exercising powers of sanctioning expenditure to pass an order directly or indirectly to its own advantage.
+
+Q71. Under Rule 28 of GFR 2017, which of the following proposals mandatorily requires the previous consent of the Ministry of Finance?
+A. Procurement of common-use goods through the Government e-Marketplace (GeM)
+B. Grant of land, assignment of revenue, or relinquishment of revenue in any way
+C. Sanction of contingent expenditure within the delegated powers of Head of Office
+D. Re-appropriation of funds within the same primary unit of appropriation
+Answer: B
+Explanation:
+Rule 28 of GFR 2017 provides that previous consent of the Finance Ministry is required for any proposal that involves grant of land, assignment of revenue, mineral/forest concessions, or relinquishment of revenue in any manner.
+
+Q72. Under Rule 30 of GFR 2017, a financial sanction issued by a competent authority lapses if:
+A. No payment in whole or in part has been made within six months of its issue
+B. No payment in whole or in part has been made within twelve months of its issue
+C. The financial year in which the sanction was issued expires without payment
+D. The Drawing and Disbursing Officer fails to present the bill within ninety days
+Answer: B
+Explanation:
+Rule 30 of GFR 2017 states that a sanction for any fresh charge lapses if no payment in whole or in part has been made during a period of twelve months from the date of issue of such sanction (subject to exceptions in Rule 31).
+
+Q73. Consider the following statements regarding the reporting of losses under Rule 33 of GFR 2017:
+
+1. Petty losses of value not exceeding ₹10,000 need not be reported to the next higher authority.
+2. Losses are reported in two stages: an initial suspicion report followed by a final investigation report.
+3. In cases of loss due to employee culpability, the loss is written off without attempting cash recovery.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct per Rule 33(1)(ii) and Rule 33(3). Statement 3 is incorrect because Rule 33(6) mandates fixing responsibility, bearing loss by the concerned Department, and crediting recoveries from erring officials to Government.
+
+Q74. Under Rules 34 and 35 of GFR 2017, what is the monetary threshold above which loss of Government property due to suspected fire, theft, fraud, or natural causes must be reported to the Police / Government?
+A. Losses exceeding ₹10,000
+B. Losses exceeding ₹25,000
+C. Losses exceeding ₹50,000
+D. Losses exceeding ₹1,00,000
+Answer: C
+Explanation:
+Rule 34 mandates that all losses above ₹50,000 due to suspected fire, theft, fraud, etc. shall be reported to the Police. Rule 35 similarly requires reporting immovable property losses exceeding ₹50,000 caused by natural calamities to the Government.
+
+Q75. Under Rule 41 of GFR 2017, how must a file categorized as 'Secret' or 'Top Secret' be handled when demanded by Audit?
+A. The file must be retained and a summary note provided in lieu of original documents
+B. The file must be sent personally to the Head of the Audit Office specifying the classification
+C. The file can only be inspected at the premises of the Ministry after Cabinet approval
+D. The file is completely exempted from production before the Comptroller and Auditor General
+Answer: B
+Explanation:
+Rule 41 of GFR 2017 provides that if the contents of any file are categorized as 'Secret' or 'Top Secret', the file may be sent personally to the Head of the Audit Office specifying this fact, to be handled per classified document protocols.
+
+Q76. Under Rule 143 of GFR 2017, the definition of 'Goods' excludes which of the following items?
+A. Commercial software and technology transfer licences
+B. Industrial machinery and scientific equipment
+C. Books, publications, and periodicals for a library
+D. Intellectual property rights and specialized patents
+Answer: C
+Explanation:
+Rule 143 of GFR 2017 defines 'goods' to include all tangible and intangible products like software, technology transfer, licences, and maintenance, but expressly excludes books, publications, periodicals, etc. for a library.
+
+Q77. Consider the following statements regarding the fundamental principles of public buying under Rule 144 of GFR 2017:
+
+1. Technical specifications should be objective, functional, generic, and measurable.
+2. Specifications should clearly indicate specific brand names or registered trademarks to ensure quality.
+3. Ministries and Departments must prepare an Annual Procurement Plan and publish it on their websites.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statements 1 and 3 are correct under Rule 144(a) and Rule 144. Statement 2 is incorrect because Rule 144(b) strictly prohibits specifying particular trademarks, trade names, or brand requirements in procurement documents.
+
+Q78. Under Rule 149 of GFR 2017 as amended by Department of Expenditure O.M. dated 10.07.2024, what are the revised procurement slabs on the Government e-Marketplace (GeM)?
+A. Direct purchase up to ₹25,000; L-1 buying ₹25,000 to ₹5,00,000; Bidding/RA above ₹5,00,000
+B. Direct purchase up to ₹50,000; L-1 buying ₹50,000 to ₹10,00,000; Bidding/RA above ₹10,00,000
+C. Direct purchase up to ₹1,00,000; L-1 buying ₹1,00,000 to ₹25,00,000; Bidding/RA above ₹25,00,000
+D. Direct purchase up to ₹50,000; L-1 buying ₹50,000 to ₹5,00,000; Bidding/RA above ₹5,00,000
+Answer: B
+Explanation:
+DoE OM No. F.1/3/2024-PPD dated 10.07.2024 revised GeM slabs under Rule 149: (i) up to ₹50,000 through any seller; (ii) above ₹50,000 up to ₹10,00,000 via L-1 among at least 3 manufacturers; (iii) above ₹10,00,000 via mandatory online bidding/RA.
+
+Q79. Under Rule 149 of GFR 2017, what is the special provision governing the procurement of automobiles on the GeM portal?
+A. Direct purchase is permitted without ceiling; L-1 comparison applies up to ₹30 lakh
+B. Direct purchase is restricted to ₹50,000; mandatory bidding applies above ₹10 lakh
+C. Mandatory Global Tender Enquiry must be invited for any automobile purchase
+D. Automobile procurement cannot be conducted through GeM and requires open tendering
+Answer: A
+Explanation:
+Under Rule 149(i) Note and Rule 149(ii), direct purchase of automobiles is permitted on GeM without any ceiling limit under sub-rule (i), and the L-1 comparison limit among three manufacturers continues up to ₹30 lakh.
+
+Q80. Under Rule 150 of GFR 2017, registered suppliers for goods and services not available on GeM are registered for a fixed duration of:
+A. Exactly five years
+B. Between one to three years
+C. Exactly six months
+D. Up to seven years
+Answer: B
+Explanation:
+Rule 150(3) of GFR 2017 provides that suppliers will be registered for a fixed period between 1 to 3 years. After expiry of the period, suppliers must apply afresh for renewal of registration.
+
+Q81. Under Rule 151 of GFR 2017, what is the maximum period of debarment for a bidder convicted under the Prevention of Corruption Act or for causing loss of life/property?
+A. Period not exceeding one year
+B. Period not exceeding two years
+C. Period not exceeding three years
+D. Period not exceeding five years
+Answer: C
+Explanation:
+Rule 151(1) of GFR 2017 provides that a bidder convicted of an offence under the Prevention of Corruption Act, 1988 or IPC/BNS shall be debarred for a period not exceeding three years. (Breach of code of integrity carries up to two years).
+
+Q82. Under Rule 153 of GFR 2017, what percentage of textile requirements is mandatorily reserved for procurement of handloom origin from KVIC or handloom clusters?
+A. At least 10% of all textile procurement
+B. At least 20% of all textile procurement
+C. At least 25% of all textile procurement
+D. At least 50% of all textile procurement
+Answer: B
+Explanation:
+Rule 153 of GFR 2017 specifies that of all items of textiles required by Central Government Ministries/Departments, it is mandatory to procure at least 20% from items of handloom origin through KVIC or recognized handloom clusters.
+
+Q83. Under Rule 154 of GFR 2017 as amended by Department of Expenditure O.M. dated 10.07.2024, purchase of goods without quotation or bids is permitted up to:
+A. ₹25,000 on each occasion
+B. ₹50,000 on each occasion
+C. ₹1,00,000 on each occasion
+D. ₹15,000 on each occasion
+Answer: B
+Explanation:
+DoE OM dated 10.07.2024 amended Rule 154 of GFR 2017, raising the threshold for purchase of goods without inviting quotations or bids from ₹25,000 to ₹50,000 on each occasion.
+
+Q84. Under Rule 155 of GFR 2017 as amended by Department of Expenditure O.M. dated 10.07.2024, what is the revised financial slab for procurement of goods by a Local Purchase Committee?
+A. Above ₹25,000 and up to ₹2,50,000 on each occasion
+B. Above ₹50,000 and up to ₹5,00,000 on each occasion
+C. Above ₹50,000 and up to ₹10,00,000 on each occasion
+D. Above ₹1,00,000 and up to ₹5,00,000 on each occasion
+Answer: B
+Explanation:
+DoE OM dated 10.07.2024 amended Rule 155 of GFR 2017, enhancing the financial slab for purchase of goods through a three-member Local Purchase Committee to 'above ₹50,000 and up to ₹5,00,000' on each occasion (earlier ₹25,000 to ₹2,50,000).
+
+Q85. Under Rule 161 of GFR 2017 as amended in July 2024, what is the financial threshold for Advertised Tender Enquiry and the standard bidding time for domestic tenders?
+A. Estimated value of ₹25 lakhs and above; minimum 2 weeks for bid submission
+B. Estimated value of ₹50 lakhs and above; minimum 3 weeks for bid submission
+C. Estimated value of ₹1 crore and above; minimum 4 weeks for bid submission
+D. Estimated value of ₹50 lakhs and above; minimum 4 weeks for bid submission
+Answer: B
+Explanation:
+Under Rule 161(i) as amended by DoE OM dated 10.07.2024, Advertised Tender Enquiry applies to procurement of ₹50 lakhs and above (earlier ₹25 lakhs). Rule 161(ii) provides that the minimum time for submission of domestic bids is ordinarily three weeks.
+
+Q86. Under Rule 161(iv)(b) of GFR 2017, Global Tender Enquiry (GTE) shall NOT be invited for public procurements up to an estimated value of:
+A. ₹50 crore
+B. ₹100 crore
+C. ₹200 crore
+D. ₹500 crore
+Answer: C
+Explanation:
+Rule 161(iv)(b) of GFR 2017 provides that Global Tender Enquiry (GTE) shall not be invited for tenders with an estimated value up to ₹200 crore, unless exceptional prior approval is obtained from the competent authority.
+
+Q87. Under Rule 162 of GFR 2017 as amended by Department of Expenditure O.M. dated 10.07.2024, Limited Tender Enquiry (LTE) is adopted for procurements up to:
+A. ₹25 lakhs, with number of supplier firms more than three
+B. ₹50 lakhs, with number of supplier firms more than three
+C. ₹50 lakhs, with number of supplier firms exactly three
+D. ₹1 crore, with number of supplier firms more than five
+Answer: B
+Explanation:
+DoE OM dated 10.07.2024 raised the threshold for Limited Tender Enquiry under Rule 162 from ₹25 lakhs to ₹50 lakhs. The rule requires that the number of supplier firms in LTE should be more than three.
+
+Q88. Consider the following statements distinguishing 'Two-Bid System' (Rule 163) and 'Two-Stage Bidding' (Rule 164) under GFR 2017:
+
+1. In Two-Bid System, technical and financial bids are submitted simultaneously in separate sealed covers.
+2. In Two-Stage Bidding, the first stage invites technical bids without prices, and price bids are invited in the second stage.
+3. Two-Bid System is adopted when technical specifications cannot be precisely defined by the procuring entity.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct per Rules 163 and 164. Statement 3 is incorrect because Two-Stage Bidding (Rule 164), not Two-Bid System (Rule 163), is used when the procuring entity cannot initially formulate detailed technical specifications.
+
+Q89. Under Rule 165 of GFR 2017, how are bids received after the specified date and time (late bids) treated in Advertised and Limited Tenders?
+A. Opened after all valid bids are evaluated with approval of Head of Department
+B. Considered only if the quoted price is significantly lower than the lowest valid bid
+C. Shall not be opened or considered under any circumstances
+D. Evaluated on provisional basis subject to verification of postal transit delay
+Answer: C
+Explanation:
+Rule 165 of GFR 2017 explicitly provides that in the case of advertised tender enquiry or limited tender enquiry, late bids (bids received after the specified date and time for receipt) should not be considered.
+
+Q90. Under Rule 166 of GFR 2017, Single Tender Enquiry may be resorted to in which of the following circumstances?
+A. When estimated value is below ₹50 lakhs and more than three firms exist
+B. When only a particular firm is the manufacturer of the required goods, or in case of emergency
+C. When technical specifications are generic and goods are available on the GeM portal
+D. When previous open tender enquiry resulted in responsive bids from multiple suppliers
+Answer: B
+Explanation:
+Rule 166 of GFR 2017 permits Single Tender Enquiry when: (1) it is known that only a particular firm manufactures the goods; (2) in cases of emergency; or (3) when a specific standardization/compatibility requirement exists.
+
+Q91. Under Rule 170 of GFR 2017, what is the standard range for Bid Security (Earnest Money) and its required validity period?
+A. 1% to 3% of estimated value; validity 30 days beyond final bid validity
+B. 2% to 5% of estimated value; validity 45 days beyond final bid validity
+C. 3% to 5% of estimated value; validity 60 days beyond contract completion
+D. 5% to 10% of estimated value; validity 90 days beyond final bid validity
+Answer: B
+Explanation:
+Rule 170 of GFR 2017 stipulates that Bid Security should ordinarily range between 2% to 5% of the estimated contract value, and remain valid for a period of 45 days beyond the final bid validity period.
+
+Q92. Under Rule 170 of GFR 2017, which of the following entities is EXEMPTED from submitting Bid Security (Earnest Money Deposit)?
+A. Foreign multinational companies participating in Global Tender Enquiries
+B. Bidders having annual turnover exceeding ₹500 crore in any of the three preceding financial years
+C. All private limited companies registered under the Companies Act, 2013
+D. Unregistered local partnership firms submitting quotes below ₹50 lakhs
+Answer: B
+Explanation:
+Rule 170 exempts Micro and Small Enterprises (MSEs), GeM-registered vendors, Startups, BIS-certified product bidders, and bidders with annual turnover exceeding ₹500 crore in any one of the three preceding financial years from paying Bid Security.
+
+Q93. Under Rule 171(i) of GFR 2017 as amended by Ministry of Finance O.M. dated 01.01.2024, what is the prescribed quantum and validity of Performance Security?
+A. 5% to 10% of contract value; valid 30 days beyond all contractual obligations
+B. 3% to 5% of contract value; valid 60 days beyond completion of all contractual obligations
+C. 3% to 10% of contract value; valid 45 days beyond completion of warranty period
+D. 2% to 5% of contract value; valid 90 days beyond the date of contract signing
+Answer: B
+Explanation:
+Finmin OM dated 01.01.2024 amended Rule 171(i) of GFR 2017, fixing Performance Security at 3% to 5% of contract value (earlier 3% to 10%). Rule 171(ii) requires it to remain valid for 60 days beyond completion of all contractual obligations including warranty.
+
+Q94. Under Rule 172 of GFR 2017, what is the maximum limit of advance payment that may be released to a private supplier firm?
+A. Up to 40% of the total contract value
+B. Up to 30% of the total contract value
+C. Up to 50% of the total contract value
+D. Up to 20% of the total contract value
+Answer: B
+Explanation:
+Rule 172(1)(a) of GFR 2017 provides that advance payments to private firms shall not exceed 30% of the contract value (as against 40% for Government agencies/PSUs, and 6 months' cost for maintenance contracts).
+
+Q95. Consider the following statements regarding procurement transparency under Rule 173 of GFR 2017:
+
+1. If a bidding firm quotes NIL charges or consideration, the bid is treated as unresponsive.
+2. Electrical appliances procured by Departments must carry the notified Star Rating of BEE.
+3. Contracts must always be awarded to the highest technical scorer regardless of price.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Statements 1 and 2 are correct per Rule 173(1) and 173(3). Statement 3 is incorrect because Rule 173(2) mandates that contracts should ordinarily be awarded to the lowest evaluated responsive bidder (L-1) meeting qualifications.
+
+Q96. Under Rule 175(1)(ii) of GFR 2017 (Code of Integrity), a bidder is required to disclose previous transgressions with any entity in any country during the last:
+A. One year
+B. Two years
+C. Three years
+D. Five years
+Answer: C
+Explanation:
+Rule 175(1)(ii) requires bidders to disclose any previous transgressions made with any entity in any country during the last three years, or of being debarred by any other procuring entity.
+
+Q97. Under Rule 177 of GFR 2017, which of the following is expressly EXCLUDED from the definition of 'Consulting Service'?
+A. Professional, intellectual, and advisory services
+B. Specialized training and project evaluation services
+C. Direct engagement of a retired Government servant
+D. Technology assessment and software advisory services
+Answer: C
+Explanation:
+Rule 177 of GFR 2017 defines consulting service as intellectual, professional, or advisory services, but explicitly states that it does not include direct engagement of a retired Government servant.
+
+Q98. Under Rule 183 of GFR 2017 as amended by Department of Expenditure O.M. dated 10.07.2024, what is the financial threshold above which an Expression of Interest (EOI) for consultancy must be published on CPPP?
+A. Where estimated cost is above ₹25 lakhs
+B. Where estimated cost is above ₹50 lakhs
+C. Where estimated cost is above ₹1 crore
+D. Where estimated cost is above ₹10 lakhs
+Answer: B
+Explanation:
+DoE OM dated 10.07.2024 enhanced the threshold in Rule 183(ii) from ₹25 lakhs to ₹50 lakhs. Where the estimated cost of consulting service exceeds ₹50 lakhs, an enquiry seeking EOI must be published on CPPP.
+
+Q99. Under Rule 192 of GFR 2017, what is the maximum permissible weightage for technical (non-financial) parameters in Quality and Cost Based Selection (QCBS)?
+A. Shall not exceed 60 percent
+B. Shall not exceed 70 percent
+C. Shall not exceed 80 percent
+D. Shall not exceed 90 percent
+Answer: C
+Explanation:
+Rule 192(ii) of GFR 2017 stipulates that in QCBS evaluation, the relative weightage of technical (non-financial) parameters in no case should exceed 80 percent.
+
+Q100. Under Rule 201 of GFR 2017 as amended by Department of Expenditure O.M. dated 10.07.2024, what are the procurement methods for Non-Consulting Services?
+A. Limited tender up to ₹25 lakhs (>3 contractors); Advertised tender on CPPP/GeM above ₹25 lakhs
+B. Limited tender up to ₹50 lakhs (>3 contractors); Advertised tender on CPPP/GeM above ₹50 lakhs
+C. Local Purchase Committee up to ₹5 lakhs; Open tender on CPPP above ₹5 lakhs
+D. Direct nomination up to ₹10 lakhs; Limited tender on GeM above ₹10 lakhs
+Answer: B
+Explanation:
+DoE OM dated 10.07.2024 revised thresholds under Rule 201: for non-consulting services up to ₹50 lakhs, a limited tender enquiry is issued to more than three contractors; for estimated value above ₹50 lakhs, an advertised tender must be published on CPPP and GeM.

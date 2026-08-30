@@ -1,0 +1,978 @@
+Q1. Under Fundamental Rules, which of the following best defines a "Fee" as opposed to an "Honorarium"?
+A. A non-recurring payment granted from the Consolidated Fund of India for occasional work.
+B. A recurring payment granted from the Consolidated Fund of India for special work.
+C. A recurring or non-recurring payment from a source other than the Consolidated Fund.
+D. A recurring payment from a State Government for performing official duty on a tour.
+Answer: C
+Explanation:
+As per FR 9(6-A), a "Fee" is a payment from a source other than the Consolidated Fund of India, whereas an "Honorarium" under FR 9(9) is paid from the Consolidated Fund of India.
+
+Q2. Which of the following statements regarding a Government servant's "Lien" is/are correct?
+
+1. It represents the right to hold a regular post.
+2. It can be retained during foreign service.
+3. It applies to a post on which probation is applicable.
+A. 1 and 2 only
+B. 2 and 3 only
+C. 1 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation:
+Under FR 9(13), a lien is the title to hold a regular post on which probation is not applicable. FR 13 allows retention of lien during foreign service, holding a temporary post, or officiating in another post.
+
+
+
+Q3. What is the maximum limit for Non-Practising Allowance (NPA) when combined with basic pay for medical posts?
+A. It must not exceed the pay at the Apex Level, which is Rs. 2,25,000.
+B. It must not exceed the pay at the Cabinet Secretary level, i.e., Rs. 2,37,500.
+C. It is restricted to 25% of the basic pay subject to a maximum of Rs. 2,50,000.
+D. It must not exceed the basic pay of the immediate superior controlling officer.
+Answer: B
+Explanation:
+According to FR 9(21), Non-Practising Allowance (NPA) to medical posts is 20% of basic pay. Basic pay plus NPA must not exceed the pay at Cabinet Secretary level, which is Rs. 2,37,500.
+
+Q4. Which of the following periods is NOT treated as "Duty" under the Fundamental Rules?
+A. Time spent by a civil servant in the Territorial Army on training.
+B. The day of an obligatory departmental examination, such as the LDCE.
+C. Pre-appointment training for the purpose of granting MACP benefits.
+D. The period of waiting for posting orders upon return from authorised leave.
+Answer: C
+Explanation:
+As per Government Decisions under FR 9(6), pre-appointment training is treated as duty for increments and qualifying service for pension, but NOT for MACP. Other options are explicitly treated as duty.
+
+Q5. An official is placed under suspension on a criminal charge but is later fully exonerated. The pay computed for the past period of suspension is termed as:
+A. Officiating Pay
+B. Substantive Pay
+C. Presumptive Pay
+D. Compensatory Pay
+Answer: C
+Explanation:
+Under FR 9(24), presumptive pay is the pay to which a Government servant would be entitled if he held the post substantively. Upon exoneration, re-computed pay for the suspension period is presumptive pay.
+
+Q6. Consider the following statements regarding the retention of a lien:
+
+1. Lien is retained during joining time on transfer to another post.
+2. Lien stands terminated on acquiring a lien on a permanent post outside the cadre.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation:
+FR 13 explicitly states that a lien is retained during joining time on transfer. Furthermore, a lien stands terminated on acquiring a lien on a permanent post outside the cadre on which the servant is borne.
+
+
+
+Q7. Under FR 17-A, which of the following is deemed to cause an interruption or break in service unless regularised by a competent authority?
+A. Absence due to inability to join duty on account of civil commotion.
+B. Participating in a strike declared illegal under any law currently in force.
+C. Overstaying joining time on transfer when supported by medical certificates.
+D. Proceeding on extraordinary leave for prosecuting higher scientific studies.
+Answer: B
+Explanation:
+Under FR 17-A, unauthorised absence includes participation in an illegal strike, participation in a strike without authority, and remaining absent without authority, all of which cause an interruption in service.
+
+Q8. What is the maximum continuous period of leave of any kind that can ordinarily be granted to a Government servant?
+A. Three years
+B. Four years
+C. Five years
+D. Seven years
+Answer: C
+Explanation:
+As per FR 18, unless the President determines otherwise in view of exceptional circumstances, no Government servant shall be granted leave of any kind for a continuous period exceeding five years.
+
+Q9. A Government servant is appointed to a new post involving duties of greater importance. Within what timeframe must he exercise the option for pay fixation?
+A. Within 15 days from the date of his promotion.
+B. Within one month from the assumption of charge.
+C. Within three months from the date of the new order.
+D. Within six months of the next annual increment date.
+Answer: B
+Explanation:
+Under FR 22(I)(a)(1), when appointed to a post involving greater responsibilities, the Government servant may opt for pay fixation either from the date of promotion or next increment within one month of assumption of charge.
+
+Q10. Which of the following periods does NOT count for earning an increment on a time scale under FR 26?
+A. All kinds of leave except extraordinary leave (EOL) without medical certificate.
+B. Time spent on pre-appointment training where a regular stipend is drawn.
+C. Extraordinary leave granted without medical certificate due to civil commotion.
+D. Wilful absence from duty not covered by grant of leave treated as dies-non.
+Answer: D
+Explanation:
+Under FR 26, EOL on medical grounds, civil commotion, or technical studies counts. However, wilful absence treated as "dies-non" does not count for increment, leave, and pension purposes.
+
+Q11. What is the quantum of special increment granted to a sportsperson achieving excellence at the International level?
+A. One increment, subject to a total of 3 increments in service.
+B. Two increments, subject to a total of 5 increments in service.
+C. Three increments, subject to a total of 5 increments in service.
+D. Two increments, without any lifetime cap on total increments.
+Answer: B
+Explanation:
+Under FR 27, sportspersons achieving excellence at the International level are granted two premature/advance increments, subject to a maximum total of 5 increments in their entire service career.
+
+Q12. An official's acting promotion to a higher post is restricted under FR 35. What is the maximum increase in basic pay allowed on such an officiating appointment?
+A. 10.0% of basic pay, subject to a maximum of Rs. 5,000 per month.
+B. 12.5% of basic pay, subject to a maximum of Rs. 6,700 per month.
+C. 15.0% of basic pay, subject to a maximum of Rs. 7,500 per month.
+D. 12.5% of basic pay, subject to a maximum of Rs. 9,000 per month.
+Answer: B
+Explanation:
+As per FR 35 (and DoPT OM dated 28.02.2019), the increase in basic pay on an officiating appointment is restricted to 12.5% of basic pay, subject to a strict maximum limit of Rs. 6,700 per month.
+
+Q13. Consider the following statements regarding stepping up of pay:
+
+1. Both the junior and the senior must belong to the same cadre.
+2. The anomaly must directly result from the application of FR 22(I)(a)(1).
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: D
+Explanation:
+Both statements are correct. Stepping up of a senior's pay requires both to belong to the same cadre, identical posts, identical pay levels, and the anomaly must arise directly from FR 22(I)(a)(1) application.
+
+
+
+Q14. What is the licence fee recovered from an official who owns a house near their station of posting, if the income from that residence is Rs. 15,000?
+A. Normal licence fee is recovered without any penalty.
+B. Double the normal licence fee is actively recovered.
+C. Triple the normal licence fee is actively recovered.
+D. The official is entirely barred from Government accommodation.
+Answer: B
+Explanation:
+Under Government Decisions on FR 45-A, if the income from a self-owned residence at the station is more than Rs. 12,000 but up to Rs. 20,000, double the normal licence fee is recovered.
+
+Q15. An official is transferred outside India. What is the permissible period for retention of Government accommodation on normal licence fee?
+A. 1 month on normal fee, and up to 3 months on double fee.
+B. 2 months on normal fee, and up to 6 months on double fee.
+C. 6 months on normal fee, and up to 8 months on double fee.
+D. 8 months on normal fee, without any double fee condition.
+Answer: B
+Explanation:
+Under FR 45-A, upon transfer outside India (or temporary transfer in India), accommodation can be retained for 2 months on normal licence fee, and up to 6 months on double licence fee.
+
+Q16. What is the rate of honorarium payable to a serving Presenting Officer in departmental proceedings?
+A. 15% of the basic pay drawn by the Presenting Officer.
+B. 10% of the basic pay drawn by the Presenting Officer.
+C. 70% of the monthly basic pension of a retired officer.
+D. Rs. 40,000 per case regardless of the basic pay drawn.
+Answer: B
+Explanation:
+According to Government Decisions under FR 46, a serving Presenting Officer in departmental proceedings is entitled to an honorarium calculated at 10% of their basic pay drawn.
+
+Q17. An officer holds additional charge of a higher post in a different office for 60 days. Which of the following is correct regarding his pay under FR 49?
+A. No additional pay is admissible since the period does not exceed 90 days.
+B. He receives pay of the higher post plus 10% of presumptive pay of the additional post.
+C. He receives pay of the lower post plus 20% of presumptive pay of the higher post.
+D. He receives pay of the higher post only, without any additional percentage allowance.
+Answer: B
+Explanation:
+Under FR 49(iii), for charge of a post not in the same office held for more than 45 days but not exceeding 3 months, the official draws pay of the higher post plus 10% of the presumptive pay of the additional post.
+
+Q18. Which of the following conditions must be met for a Central Government officer to be eligible for deputation/foreign service?
+A. The officer must have completed 5 years of service and be clear from vigilance.
+B. The officer must have completed 9 years of service and be clear from vigilance.
+C. The officer must have completed 7 years of service and hold a Group A post.
+D. The officer must have completed 10 years of service and be clear from vigilance.
+Answer: B
+Explanation:
+As per the DoPT Consolidated Guidelines dated 28.03.2024, a Central Government officer is eligible for deputation/foreign service only after completing 9 years of service and being clear from the vigilance angle.
+
+Q19. Under FR 53, subsistence allowance may be increased if suspension is prolonged for reasons not directly attributable to the Government servant. What is the maximum permissible increase?
+A. Up to 25% of the initial first-three-months rate.
+B. Up to 50% of the initial first-three-months rate.
+C. Up to 75% of the leave salary on half-pay leave.
+D. Up to 100% of the initial first-three-months rate.
+Answer: B
+Explanation:
+Under FR 53(ii), subsistence allowance may be increased by up to 50% of the first-three-months rate where the prolongation of suspension is not directly attributable to the Government servant.
+
+Q20. Which of the following recoveries is strictly NOT permitted from the subsistence allowance of a suspended official?
+A. Recovery of house rent and allied charges (electricity, water).
+B. Compulsory deduction for CGHS and CGEGIS contributions.
+C. Recovery of loss to Government for which the servant is responsible.
+D. Repayment of loans and advances previously taken by the servant.
+Answer: C
+Explanation:
+Under Government Decisions on FR 53, recoveries strictly not to be made from subsistence allowance include GPF subscription, amounts due on court attachment, and recovery of loss to Government for which the servant is responsible.
+
+Q21. A temporary Government servant is dismissed, but the order is converted into leave under FR 54-B. What is the maximum period of Extraordinary Leave (EOL) that can be sanctioned?
+A. EOL up to 3 months.
+B. EOL up to 6 months.
+C. EOL up to 12 months.
+D. EOL up to 5 years.
+Answer: A
+Explanation:
+Under FR 54-B(7), the competent authority may convert the period of suspension preceding dismissal into EOL up to 3 months in the case of a temporary Government servant. For a permanent servant, leave up to 5 years is permitted.
+
+Q22. Consider the following statements regarding the age of superannuation under FR 56:
+
+1. Specialists in the Teaching sub-cadre of CHS engaged only in teaching superannuate at 65 years.
+2. Nursing teaching faculty with an M.Sc. (Nursing) in Central Govt. Institutions superannuate at 62 years.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Statement 1 is correct per FR 56(bb). Statement 2 is incorrect because FR 56(bbb) explicitly states the superannuation age for nursing teaching faculty with an M.Sc. (Nursing) is 65 years, not 62 years.
+
+
+
+Q23. Under FR 56(j), the Appropriate Authority has the absolute right to prematurely retire a Group A officer who entered service before the age of 35. At what age does this right become exercisable?
+A. After attaining the age of 50 years.
+B. After attaining the age of 55 years.
+C. After completing 25 years of regular service.
+D. After completing 30 years of qualifying service.
+Answer: A
+Explanation:
+Under FR 56(j)(i), for Group A & B servants who entered service before the age of 35 years, the authority can prematurely retire them in the public interest after they attain the age of 50 years.
+
+Q24. An official born on 1st October 1966 attains the age of 60 years in 2026. On which exact date will the official superannuate?
+A. Afternoon of 1st October 2026.
+B. Afternoon of 30th September 2026.
+C. Afternoon of 31st October 2026.
+D. Forenoon of 1st October 2026.
+Answer: B
+Explanation:
+According to FR 56(a), a Government servant whose date of birth is the first of a month retires on the afternoon of the last day of the preceding month. Hence, he retires on the afternoon of 30th September 2026.
+
+Q25. Which of the following is correct regarding pension and leave-salary contributions during foreign service outside India?
+A. Pension contribution is paid by the foreign employer; leave-salary by the servant.
+B. Pension contribution is paid by the servant; leave-salary by the foreign employer.
+C. Both pension and leave-salary contributions are paid by the Government servant.
+D. Both pension and leave-salary contributions are paid by the foreign employer.
+Answer: B
+Explanation:
+Under FR 115, contribution towards pension is paid by the Government servant himself on foreign service. By special arrangement, leave-salary contribution is paid by the foreign employer when deputation is out of India.
+
+Q26. What is the rate of leave-salary contribution for all Government servants in foreign service?
+A. 10% of (basic pay + DA)
+B. 11% of (basic pay + DA)
+C. 14% of (basic pay + DA)
+D. 18% of (basic pay + DA)
+Answer: B
+Explanation:
+Under FR 116, the updated rate of leave-salary contribution is fixed at 11% of (basic pay + DA) for all Government servants in foreign service.
+
+Q27. A Government servant earns a fee of Rs. 11,000 for work done for a private body in a financial year. What amount must be credited to the Consolidated Fund of India?
+A. Rs. 2,000
+B. Rs. 3,666
+C. Rs. 1,500
+D. Rs. 3,000
+Answer: A
+Explanation:
+Under SR 12, one-third of the fee in excess of Rs. 5,000 is credited. Calculation: (11,000 - 5,000) / 3 = 6,000 / 3 = Rs. 2,000. The first Rs. 5,000 is fully retained.
+
+Q28. If a Government servant's copy of the service book is lost by him, what is the prescribed fee for its replacement under SR 198?
+A. Rs. 100
+B. Rs. 250
+C. Rs. 500
+D. Rs. 1000
+Answer: C
+Explanation:
+According to Government Decisions under SR 198, if the Government servant's copy of the service book is lost by him, it is replaced on payment of an exact fee of Rs. 500.
+
+Q29. What is the current maximum ceiling for Deputation (Duty) Allowance when the deputation involves a change of station, following the DA reaching 50%?
+A. Rs. 9,000 per month
+B. Rs. 10,000 per month
+C. Rs. 11,250 per month
+D. Rs. 12,500 per month
+Answer: C
+Explanation:
+Under SR 307-A, the 10% deputation allowance for change of station has a base ceiling of Rs. 9,000, which rose by 25% when DA crossed 50% (w.e.f. 01.01.2024), making the current ceiling Rs. 11,250 per month.
+
+Q30. Consider the following statements about Joining Time under CCS (Joining Time) Rules, 1979:
+
+1. No joining time is admissible on temporary transfer for a period not exceeding 180 days.
+2. A permanent employee transferred on his own request is entitled to regular joining time pay.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Statement 1 is correct per Rule 4. Statement 2 is incorrect because, under Rule 15, on own-request transfer, regular leave may be granted to cover transit; joining time pay is not admissible as it is not in public interest.
+
+
+
+Q31. An official is transferred to a new station located 1,500 km away. The journey is performed by train. What is the admissible joining time?
+A. 10 days
+B. 12 days
+C. 15 days
+D. 20 days
+Answer: B
+Explanation:
+Under Rule 9 of the CCS (Joining Time) Rules, for a distance of more than 1,000 km and up to 2,000 km, the joining time admissible is exactly 12 days.
+
+Q32. A Government servant joins his new post without availing 5 days of his admissible joining time. What happens to this unutilised joining time?
+A. It is permanently forfeited and cannot be claimed.
+B. It is credited to his half-pay leave account fully.
+C. It is credited to his earned-leave account, up to 300 days limit.
+D. It is encashed immediately at the basic pay rate of the new post.
+Answer: C
+Explanation:
+Under Rule 11 of the CCS (Joining Time) Rules, unutilised joining time is credited to the Government servant's earned-leave account, subject to the maximum overall accumulation limit of 300 days.
+
+Q33. Which of the following relatives is explicitly NOT included in the term "family" for the purpose of Travelling Allowance on transfer?
+A. A widowed daughter residing with and dependent upon the servant.
+B. A step-father residing with and wholly dependent upon the servant.
+C. A major son residing with and wholly dependent upon the servant.
+D. A step-mother residing with and wholly dependent upon the servant.
+Answer: B
+Explanation:
+Under Government Decisions on SR 2(4), a step-father is explicitly NOT included for TA on transfer, although he is included as a family member for LTC purposes. Step-mothers, major sons, and widowed daughters are included.
+
+Q34. Under what condition is a Conveyance Allowance granted to a Government servant?
+A. The official uses a bicycle for daily official duties up to 16 km.
+B. The average monthly running on official duty strictly exceeds 200 km.
+C. The official is on temporary transfer for a continuous period of 30 days.
+D. The average monthly absence from headquarters exceeds 15 days in a month.
+Answer: B
+Explanation:
+Under SR 25-27, conveyance allowance is granted only if the average monthly running on duty exceeds 200 km, the official uses a car/motorcycle, and absence from HQ does not exceed 15 days in a month.
+
+Q35. What is the current road mileage rate for journeys performed by own car/taxi at places where no specific rates have been prescribed, effective from 01.01.2024?
+A. Rs. 24 per km
+B. Rs. 25 per km
+C. Rs. 30 per km
+D. Rs. 35 per km
+Answer: C
+Explanation:
+Under Rule 46, following the 25% enhancement when DA reached 50% (w.e.f. 01.01.2024), the road mileage rate for own car/taxi superseded the earlier Rs. 24 rate and is now Rs. 30 per km.
+
+Q36. An official in Pay Level 10 stays in a hotel during an official tour in an X-class city. He claims Rs. 2,500 per day. Which of the following is correct regarding his claim?
+A. He can claim up to Rs. 2,812.50 without producing any vouchers.
+B. He can claim up to Rs. 2,812.50 but must produce actual vouchers.
+C. He is limited to a strict maximum of Rs. 1,000 per day without vouchers.
+D. He is limited to a maximum of Rs. 2,250 and must produce actual vouchers.
+Answer: B
+Explanation:
+For Pay Levels 9 to 11, the hotel ceiling is Rs. 2,812.50 per day (updated). Reimbursement on a self-certified basis without vouchers is only for Level 8 and below. Above Level 8, or exceeding Rs. 1,250 in X-class cities, vouchers are required.
+
+Q37. An official proceeds on a local journey for 8 hours. What percentage of the normal daily allowance (DA) is admissible for this local journey?
+A. 30% of the normal DA entitlement.
+B. 35% of the normal DA entitlement.
+C. 50% of the normal DA entitlement.
+D. 70% of the normal DA entitlement.
+Answer: B
+Explanation:
+Under Government Decisions on Rule 71, for local journeys, DA is admissible at 50% of the normal tour entitlement. A normal tour of 6-12 hours gives 70%. Half of 70% is 35% for a local journey.
+
+Q38. Consider the following statements regarding the Composite Transfer Grant (CTG):
+
+1. CTG is calculated at 80% of the last basic pay for a transfer > 20 km.
+2. NPA and MSP are included in basic pay when computing the CTG.
+3. For transfer to Lakshadweep, CTG is 100% of the last basic pay.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: B
+Explanation:
+Statement 1 and 3 are correct. Statement 2 is incorrect because the rules strictly state that NPA and MSP are NOT included in computing CTG.
+
+
+
+Q39. An official retires from service and settles at a station other than the last station of duty. What is the time limit for submitting the TA claim on retirement?
+A. 60 days from the date of retirement.
+B. 60 days from the date succeeding completion of the journey.
+C. 180 days from the date of retirement.
+D. 180 days from the date succeeding completion of the journey.
+Answer: D
+Explanation:
+Under Rule 194-A and related decisions, while normal TA claims are time-barred after 60 days, claims for TA on retirement must be submitted within 180 days from the date succeeding completion of the journey.
+
+Q40. A Government servant under suspension is required to attend a departmental enquiry at an outstation. He is permitted to claim TA under SR 153-A. Which of the following applies if the enquiry is held at an outstation at his own request?
+A. He receives full TA as for a journey on regular tour.
+B. He receives TA limited to second-class train fare only.
+C. No TA is admissible if the enquiry is at his own request.
+D. He receives TA based on his subsistence allowance grade.
+Answer: C
+Explanation:
+Under SR 153-A, a suspended official is generally allowed TA for a departmental enquiry; however, no TA is admissible if the enquiry is held at an outstation strictly at his own request.
+
+Q41. Regarding Dearness Allowance (DA), which of the following statements is correct?
+A. DA is calculated solely on Basic Pay and excludes NPA for medical posts.
+B. During suspension, DA is calculated on the official's original basic pay.
+C. DA is admissible during Extraordinary Leave (EOL).
+D. Any fraction of 50 paise and above in DA computation is rounded up to the next higher rupee.
+Answer: D
+Explanation:
+DA is calculated on Basic + NPA. During suspension, it's calculated on Subsistence Allowance. DA is NOT admissible during EOL. A fraction of 50 paise and above is rounded up to the next higher rupee.
+
+Q42. What is the current rate of House Rent Allowance (HRA) for a Z-class city, following DA crossing 50% on 01.01.2024?
+A. 8% of Basic Pay, with a minimum floor of Rs. 1,800.
+B. 9% of Basic Pay, with a minimum floor of Rs. 1,800.
+C. 10% of Basic Pay, with a minimum floor of Rs. 1,800.
+D. 10% of Basic Pay, with a minimum floor of Rs. 3,600.
+Answer: C
+Explanation:
+As per MoF OM dated 07.07.2017, when DA crossed 50% w.e.f. 01.01.2024, HRA rates were revised to 30%, 20%, and 10% for X, Y, and Z cities respectively, with a minimum floor of Rs. 1,800 for Z cities.
+
+Q43. An official is offered Government accommodation but refuses it. How does this refusal affect his HRA entitlement?
+A. HRA is immediately reduced by 50% for the next 12 months.
+B. The refusal debars him from allotment for one year, and no HRA is admissible during this period.
+C. HRA continues at the normal rate, provided a No Accommodation Certificate is obtained.
+D. He is debarred from allotment for three years but continues to receive full HRA.
+Answer: B
+Explanation:
+Under HRA Admissibility rules, refusal of offered Government accommodation debars the servant from further allotment for one year, and crucially, HRA is not admissible during this debarment period.
+
+Q44. A Government servant is transferred and leaves his family behind in a non-Government accommodation at the old station. How is his HRA regulated for the first 2 months?
+A. He draws HRA at the maximum admissible rate of the new station.
+B. He draws HRA at the same rate as drawn at the old station.
+C. He draws the lower of the HRA rates of the old and new stations.
+D. He draws half the HRA rate of the old station for the transit period.
+Answer: B
+Explanation:
+Under the rules for HRA on transfer (Family left behind), for the first 2 months from joining at the new station, the official is entitled to HRA at the same rate as drawn at the old station.
+
+Q45. An industrial employee covered by CCS (Leave) Rules suffers from a specified ailment like TB and goes on extended leave. Up to what maximum period is HRA admissible during this leave based on a medical certificate?
+A. Admissible up to a maximum of 40 days.
+B. Admissible up to a maximum of 120 days.
+C. Admissible up to a maximum of 180 days.
+D. Admissible up to a maximum of 8 months.
+Answer: C
+Explanation:
+For industrial employees under CCS (Leave) Rules, HRA is normally admissible for 40 days of leave, but this is extended up to 180 days if suffering from TB/cancer/other ailments during leave, on medical certificate.
+
+Q46. The dependency income limit for a family member to be considered dependent for HRA purposes is:
+A. Income not exceeding Rs. 9,000 per month (inclusive of pension and TI).
+B. Income not exceeding Rs. 12,000 per month (exclusive of pension).
+C. Income not exceeding Rs. 18,000 per month (inclusive of pension and TI).
+D. Income not exceeding Rs. 21,000 per month (exclusive of TI).
+Answer: A
+Explanation:
+Under the definitions for HRA, a family member is NOT dependent if their independent source of income exceeds Rs. 9,000 per month, which is inclusive of pension and TI on pension.
+
+Q47. Consider the following statements regarding HRA during suspension:
+
+1. HRA is calculated on the subsistence allowance drawn by the official.
+2. HRA is computed on the basis of the pay the servant was drawing on the date of suspension.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation:
+Statement 1 is incorrect because DA is calculated on subsistence allowance, but HRA is NOT. Statement 2 is correct; HRA during suspension is computed on the pay the servant was drawing on the date of suspension.
+
+
+
+Q48. Which of the following correctly describes the "Deemed possession" rule for Government accommodation?
+A. Failing to take possession within 15 days leads to 30 days of lost HRA.
+B. Failing to take possession within 8 days leads to licence fee charge and no HRA for up to 12 days.
+C. Failing to occupy within 10 days results in an immediate 1-year debarment from HRA.
+D. Failing to take possession within 12 days leads to licence fee charge and no HRA for up to 8 days.
+Answer: B
+Explanation:
+Under SR 317-B-12(1), if the servant fails to take possession within 8 days of the allotment letter, licence fee is charged for up to 12 days (deemed possession), and NO HRA is admissible for that 12-day period.
+
+Q49. A Central Government official is placed on deputation within the same station. What is the rate of Deputation (Duty) Allowance admissible?
+A. 5% of basic pay, subject to a maximum of Rs. 4,500 per month.
+B. 10% of basic pay, subject to a maximum of Rs. 9,000 per month.
+C. 5% of basic pay, subject to a maximum of Rs. 5,625 per month.
+D. 10% of basic pay, subject to a maximum of Rs. 11,250 per month.
+Answer: C
+Explanation:
+Under SR 307-A updated rates, deputation at the same station entitles the official to 5% of basic pay. The ceiling increased by 25% (when DA crossed 50%) from Rs. 4,500 to Rs. 5,625 per month.
+
+Q50. Under the Casual Labourers Scheme 1993, how many days of continuous service are required for a casual labourer in a five-day week office to earn temporary status?
+A. 180 days
+B. 206 days
+C. 240 days
+D. 300 days
+Answer: B
+Explanation:
+As per the Casual Labourers Scheme 1993, continuous service of at least one year means engagement for at least 240 days, or specifically 206 days in offices observing a strict five-day week.
+
+Q51. Which of the following benefits is NOT admissible to a Casual Labourer with Temporary Status (CL-TS)?
+A. Encashment of accumulated leave on termination of service.
+B. Maternity leave of 180 days under CCS (Leave) Rules.
+C. Payment of wages calculated on the minimum pay of MTS + DA + HRA.
+D. Contribution to General Provident Fund after three years of service.
+Answer: A
+Explanation:
+Under the 1993 Scheme, while leave is credited and carried forward on regularisation, there is strictly no encashment of leave on termination of service for any reason, or on quitting service.
+
+Q52. Consider the following statements regarding the regularisation of Casual Labourers in the Department of Posts:
+
+1. They are regularised into the Multi Tasking Staff (MTS) cadre.
+2. The general DoP&T rule of absorbing them into two out of every three vacancies is strictly followed by DoP.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Statement 1 is correct. Statement 2 is incorrect because the Department of Posts is governed by its own MTS Recruitment Rules (2018/2023 waterfall system), not the general DoP&T 2-out-of-3 vacancy rule.
+
+
+
+Q53. A male Casual Labourer with Temporary Status and one surviving child applies for paternity leave. What is the maximum duration of paternity leave he can be granted?
+A. 10 days
+B. 15 days
+C. 20 days
+D. 30 days
+Answer: B
+Explanation:
+Under Rule 43-A of the CCS (Leave) Rules, extended to CL-TS, a male casual labourer with temporary status and fewer than two surviving children may be granted paternity leave of 15 days.
+
+Q54. How is Earned Leave credited for a Casual Labourer with Temporary Status?
+A. 1 day for every 10 days of work, credited twice a year on 1 January and 1 July.
+B. 2.5 days for every month of work, credited at the end of each calendar year.
+C. 1 day for every 15 days of work, up to a maximum of 30 days per year.
+D. 15 days in advance on 1 January and 15 days on 1 July, irrespective of days worked.
+Answer: A
+Explanation:
+For a CL-TS, leave is earned on a pro-rata basis at the rate of one day for every ten days of work, and it is credited twice a year on 1 January and 1 July.
+
+Q55. Under the MTS Recruitment (Amendment) Rules, 2023, what is the correct "waterfall" order of priority for filling MTS vacancies?
+A. Gramin Dak Sevaks → Casual Labourers → Open Market
+B. Casual Labourers → Open Market → Gramin Dak Sevaks
+C. Casual Labourers → Gramin Dak Sevaks → Open Market
+D. Open Market → Gramin Dak Sevaks → Casual Labourers
+Answer: C
+Explanation:
+The 2023 amendment mandates a strict priority order: Order 1 is Casual Labourers (100% first); unfilled vacancies flow to Order 2, Gramin Dak Sevaks; and finally unfilled GDS vacancies flow to Order 3, Open Market.
+
+Q56. When terminating the service of a Casual Labourer with Temporary Status, what is the required notice period?
+A. No notice is required if surplus casual workers are available.
+B. Seven days' notice in writing from the competent authority.
+C. One month's notice in writing from either the employer or the worker.
+D. Three months' notice in writing or pay in lieu thereof.
+Answer: C
+Explanation:
+Despite temporary status, the services of a casual labourer may be dispensed with, or the worker may quit, by giving exactly one month’s notice in writing, paying wages only for days actually engaged.
+
+Q57. After regularisation into the MTS cadre, what percentage of the service rendered under temporary status is counted for the purpose of retirement benefits?
+A. 25% of temporary-status service
+B. 50% of temporary-status service
+C. 75% of temporary-status service
+D. 100% of temporary-status service
+Answer: B
+Explanation:
+According to the Casual Labourers Scheme, 1993, upon regularisation, exactly 50% of the service rendered under temporary status is counted for the purpose of retirement benefits.
+
+Q58. Consider the following statements about the engagement of plain casual labourers (without temporary status):
+
+1. They may be recruited for work of a regular nature if MTS posts are vacant.
+2. If performing the same work as regular employees, they are paid 1/30th of the minimum pay plus DA.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Statement 1 is incorrect; DoP&T instructions explicitly state that persons on daily wages should NOT be recruited for work of a regular nature. Statement 2 is correct regarding the 1/30th calculation for identical work.
+
+
+
+Q59. A casual labourer with temporary status becomes eligible for General Provident Fund (GPF) and Festival Advances after completing what period of continuous service following conferment of temporary status?
+A. One year of continuous service
+B. Two years of continuous service
+C. Three years of continuous service
+D. Five years of continuous service
+Answer: C
+Explanation:
+Under the scheme, after rendering three years of continuous service following conferment of temporary status, a casual labourer is treated on par with a temporary MTS employee for GPF and advance purposes.
+
+Q60. Which Supreme Court judgment established that the 1993 Casual Labourer Scheme is a one-time measure and protects temporary-status workers from removal merely due to surplus availability?
+A. Raj Kamal & Others vs. Union of India
+B. Dev Dutt vs. Union of India
+C. Union of India & Anr. vs. Mohan Pal
+D. Secretary, State of Karnataka vs. Umadevi
+Answer: C
+Explanation:
+The Supreme Court confirmed in Union of India & Anr. vs. Mohan Pal [SLP (Civil) No. 2224/2000] that the scheme is a one-time measure and protected CL-TS from arbitrary removal due to surplus availability.
+
+Q61. What is the minimum period of supervision required for a Reporting or Reviewing Officer to validly record an assessment in an APAR?
+A. One month (30 days)
+B. Two months (60 days)
+C. Three months (90 days)
+D. Six months (180 days)
+Answer: C
+Explanation:
+Under the APAR instructions, officers at both the Reporting and Reviewing levels must have supervised the work and conduct of the Government servant for at least three months (90 days) during the reporting period.
+
+Q62. When calculating the 3-month supervisory period for APAR, which of the following leave types exceeding 15 days is deducted from the total period spent on the post?
+A. Casual Leave exceeding 15 days
+B. Half Pay Leave exceeding 15 days
+C. Earned Leave exceeding 15 days
+D. Special Casual Leave exceeding 15 days
+Answer: C
+Explanation:
+When computing the qualifying 3-month period, Earned Leave, Maternity Leave, Child Care Leave, or Study Leave exceeding 15 days is explicitly deducted from the total period spent on the post.
+
+Q63. Consider the following statements regarding the numerical grading in the APAR:
+
+1. The Assessment of Work Output carries a weightage of 40%.
+2. The Assessment of Personal Attributes carries a weightage of 40%.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Statement 1 is correct. Statement 2 is incorrect because the DoPT OM dated 23.07.2009 sets the weightage as: Work Output 40%, Personal Attributes 30%, and Functional Competency 30%.
+
+
+
+Q64. An official receives an overall numerical APAR grade of 5.9. According to the verbal grading bands, which category does this score fall into?
+A. Outstanding
+B. Very Good
+C. Good
+D. Below the 'Good' band
+Answer: C
+Explanation:
+As per the grading bands, "Good" covers scores from 4 up to (but not including) 6. A score of 5.9 falls in the "Good" band, while exactly 6.0 is the floor for "Very Good".
+
+Q65. If a Reporting Officer is transferred during the middle of the reporting year, when should they write the APAR for their subordinates?
+A. At the end of the financial year, consolidating the entire period.
+B. Within three months from the date of assuming the new charge.
+C. Exactly at the time of transfer or immediately thereafter.
+D. It should be left to the Reviewing Officer to initiate the report instead.
+Answer: C
+Explanation:
+Under special situations guidelines, where a Reporting Officer is being transferred, the report should be written at the time of transfer or immediately thereafter, and not deferred to the end of the year.
+
+Q66. What is the benchmark grading required for financial upgradation under the Modified Assured Career Progression Scheme (MACPS) falling due on or after 25.07.2016?
+A. "Good" (overall score of 5.0 or more)
+B. "Very Good" (overall score of 6.0 or more)
+C. "Outstanding" (overall score of 8.0 or more)
+D. "Fit" (based on seniority without numeric benchmark)
+Answer: B
+Explanation:
+On the recommendation of the 7th CPC, for MACP due on or after 25.07.2016, the benchmark was enhanced from "Good" to "Very Good" (an overall score of 6.0 or more) for all posts.
+
+Q67. Under the revised APAR time schedule effective from the reporting year 2024-25, what is the due date for the submission of self-appraisal by the officer reported upon?
+A. 15 April
+B. 15 May
+C. 30 June
+D. 31 July
+Answer: B
+Explanation:
+As per DoPT O.M. No. 21011/10/2025-PP(A-II) dated 09.04.2025, the revised due date for the submission of self-appraisal is 15 May (previously 15 April).
+
+Q68. A Government servant retires and his APAR dossier is preserved. What is the prescribed preservation period for the APAR in the case of retirement?
+A. 2 years from the date of retirement
+B. 3 years from the date of retirement
+C. 5 years from the date of retirement
+D. 10 years from the date of retirement
+Answer: C
+Explanation:
+According to the custody and preservation rules, an APAR is retained for 5 years from the date of the event in cases of retirement, dismissal, removal, or resignation. (It is 2 years in case of death).
+
+Q69. After the APAR is disclosed to the officer, what is the time limit for making a representation against any entry or grading?
+A. Within 7 days from the date of disclosure.
+B. Within 15 days from the date of disclosure.
+C. Within 30 days from the date of disclosure.
+D. Within 45 days from the date of disclosure.
+Answer: B
+Explanation:
+Following the disclosure of the APAR (mandated since 2008-09), the officer reported upon may make a representation against any entry strictly within 15 days from the date of disclosure.
+
+Q70. If the Reviewing Officer does not have the requisite 3 months' experience, how is the APAR process handled assuming the Reporting Officer is eligible?
+A. A No Report Certificate (NRC) must be generated for the entire period.
+B. The Reviewing Officer completes it based purely on the Reporting Officer's notes.
+C. The APAR is reviewed by the next higher authority above the Reviewing Officer.
+D. The Reporting Officer's assessment is treated as final without any review.
+Answer: C
+Explanation:
+If the Reviewing Officer lacks the 3 months' requisite experience but the Reporting Officer is eligible, the report is initiated by the Reporting Officer and then reviewed by the next higher authority.
+
+Q71. Consider the following statements regarding a penalty entry in the APAR:
+
+1. The penalty is recorded in the APAR of the year in which the offence was committed.
+2. The penalty entry must note the period when the actual offence occurred.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: B
+Explanation:
+Statement 1 is incorrect because the penalty entry is recorded in the APAR of the year in which the punishment order is issued, not the year of the offence. Statement 2 is correct.
+
+
+
+Q72. What word limit is prescribed for the brief description of duties in the self-appraisal section, as per the DoPT proforma?
+A. Not exceeding 50 words.
+B. Not exceeding 100 words.
+C. Not exceeding 200 words.
+D. Not exceeding 300 words.
+Answer: B
+Explanation:
+Under Section-II (Self-Appraisal) instructions, the brief description of duties performed must be recorded in not more than 100 words, matching the pen-picture limit for the Reporting Officer.
+
+Q73. Which platform is mandated for the electronic recording of APARs, including the fetching of mandatory training completion status under Mission Karmayogi?
+A. E-HRMS (Electronic Human Resource Management System)
+B. SPARROW (Smart Performance Appraisal Report Recording Online Window)
+C. CPENGRAMS (Centralised Pension Grievance Redress And Monitoring System)
+D. iGOT-Karmayogi standalone offline assessment module
+Answer: B
+Explanation:
+SPARROW is the online system for recording APARs electronically. From 2025-26, completion status of mandatory iGOT-Karmayogi courses is fetched directly into the APAR via the SPARROW platform.
+
+Q74. Under FR 22(I)(a)(3), if a Government servant is transferred at his own request to a post where the maximum of the new time-scale is lower than his old pay, what is his initial pay?
+A. He draws the minimum of the new time-scale.
+B. He draws the maximum of the new time-scale.
+C. His pay is protected by granting personal pay.
+D. He continues to draw his exact old basic pay.
+Answer: B
+Explanation:
+Under FR 22(I)(a)(3), when appointment is on the Government servant's own request and the maximum of the new time-scale is lower than his old pay, he draws that maximum as his initial pay.
+
+Q75. Which of the following defines a "Tenure Post" under the Fundamental Rules?
+A. A temporary post sanctioned with a specific rate of pay for a limited time.
+B. A permanent post which an individual Government servant may not hold for more than a limited period.
+C. A post outside the ordinary line of service offering officiating promotion within the cadre.
+D. A post whose pay rises from a minimum to a maximum within a prescribed time-scale level.
+Answer: B
+Explanation:
+According to FR 9(30-A), a "Tenure Post" is strictly defined as a permanent post which an individual Government servant may not hold for more than a limited period.
+
+Q76. A Government servant under suspension dies before the completion of disciplinary proceedings. How is the period of suspension treated?
+A. It is treated as dies-non and no pay/allowances are paid to the family.
+B. It is converted to EOL and 50% pay is paid to the surviving family.
+C. It is treated as duty and full pay and allowances are paid to the family.
+D. It is regularised as Leave on Medical Certificate with half pay only.
+Answer: C
+Explanation:
+Under FR 54-B(2), if the official dies under suspension before completion of proceedings, the period from suspension to death is treated as duty and full pay & allowances are paid to the family.
+
+Q77. What is the mandatory time limit within which a suspension must be reviewed from the date of initial suspension?
+A. Within 30 days
+B. Within 60 days
+C. Within 3 months
+D. Within 6 months
+Answer: C
+Explanation:
+According to Government Decisions under FR 53, a suspension order must be reviewed within 3 months (90 days) from the date of suspension.
+
+Q78. For Group 'C' Government servants not governed by any pension rules, after how many years of service does the Appropriate Authority have the absolute right to prematurely retire them?
+A. After 20 years of continuous service.
+B. After 25 years of continuous service.
+C. After 30 years of continuous service.
+D. After 35 years of continuous service.
+Answer: C
+Explanation:
+Under FR 56(l), the Appropriate Authority has the absolute right to retire a Group 'C' servant not governed by pension rules after he has completed 30 years' service, on 3 months' notice.
+
+Q79. According to FR 108, what is the consequence of a Government servant overstaying joining time?
+A. The period is automatically converted into Earned Leave up to a maximum of 30 days.
+B. The period is treated as extraordinary leave on medical grounds without allowances.
+C. He is entitled to no pay or leave salary after the end of the joining time.
+D. He receives joining-time pay reduced by 50% for the overstayed duration.
+Answer: C
+Explanation:
+Under FR 108, a Government servant who does not join his post within his joining time is entitled to no pay or leave salary after the end of the joining time.
+
+Q80. When a person is appointed to a post which he cannot join except by sea, who has the power to grant a free sea passage?
+A. The President of India
+B. The Competent Authority
+C. The Audit Officer
+D. The Head of Office
+Answer: B
+Explanation:
+Under Rule 108 of the Supplementary Rules (TA), when a person is appointed to a post which he cannot join except by sea, a competent authority may grant a free sea passage.
+
+Q81. A Government servant in Pay Level 5 is transferred by road. What is the rate for transportation of personal effects effective from 01.01.2024?
+A. Rs. 18.75 per km
+B. Rs. 31.25 per km
+C. Rs. 62.50 per km
+D. Rs. 75.00 per km
+Answer: B
+Explanation:
+Under the updated transfer TA rules (w.e.f. 01.01.2024), an official in Pay Level 5 is entitled to transport up to 3,000 kg of personal effects by road at the rate of Rs. 31.25 per km.
+
+Q82. Which of the following conditions must be met for stepping up of pay of a senior to that of a junior?
+
+1. The lower and higher posts must be in identical pay matrix levels.
+2. The anomaly must result directly from FR 22(I)(b) provisions.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation:
+Statement 1 is correct. Statement 2 is incorrect because the anomaly must be directly a result of the application of FR 22(I)(a)(1), not FR 22(I)(b).
+
+
+
+Q83. What is the Transport Allowance (TPA) entitlement for a physically disabled employee in Pay Level 6 posted in an X-class city?
+A. Rs. 3,600 + DA
+B. Rs. 7,200 + DA
+C. Rs. 1,800 + DA
+D. Rs. 2,250 + DA
+Answer: B
+Explanation:
+For Pay Level 3 to 8 in listed cities, the normal TPA is Rs. 3,600 + DA. Physically disabled employees get double the normal rate, so it becomes Rs. 7,200 + DA.
+
+Q84. An official is deputed for training in India where boarding and lodging facilities exist. How is his Daily Allowance (DA) regulated for a 60-day training?
+A. Full DA for first 30 days, half DA for next 30 days.
+B. Full DA for first 60 days, without any reduction.
+C. Half DA for first 30 days, Nil DA for next 30 days.
+D. Full DA for first 180 days, Nil DA thereafter.
+Answer: A
+Explanation:
+Under DA on Tour guidelines, where boarding and lodging facilities exist during training in India, the entitlement is full DA for the first 30 days and half DA for the next 150 days.
+
+Q85. Consider the following statements regarding HRA on Deputation Abroad:
+
+1. HRA is admissible for the entire period of deputation if it is up to 1 year.
+2. For deputation exceeding 1 year, HRA is admissible provided the family remains at the last place of duty in India.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: D
+Explanation:
+Both statements are correct. HRA is admissible up to 1 year unconditionally, and beyond 1 year provided the family continues to reside at the last place of duty in India.
+
+
+
+Q86. A re-employed pensioner joins the department. How is Dearness Relief (DR) regulated for such a pensioner?
+A. DR is suspended completely during the entire re-employment period.
+B. DR is admissible and drawn alongside the pay of the new post.
+C. DR is subsumed strictly into the Dearness Allowance of the new post.
+D. DR is payable only if the original pension was below Rs. 9,000 per month.
+Answer: B
+Explanation:
+Under the rules for Dearness Relief, DR is explicitly admissible to re-employed pensioners. Also, a re-employed pensioner is treated as a fresh appointment for allowance calculation.
+
+Q87. What is the rate of Deputation (Duty) Allowance for a change of station, and what is its maximum cap when combined with basic pay and NPA?
+A. 5%; max cap is Rs. 2,25,000
+B. 10%; max cap is Rs. 2,37,500
+C. 15%; max cap is Rs. 2,50,000
+D. 20%; max cap is Rs. 2,37,500
+Answer: B
+Explanation:
+The allowance is 10% (max Rs. 11,250) for change of station. The rules state that Basic + NPA + Deputation Allowance must not exceed the Cabinet Secretary level pay of Rs. 2,37,500.
+
+Q88. Which of the following constitutes an exception to the requirement of producing a medical certificate of fitness on first appointment?
+A. A temporary Government servant appointed for a period of 6 months.
+B. A retired Government servant re-employed immediately after retirement.
+C. A gazetted officer appointed directly through a departmental promotion.
+D. A non-gazetted servant returning from a break in service of three years.
+Answer: B
+Explanation:
+Under SR 4(a), a retired Government servant re-employed immediately after retirement is specifically exempted from producing a medical certificate of health at the time of joining.
+
+Q89. If a Government servant remains absent without authority, how is this period treated for the purpose of earning increments?
+A. It is treated as Extra-Ordinary Leave and counts for increment.
+B. It is converted to half-pay leave and counts for increment.
+C. It is treated as dies-non and does not count for increment.
+D. It is ignored completely and the increment date is unchanged.
+Answer: C
+Explanation:
+Wilful absence from duty not covered by leave is treated as "dies-non" for all purposes, meaning it strictly does not count for increment, leave, or pension.
+
+Q90. A temporary post is filled by a person who is NOT a Government servant. Which Fundamental Rule governs the pay in this scenario?
+A. FR 35
+B. FR 37
+C. FR 39
+D. FR 40
+Answer: C
+Explanation:
+FR 39 specifically governs the pay of temporary posts where the post is filled by a person who is NOT a Government servant. (FR 40 applies if the person IS a Government servant).
+
+Q91. Under FR 22(II), the President may specify posts outside the ordinary line of service whose holders may be given what specific benefit?
+A. Officiating promotion in the cadre with equivalent pay.
+B. Permanent absorption into the parent cadre immediately.
+C. Double the rate of Deputation (Duty) Allowance indefinitely.
+D. Exemption from all disciplinary proceedings while out of line.
+Answer: A
+Explanation:
+Under FR 22(II), the President may specify posts outside the ordinary line whose holders may be given officiating promotion in the cadre and granted the same pay they would have received on officiating promotion within the line.
+
+Q92. What is the maximum joining time admissible for a transfer exceeding 2,000 km if the journey is performed entirely by air?
+A. 10 days
+B. 12 days
+C. 15 days
+D. 20 days
+Answer: B
+Explanation:
+Under Rule 9 of the CCS (Joining Time) Rules, for a distance exceeding 2,000 km, the joining time is normally 15 days, but if travel is by air, it is restricted to 12 days.
+
+Q93. A Government servant travelling on duty within 8 km of his headquarters claims TA. What is he entitled to recover?
+A. Full DA and mileage allowance as on tour.
+B. 50% of DA but no actual travelling expenses.
+C. Actual amounts spent on ferry/tolls and fares by public conveyance.
+D. A flat rate of Rs. 15 per km regardless of actual expenses.
+Answer: C
+Explanation:
+Under Rule 90, for journeys within 8 km of headquarters (where daily allowance is not admissible), a Government servant may recover actual amounts spent on ferry/tolls and fares by public conveyance.
+
+Q94. Under what circumstances can the one-year time limit for claiming TA to the family of a deceased Government servant be extended?
+A. With the approval of the immediate Head of Office.
+B. With the approval of the Financial Adviser of the Ministry concerned.
+C. With the approval of the Secretary of the Department of Personnel & Training.
+D. The time limit is absolute and cannot be extended under any circumstances.
+Answer: B
+Explanation:
+Under Rule 148, the journey must be completed within one year after the death. This one-year limit may be extended strictly with the approval of the Financial Adviser of the Ministry concerned.
+
+Q95. Regarding TA for Medical Certificates, for which of the following is TA strictly NOT admissible?
+A. Journey to obtain a certificate in support of an original grant of leave.
+B. Journey to obtain a fitness certificate on first appointment.
+C. Journey connected with a second medical opinion by a competent authority.
+D. Journey to appear before a nominated medical board for leave necessity.
+Answer: B
+Explanation:
+Under Rules 157 & 157-A, TA is not admissible for obtaining a fitness certificate, procuring a health certificate on first appointment, or for a second medical opinion in support of an extension of leave.
+
+Q96. What is the rate of Composite Transfer Grant (CTG) for an employee transferred from Delhi to a station in the Andaman & Nicobar Islands?
+A. 50% of the last basic pay.
+B. 80% of the last basic pay.
+C. 100% of the last basic pay.
+D. 120% of the last basic pay.
+Answer: C
+Explanation:
+Under TA on Transfer rules, the normal CTG is 80% of the last basic pay. However, for transfers to/from the A&N Islands and Lakshadweep, the CTG is strictly 100% of the last basic pay.
+
+Q97. A casual labourer with temporary status works for 240 days in a year. How many days of Earned Leave will be credited to his account for that period?
+A. 15 days
+B. 24 days
+C. 30 days
+D. 40 days
+Answer: B
+Explanation:
+Under the Casual Labourers Scheme, Earned Leave is credited on a pro-rata basis at the rate of one day for every ten days of work. For 240 days of work, 24 days of leave are credited.
+
+Q98. In the APAR system, if a Government servant is on unauthorised absence, how is this handled by the Custodian?
+A. A 'Below Good' grade is automatically awarded by the Custodian.
+B. A 'No Report Certificate' (NRC) stating the specific reason is placed in the dossier.
+C. The APAR is left blank until the official returns and justifies the absence.
+D. The Reporting Officer creates a pen-picture based strictly on hearsay.
+Answer: B
+Explanation:
+Under the gaps in reporting guidelines, if an officer is on unauthorised absence (where factually established), the Custodian must place a "No Report Certificate (NRC)" in the dossier stating the specific reason.
+
+Q99. For which of the following categories of officials is an APAR NOT required to be written?
+A. Central Government servants on deputation to a State Government.
+B. Group 'C' employees performing strictly non-managerial duties.
+C. Honorary or purely part-time officials engaged by the Government.
+D. Officers placed under suspension for a minor part of the reporting year.
+Answer: C
+Explanation:
+Under the special categories for APAR, it is explicitly stated that no APAR need be written for honorary or purely part-time officials. Deputationists and suspended officials (minor part) still require APARs/NRCs.
+
+Q100. In the APAR, which of the following statements regarding the "Integrity" column is NOT a permitted entry for the Reporting Officer?
+A. "Beyond doubt."
+B. "Since the integrity is doubtful, a secret note is attached."
+C. "Work not watched for sufficient time to form a definite judgment."
+D. "Integrity is presumed good based on general reputation in the office."
+Answer: D
+Explanation:
+DoPT OM dated 11.02.2016 restricts integrity entries to three specific phrases: "Beyond doubt," "doubtful (secret note attached)," or "not watched for sufficient time." General presumptions are strictly not permitted.
