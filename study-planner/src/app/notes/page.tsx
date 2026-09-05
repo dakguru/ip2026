@@ -175,9 +175,9 @@ const PDF_DATA: Record<string, Note[]> = {
         {
             title: "Government Savings Promotion Rules, 2018",
             description: "General rules applicable to all Government Savings Schemes.",
-            filename: "Government Savings Promotion Rules, 2018 FINAL.pdf",
-            path: "/notes/paper-1/Government Savings Promotion Rules, 2018 FINAL.pdf",
-            size: "0.7 MB",
+            filename: "GSPR_2018_Notes_Corrected.pdf",
+            path: "/notes/paper-1/GSPR_2018_Notes_Corrected.pdf",
+            size: "0.5 MB",
             color: "emerald",
             topic: "Rules"
         },
