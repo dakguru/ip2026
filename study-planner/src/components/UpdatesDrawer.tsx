@@ -68,6 +68,7 @@ const UPDATES_DATA: UpdateGroup[] = [
                     </div>
                 )
             }
+        ]
     },
     {
         date: "18.08.2026",
