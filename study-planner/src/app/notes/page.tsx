@@ -444,6 +444,17 @@ const PDF_DATA: Record<string, Note[]> = {
             topic: "Rules"
         },
     ],
+    "Paper II": [
+        {
+            title: "Noting, Drafting & Major-Penalty Charge Sheet",
+            description: "Comprehensive notes on Noting, Drafting and Major-Penalty Charge Sheet for LDCE IP Paper II.",
+            filename: "DakGuru_LDCE_IP_PaperII.pdf",
+            path: "/notes/paper-2/DakGuru_LDCE_IP_PaperII.pdf",
+            size: "0.6 MB",
+            color: "teal",
+            topic: "Noting, Drafting & Major-Penalty Charge Sheet"
+        },
+    ],
     "Paper III": [
         // 1-8. Constitution
         // 1. Constitution
@@ -854,7 +865,7 @@ const PDF_DATA: Record<string, Note[]> = {
 export default function NotesPage() {
     const { course } = useCourse();
     const isPS = course === 'PS_GR_B';
-    const TABS = isPS ? ["Paper I", "Paper II", "SB Orders"] : ["Paper I", "Paper III", "SB Orders"];
+    const TABS = isPS ? ["Paper I", "Paper II", "SB Orders"] : ["Paper I", "Paper II", "Paper III", "SB Orders"];
 
     const [activeTab, setActiveTab] = useState(TABS[0]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -1179,13 +1190,13 @@ export default function NotesPage() {
 
                     {/* Tabs */}
                     <div className="flex justify-center mb-6 md:mb-8 sticky top-[64px] z-30 px-4 md:px-0">
-                        <div className="w-full md:w-auto bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-1.5 md:p-2 rounded-xl md:rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 grid grid-cols-3 md:inline-flex md:grid-cols-none gap-2">
+                        <div className={`w-full md:w-auto bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md p-1.5 md:p-2 rounded-xl md:rounded-2xl shadow-lg border border-slate-200/60 dark:border-zinc-800 grid ${TABS.length === 4 ? 'grid-cols-4 gap-1' : 'grid-cols-3 gap-2'} md:inline-flex md:grid-cols-none md:gap-2`}>
                             {TABS.map((tab) => (
                                 <button
                                     key={tab}
                                     onClick={() => { setActiveTab(tab); setSearchQuery(''); }}
                                     className={`
-                                    relative p-2 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-bold text-[11px] xs:text-xs md:text-sm transition-colors duration-200 flex items-center justify-center gap-1.5 md:gap-2 whitespace-nowrap outline-none
+                                    relative ${TABS.length === 4 ? 'px-1.5 py-2' : 'p-2'} md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-bold ${TABS.length === 4 ? 'text-[10px]' : 'text-[11px]'} xs:text-xs md:text-sm transition-colors duration-200 flex items-center justify-center gap-1.5 md:gap-2 whitespace-nowrap outline-none
                                     ${activeTab === tab
                                             ? 'text-white'
                                             : 'text-slate-500 dark:text-zinc-400 hover:text-slate-700 dark:hover:text-zinc-200'
@@ -1201,7 +1212,7 @@ export default function NotesPage() {
                                         />
                                     )}
                                     <span className="relative z-10 flex items-center gap-1.5 md:gap-2">
-                                        <Layers className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
+                                        <Layers className={`${TABS.length === 4 ? 'hidden md:block' : ''} w-3.5 h-3.5 md:w-4 md:h-4 shrink-0`} />
                                         <span>{tab}</span>
                                     </span>
                                 </button>
