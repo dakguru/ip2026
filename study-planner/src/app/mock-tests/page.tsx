@@ -5,6 +5,7 @@ import { ArrowLeft, Calendar, Clock, Trophy, Users, PlayCircle, Play, AlertCircl
 import { FULL_SCHEDULE } from "@/data/schedule";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
 import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
+import { FULL_LENGTH_MOCK_SCHEDULE } from "@/data/fullLengthMockSchedule";
 import { getDisplayMembership } from "@/lib/membership-utils";
 import { format, isBefore, isSameDay, addDays, startOfToday, eachDayOfInterval, endOfDay } from "date-fns";
 import { useMemo, useState, useEffect } from "react";
@@ -50,7 +51,7 @@ export default function MockTestsPage() {
     const [userName, setUserName] = useState<string>("Aspirant");
     const [role, setRole] = useState<string>("user");
     const [processingId, setProcessingId] = useState<string | null>(null);
-    const [activeSeriesTab, setActiveSeriesTab] = useState<'series1' | 'series2'>('series2');
+    const [activeSeriesTab, setActiveSeriesTab] = useState<'series1' | 'series2' | 'fullLength'>('fullLength');
 
     // Admin Enrollment View State
     const [enrollmentModalOpen, setEnrollmentModalOpen] = useState(false);
@@ -248,6 +249,36 @@ export default function MockTestsPage() {
         });
     }, [role]);
 
+    const fullLengthMockTests = useMemo(() => {
+        return FULL_LENGTH_MOCK_SCHEDULE.map(test => {
+            const startDate = new Date(test.startDate + "T00:00:00+05:30");
+            const endDate = new Date(test.endDate + "T23:59:59+05:30");
+            
+            let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
+            const now = new Date();
+
+            if (now > endDate) {
+                status = 'completed';
+            } else if (now >= startDate) {
+                status = 'live';
+            } else {
+                status = 'upcoming';
+            }
+
+            return {
+                id: test.id,
+                title: test.title,
+                topics: test.topics,
+                startDate,
+                endDate,
+                status,
+                questionCount: test.questionCount,
+                marks: test.marks,
+                duration: test.duration,
+            } as MockTest;
+        });
+    }, [role]);
+
     const activeMocks = mockTests.filter(m => m.status === 'live');
     const upcomingMocks = mockTests.filter(m => m.status === 'upcoming');
     const completedMocks = mockTests.filter(m => m.status === 'completed').reverse();
@@ -330,7 +361,7 @@ export default function MockTestsPage() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    amount: (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? 99 : 49,
+                    amount: mock.id.startsWith("fl-") ? 249 : ((mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? 99 : 49),
                     email: userEmail,
                     plan: { id: mock.id, name: mock.title, type: 'mock_test' }
                 })
@@ -664,7 +695,7 @@ export default function MockTestsPage() {
                     )}
 
                     {/* Segmented Tab — Clearly visible */}
-                    <div className={`relative z-20 ${isMobileApp ? 'mb-3' : 'mb-6'} bg-zinc-200/80 dark:bg-zinc-800 p-1.5 rounded-2xl flex items-center justify-between border border-zinc-300 dark:border-zinc-700 shadow-md max-w-[420px] mx-auto w-full`}>
+                    <div className={`relative z-20 ${isMobileApp ? 'mb-3' : 'mb-6'} bg-zinc-200/80 dark:bg-zinc-800 p-1.5 rounded-2xl flex items-center justify-between border border-zinc-300 dark:border-zinc-700 shadow-md max-w-[620px] mx-auto w-full`}>
                         <button 
                             onClick={() => setActiveSeriesTab('series1')}
                             className={`flex-1 py-3 px-3 rounded-xl text-sm sm:text-base font-extrabold transition-all duration-200 relative ${activeSeriesTab === 'series1' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-zinc-100/50 dark:hover:bg-zinc-700/50'}`}
@@ -677,8 +708,102 @@ export default function MockTestsPage() {
                         >
                             Series - II
                         </button>
+                        <button 
+                            onClick={() => setActiveSeriesTab('fullLength')}
+                            className={`flex-1 py-3 px-3 rounded-xl text-[11px] sm:text-sm font-extrabold transition-all duration-200 relative whitespace-nowrap ${activeSeriesTab === 'fullLength' ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-purple-500/25' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-zinc-100/50 dark:hover:bg-zinc-700/50'}`}
+                        >
+                            ✨ Full Length
+                        </button>
                     </div>
 
+                    {/* Full Length Mock Tests Tab Content */}
+                    {activeSeriesTab === 'fullLength' && (
+                        <div className="relative z-20 mb-8">
+                            {/* Section Header */}
+                            <div className="text-center mb-10">
+                                <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 mb-4">
+                                    <Sparkles className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
+                                    <span className="text-sm font-semibold text-slate-600 dark:text-slate-300">Full Length Practice</span>
+                                </div>
+                                <h2 className="text-2xl sm:text-3xl font-black text-slate-800 dark:text-white mb-2">Full Length Mock Tests</h2>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 max-w-lg mx-auto">Simulate the real LDCE IP exam experience with full-length papers covering the complete syllabus.</p>
+                            </div>
+
+                            {/* Paper I Section */}
+                            <div className="mb-12">
+                                <div className="flex items-center gap-3 mb-6 px-1">
+                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-100 to-blue-200 dark:from-sky-900/50 dark:to-blue-800/50 flex items-center justify-center border border-sky-200 dark:border-sky-700/50">
+                                        <span className="text-blue-600 dark:text-blue-400 font-black text-sm">I</span>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold text-slate-800 dark:text-white">Paper - I</h3>
+                                        <p className="text-xs text-slate-500 dark:text-slate-400">PO Act, Rules, Regulations, Small Savings, Postal Manuals, PMLA, CoPA, CCS Conduct, CCS Rules, Etc.,</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                                    {fullLengthMockTests.filter(mock => mock.id.startsWith('fl-p1-')).map(mock => (
+                                        <MockTestCard
+                                            key={mock.id}
+                                            mock={mock}
+                                            onClick={() => handleMockClick(mock)}
+                                            isPaid={paidTests.includes(mock.id)}
+                                            membershipLevel={membershipLevel}
+                                            displayMembership={getDisplayMembership(membershipLevel, planName)}
+                                            onEnroll={() => handleEnroll(mock)}
+                                            isProcessing={processingId === mock.id}
+                                            role={role}
+                                            onViewEnrollments={() => handleViewEnrollments(mock)}
+                                            enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                            onShowRankList={() => setSelectedMockForRank(mock)}
+                                            userResult={userResults[mock.id]}
+                                            onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                            onViewSheets={() => setSelectedMockForSheets(mock)}
+                                            isDownloading={downloadingId === mock.id}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Paper III Section */}
+                            <div>
+                                <div className="flex items-center gap-3 mb-6 px-1">
+                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-100 to-orange-200 dark:from-amber-900/50 dark:to-orange-800/50 flex items-center justify-center border border-amber-200 dark:border-amber-700/50">
+                                        <span className="text-amber-600 dark:text-amber-400 font-black text-sm">III</span>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold text-slate-800 dark:text-white">Paper - III</h3>
+                                        <p className="text-xs text-slate-500 dark:text-slate-400">Constitution of India, FR SR, CrPC, RTI, POSH, FHB - I & II, CCS Pension, NPS Rules, Etc.,</p>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                                    {fullLengthMockTests.filter(mock => mock.id.startsWith('fl-p3-')).map(mock => (
+                                        <MockTestCard
+                                            key={mock.id}
+                                            mock={mock}
+                                            onClick={() => handleMockClick(mock)}
+                                            isPaid={paidTests.includes(mock.id)}
+                                            membershipLevel={membershipLevel}
+                                            displayMembership={getDisplayMembership(membershipLevel, planName)}
+                                            onEnroll={() => handleEnroll(mock)}
+                                            isProcessing={processingId === mock.id}
+                                            role={role}
+                                            onViewEnrollments={() => handleViewEnrollments(mock)}
+                                            enrollmentCount={enrollmentCounts[mock.id] || universalCount}
+                                            onShowRankList={() => setSelectedMockForRank(mock)}
+                                            userResult={userResults[mock.id]}
+                                            onDownloadResult={() => handleDownloadAnalytics(mock, userResults[mock.id])}
+                                            onViewSheets={() => setSelectedMockForSheets(mock)}
+                                            isDownloading={downloadingId === mock.id}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Series I & II Content */}
+                    {activeSeriesTab !== 'fullLength' && (
+                        <>
                     {currentCompletedMocks.length > 0 && (
                         <div className="flex justify-center -mt-1 mb-6 relative z-20 w-full">
                             <a
@@ -800,6 +925,9 @@ export default function MockTestsPage() {
                         </div>
                     )}
 
+
+                        </>
+                    )}
 
                 </div>
 
@@ -1066,24 +1194,57 @@ function MockTestDetail({
                         <AlertCircle className="w-4 h-4 text-amber-500" /> Test Instructions
                     </h3>
                     <div className="bg-amber-50 dark:bg-amber-900/10 rounded-xl p-3 md:p-4 border border-amber-100 dark:border-amber-900/20">
-                        <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-snug">
-                            <li className="flex gap-2.5 md:gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">1.</span>
-                                <span>The test window is open from Saturday 00:00 AM to Sunday 11:59 PM. You can attempt the test at any time within this window.</span>
-                            </li>
-                            <li className="flex gap-2.5 md:gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">2.</span>
-                                <span>Once started, the timer cannot be paused. Ensure you have a stable internet connection.</span>
-                            </li>
-                            <li className="flex gap-2.5 md:gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">3.</span>
-                                <span>There is <strong>no negative marking</strong> for this test series.</span>
-                            </li>
-                            <li className="flex gap-2.5 md:gap-3">
-                                <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">4.</span>
-                                <span>All India Rank will be generated on the following Monday at 10:00 AM.</span>
-                            </li>
-                        </ul>
+                        {mock.id.startsWith('fl-') ? (
+                            <div className="space-y-4">
+                                <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-snug">
+                                    <li className="flex gap-2.5 md:gap-3">
+                                        <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">1.</span>
+                                        <span>Test window will be open till the exam i.e., 27.09.2026 - 2359 hours</span>
+                                    </li>
+                                    <li className="flex gap-2.5 md:gap-3">
+                                        <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">2.</span>
+                                        <span>Candidate can attempt multiple no. of attempts till the exam</span>
+                                    </li>
+                                    <li className="flex gap-2.5 md:gap-3">
+                                        <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">3.</span>
+                                        <span>PDF Answer Sheets can be downloaded after attempting the Mock Tests</span>
+                                    </li>
+                                    <li className="flex gap-2.5 md:gap-3">
+                                        <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">4.</span>
+                                        <span>Answer Sheets of the previous attempts can also be downloaded later</span>
+                                    </li>
+                                    <li className="flex gap-2.5 md:gap-3">
+                                        <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">5.</span>
+                                        <span>Once started, the timer cannot be paused. Ensure you have a stable internet connection.</span>
+                                    </li>
+                                </ul>
+                                {mock.id.startsWith('fl-p3-') && (
+                                    <div className="p-3 bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800/30 rounded-lg text-xs md:text-sm text-red-800 dark:text-red-300 font-medium leading-snug">
+                                        <span className="font-bold text-red-600 dark:text-red-400">Note: </span>
+                                        We have not covered Current Affairs, Aptitude, Reasoning and English in this Mock Tests. Make sure to read the topics separately and practice everyday till the exam without fail.
+                                    </div>
+                                )}
+                            </div>
+                        ) : (
+                            <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-snug">
+                                <li className="flex gap-2.5 md:gap-3">
+                                    <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">1.</span>
+                                    <span>The test window is open from Saturday 00:00 AM to Sunday 11:59 PM. You can attempt the test at any time within this window.</span>
+                                </li>
+                                <li className="flex gap-2.5 md:gap-3">
+                                    <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">2.</span>
+                                    <span>Once started, the timer cannot be paused. Ensure you have a stable internet connection.</span>
+                                </li>
+                                <li className="flex gap-2.5 md:gap-3">
+                                    <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">3.</span>
+                                    <span>There is <strong>no negative marking</strong> for this test series.</span>
+                                </li>
+                                <li className="flex gap-2.5 md:gap-3">
+                                    <span className="font-bold text-amber-600 dark:text-amber-500 shrink-0">4.</span>
+                                    <span>All India Rank will be generated on the following Monday at 10:00 AM.</span>
+                                </li>
+                            </ul>
+                        )}
                     </div>
                 </div>
 
@@ -1147,7 +1308,7 @@ function MockTestDetail({
                             className="w-full py-4.5 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-red-500/40 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98] animate-pulse-slow"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-
+                            Enroll Now for Rs.{(mock.id.startsWith("fl-") ? '249' : (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49')}/-
                         </button>
                     )
                 ) : mock.status === 'completed' ? (
@@ -1200,7 +1361,7 @@ function MockTestDetail({
                             className="w-full py-4 bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-700 hover:to-indigo-900 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-indigo-500/30 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.01] active:scale-[0.98]"
                         >
                             {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5 text-yellow-300 fill-current" />}
-                            Enroll Now for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-
+                            Enroll Now for Rs.{(mock.id.startsWith("fl-") ? '249' : (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49')}/-
                         </button>
                     )
                 ) : (
@@ -1421,7 +1582,7 @@ function MockTestCard({
 
             {/* Actions */}
             <div className="mt-auto space-y-3 relative z-10">
-                {onShowRankList && (role === 'admin' || new Date() > mock.endDate) && (
+                {onShowRankList && (role === 'admin' || (new Date() > mock.endDate && !mock.id.startsWith('fl-'))) && (
                     <button
                         onClick={(e) => { e.stopPropagation(); onShowRankList(); }}
                         disabled={role !== 'admin' && (new Date() >= mock.startDate && new Date() <= mock.endDate)}
@@ -1488,7 +1649,7 @@ function MockTestCard({
                             className="flex-1 py-2 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0 w-full"
                         >
                             {isProcessing ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-</span>
+                            <span className="text-center">Enroll for Rs.{(mock.id.startsWith("fl-") ? '249' : (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49')}/-</span>
                         </button>
                 )
                     ) : isLive ? (
@@ -1534,7 +1695,7 @@ function MockTestCard({
                             className="flex-1 py-2.5 sm:py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-red-500/30 transition-all transform active:scale-[0.97] px-2 min-w-0"
                         >
                             {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-current shrink-0" />}
-                            <span className="text-center">Enroll for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-</span>
+                            <span className="text-center">Enroll for Rs.{(mock.id.startsWith("fl-") ? '249' : (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49')}/-</span>
                         </button>
                     )
                 )
@@ -1549,7 +1710,7 @@ function MockTestCard({
                     className="flex-1 py-2 sm:py-3 w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-indigo-500/30 transition-all transform hover:scale-[1.01] active:scale-[0.97] px-2 min-w-0"
                 >
                     {isProcessing ? <Loader2 className="w-3.5 h-3.5 animate-spin shrink-0" /> : <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-300 fill-current shrink-0" />}
-                    <span className="text-center">Enroll for Rs.{(mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49'}/-</span>
+                    <span className="text-center">Enroll for Rs.{(mock.id.startsWith("fl-") ? '249' : (mock.id.startsWith("mock-s2-") || mock.id.startsWith("psgb-mock-")) ? '99' : '49')}/-</span>
                 </button>
             ) : (
                 <button

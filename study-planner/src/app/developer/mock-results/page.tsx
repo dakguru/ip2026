@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import {
     ArrowLeft, FileText, ChevronRight, BarChart3, Clock, Loader2, Download,
-    BookOpen, GraduationCap, CalendarDays, CheckCircle2, Circle, Zap, Trophy, Shield
+    BookOpen, GraduationCap, CalendarDays, CheckCircle2, Circle, Zap, Trophy, Shield, Archive, ChevronDown, ChevronUp
 } from "lucide-react";
 import Link from "next/link";
 import { addDays, format, isBefore, isAfter, startOfDay, isSameDay } from "date-fns";
@@ -11,6 +11,7 @@ import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { getMockTestAnswerSheetPDFBlob } from "@/lib/pdf-generator-mocks";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
 import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
+import { FULL_LENGTH_MOCK_SCHEDULE } from "@/data/fullLengthMockSchedule";
 
 interface MockTestEntry {
     id: string;
@@ -104,21 +105,36 @@ export default function MockResultsDashboard() {
         });
     };
 
+    const generateFullLengthTests = (): MockTestEntry[] => {
+        return FULL_LENGTH_MOCK_SCHEDULE.map((test) => {
+            return {
+                id: test.id,
+                title: test.title,
+                date: format(new Date(test.startDate + "T00:00:00+05:30"), 'MMM dd, yyyy'),
+                status: 'Scheduled',
+                type: 'weekly', // We can reuse 'weekly' type for styling since it's just a non-psgb, non-sample test
+                hasData: test.id in TEST_QUESTIONS_MAP
+            };
+        });
+    };
+
     const ldceIpTests = generateLdceIpTests();
     const psgbTests = generatePsgbTests();
     const seriesIITests = generateSeriesIITests();
-    const allTests = [...ldceIpTests, ...psgbTests, ...seriesIITests];
+    const fullLengthTests = generateFullLengthTests();
+    const allTests = [...ldceIpTests, ...psgbTests, ...seriesIITests, ...fullLengthTests];
 
     const [searchTerm, setSearchTerm] = useState("");
     const [isGlobalDownloading, setIsGlobalDownloading] = useState(false);
     const [downloadProgress, setDownloadProgress] = useState(0);
     const [currentDownloadAction, setCurrentDownloadAction] = useState("");
+    const [isArchiveOpen, setIsArchiveOpen] = useState(false);
 
     const q = searchTerm.toLowerCase();
 
     // Date-based classification
     const getDateStatus = (test: MockTestEntry): 'live' | 'completed' | 'upcoming' => {
-        if (test.type === 'sample') return 'live';
+        if (test.type === 'sample') return 'completed';
         const d = startOfDay(new Date(test.date));
         if (isSameDay(d, today)) return 'live';
         if (isBefore(d, today)) return 'completed';
@@ -465,72 +481,29 @@ export default function MockResultsDashboard() {
                         </section>
                     )}
 
-                    {/* ── LDCE IP: Completed + Upcoming ── */}
-                    {ldceNonLive.length > 0 && (
-                        <section>
-                            <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-indigo-200 dark:border-indigo-900">
-                                <div className="flex items-center gap-3">
-                                    <BookOpen className="w-5 h-5 text-indigo-500" />
-                                    <div>
-                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100">LDCE IP</h2>
-                                        <p className="text-xs text-zinc-400">Inspector Posts · Weekly Series · Jan–May 2026</p>
-                                    </div>
-                                </div>
-                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
-                                    {ldceNonLive.length} tests
-                                </span>
-                            </div>
-                            <div className="flex flex-col gap-2">
-                                {ldceNonLive.map((test, i) => (
-                                    <NonLiveListRow key={test.id} test={test} index={i} dateStatus={getDateStatus(test) as 'completed' | 'upcoming'} />
-                                ))}
-                            </div>
-                        </section>
-                    )}
 
-                    {/* ── PS Gr B: Completed + Upcoming ── */}
-                    {psgbNonLive.length > 0 && (
-                        <section>
-                            <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-amber-200 dark:border-amber-900">
-                                <div className="flex items-center gap-3">
-                                    <GraduationCap className="w-5 h-5 text-amber-500" />
-                                    <div>
-                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100">PS Gr B</h2>
-                                        <p className="text-xs text-zinc-400">Postal Service Group B · Weekly Series · Apr–Jul 2026</p>
-                                    </div>
-                                </div>
-                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
-                                    {psgbNonLive.length} tests
-                                </span>
-                            </div>
-                            <div className="flex flex-col gap-2">
-                                {psgbNonLive.map((test, i) => (
-                                    <NonLiveListRow key={test.id} test={test} index={i} dateStatus={getDateStatus(test) as 'completed' | 'upcoming'} />
-                                ))}
-                            </div>
-                        </section>
-                    )}
 
-                    {/* ── LDCE IP Mock Test Series II Leaderboard Cards (15 cards) ── */}
-                    {seriesIITests.length > 0 && (
+
+                    {/* ── Full Length Mock Tests Leaderboard Cards ── */}
+                    {fullLengthTests.length > 0 && (
                         <section className="mt-10">
-                            <div className="flex items-center justify-between mb-6 pb-3 border-b-2 border-purple-200 dark:border-purple-900">
+                            <div className="flex items-center justify-between mb-6 pb-3 border-b-2 border-sky-200 dark:border-sky-900">
                                 <div className="flex items-center gap-3">
-                                    <Trophy className="w-5 h-5 text-purple-600" />
+                                    <Trophy className="w-5 h-5 text-sky-600" />
                                     <div>
                                         <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
-                                            LDCE IP Mock Test Series II Leaderboard Cards
+                                            Full Length Mock Tests Leaderboard Cards
                                         </h2>
-                                        <p className="text-xs text-zinc-400">15 Weekly Mock Test Leaderboards for Series II</p>
+                                        <p className="text-xs text-zinc-400">Full Length Mock Test Leaderboards</p>
                                     </div>
                                 </div>
-                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800">
-                                    {seriesIITests.length} cards
+                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-sky-50 dark:bg-sky-900/20 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-800">
+                                    {fullLengthTests.length} cards
                                 </span>
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                {seriesIITests
+                                {fullLengthTests
                                     .filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase()))
                                     .map((test) => {
                                         const dateStatus = getDateStatus(test);
@@ -551,7 +524,7 @@ export default function MockResultsDashboard() {
                                             >
                                                 <div className="relative z-10">
                                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                                        <span className="text-[10px] font-black tracking-widest text-zinc-400 uppercase">Series II Mock</span>
+                                                        <span className="text-[10px] font-black tracking-widest text-zinc-400 uppercase">Full Length</span>
                                                         
                                                         {isTestLive ? (
                                                             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300 border border-red-200 dark:border-red-800 animate-pulse">
@@ -568,7 +541,7 @@ export default function MockResultsDashboard() {
                                                         )}
                                                     </div>
 
-                                                    <h3 className="text-base font-extrabold text-zinc-900 dark:text-zinc-50 mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                    <h3 className="text-base font-extrabold text-zinc-900 dark:text-zinc-50 mb-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                                                         {test.title}
                                                     </h3>
                                                     <p className="text-[11px] text-zinc-400 font-medium mb-4 flex items-center gap-1.5">
@@ -581,7 +554,7 @@ export default function MockResultsDashboard() {
                                                     <span className="text-zinc-400 dark:text-zinc-500">
                                                         {test.hasData ? "✓ Configured" : "Upcoming setup"}
                                                     </span>
-                                                    <span className="text-purple-600 dark:text-purple-400 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                                                    <span className="text-sky-600 dark:text-sky-400 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                                                         View Results <ChevronRight className="w-3.5 h-3.5" />
                                                     </span>
                                                 </div>
@@ -592,8 +565,114 @@ export default function MockResultsDashboard() {
                         </section>
                     )}
 
-                    {/* Empty state */}
-                    {totalLive === 0 && ldceNonLive.length === 0 && psgbNonLive.length === 0 && seriesIITests.filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase())).length === 0 && searchTerm && (
+                    {/* ── ARCHIVED ITEMS ── */}
+                    {(ldceNonLive.length > 0 || psgbNonLive.length > 0 || seriesIITests.length > 0) && (
+                        <section className="mt-10 mb-8 border-t border-zinc-100 dark:border-zinc-800 pt-10">
+                            <button
+                                onClick={() => setIsArchiveOpen(!isArchiveOpen)}
+                                className="w-full flex items-center justify-between p-4 bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors"
+                            >
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center">
+                                        <Archive className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                                    </div>
+                                    <div className="text-left">
+                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100">
+                                            Archived Items
+                                        </h2>
+                                        <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                                            {ldceNonLive.length + psgbNonLive.length + seriesIITests.length} Previous Mock Tests
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="p-2 bg-white dark:bg-zinc-900 rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm">
+                                    {isArchiveOpen ? (
+                                        <ChevronUp className="w-5 h-5 text-zinc-500" />
+                                    ) : (
+                                        <ChevronDown className="w-5 h-5 text-zinc-500" />
+                                    )}
+                                </div>
+                            </button>
+
+                            {isArchiveOpen && (
+                                <div className="mt-6 space-y-10 pl-2 sm:pl-4 border-l-2 border-zinc-100 dark:border-zinc-800/50">
+                                    {/* ── LDCE IP: Completed + Upcoming ── */}
+                                    {ldceNonLive.length > 0 && (
+                                        <section>
+                                            <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-indigo-200 dark:border-indigo-900">
+                                                <div className="flex items-center gap-3">
+                                                    <BookOpen className="w-5 h-5 text-indigo-500" />
+                                                    <div>
+                                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100">LDCE IP</h2>
+                                                        <p className="text-xs text-zinc-400">Inspector Posts · Weekly Series · Jan–May 2026</p>
+                                                    </div>
+                                                </div>
+                                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
+                                                    {ldceNonLive.length} tests
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col gap-2">
+                                                {ldceNonLive.map((test, i) => (
+                                                    <NonLiveListRow key={test.id} test={test} index={i} dateStatus={getDateStatus(test) as 'completed' | 'upcoming'} />
+                                                ))}
+                                            </div>
+                                        </section>
+                                    )}
+
+                                    {/* ── PS Gr B: Completed + Upcoming ── */}
+                                    {psgbNonLive.length > 0 && (
+                                        <section>
+                                            <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-amber-200 dark:border-amber-900">
+                                                <div className="flex items-center gap-3">
+                                                    <GraduationCap className="w-5 h-5 text-amber-500" />
+                                                    <div>
+                                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100">PS Gr B</h2>
+                                                        <p className="text-xs text-zinc-400">Postal Service Group B · Weekly Series · Apr–Jul 2026</p>
+                                                    </div>
+                                                </div>
+                                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
+                                                    {psgbNonLive.length} tests
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col gap-2">
+                                                {psgbNonLive.map((test, i) => (
+                                                    <NonLiveListRow key={test.id} test={test} index={i} dateStatus={getDateStatus(test) as 'completed' | 'upcoming'} />
+                                                ))}
+                                            </div>
+                                        </section>
+                                    )}
+                                    {/* ── Series II Mock Tests ── */}
+                                    {seriesIITests.length > 0 && (
+                                        <section>
+                                            <div className="flex items-center justify-between mb-4 pb-3 border-b-2 border-purple-200 dark:border-purple-900">
+                                                <div className="flex items-center gap-3">
+                                                    <Trophy className="w-5 h-5 text-purple-600" />
+                                                    <div>
+                                                        <h2 className="text-base font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+                                                            LDCE IP Mock Test Series II
+                                                        </h2>
+                                                        <p className="text-xs text-zinc-400">15 Weekly Mock Tests for Series II</p>
+                                                    </div>
+                                                </div>
+                                                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800">
+                                                    {seriesIITests.length} tests
+                                                </span>
+                                            </div>
+
+                                            <div className="flex flex-col gap-2">
+                                                {seriesIITests
+                                                    .filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase()))
+                                                    .map((test, i) => (
+                                                        <NonLiveListRow key={test.id} test={test} index={i} dateStatus={getDateStatus(test) as 'completed' | 'upcoming'} />
+                                                    ))}
+                                            </div>
+                                        </section>
+                                    )}
+                                </div>
+                            )}
+                        </section>
+                    )}
+                    {totalLive === 0 && ldceNonLive.length === 0 && psgbNonLive.length === 0 && seriesIITests.filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase())).length === 0 && fullLengthTests.filter(test => test.title.toLowerCase().includes(searchTerm.toLowerCase())).length === 0 && searchTerm && (
                         <div className="text-center py-20">
                             <FileText className="w-12 h-12 text-zinc-200 dark:text-zinc-700 mx-auto mb-4" />
                             <p className="text-zinc-400 font-medium">No tests match "{searchTerm}"</p>

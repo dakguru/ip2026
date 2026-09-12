@@ -50,6 +50,18 @@ import { PSGB_MOCK_14_QUESTIONS } from "@/data/psgb_mock_data_14";
 import { PSGB_MOCK_15_QUESTIONS } from "@/data/psgb_mock_data_15";
 import { PSGB_MOCK_16_QUESTIONS } from "@/data/psgb_mock_data_16";
 
+import { FL_PAPER1_SET_01_QUESTIONS } from "@/data/fl_paper1_set_01";
+import { FL_PAPER1_SET_02_QUESTIONS } from "@/data/fl_paper1_set_02";
+import { FL_PAPER1_SET_03_QUESTIONS } from "@/data/fl_paper1_set_03";
+import { FL_PAPER1_SET_04_QUESTIONS } from "@/data/fl_paper1_set_04";
+import { FL_PAPER1_SET_05_QUESTIONS } from "@/data/fl_paper1_set_05";
+
+import { FL_PAPER3_SET_1_QUESTIONS } from "@/data/fl_paper3_set_1_questions";
+import { FL_PAPER3_SET_2_QUESTIONS } from "@/data/fl_paper3_set_2_questions";
+import { FL_PAPER3_SET_3_QUESTIONS } from "@/data/fl_paper3_set_3_questions";
+import { FL_PAPER3_SET_4_QUESTIONS } from "@/data/fl_paper3_set_4_questions";
+import { FL_PAPER3_SET_5_QUESTIONS } from "@/data/fl_paper3_set_5_questions";
+
 export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
     "mock-2026-01-24": WEEKLY_MOCK_02_QUESTIONS,
@@ -99,5 +111,16 @@ export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "psgb-mock-2026-06-28": PSGB_MOCK_13_QUESTIONS,
     "psgb-mock-2026-07-05": PSGB_MOCK_14_QUESTIONS,
     "psgb-mock-2026-07-12": PSGB_MOCK_15_QUESTIONS,
-    "psgb-mock-2026-07-19": PSGB_MOCK_16_QUESTIONS
+    "psgb-mock-2026-07-19": PSGB_MOCK_16_QUESTIONS,
+    "fl-p1-set-01": FL_PAPER1_SET_01_QUESTIONS,
+    "fl-p1-set-02": FL_PAPER1_SET_02_QUESTIONS,
+    "fl-p1-set-03": FL_PAPER1_SET_03_QUESTIONS,
+    "fl-p1-set-04": FL_PAPER1_SET_04_QUESTIONS,
+    "fl-p1-set-05": FL_PAPER1_SET_05_QUESTIONS,
+    "fl-p3-set-01": FL_PAPER3_SET_1_QUESTIONS,
+    "fl-p3-set-02": FL_PAPER3_SET_2_QUESTIONS,
+    "fl-p3-set-03": FL_PAPER3_SET_3_QUESTIONS,
+    "fl-p3-set-04": FL_PAPER3_SET_4_QUESTIONS,
+    "fl-p3-set-05": FL_PAPER3_SET_5_QUESTIONS
 };
+

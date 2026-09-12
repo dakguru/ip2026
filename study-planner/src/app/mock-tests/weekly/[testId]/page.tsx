@@ -15,9 +15,16 @@ import { format, eachDayOfInterval, addDays } from "date-fns";
 import FormattedQuestionText from "@/components/quiz/FormattedQuestionText";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
 import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
+import { FULL_LENGTH_MOCK_SCHEDULE } from "@/data/fullLengthMockSchedule";
 
 
 const getTopicsForMock = (saturdayDate: Date, testId?: string): string[] => {
+    // Handling Full Length Paper-I
+    if (testId && testId.startsWith('fl-')) {
+        const flTest = FULL_LENGTH_MOCK_SCHEDULE.find(w => w.id === testId);
+        if (flTest) return flTest.topics;
+    }
+
     // Handling PSGB Mock Schedule
     if (testId && testId.startsWith('psgb-mock-')) {
         // Compare testId against sundayDate in schedule (consistent with ID generation)
@@ -312,6 +319,56 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         startDate: new Date("2026-09-05T00:00:00+05:30"),
         endDate: new Date("2026-09-06T23:59:59+05:30"),
         title: "Weekly Mock Test - S2-15"
+    },
+    "fl-p1-set-01": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Full Length Mock Test - Paper I - Set 1"
+    },
+    "fl-p1-set-02": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Full Length Mock Test - Paper I - Set 2"
+    },
+    "fl-p1-set-03": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Full Length Mock Test - Paper I - Set 3"
+    },
+    "fl-p1-set-04": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Full Length Mock Test - Paper I - Set 4"
+    },
+    "fl-p1-set-05": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Full Length Mock Test - Paper I - Set 5"
+    },
+    "fl-p3-set-01": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Mock Test - Paper III"
+    },
+    "fl-p3-set-02": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Mock Test - Paper III"
+    },
+    "fl-p3-set-03": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Mock Test - Paper III"
+    },
+    "fl-p3-set-04": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Mock Test - Paper III"
+    },
+    "fl-p3-set-05": {
+        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        endDate: new Date("2026-09-27T23:59:59+05:30"),
+        title: "Mock Test - Paper III"
     }
 };
 
@@ -530,6 +587,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     const [showSubmitModal, setShowSubmitModal] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [score, setScore] = useState(0);
+    const [timeTakenOnSubmit, setTimeTakenOnSubmit] = useState(0);
 
     const isPsgbSelectedMock = (() => {
         if (!testId.startsWith('psgb-mock-')) return false;
@@ -539,10 +597,15 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     })();
 
     const is120MinTest = isPsgbSelectedMock || testId.startsWith('mock-s2-');
+    const is150MinTest = testId.startsWith('fl-p1-');
+    const is180MinTest = testId.startsWith('fl-p3-');
 
     const [isAuthorized, setIsAuthorized] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    const [timeLeft, setTimeLeft] = useState(is120MinTest ? 7200 : 3600); // 120 mins for PSGB Mock 09-14 and Series II, else 60 mins
+    
+    // Timer logic: 180 mins for fl-p3, 150 mins for fl-p1, 120 mins for PSGB 09-16 & Series II, else 60 mins
+    const [timeLeft, setTimeLeft] = useState(is180MinTest ? 10800 : (is150MinTest ? 9000 : (is120MinTest ? 7200 : 3600))); 
+    
     const [isAdmin, setIsAdmin] = useState(false);
     const [userName, setUserName] = useState("Aspirant");
     const [userEmail, setUserEmail] = useState("");
@@ -878,11 +941,17 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
         setIsSubmitted(true);
         window.scrollTo(0, 0);
 
+        const totalTime = is180MinTest ? 10800 : (is150MinTest ? 9000 : (is120MinTest ? 7200 : 3600));
+        setTimeTakenOnSubmit(totalTime - timeLeft);
+
         // Show feedback modal for eligible tests
         const isEligibleSeriesII = testId.startsWith('mock-s2-') && testId >= 'mock-s2-2026-06-06';
         const isEligiblePSGB = testId.startsWith('psgb-mock-') && testId >= 'psgb-mock-2026-06-07';
         
-        if ((isEligibleSeriesII || isEligiblePSGB) && userEmail) {
+        // Also show for Full Length tests
+        const isEligibleFL = testId.startsWith('fl-');
+        
+        if ((isEligibleSeriesII || isEligiblePSGB || isEligibleFL) && userEmail) {
             try {
                 const res = await fetch('/api/mock-test/feedback/check', {
                     method: 'POST',
@@ -896,7 +965,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
             } catch (e) { console.error(e); }
         }
 
-    }, [questions, answers, vibrate, userEmail, isAdmin, testId]);
+    }, [questions, answers, vibrate, userEmail, isAdmin, testId, timeLeft, is180MinTest, is150MinTest, is120MinTest]);
 
     // Mobile / timeout / back-button path: keeps the lightweight native confirm
     const handleSubmit = useCallback(async () => {
@@ -1583,20 +1652,27 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                     <CheckCircle2 className="w-10 h-10 text-green-600 dark:text-green-400" />
                                 </div>
                                 <h1 className="text-2xl md:text-4xl font-black mb-2 text-zinc-900 dark:text-white">Test Submitted!</h1>
-                                <p className="text-zinc-500 dark:text-zinc-400 text-base md:text-lg mb-8">
-                                    You scored <span className="font-bold text-zinc-900 dark:text-white">{score}</span> out of <span className="font-bold text-zinc-900 dark:text-white">{questions.length * 2}</span>
-                                </p>
-
-                                <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-4 md:p-6 border border-amber-100 dark:border-amber-900/20 max-w-lg mx-auto mb-8">
-                                    <p className="font-medium text-sm md:text-base text-amber-800 dark:text-amber-200 flex items-center justify-center gap-2">
-                                        <AlertCircle className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-                                        All India Rank List will be released on Monday.
-                                    </p>
+                                <div className="text-zinc-500 dark:text-zinc-400 text-base md:text-lg mb-8 flex flex-col items-center gap-2">
+                                    <p>You scored <span className="font-bold text-zinc-900 dark:text-white">{score}</span> out of <span className="font-bold text-zinc-900 dark:text-white">{questions.length * 2}</span></p>
+                                    <div className="flex items-center justify-center gap-2 text-sm bg-zinc-100 dark:bg-zinc-800 px-4 py-2 rounded-full mt-2">
+                                        <Clock className="w-4 h-4 text-indigo-500" />
+                                        <span>Time Taken: <span className="font-bold text-zinc-900 dark:text-white">{formatTime(timeTakenOnSubmit)}</span></span>
+                                    </div>
                                 </div>
+
+                                {!testId.startsWith('fl-') && (
+                                    <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-4 md:p-6 border border-amber-100 dark:border-amber-900/20 max-w-lg mx-auto mb-8">
+                                        <p className="font-medium text-sm md:text-base text-amber-800 dark:text-amber-200 flex items-center justify-center gap-2">
+                                            <AlertCircle className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+                                            All India Rank List will be released on Monday.
+                                        </p>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="max-w-4xl mx-auto space-y-12">
                                 {/* Live Leaderboard */}
+                                {(!testId.startsWith('fl-') || isAdmin) && (
                                 <div className="max-w-2xl mx-auto mb-12 bg-white dark:bg-zinc-900 rounded-[2rem] border border-zinc-100 dark:border-zinc-800 shadow-xl overflow-hidden">
                                     <div className="p-6 md:p-8 flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/30">
                                         <div>
@@ -1702,6 +1778,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         </div>
                                     )}
                                 </div>
+                                )}
 
                                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 px-4 mb-12 w-full">
                                     {(() => {

@@ -23,7 +23,14 @@ export async function POST(req: NextRequest) {
 
         let isLeaderboardEligible = true;
 
-        if (testId && (testId.startsWith('mock-') || testId.startsWith('psgb-mock-'))) {
+        if (testId && testId.startsWith('fl-')) {
+            isLeaderboardEligible = true;
+            // Demote any previously eligible attempts for this test so only the newest remains on the leaderboard
+            await MockResult.updateMany(
+                { userEmail: user.email, testId: testId, isLeaderboardEligible: true },
+                { $set: { isLeaderboardEligible: false } }
+            );
+        } else if (testId && (testId.startsWith('mock-') || testId.startsWith('psgb-mock-'))) {
             try {
                 // Heuristic to detect live window based on testId date
                 const dateMatch = testId.match(/\d{4}-\d{2}-\d{2}/);

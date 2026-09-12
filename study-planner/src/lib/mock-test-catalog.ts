@@ -3,6 +3,7 @@ import { Question } from "@/lib/quizTypes";
 import { TEST_QUESTIONS_MAP } from "@/lib/mock-test-data-map";
 import { SERIES_II_MOCK_SCHEDULE } from "@/data/seriesIIMockSchedule";
 import { PSGB_MOCK_SCHEDULE } from "@/data/psgbMockSchedule";
+import { FULL_LENGTH_MOCK_SCHEDULE } from "@/data/fullLengthMockSchedule";
 
 /**
  * Browser-agnostic catalog of mock tests that have published question content
@@ -55,6 +56,7 @@ function ddmmyyyy(d: Date): string {
 // Series II lookup by id; PSGB lookup by sunday (exam) date.
 const seriesIIById = new Map(SERIES_II_MOCK_SCHEDULE.map((t) => [t.id, t]));
 const psgbBySunday = new Map(PSGB_MOCK_SCHEDULE.map((w) => [w.sundayDate, w]));
+const fullLengthById = new Map(FULL_LENGTH_MOCK_SCHEDULE.map((t) => [t.id, t]));
 
 // Series-I weekly tests: number them chronologically (Weekly Mock Test - NN).
 const seriesIIndex = (() => {
@@ -107,6 +109,27 @@ function buildMeta(id: string, questionCount: number): MockTestMeta | null {
             dateLabel: ddmmyyyy(start),
             scheduleLabel: `${ddmmyyyy(start)} - ${ddmmyyyy(endBase)}`,
             topics: test?.topics ?? [],
+            completed: now > endOfDay(endBase).getTime(),
+            questionCount,
+        };
+    }
+
+    // ── LDCE IP Full Length (Paper I & III) ───────────────────────────────────
+    if (id.startsWith("fl-")) {
+        const test = fullLengthById.get(id);
+        if (!test) return null;
+        const start = new Date(test.startDate + "T00:00:00");
+        const endBase = new Date(test.endDate + "T00:00:00");
+        const paperStr = id.startsWith("fl-p3-") ? "Paper III" : "Paper I";
+        return {
+            id,
+            course: "LDCE_IP",
+            title: test.title,
+            examName: `LDCE IP Full Length Mock Test - ${paperStr}`,
+            group: `LDCE IP - Full Length ${paperStr}`,
+            dateLabel: ddmmyyyy(start),
+            scheduleLabel: `${ddmmyyyy(start)} - ${ddmmyyyy(endBase)}`,
+            topics: test.topics,
             completed: now > endOfDay(endBase).getTime(),
             questionCount,
         };
