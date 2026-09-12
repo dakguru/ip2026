@@ -454,6 +454,15 @@ const PDF_DATA: Record<string, Note[]> = {
             color: "teal",
             topic: "Noting, Drafting & Major-Penalty Charge Sheet"
         },
+        {
+            title: "Answer Sheet for LDCE IP 2025 - Paper II",
+            description: "Model Answer Key for LDCE IP 2025 Paper II examination.",
+            filename: "DakGuru_LDCE_IP_Paper-II_2025_Model_Answer_Key.pdf",
+            path: "/notes/paper-2/DakGuru_LDCE_IP_Paper-II_2025_Model_Answer_Key.pdf",
+            size: "0.5 MB",
+            color: "purple",
+            topic: "Answer Key"
+        },
     ],
     "Paper III": [
         // 1-8. Constitution
