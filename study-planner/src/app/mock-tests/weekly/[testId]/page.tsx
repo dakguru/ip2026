@@ -348,27 +348,27 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
     "fl-p3-set-01": {
         startDate: new Date("2026-09-13T00:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
-        title: "Mock Test - Paper III"
+        title: "Mock Test - Paper III - Set 1"
     },
     "fl-p3-set-02": {
         startDate: new Date("2026-09-13T00:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
-        title: "Mock Test - Paper III"
+        title: "Mock Test - Paper III - Set 2"
     },
     "fl-p3-set-03": {
         startDate: new Date("2026-09-13T00:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
-        title: "Mock Test - Paper III"
+        title: "Mock Test - Paper III - Set 3"
     },
     "fl-p3-set-04": {
         startDate: new Date("2026-09-13T00:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
-        title: "Mock Test - Paper III"
+        title: "Mock Test - Paper III - Set 4"
     },
     "fl-p3-set-05": {
         startDate: new Date("2026-09-13T00:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
-        title: "Mock Test - Paper III"
+        title: "Mock Test - Paper III - Set 5"
     }
 };
 
