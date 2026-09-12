@@ -42,8 +42,32 @@ const UPDATES_DATA: UpdateGroup[] = [
                         </div>
                     </div>
                 )
+            },
+            {
+                title: "📄 New: Answer Sheet for LDCE IP 2025 - Paper II",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            The <strong className="text-violet-600 dark:text-violet-400">Model Answer Key</strong> for <strong className="text-zinc-900 dark:text-zinc-100">LDCE IP 2025 - Paper II</strong> is now available under the Paper II tab!
+                        </p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-gradient-to-r from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-xl border border-purple-200 dark:border-purple-800/50 shadow-sm relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-2 opacity-20 pointer-events-none">
+                                    <img src="/dak-guru-new-logo.png" alt="" className="w-16 h-16 object-contain mix-blend-multiply dark:mix-blend-screen grayscale" />
+                                </div>
+                                <p className="font-bold text-purple-700 dark:text-purple-300 text-[10px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
+                                    New Addition
+                                </p>
+                                <p className="text-zinc-800 dark:text-zinc-200 text-[12px] font-medium leading-relaxed relative z-10">
+                                    Model Answer Key for <strong>LDCE IP 2025 Paper II</strong> examination is now available. Available exclusively for <strong>Gold</strong> members.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )
             }
-        ]
     },
     {
         date: "18.08.2026",
