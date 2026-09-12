@@ -16,6 +16,36 @@ interface UpdateGroup {
 
 const UPDATES_DATA: UpdateGroup[] = [
     {
+        date: "12.09.2026",
+        items: [
+            {
+                title: "📝 New: Paper II Tab & Noting, Drafting Notes",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            A brand new <strong className="text-violet-600 dark:text-violet-400">Paper II</strong> tab has been added to the <strong className="text-zinc-900 dark:text-zinc-100">Study Material</strong> section for <strong className="text-zinc-900 dark:text-zinc-100">LDCE IP</strong> course!
+                        </p>
+                        
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-gradient-to-r from-teal-50 to-emerald-50 dark:from-teal-900/20 dark:to-emerald-900/20 p-4 rounded-xl border border-teal-200 dark:border-teal-800/50 shadow-sm relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-2 opacity-20 pointer-events-none">
+                                    <img src="/dak-guru-new-logo.png" alt="" className="w-16 h-16 object-contain mix-blend-multiply dark:mix-blend-screen grayscale" />
+                                </div>
+                                <p className="font-bold text-teal-700 dark:text-teal-300 text-[10px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+                                    New Addition
+                                </p>
+                                <p className="text-zinc-800 dark:text-zinc-200 text-[12px] font-medium leading-relaxed relative z-10">
+                                    PDF Notes on <strong>Noting, Drafting & Major-Penalty Charge Sheet</strong> are now available under the new Paper II tab. Available exclusively for <strong>Gold</strong> members.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        ]
+    },
+    {
         date: "18.08.2026",
         items: [
             {
