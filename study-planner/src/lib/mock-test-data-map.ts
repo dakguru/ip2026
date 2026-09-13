@@ -56,11 +56,11 @@ import { FL_PAPER1_SET_03_QUESTIONS } from "@/data/fl_paper1_set_03";
 import { FL_PAPER1_SET_04_QUESTIONS } from "@/data/fl_paper1_set_04";
 import { FL_PAPER1_SET_05_QUESTIONS } from "@/data/fl_paper1_set_05";
 
-import { FL_PAPER3_SET_1_QUESTIONS } from "@/data/fl_paper3_set_1_questions";
-import { FL_PAPER3_SET_2_QUESTIONS } from "@/data/fl_paper3_set_2_questions";
-import { FL_PAPER3_SET_3_QUESTIONS } from "@/data/fl_paper3_set_3_questions";
-import { FL_PAPER3_SET_4_QUESTIONS } from "@/data/fl_paper3_set_4_questions";
-import { FL_PAPER3_SET_5_QUESTIONS } from "@/data/fl_paper3_set_5_questions";
+import { FL_PAPER3_SET_01_QUESTIONS } from "@/data/fl_paper3_set_01";
+import { FL_PAPER3_SET_02_QUESTIONS } from "@/data/fl_paper3_set_02";
+import { FL_PAPER3_SET_03_QUESTIONS } from "@/data/fl_paper3_set_03";
+import { FL_PAPER3_SET_04_QUESTIONS } from "@/data/fl_paper3_set_04";
+import { FL_PAPER3_SET_05_QUESTIONS } from "@/data/fl_paper3_set_05";
 
 export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "mock-2026-01-17": WEEKLY_MOCK_01_QUESTIONS,
@@ -117,10 +117,10 @@ export const TEST_QUESTIONS_MAP: Record<string, any[]> = {
     "fl-p1-set-03": FL_PAPER1_SET_03_QUESTIONS,
     "fl-p1-set-04": FL_PAPER1_SET_04_QUESTIONS,
     "fl-p1-set-05": FL_PAPER1_SET_05_QUESTIONS,
-    "fl-p3-set-01": FL_PAPER3_SET_1_QUESTIONS,
-    "fl-p3-set-02": FL_PAPER3_SET_2_QUESTIONS,
-    "fl-p3-set-03": FL_PAPER3_SET_3_QUESTIONS,
-    "fl-p3-set-04": FL_PAPER3_SET_4_QUESTIONS,
-    "fl-p3-set-05": FL_PAPER3_SET_5_QUESTIONS
+    "fl-p3-set-01": FL_PAPER3_SET_01_QUESTIONS,
+    "fl-p3-set-02": FL_PAPER3_SET_02_QUESTIONS,
+    "fl-p3-set-03": FL_PAPER3_SET_03_QUESTIONS,
+    "fl-p3-set-04": FL_PAPER3_SET_04_QUESTIONS,
+    "fl-p3-set-05": FL_PAPER3_SET_05_QUESTIONS
 };
 

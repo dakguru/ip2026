@@ -1,0 +1,1254 @@
+Q1. Consider the following statements regarding the Preamble to the Constitution of India:
+
+1. The Preamble is an integral part of the Constitution.
+2. It can be amended under Article 368 of the Constitution.
+3. The Preamble is justiciable and enforceable in a court of law.
+Which of the statements given above is/are correct?
+A. Statements 1 and 2 only are correct
+B. Statements 2 and 3 only are correct
+C. Statements 1 and 3 only are correct
+D. Statements 1, 2 and 3 are correct
+Answer: A
+Explanation: In the Kesavananda Bharati case (1973), the Supreme Court ruled the Preamble is part of the Constitution and amendable under Article 368. However, it is non-justiciable and cannot be enforced in a court of law.
+
+Q2. Under Article 124 of the Constitution, which of the following is a mandatory condition for the removal of a Supreme Court Judge?
+A. An order passed by the President after an inquiry by the Chief Justice
+B. A resolution passed by the Lok Sabha with a two-thirds majority
+C. An order by the President after an address by both Houses of Parliament
+D. A directive from the Union Cabinet validated by the Supreme Court
+Answer: C
+Explanation: Article 124(4) strictly mandates that a judge can only be removed by a Presidential order passed after an address by both Houses of Parliament supported by a special majority, on grounds of proved misbehaviour or incapacity.
+
+Q3. As per Article 311(2) of the Constitution, in which scenario is the disciplinary authority exempted from holding an inquiry before imposing a major penalty?
+A. When the government servant requests an immediate voluntary retirement scheme
+B. When the President is satisfied that holding an inquiry threatens State security
+C. When the concerned employee has been suspended for more than ninety days
+D. When the departmental vigilance officer recommends immediate direct dismissal
+Answer: B
+Explanation: The second proviso (c) to Article 311(2) expressly exempts the inquiry requirement if the President or the Governor is satisfied that in the interest of the security of the State, it is not expedient to hold such inquiry.
+
+Q4. According to Article 338B of the Constitution, what is the composition of the National Commission for Backward Classes?
+A. A Chairperson, a Vice-Chairperson, and two other Members
+B. A Chairperson, a Vice-Chairperson, and three other Members
+C. A Chairperson, two Vice-Chairpersons, and two Members
+D. A Chairperson, a Vice-Chairperson, and five other Members
+Answer: B
+Explanation: Article 338B(2) specifies that the Commission shall consist of a Chairperson, Vice-Chairperson, and three other Members, all appointed by the President by warrant under his hand and seal.
+
+Q5. Which of the following Directives is enshrined as a Fundamental Duty under Part IVA of the Constitution of India?
+A. To organize village panchayats and endow them with necessary powers
+B. To protect and improve the natural environment including forests and lakes
+C. To secure for the citizens a uniform civil code throughout the territory
+D. To promote international peace and maintain just relations between nations
+Answer: B
+Explanation: Protecting and improving the natural environment is a Fundamental Duty under Article 51A(g). The other options represent Directive Principles of State Policy under Articles 40, 44, and 51 respectively.
+
+Q6. Under Section 84 of the Bharatiya Nagarik Suraksha Sanhita, 2023, what minimum period must be specified in the proclamation for an absconding person to appear?
+A. Not less than fifteen days from the date of publishing such proclamation
+B. Not less than thirty days from the date of publishing such proclamation
+C. Not less than forty-five days from the date of publishing such proclamation
+D. Not less than sixty days from the date of publishing such proclamation
+Answer: B
+Explanation: Section 84(1) of the BNSS mandates that the Court shall publish a written proclamation requiring the absconding person to appear at a specified place and time not less than thirty days from the date of its publication.
+
+Q7. As per Section 2 of the Central Administrative Tribunal Act, 1985, the Act does not apply to which of the following categories of employees?
+A. Personnel belonging to the clerical staff of the subordinate district courts
+B. Civilian employees formally appointed to defense services under the Union
+C. Any member of the naval, military, or air forces or other armed forces
+D. Persons appointed to any civil service of the Union or a civil post
+Answer: C
+Explanation: Section 2(a) of the Administrative Tribunals Act, 1985 explicitly exempts any member of the naval, military or air forces or of any other armed forces of the Union from the jurisdiction of the Tribunal.
+
+Q8. Under the Revenue Recovery Act, 1890, who is the competent authority to issue a certificate for the recovery of public demands arising in another district?
+A. The Sub-Divisional Magistrate of the district where the demand originates
+B. The Collector of the district where the arrear of land revenue is payable
+C. The District Judge of the district where the defaulting taxpayer resides
+D. The Revenue Secretary of the State Government managing the jurisdiction
+Answer: B
+Explanation: Section 3 of the Revenue Recovery Act, 1890 empowers the Collector of the district where the arrear is payable to send a certificate to the Collector of the district where the defaulter resides or has property.
+
+Q9. As per the Prevention of Corruption Act, 1988 (as amended in 2018), what is the statutory penalty for a public servant obtaining an undue advantage?
+A. Imprisonment for a term not less than three years, extendable to seven years
+B. Imprisonment for a term not less than one year, extendable to five years
+C. Imprisonment for a term not less than five years, extendable to ten years
+D. Imprisonment for a term not less than two years, extendable to five years
+Answer: A
+Explanation: Under Section 7 of the amended PC Act, 1988, a public servant taking an undue advantage is punishable with imprisonment for a term which shall not be less than three years but which may extend to seven years, and shall also be liable to fine.
+
+Q10. Consider the following statements regarding the Right to Information Act, 2005:
+
+1. Information regarding intelligence and security organizations specified in the Second Schedule is entirely exempt, even concerning allegations of corruption.
+2. A first appeal must be filed within thirty days from the expiry of the stipulated decision period or from the receipt of the decision.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: B
+Explanation: Section 24 of the RTI Act exempts Second Schedule organizations, but the proviso strictly states that information pertaining to allegations of corruption and human rights violations shall not be excluded. Hence, statement 1 is incorrect. Section 19(1) confirms the 30-day limit for the first appeal.
+
+Q11. According to the Manual on Procurement of Goods, what is the minimum bidding period generally allowed for National Competitive Bidding (NCB)?
+A. Fourteen days from the date of publication of the tender notice
+B. Twenty-one days from the date of publication of the tender notice
+C. Thirty days from the date of publication of the tender notice
+D. Forty-five days from the date of publication of the tender notice
+Answer: B
+Explanation: As per the Manual on Procurement of Goods / GFR provisions, the minimum time allowed for submission of bids in National Competitive Bidding (NCB) should ordinarily be 21 days to ensure adequate competition.
+
+Q12. Under the Central Civil Services (Implementation of National Pension System) Rules, 2021, who bears the primary responsibility for deducting the subscriber's mandatory NPS contribution from their monthly salary?
+A. The Central Recordkeeping Agency (CRA) via direct debit
+B. The Drawing and Disbursing Officer (DDO)
+C. The Head of Office strictly at the end of the financial year
+D. The subscriber themselves via a self-deposit portal
+Answer: B
+Explanation: Under Rule 7 of the CCS (Implementation of NPS) Rules, 2021, the Drawing and Disbursing Officer (DDO) is legally responsible for deducting the subscriber’s contribution from their salary every month and ensuring it is remitted to the designated Pension Fund.
+
+Q13. Under the CCS (Commutation of Pension) Rules, 1981, when does the commuted value of pension become absolute for an applicant retiring on superannuation?
+A. On the date following the date of retirement if applied before retirement
+B. On the date the medical board confirms the applicant's fitness
+C. On the exact date the Accounts Officer authorizes the final payment
+D. On the date the applicant receives the credited amount in the bank
+Answer: A
+Explanation: Under Rule 6(1)(i) of the CCS (Commutation of Pension) Rules, 1981, if an application is made before the date of retirement, the commutation becomes absolute on the date following the date of retirement.
+
+Q14. As per the Sexual Harassment of Women at Workplace Act, 2013, what is the time limit for filing a complaint of sexual harassment to the Internal Committee?
+A. Within one month from the date of the incident or the last incident
+B. Within three months from the date of the incident or the last incident
+C. Within six months from the date of the incident or the last incident
+D. Within one year from the date of the incident or the last incident
+Answer: B
+Explanation: Section 9(1) of the POSH Act, 2013, mandates that an aggrieved woman must make a complaint in writing to the Internal Committee within three months from the date of the incident, or the last incident in case of a series of incidents.
+
+Q15. Under the CCS (Implementation of NPS) Rules, 2021, if a government servant fails to exercise an option regarding benefits in the event of death, what is the default provision?
+A. The family is granted benefits strictly under the NPS corpus accumulations
+B. The family receives a lump sum equivalent to ten years of basic salary
+C. The family is granted benefits under the old CCS (Pension) Rules for the first 15 years
+D. The family is completely denied any pensionary benefits until a judicial order
+Answer: C
+Explanation: Rule 10 specifies that if a subscriber dies without exercising an option, the family will be granted benefits under the old CCS (Pension) Rules as the default option for the first 15 years of the scheme's implementation.
+
+Q16. According to Chapter 6 of GFR 2017, up to what monetary limit can goods be procured directly without inviting quotations on the recommendation of a duly constituted Local Purchase Committee?
+A. Goods up to the value of Rupees Twenty-Five Thousand on each occasion
+B. Goods up to the value of Rupees Fifty Thousand on each occasion
+C. Goods up to the value of Rupees Two Lakh Fifty Thousand on each occasion
+D. Goods up to the value of Rupees Five Lakh on each occasion
+Answer: C
+Explanation: Rule 155 of GFR 2017 allows the purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion on the recommendations of a duly constituted Local Purchase Committee without inviting formal quotations.
+
+Q17. Under the Fundamental Rules (FR), which of the following best defines a "Lien"?
+A. The right of a government servant to hold substantively a permanent post
+B. The right of a government servant to draw a specific allowance temporarily
+C. The entitlement of an employee to claim arrears of pending salary bills
+D. The claim to foreign service deputation allowances after five years
+Answer: A
+Explanation: FR 9(13) defines "Lien" as the title of a Government servant to hold substantively, either immediately or on the termination of a period or periods of absence, a permanent post, including a tenure post, to which he has been appointed substantively.
+
+Q18. Consider the following statements regarding Casual Labourers as per DoP&T instructions:
+
+1. Casual labourers with temporary status are entitled to earn leave on a pro-rata basis.
+2. They are fully covered under the GPF rules from the very first day of engagement.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: A
+Explanation: Casual labourers granted temporary status are entitled to earn leave on a pro-rata basis (one day for 10 days of work). However, they are not covered under GPF from day one; GPF coverage occurs only after completing three years of continuous service with temporary status.
+
+Q19. Under the Service Discharge Benefit Scheme (SDBS) for Gramin Dak Sevaks, as per the revised guidelines, what is the mandated monthly contribution structure?
+A. The Government contributes Rs. 300 and the GDS contributes Rs. 200 per month
+B. The Government contributes Rs. 300 and the GDS is not required to make any contribution
+C. Both the GDS and the Government make a matching monthly contribution of Rs. 300 each
+D. The GDS contributes ten percent of their TRCA and the Government provides a matching share
+Answer: C
+Explanation: As per the revised operational guidelines of the SDBS for Gramin Dak Sevaks, the scheme operates on a strict co-contribution model where both the Gramin Dak Sevak and the Government contribute a sum of Rs. 300/- each per month.
+
+Q20. As per the rules governing APAR (Annual Performance Assessment Report) maintenance, what is the prescribed time limit for the reporting officer to complete the report?
+A. By 15th April of the subsequent financial year
+B. By 30th June of the subsequent financial year
+C. By 31st July of the subsequent financial year
+D. By 31st August of the subsequent financial year
+Answer: B
+Explanation: As per the DoPT schedule for APARs, the reporting officer is required to write and submit the report to the reviewing officer by 30th June of the subsequent financial year.
+
+Q21. According to the P&T Financial Handbook Volume I, who is primarily responsible for the strict enforcement of financial discipline and control of expenditure?
+A. The Chief Accounts Officer of the respective telecom or postal circle
+B. The Head of the Department or the Controlling Officer of the unit
+C. The Internal Financial Advisor deputed by the Ministry of Finance
+D. The Senior Superintendent of Post Offices of the respective division
+Answer: B
+Explanation: P&T FHB Vol I establishes that the Head of the Department or the Controlling Officer is primarily responsible for ensuring that financial rules are strictly observed, expenditure is kept within the budget, and financial discipline is maintained.
+
+Q22. Under Article 226 of the Constitution, what is the territorial extent of a High Court's power to issue writs?
+A. It extends only to authorities located physically within its territorial jurisdiction
+B. It extends throughout India if the central government is a party to the dispute
+C. It extends beyond its territory if the cause of action arises within its jurisdiction
+D. It extends only to fundamental rights violations occurring within the capital city
+Answer: C
+Explanation: Article 226(2) provides that the power of a High Court to issue writs extends beyond its territorial limits if the cause of action, wholly or in part, arises within its territorial jurisdiction, regardless of the authority's physical location.
+
+Q23. In the context of the Prevention of Corruption Act, 1988, what is the time limit prescribed for concluding the trial of offences?
+A. Within one year, extendable by six months at a time, maximum two years
+B. Within two years, extendable by six months at a time, maximum four years
+C. Within three years, extendable by one year at a time, maximum five years
+D. Within six months, extendable by three months at a time, maximum one year
+Answer: B
+Explanation: Section 4(4) of the PC Act (inserted by 2018 amendment) mandates that the Special Judge shall ensure the trial is concluded within two years. This period can be extended by six months at a time, but the overall period shall not exceed four years.
+
+Q24. Under the RTI Rules, 2012, which of the following is NOT an acceptable mode of payment for the application fee?
+A. Cash paid against a proper receipt to the Accounts Officer
+B. Demand draft payable to the Accounts Officer of the public authority
+C. Indian Postal Order payable to the Accounts Officer of the public authority
+D. Uncrossed personal cheque drawn in favor of the Public Information Officer
+Answer: D
+Explanation: Rule 6 of the RTI Rules, 2012 specifies the modes of payment, which include cash, demand draft, banker's cheque, or Indian Postal Order payable to the Accounts Officer. Personal uncrossed cheques to the PIO are not valid.
+
+Q25. According to Chapter 2 of GFR 2017, which fundamental principle must every officer incurring public expenditure observe?
+A. The expenditure should not exceed the revenue generated by the specific unit
+B. The officer should exercise the same vigilance as a person of ordinary prudence
+C. The expenditure must strictly prioritize capital assets over operational liabilities
+D. The officer must consult the Ministry of Finance before approving any amount
+Answer: B
+Explanation: Rule 21 of GFR 2017 states the fundamental principle of public buying: every officer incurring expenditure from public moneys should exercise the same vigilance as a person of ordinary prudence would exercise in respect of his own money.
+
+Q26. Under the CCS (Payment of Gratuity under NPS) Rules, 2021, what is the maximum qualifying service considered for the calculation of Retirement Gratuity?
+A. Thirty years, resulting in a maximum of fifteen times the emoluments
+B. Thirty-three years, resulting in a maximum of sixteen and a half times the emoluments
+C. Thirty-five years, resulting in a maximum of seventeen and a half times the emoluments
+D. Forty years, resulting in a maximum of twenty times the emoluments
+Answer: B
+Explanation: Under the CCS (Payment of Gratuity under NPS) Rules, 2021 (aligned with old Pension rules), retirement gratuity is calculated at 1/4th of a month's basic pay plus DA for each completed six-monthly period, subject to a maximum of 33 years (16.5 times the emoluments).
+
+Q27. As per the Manual on Procurement of Consultancy & Other Services, what is the financial threshold for procuring services through a Quality and Cost Based Selection (QCBS) method without specific Finance Ministry approval?
+A. The threshold limit is set at Rupees Ten Lakhs per specific contract
+B. The threshold limit is set at Rupees Fifty Lakhs per specific contract
+C. The threshold limit is unrestricted for competent administrative authorities
+D. The method is restricted only to internationally funded consultancy projects
+Answer: C
+Explanation: The Manual on Procurement of Consultancy Services (based on GFR 192) standardizes QCBS for consultancy procurement. Administrative ministries have delegated powers to use QCBS without arbitrary financial caps, provided the weighting of quality to cost is typically 80:20.
+
+Q28. Under the CCS (GPF) Rules, 1961, what is the minimum rate of subscription a government servant must make to the Fund?
+A. Not less than six per cent of the subscriber's emoluments
+B. Not less than eight per cent of the subscriber's emoluments
+C. Not less than ten per cent of the subscriber's emoluments
+D. Not less than twelve per cent of the subscriber's emoluments
+Answer: A
+Explanation: Rule 11 of the CCS (General Provident Fund) Rules, 1961, states that the amount of subscription shall be fixed by the subscriber himself, but it shall not be less than 6 percent of his emoluments and not more than his total emoluments.
+
+Q29. Consider the following regarding the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013:
+
+1. The Internal Committee must have a minimum of 50% representation of women.
+2. The Presiding Officer must be a senior-level female employee from the workplace.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: C
+Explanation: Section 4(2) of the POSH Act requires the Presiding Officer to be a woman at a senior level in the workplace. Furthermore, Section 4(2)(c) mandates that at least one-half of the total Members nominated to the Internal Committee must be women.
+
+Q30. Under Article 143 of the Constitution, who is authorized to seek the advisory opinion of the Supreme Court?
+A. The Prime Minister of India, upon resolution of the Cabinet
+B. The Chief Election Commissioner on complex electoral disputes
+C. The President of India on questions of law or public importance
+D. The Attorney General of India on behalf of the Union Government
+Answer: C
+Explanation: Article 143 confers the power to consult the Supreme Court strictly on the President of India. If at any time it appears to the President that a question of law or fact of public importance has arisen, he may refer it to the Supreme Court.
+
+Q31. According to the Supplementary Rules (SR), what is the maximum duration for which a government servant can generally be granted joining time to join a new post?
+A. Seven days, extendable by another seven days under exceptional circumstances
+B. Fifteen days, subject to a maximum of thirty days by the Head of Department
+C. Twelve days, subject to an absolute maximum of twenty-four days if travelling
+D. Ten days, with no provision for any extension regardless of travel distance
+Answer: B
+Explanation: Under the CCS (Joining Time) Rules (derived from SR), the standard joining time for transfer involving a change of station is 10 to 15 days depending on distance, and the Head of Department can extend it up to a maximum of 30 days.
+
+Q32. As per the P&T Financial Handbook Volume II, which of the following is considered an irregular mechanism for drawing funds from the treasury?
+A. Drawing advances for contingent charges when immediately required
+B. Drawing amounts specifically to prevent the lapse of budget grants
+C. Drawing funds using properly sanctioned and authorized salary bills
+D. Drawing money on the explicit sanction of the competent authority
+Answer: B
+Explanation: P&T FHB Vol I and II explicitly state that drawing money from the treasury merely to prevent the lapse of budget grants at the end of the financial year is highly irregular and strictly prohibited under financial propriety rules.
+
+Q33. Under the Welfare Measures for Departmental Employees of DoP, what is the maximum financial assistance granted from the Circle Welfare Fund for the purchase of spectacles?
+A. Rupees Two Hundred and Fifty only per eligible regular employee
+B. Rupees Five Hundred only per eligible regular employee
+C. Rupees One Thousand only per eligible regular employee
+D. Rupees One Thousand Five Hundred only per eligible regular employee
+Answer: B
+Explanation: As per the updated DoP welfare guidelines (Postal Services Staff Welfare Board), the financial assistance provided for the purchase of spectacles to Group C and MTS employees is limited to Rs. 500, subject to periodic revisions.
+
+Q34. According to Section 17A of the Prevention of Corruption Act, 1988, prior approval is required to conduct any enquiry or investigation against a public servant. This approval is NOT required if:
+A. The public servant belongs to a Group C or Group D category post
+B. The alleged offence involves misappropriation of funds exceeding Rs. 1 Crore
+C. The person is arrested on the spot on the charge of accepting an undue advantage
+D. The complaint is filed by the Central Vigilance Commission directly to the police
+Answer: C
+Explanation: The proviso to Section 17A of the PC Act explicitly states that no such prior approval shall be necessary for cases involving the arrest of a person on the spot on the charge of accepting or attempting to accept any undue advantage.
+
+Q35. Under the CCS (Pension) Rules, 2021, if a government servant is dismissed from service, what happens to their accrued pension and gratuity?
+A. They receive full gratuity but forfeit the entirety of their monthly pension
+B. Both pension and gratuity are forfeited, but a compassionate allowance may be granted
+C. They forfeit only half of the pension, while the entire gratuity remains protected
+D. Both pension and gratuity are protected as they are considered earned benefits
+Answer: B
+Explanation: Rule 41 of the CCS (Pension) Rules, 2021 states that dismissal or removal from service entails forfeiture of his past service, leading to loss of pension and gratuity. However, the competent authority may grant a compassionate allowance not exceeding two-thirds of the pension/gratuity.
+
+Q36. As per Chapter 6 of GFR 2017, what is the standard value limit up to which Goods can be procured through the Government e-Marketplace (GeM) from any of the available suppliers?
+A. Up to Rupees Twenty-Five Thousand without comparing multiple suppliers
+B. Up to Rupees Fifty Thousand without comparing multiple suppliers
+C. Up to Rupees One Lakh without comparing multiple suppliers
+D. Up to Rupees Two Lakhs without comparing multiple suppliers
+Answer: A
+Explanation: Rule 149(i) of GFR 2017 stipulates that for procurements up to Rs. 25,000 through GeM, buyers can purchase from any of the available suppliers on the platform, provided the quality, specifications, and delivery period meet the requisite needs.
+
+Q37. Under Article 338 of the Constitution, what power does the National Commission for Scheduled Castes possess while investigating any matter?
+A. The power of a High Court exercising its appellate criminal jurisdiction
+B. The power of a civil court trying a suit under the Code of Civil Procedure
+C. The power of a special tribunal handling administrative service disputes
+D. The power of an executive magistrate enforcing preventive detention laws
+Answer: B
+Explanation: Article 338(8) states that the Commission shall, while investigating any matter, have all the powers of a civil court trying a suit. This includes summoning witnesses, requiring document discovery, and receiving evidence on affidavits.
+
+Q38. Consider the following statements regarding the Service Discharge Benefit Scheme (SDBS) for Gramin Dak Sevaks:
+1.Both the Government and the enrolled GDS are required to make a flat monthly contribution of Rs. 300 each.
+2.The accumulated corpus under the scheme is managed under the regulatory architecture of the Pension Fund Regulatory and Development Authority (PFRDA).
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under the revised SDBS guidelines, both the GDS and the Department contribute a flat Rs. 300 per month (Statement 1 is correct). The scheme is governed, regulated, and managed by the PFRDA through the standard NPS architecture (Statement 2 is correct).
+
+Q39. According to the Manual on Procurement of Works, what is the percentage of Performance Security generally required from the successful bidder?
+A. Generally restricted to two per cent of the total final contract value
+B. Generally stipulated between five to ten per cent of the contract value
+C. Generally stipulated between ten to fifteen per cent of the contract value
+D. Generally restricted to twenty per cent of the total final contract value
+Answer: B
+Explanation: The Manual on Procurement of Works and GFR 171 indicate that Performance Security is ordinarily obtained from the successful bidder at a rate of 5 to 10 percent of the value of the contract to ensure due performance.
+
+Q40. Under the CCS (Implementation of NPS) Rules, 2021, an employee who intends to exit from the National Pension System upon superannuation must submit the withdrawal application within what timeframe?
+A. At least six months prior to the exact date of superannuation
+B. At least three months prior to the exact date of superannuation
+C. Within one month immediately following the date of superannuation
+D. Within six months immediately following the date of superannuation
+Answer: A
+Explanation: Rule 15 of the CCS (Implementation of NPS) Rules, 2021 mandates that the subscriber shall submit the requisite forms for withdrawal of the accumulated pension corpus to the Head of Office at least six months before the date of superannuation.
+
+Q41. As per the RTI Act, 2005, what is the penalty imposable by the Central Information Commission on a PIO for unreasonably delaying information?
+A. Rupees Two Hundred and Fifty per day, subject to a maximum of Rs. 25,000
+B. Rupees Five Hundred per day, subject to a maximum of Rs. 50,000
+C. Rupees One Hundred per day, subject to a maximum of Rs. 10,000
+D. Rupees Two Hundred and Fifty per day, subject to a maximum of Rs. 50,000
+Answer: A
+Explanation: Section 20(1) of the RTI Act states that the Commission shall impose a penalty of Rs. 250 each day till the application is received or information is furnished, provided the total amount of such penalty shall not exceed Rs. 25,000.
+
+Q42. Under the Schedule of Financial Powers of Divisional Heads, what is the upper limit for the Superintendent of Post Offices to write off losses of postal articles?
+A. Up to Rupees Five Hundred in each distinct and verified case
+B. Up to Rupees One Thousand in each distinct and verified case
+C. Up to Rupees Two Thousand in each distinct and verified case
+D. Up to Rupees Five Thousand in each distinct and verified case
+Answer: A
+Explanation: According to the Schedule of Financial Powers, a Divisional Head (Superintendent/Senior Superintendent) is empowered to write off losses regarding postal articles up to a limit of Rs. 500 per case, provided there is no structural defect in the system.
+
+Q43. According to Fundamental Rule (FR) 11, the whole time of a Government servant is at the disposal of the Government. Does this allow the Government to employ them without additional claim for remuneration?
+A. Yes, but only in duties directly aligned with their substantive appointment
+B. No, additional duties automatically qualify for supplementary remuneration
+C. Yes, they may be employed in any manner required by proper authority
+D. No, foreign service assignments require separate parliamentary approval
+Answer: C
+Explanation: FR 11 explicitly states that unless in any case it be otherwise distinctly provided, the whole time of a Government servant is at the disposal of the Government which pays him, and he may be employed in any manner required by proper authority without claim for additional remuneration.
+
+Q44. Under Article 214 to 232 of the Constitution, which of the following authorities determines the number of judges in a High Court?
+A. The Chief Justice of India through an administrative resolution
+B. The Parliament of India by passing a statutory enactment
+C. The President of India based on the workload and necessity
+D. The Governor of the respective State based on executive need
+Answer: C
+Explanation: Unlike the Supreme Court, where the number of judges is fixed by Parliament under Article 124, Article 216 states that every High Court shall consist of a Chief Justice and such other Judges as the President may from time to time deem it necessary to appoint.
+
+Q45. As per the CCS (Commutation of Pension) Rules, 1981, what is the maximum percentage of basic pension that a retired government servant can commute?
+A. Up to twenty-five per cent of the final basic pension authorized
+B. Up to thirty-three per cent of the final basic pension authorized
+C. Up to forty per cent of the final basic pension authorized
+D. Up to fifty per cent of the final basic pension authorized
+Answer: C
+Explanation: Rule 5 of the CCS (Commutation of Pension) Rules, 1981 allows a government servant to commute for a lump-sum payment a fraction not exceeding forty per cent of his basic pension.
+
+Q46. Consider the following statements regarding the maintenance of APARs (Annual Performance Assessment Reports):
+
+1. An officer is not allowed to write the APAR of a subordinate if he/she has supervised the subordinate for less than three months.
+2. The APAR must contain a self-appraisal section completed by the officer reported upon.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: C
+Explanation: DoPT instructions strictly mandate that a reporting officer must have supervised the employee for at least three months to write an APAR. Additionally, standard APAR formats obligate the reported officer to submit a self-appraisal outlining their achievements and targets.
+
+Q47. Under the Revenue Recovery Act, 1890, what does a "Certificate" issued by the Collector primarily represent?
+A. A request for a civil court trial regarding the disputed taxation amount
+B. Conclusive evidence of the arrears owed and the identity of the defaulter
+C. A temporary attachment order valid for thirty days pending investigation
+D. An advisory notice to the defaulter demanding immediate clarification
+Answer: B
+Explanation: Under Section 4(2) of the Revenue Recovery Act, 1890, the certificate issued by the sending Collector shall be conclusive proof of the matters stated therein (the arrear due and the defaulter's identity) for the receiving Collector to proceed with the recovery.
+
+Q48. As per Chapter 2 of GFR 2017, an expenditure sanction granted by a competent authority normally lapses if not acted upon within what period?
+A. Six months from the date the sanction was officially communicated
+B. Twelve months from the date the sanction was officially communicated
+C. Eighteen months from the date the sanction was officially communicated
+D. Twenty-four months from the date the sanction was officially communicated
+Answer: B
+Explanation: Rule 30 of GFR 2017 states that a sanction for any fresh charge shall, unless specifically renewed, lapse if no payment in whole or in part has been made during a period of twelve months from the date of issue of such sanction.
+
+Q49. Under the Sexual Harassment of Women at Workplace Act, 2013, what is the monetary penalty imposed on an employer for failing to constitute an Internal Committee for the first time?
+A. A fine which may extend to Rupees Twenty-Five Thousand
+B. A fine which may extend to Rupees Fifty Thousand
+C. A fine which may extend to Rupees One Lakh
+D. A fine which may extend to Rupees Five Lakhs
+Answer: B
+Explanation: Section 26(1) of the POSH Act prescribes that an employer who fails to constitute an Internal Committee shall be punishable with a fine which may extend to fifty thousand rupees.
+
+Q50. Under Article 129 of the Constitution, what power does the Supreme Court of India hold as a Court of Record?
+A. The absolute power to dismiss any judge of a subordinate state court
+B. The power to punish for its contempt with both imprisonment and fine
+C. The authority to amend the Constitution directly to cure legal defects
+D. The exclusive right to pardon individuals convicted by military courts
+Answer: B
+Explanation: Article 129 declares that the Supreme Court shall be a court of record and shall have all the powers of such a court, including the power to punish for contempt of itself.
+
+Q51. Under the CCS (Implementation of National Pension System) Rules, 2021, if a subscriber is retired on invalidation and had not exercised any prior option, what default benefit is provided?
+A. The family receives standard NPS corpus accumulated benefits exclusively
+B. The subscriber is granted benefits under the old CCS (Pension) Rules
+C. The subscriber receives ten years of basic pay as a single lump sum
+D. The government entirely ceases its contribution towards the pension
+Answer: B
+Explanation: Rule 16(2) of the CCS (Implementation of NPS) Rules, 2021 states that if a subscriber is retired on invalidation and hasn't exercised an option, the default benefit granted shall be invalid pension under the old CCS (Pension) Rules, provided the incapacity is verified.
+
+Q52. According to Section 8(1) of the RTI Act, 2005, which of the following categories of information is strictly exempt from disclosure?
+A. Details regarding the budgetary allocations of the local municipal bodies
+B. Information that would cause a breach of privilege of Parliament
+C. Administrative decisions taken by the Head of a Public Authority
+D. Records concerning the daily attendance of junior clerical officers
+Answer: B
+Explanation: Section 8(1)(c) of the RTI Act, 2005 explicitly exempts from disclosure any information, the release of which would cause a breach of privilege of Parliament or the State Legislature. The other options are generally open to public scrutiny.
+
+Q53. Under Article 137 of the Constitution, what power is expressly granted to the Supreme Court of India?
+A. The power to issue writs for the enforcement of non-fundamental legal rights
+B. The power to review any judgment pronounced or order made by it
+C. The power to pardon sentences awarded by state-level military courts
+D. The power to dissolve a State Legislative Assembly during an emergency
+Answer: B
+Explanation: Article 137 provides that subject to the provisions of any law made by Parliament or any rules made under Article 145, the Supreme Court shall have the power to review any judgment pronounced or order made by it.
+
+Q54. As per the Manual on Procurement of Goods and GFR 2017, up to what estimated value is a Limited Tender Enquiry (LTE) generally adopted?
+A. For procurements up to the estimated value of Rupees Ten Lakhs
+B. For procurements up to the estimated value of Rupees Fifteen Lakhs
+C. For procurements up to the estimated value of Rupees Twenty-Five Lakhs
+D. For procurements up to the estimated value of Rupees Fifty Lakhs
+Answer: C
+Explanation: Rule 162 of GFR 2017 and the Procurement Manual specify that Limited Tender Enquiry may be adopted when the estimated value of the procurement of goods is up to Rupees Twenty-Five Lakhs, by directly addressing a panel of registered suppliers.
+
+Q55. Under Rule 8 of the CCS (Pension) Rules, 2021, pension is granted subject to future good conduct. Who is the competent authority to withhold or withdraw the pension if the pensioner is convicted of a serious crime?
+A. The Head of the Office where the pensioner last served before retirement
+B. The specific Disciplinary Authority who initially appointed the employee
+C. The Appointing Authority who is competent to make substantive appointments
+D. The Union Minister overseeing the concerned departmental jurisdiction
+Answer: C
+Explanation: Rule 8(2) of the CCS (Pension) Rules, 2021 stipulates that the Appointing Authority possesses the competence, by order in writing, to withhold or withdraw a pension if the pensioner is convicted of a serious crime or found guilty of grave misconduct.
+
+Q56. Under Section 10 of the Sexual Harassment of Women at Workplace Act, 2013, which condition strictly governs the conciliation process before the Internal Committee?
+A. No monetary settlement shall be made as a basis of conciliation
+B. The employer must enforce conciliation before launching an inquiry
+C. Conciliation can only happen if the district magistrate gives permission
+D. The respondent must deposit a security amount before conciliation
+Answer: A
+Explanation: Section 10(1) proviso of the POSH Act, 2013 clearly mandates that no monetary settlement shall be made as a basis of conciliation between the aggrieved woman and the respondent. Conciliation is purely based on the request of the aggrieved woman.
+
+Q57. Consider the following statements regarding Casual Labourers governed by DoP&T instructions:
+
+1. Casual labourers with temporary status are entitled to maternity leave.
+2. Their wages are calculated at 1/30th of the minimum of the relevant pay scale plus DA.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: C
+Explanation: Under DoPT’s 1993 Casual Labourers (Grant of Temporary Status) Scheme, female casual labourers with temporary status are eligible for maternity leave. Additionally, they are paid daily wages calculated at 1/30th of the minimum of the pay scale of a Group D (now MTS) official plus Dearness Allowance.
+
+Q58. As per the P&T Financial Handbook Volume I, to whom must any defalcation or loss of public money be reported immediately upon discovery?
+A. The local police station having jurisdiction over the concerned post office
+B. The immediate superior officer and the Head of the Circle or Department
+C. The Central Bureau of Investigation if the amount exceeds ten thousand
+D. The Internal Financial Advisor of the Ministry of Communications strictly
+Answer: B
+Explanation: Rule 18 of the P&T FHB Vol I mandates that any loss of public money, stamps, or property discovered in a government office must be immediately reported to the immediate superior officer and to the Head of the Circle or Department.
+
+Q59. Under Article 311(1) of the Constitution, what is the fundamental protection provided to a civil servant regarding dismissal or removal?
+A. They cannot be dismissed without a prior hearing by a High Court judge
+B. They cannot be dismissed by an authority subordinate to the appointing authority
+C. They cannot be dismissed during a period of officially sanctioned medical leave
+D. They cannot be dismissed unless convicted of a criminal offence by a valid court
+Answer: B
+Explanation: Article 311(1) guarantees that no person who is a member of a civil service of the Union or an all-India service or a civil service of a State shall be dismissed or removed by an authority subordinate to that by which he was appointed.
+
+Q60. According to Section 5 of the Central Administrative Tribunal Act, 1985, a standard Bench of the Tribunal must consist of which of the following?
+A. Two Judicial Members and one senior Administrative Member
+B. One Judicial Member and one Administrative Member
+C. Three Members appointed sequentially by the State Governor
+D. Two Administrative Members and one High Court Judge
+Answer: B
+Explanation: Section 5(2) of the Administrative Tribunals Act, 1985 explicitly dictates that every Bench shall consist of one Judicial Member and one Administrative Member, ensuring a balance of legal expertise and administrative experience.
+
+Q61. Under the Revenue Recovery Act, 1890, if an arrear of land revenue is payable by a defaulter who owns property in another district, how does the Collector initiate recovery?
+A. By deploying the state police force directly into the other district's borders
+B. By issuing a legally binding certificate to the Collector of the other district
+C. By directly auctioning the property located in the foreign district immediately
+D. By petitioning the High Court to issue a sweeping writ of absolute mandamus
+Answer: B
+Explanation: Section 3 of the Revenue Recovery Act, 1890 states that the Collector of the district where the arrear accrued may send to the Collector of the other district a certificate in the prescribed form, directing him to recover the specified amount.
+
+Q62. As per the Prevention of Corruption Act, 1988, what is the time limit for the competent authority to convey its decision on a request for sanction of prosecution?
+A. One month from the receipt of the request, strictly without any extensions
+B. Two months from the receipt of the request, extendable by one extra month
+C. Three months from the receipt of the request, extendable by one extra month
+D. Six months from the receipt of the request, extendable by two extra months
+Answer: C
+Explanation: The first proviso to Section 19(1) of the PC Act (inserted by 2018 amendment) mandates that the competent authority shall endeavor to convey the decision on the proposal for sanction within three months, extendable by one month for recorded reasons.
+
+Q63. According to Chapter 6 of GFR 2017, what is the standard percentage of Bid Security (Earnest Money Deposit) ordinarily required from participating bidders?
+A. Between one and two per cent of the estimated value of the goods
+B. Between two and five per cent of the estimated value of the goods
+C. Between five and ten per cent of the estimated value of the goods
+D. Between ten and fifteen per cent of the estimated value of the goods
+Answer: B
+Explanation: Rule 170(i) of GFR 2017 stipulates that Bid Security (EMD) is ordinarily obtained to safeguard against a bidder withdrawing or altering the bid, and should normally range between two to five percent of the estimated value of the goods.
+
+Q64. Under the CCS (General Provident Fund) Rules, 1961, an advance granted to a subscriber is normally recoverable in a maximum of how many equal monthly installments?
+A. Not exceeding twenty-four equal monthly installments
+B. Not exceeding thirty-six equal monthly installments
+C. Not exceeding forty-eight equal monthly installments
+D. Not exceeding sixty equal monthly installments
+Answer: D
+Explanation: Rule 14(1) of the CCS (GPF) Rules, 1961 dictates that an advance shall be recovered in such number of equal monthly installments as the sanctioning authority may direct, but such number shall not be less than 12 unless the subscriber opts, and not more than 60.
+
+Q65. Consider the following statements regarding Article 20 of the Constitution:
+
+1. No person shall be prosecuted and punished for the same offence more than once.
+2. A person accused of an offence can be compelled to be a witness against himself during trials.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: A
+Explanation: Article 20(2) guarantees protection against double jeopardy (cannot be prosecuted and punished twice for the same offence). Article 20(3) explicitly protects against self-incrimination, stating no person accused of an offence shall be compelled to be a witness against himself. Statement 2 is entirely incorrect.
+
+Q66. Under Article 227 of the Constitution, the power of superintendence over all courts and tribunals throughout the territories in relation to which it exercises jurisdiction is vested in the High Court. This power does NOT extend to:
+A. The Central Administrative Tribunal functioning within its borders
+B. The subordinate district consumer disputes redressal commissions
+C. Any court or tribunal constituted by or under law relating to the Armed Forces
+D. The state-level industrial and labor tribunals resolving corporate disputes
+Answer: C
+Explanation: Article 227(4) strictly clarifies that nothing in this article shall be deemed to confer on a High Court powers of superintendence over any court or tribunal constituted by or under any law relating to the Armed Forces.
+
+Q67. Under the Service Discharge Benefit Scheme (SDBS) 2010, what happens to the accumulated corpus if a Gramin Dak Sevak is absorbed into a regular departmental post?
+A. The entire corpus is heavily taxed and paid out immediately as a single lump sum
+B. The accumulated corpus is securely transferred to the employee's new NPS account
+C. The government entirely confiscates the departmental contributions of the corpus
+D. The corpus remains frozen until the employee finally retires from regular service
+Answer: B
+Explanation: As per DoP instructions regarding SDBS 2010, if a GDS is successfully absorbed against a regular departmental post, their accumulated SDBS corpus under the PFRDA architecture is directly and seamlessly transferred to their newly opened regular National Pension System (NPS) account.
+
+Q68. As per DoP&T instructions on APAR maintenance, within how many days must an employee submit a representation after receiving the communication of their APAR?
+A. Within seven days from the date of receipt of the APAR communication
+B. Within fifteen days from the date of receipt of the APAR communication
+C. Within thirty days from the date of receipt of the APAR communication
+D. Within forty-five days from the date of receipt of the APAR communication
+Answer: B
+Explanation: DoPT OM No. 21011/1/2005-Estt.(A)(Pt-II) mandates that only 15 days time should be given to the officer reported upon to submit a representation, if any, against the entries and the final grading recorded in the APAR.
+
+Q69. According to the Delegation of Financial Powers to Heads of Circle (HoC), what is the maximum financial limit up to which the HoC can sanction the write-off of losses of cash due to theft or fraud?
+A. Up to Rupees Ten Thousand in each thoroughly verified case
+B. Up to Rupees Fifty Thousand in each thoroughly verified case
+C. Up to Rupees One Lakh in each thoroughly verified case
+D. Up to Rupees Five Lakhs in each thoroughly verified case
+Answer: C
+Explanation: Under the Schedule of Financial Powers revised for the Department of Posts, the Head of Circle (Chief Postmaster General) is fully empowered to sanction the write-off of losses of cash due to theft, fraud, or negligence up to a maximum limit of Rs. 1,00,000 per case.
+
+Q70. Under the Welfare Measures for Departmental Employees of DoP, what is the maximum amount provided as a Maternity Grant to female Gramin Dak Sevaks (for a maximum of two children)?
+A. Rupees Five Thousand provided as a direct single installment
+B. Rupees One Thousand provided as a direct single installment
+C. Rupees Two Thousand provided as a direct single installment
+D. Rupees Ten Thousand provided as a direct single installment
+Answer: B
+Explanation: Under the Circle Welfare Fund rules administered by the DoP, female Gramin Dak Sevaks are provided financial assistance in the form of a Maternity Grant amounting to Rs. 1000 per birth, strictly restricted to a maximum of two children.
+
+Q71. As per the P&T Financial Handbook Volume II, what is the mandatory preservation period for a post office cash book?
+A. Three years after the book is completely filled and closed
+B. Five years after the book is completely filled and closed
+C. Ten years after the book is completely filled and closed
+D. It must be preserved permanently without any destruction
+Answer: C
+Explanation: According to the schedule of preservation of records in the P&T FHB Vol II, standard cash books and major accounting ledgers containing crucial financial transaction histories must be strictly preserved for a period of ten years after they are closed.
+
+Q72. Under Fundamental Rule (FR) 54, if a government servant who was dismissed is subsequently fully exonerated on appeal and reinstated, how is their pay and allowances regulated for the absence period?
+A. They receive fifty percent of their basic pay and no supplementary allowances
+B. They receive the full pay and allowances they would have otherwise drawn
+C. They receive a consolidated subsistence allowance equivalent to past leaves
+D. They forfeit all pay for the period but their service counts for future pension
+Answer: B
+Explanation: FR 54(2) states that if the competent authority finds the dismissal or suspension was wholly unjustified and the employee is fully exonerated, the government servant shall be given the full pay and allowances to which they would have been entitled had they not been dismissed.
+
+Q73. Consider the following regarding the CCS (Payment of Gratuity under NPS) Rules, 2021:
+
+1. For qualifying service between one to five years, death gratuity is payable at six times the monthly emoluments.
+2. For qualifying service of twenty years or more, it is payable at thirty-three times the monthly emoluments.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: A
+Explanation: Under Rule 42, death gratuity for 1-5 years service is 6 times the emoluments. However, for 20 years or more, the gratuity is payable at half of the emoluments for every completed six-monthly period, subject to a maximum of 33 times the emoluments, not a flat 33 times. Hence, statement 2 is conceptually flawed.
+
+Q74. Under the CCS (Pension) Rules, 2021, what is the minimum continuous qualifying service required for a government servant to apply for voluntary retirement?
+A. A minimum of ten years of verifiable qualifying service
+B. A minimum of fifteen years of verifiable qualifying service
+C. A minimum of twenty years of verifiable qualifying service
+D. A minimum of twenty-five years of verifiable qualifying service
+Answer: C
+Explanation: Rule 43(1) of the CCS (Pension) Rules, 2021 provides that at any time after a Government servant has completed twenty years of qualifying service, he may, by giving notice of not less than three months in writing to the appointing authority, retire from service.
+
+Q75. Under Article 338A of the Constitution of India, which specific constitutional body has been formally established?
+A. The National Commission for Backward Classes
+B. The National Commission for Scheduled Tribes
+C. The National Commission for Scheduled Castes
+D. The National Commission for Minority Communities
+Answer: B
+Explanation: Article 338A was inserted into the Constitution by the 89th Amendment Act, 2003, exclusively to establish the National Commission for Scheduled Tribes (NCST) as a separate constitutional body, distinct from the National Commission for Scheduled Castes (Article 338).
+
+Q76. Under Section 2(a) of the Bharatiya Nagarik Suraksha Sanhita, 2023, does the definition of "audio-video electronic means" explicitly encompass which of the following?
+A. The use of traditional analog telegraphic communication signals exclusively
+B. Only closed-circuit television networks established inside courtroom premises
+C. The use of electronic communication for summons, evidence, and proceedings
+D. Handwritten documents physically scanned and mailed through regular post
+Answer: C
+Explanation: Section 2(1)(a) of BNSS introduces "audio-video electronic means," defining it to include the use of any communication device for purposes of video conferencing, recording of identification, search and seizure, evidence, and other proceedings, reflecting modernized criminal procedures.
+
+Q77. According to the Manual on Procurement of Works, under what circumstances is a two-bid system (technical and financial bids submitted separately) strictly adopted?
+A. For routine maintenance works valued at less than Rupees Five Lakhs
+B. For standard civil works where specifications are completely standardized
+C. For specialized or complex works requiring highly technical evaluation
+D. For emergency repairs where immediate financial outlays are demanded
+Answer: C
+Explanation: The Manual on Procurement of Works directs that the two-bid system is adopted for complex, specialized, and highly technical works where the quality of the execution is heavily dependent on the contractor's technical capability, equipment, and past experience.
+
+Q78. As per the CCS (Commutation of Pension) Rules, 1981, under which scenario is a government servant mandatorily required to undergo a medical examination before commutation is authorized?
+A. If the application is submitted within three months of superannuation
+B. If the application is submitted after one year from the date of retirement
+C. If the commuter is voluntarily retiring after completing twenty years
+D. If the pensioner was awarded a major penalty during active service
+Answer: B
+Explanation: Rule 12 of the CCS (Commutation of Pension) Rules, 1981 stipulates that if an application for commutation is made after the expiry of one year from the date of retirement, the applicant is mandatorily required to undergo a medical examination to assess health and life expectancy.
+
+Q79. Which Article of the Constitution of India contains the Directive Principle directing the State to take steps to secure the participation of workers in the management of industries?
+A. Article 39A
+B. Article 41
+C. Article 43A
+D. Article 47
+Answer: C
+Explanation: Article 43A, inserted by the 42nd Amendment Act, 1976, explicitly states that the State shall take steps, by suitable legislation or in any other way, to secure the participation of workers in the management of undertakings, establishments, or other organizations engaged in any industry.
+
+Q80. Under the RTI Act, 2005, if a Public Information Officer receives an application for information that is held by another public authority, within what timeframe must the application be transferred?
+A. Within three days of the physical receipt of the application
+B. Within five days of the physical receipt of the application
+C. Within seven days of the physical receipt of the application
+D. Within ten days of the physical receipt of the application
+Answer: B
+Explanation: Section 6(3) of the RTI Act, 2005 mandates that where an application is made to a public authority requesting information held by another, the authority shall transfer the application or the relevant part to the other authority no later than five days from the date of receipt.
+
+Q81. As per Section 9 of the Prevention of Corruption Act, 1988 (relating to offences by commercial organizations), what is a valid defense for a commercial organization accused of giving an undue advantage?
+A. Proving that the undue advantage was given solely by an outsourced foreign contractor
+B. Proving that the advantage was completely negligible and thus socially acceptable
+C. Proving that it had in place adequate procedures designed to prevent such conduct
+D. Proving that the bribed official initially coerced the organization into paying
+Answer: C
+Explanation: Section 9(3) provides a specific statutory defense, stating it shall be a defense for the commercial organization to prove that it had in place adequate procedures in compliance with guidelines prescribed under section 136 to prevent persons associated with it from undertaking such conduct.
+
+Q82. According to Chapter 2 of GFR 2017, what does the principle "standards of financial propriety" dictate regarding the quantum of public expenditure?
+A. The expenditure should fundamentally equal the revenue generated
+B. The expenditure should not be prima facie more than the occasion demands
+C. The expenditure must fully utilize the budget allocated by November
+D. The expenditure must exclusively benefit the immediate local population
+Answer: B
+Explanation: Rule 21(i) of GFR 2017 (Standards of financial propriety) dictates that every officer incurring expenditure from public moneys should ensure that the expenditure is not prima facie more than the occasion demands.
+
+Q83. Consider the following regarding Section 14 of the Sexual Harassment of Women at Workplace Act, 2013 (Punishment for false or malicious complaint):
+
+1. Action can be taken against the complainant if the Internal Committee arrives at a conclusion that the allegation is malicious.
+2. The mere inability to substantiate a complaint or provide adequate proof attracts disciplinary action for malicious intent.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: A
+Explanation: Section 14(1) provides for action against malicious complaints. However, the proviso to Section 14(1) explicitly states that the mere inability to substantiate a complaint or provide adequate proof need not attract action against the complainant. Intent to maliciously frame someone must be proven. Statement 2 is incorrect.
+
+Q84. Under the CCS (General Provident Fund) Rules, 1961, what is the rule regarding the subscription to the fund during a period of suspension?
+A. The subscription is completely mandatory at the standard six percent rate
+B. The subscription is entirely prohibited until the final exoneration order
+C. The subscription is strictly optional at the sole discretion of the subscriber
+D. The subscription is doubled to compensate for the anticipated loss of service
+Answer: C
+Explanation: Rule 11(2) of the CCS (GPF) Rules, 1961 specifies that a subscriber may, at his option, choose not to subscribe during a period of suspension, provided he intimates his option in writing to the Head of Office.
+
+Q85. As per DoP&T rules on Casual Labourers, which of the following benefits is NOT admissible to a casual labourer holding temporary status?
+A. Entitlement to pro-rata casual leave directly matching regular staff limits
+B. Automatic conversion into a permanent Group D post after three years
+C. Counting of fifty per cent of service rendered for retirement benefits
+D. Enjoyment of standard festival holidays applicable to regular employees
+Answer: B
+Explanation: Temporary status does not automatically grant a right to permanent absorption or regularization. Regularization occurs only against available vacancies in regular Group D (now MTS) posts based on seniority and eligibility criteria. Options A, C, and D are valid benefits under the 1993 Scheme.
+
+Q86. Under the P&T Financial Handbook Volume I, how should a mistake in a cash book officially be corrected?
+A. By applying fluid to entirely obscure the wrong entry and rewriting it cleanly
+B. By heavily overwriting the correct figure over the incorrect original entry
+C. By entirely erasing the mistake with a blade before writing the correct amount
+D. By drawing a line through the wrong entry and inserting the correct one above
+Answer: D
+Explanation: Rule 32 of P&T FHB Vol I strictly prohibits erasures, overwriting, and the use of correction fluids in cash books. A mistake should be corrected by drawing a clear red ink line through the incorrect entry, inserting the correct one, and having the drawing officer initial it.
+
+Q87. According to Article 141 of the Constitution of India, the law declared by the Supreme Court shall be binding on:
+A. Only the High Courts situated in metropolitan tier-one cities
+B. All civil and criminal courts functioning within the territory of India
+C. Only the lower subordinate district courts dealing with civil matters
+D. The Parliament of India and the respective State Legislatures
+Answer: B
+Explanation: Article 141 states explicitly that the law declared by the Supreme Court shall be binding on all courts within the territory of India, establishing the apex court's decisions as binding precedent for the entire judicial framework.
+
+Q88. Under Section 20 of the Central Administrative Tribunal Act, 1985, can a government servant ordinarily file an application directly to the Tribunal?
+A. Yes, they can approach the Tribunal directly without any internal appeals
+B. No, the Tribunal shall not admit it unless departmental remedies are exhausted
+C. Yes, provided the concerned departmental minister grants special clearance
+D. No, they must first necessarily secure an interim order from the High Court
+Answer: B
+Explanation: Section 20(1) of the Administrative Tribunals Act, 1985 mandates that a Tribunal shall not ordinarily admit an application unless it is satisfied that the applicant has availed of all the remedies available to him under the relevant service rules (exhaustion of departmental remedies).
+
+Q89. Under Section 6 of the Revenue Recovery Act, 1890, what action can a defaulter take if they wish to deny liability for the amount stated in a recovery certificate?
+A. Immediately arrest the sending Collector through local state police action
+B. Institute a suit in a civil court located in the district where the certificate was made
+C. Appeal directly to the Supreme Court utilizing a standard writ of prohibition
+D. File a counter-claim with the receiving Collector to entirely stall the process
+Answer: B
+Explanation: Section 6 allows a person who denies their liability to pay the arrear to institute a civil suit against the Secretary of State for India in Council (now the State/Union) in the civil court having jurisdiction in the local area where the certificate was made.
+
+Q90. As per the Manual on Procurement of Consultancy & Other Services, Single Source Selection (SSS) for consultancy services is strictly permissible under which of the following circumstances?
+A. When the estimated cost of the consultancy exceeds Rupees Two Crores
+B. When standard competitive bidding procedures become too time-consuming
+C. When tasks represent a natural continuation of previous expert assignments
+D. When the Ministry of Finance mandates it to promote local business growth
+Answer: C
+Explanation: The Manual on Procurement of Consultancy (GFR 194) dictates that Single Source Selection is permissible in exceptional circumstances, such as tasks that represent a natural continuation of previous work, emergencies, or when only one consultant has the requisite unique expertise.
+
+Q91. Under Fundamental Rule (FR) 15, a government servant can be transferred to a post carrying less pay than the pay of their permanent post strictly under which condition?
+A. On a routine administrative rotation managed by the general establishment branch
+B. Only on account of inefficiency, misbehavior, or on their own written request
+C. Whenever the government faces a severe, immediate financial budget deficit
+D. When the officer completes exactly twenty-five years of unblemished service
+Answer: B
+Explanation: FR 15 states that a Government servant shall not be transferred substantively to a post carrying less pay than the pay of the permanent post on which he holds a lien, except on account of inefficiency or misbehavior, or on his written request.
+
+Q92. Consider the following statements regarding the instructions on maintenance of APAR:
+
+1. Only adverse remarks in the APAR need to be communicated to the officer reported upon.
+2. The entire APAR, including the overall grading, must be communicated within one month of its finalization.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: B
+Explanation: DoPT instructions completely revamped the APAR system following a Supreme Court directive (Dev Dutt case). Now, the entire APAR—not just adverse remarks—including the final grading, must be communicated to the officer reported upon to ensure absolute transparency. Statement 1 is outdated and incorrect.
+
+Q93. Under the Service Discharge Benefit Scheme (SDBS) 2010 for Gramin Dak Sevaks, what is the entry age limit prescribed for joining the scheme?
+A. Gramin Dak Sevaks between 18 and 50 years of age are strictly eligible
+B. Gramin Dak Sevaks between 21 and 55 years of age are strictly eligible
+C. Gramin Dak Sevaks between 18 and 60 years of age are strictly eligible
+D. Gramin Dak Sevaks between 25 and 65 years of age are strictly eligible
+Answer: A
+Explanation: According to the operational guidelines of the SDBS 2010 issued by the Department of Posts, enrollment into the scheme is available to all regular Gramin Dak Sevaks who are within the age bracket of 18 to 50 years.
+
+Q94. According to the Schedule of Financial Powers of Heads of Circle, up to what maximum limit per month can a Chief Postmaster General sanction rent for a building where a standard rent certificate is not issued by CPWD?
+A. Up to Rupees Ten Thousand per month per individual post office building
+B. Up to Rupees Twenty-Five Thousand per month per individual post office building
+C. Up to Rupees Fifty Thousand per month per individual post office building
+D. The Head of Circle has full powers subject to verification by a rent assessment committee
+Answer: D
+Explanation: As per the latest revision of financial powers in DoP, the Head of Circle holds full powers to sanction rent for ordinary office accommodations even without a CPWD certificate, provided the rent is assessed as reasonable by a duly constituted Fair Rent Assessment Committee.
+
+Q95. Under the Welfare Measures for Departmental Employees, what is the core purpose of providing financial assistance from the Circle Welfare Fund in cases of natural calamities like floods or fires?
+A. To entirely compensate the employee for the total market value of the lost home
+B. To provide immediate relief for the replacement of damaged household articles
+C. To fund the immediate construction of a new concrete departmental quarter
+D. To cover the lifetime healthcare insurance premiums for the affected family
+Answer: B
+Explanation: The DoP Circle Welfare Fund strictly provides limited financial assistance (often a fixed grant) in cases of natural calamities specifically for immediate relief and replacement of damaged essential household articles, not for total asset compensation.
+
+Q96. As per the CCS (Implementation of NPS) Rules, 2021, if the payment of the lump-sum withdrawal amount upon superannuation is delayed entirely due to administrative lapses, what compensation is payable to the subscriber?
+A. No compensation is payable as NPS is purely a market-linked investment
+B. Interest at the rate applicable to the GPF deposits for the delayed period
+C. A fixed daily penalty of five hundred rupees paid directly to the subscriber
+D. Interest calculated at eighteen per cent per annum compound interest
+Answer: B
+Explanation: Rule 21 of the CCS (Implementation of NPS) Rules, 2021 dictates that if the payment of benefits is delayed due to administrative reasons beyond the prescribed time limit, interest at the rate applicable to the General Provident Fund (GPF) shall be paid.
+
+Q97. Under Article 311 of the Constitution, which of the following actions requires a formal departmental inquiry providing the civil servant a reasonable opportunity of being heard?
+A. Routine transfer to a different state department for administrative convenience
+B. Dismissal, removal, or reduction in rank on grounds of serious misconduct
+C. Automatic retirement on attaining the statutory age of superannuation
+D. Non-renewal of a purely contractual or purely temporary ad-hoc engagement
+Answer: B
+Explanation: Article 311(2) specifically mandates that no civil servant shall be dismissed, removed, or reduced in rank except after an inquiry in which they have been informed of the charges against them and given a reasonable opportunity of being heard.
+
+Q98. According to Chapter 6 of GFR 2017, what is the maximum percentage of advance payment generally permissible to private firms for fabrication contracts without requiring special financial concurrence?
+A. Not exceeding ten per cent of the total validated contract value
+B. Not exceeding fifteen per cent of the total validated contract value
+C. Not exceeding thirty per cent of the total validated contract value
+D. Not exceeding fifty per cent of the total validated contract value
+Answer: C
+Explanation: Rule 172(1) of GFR 2017 outlines that advance payments to private firms can be authorized up to 15% for maintenance contracts, and up to 30% for fabrication contracts or turnkey projects, provided adequate safeguards like Bank Guarantees are secured.
+
+Q99. Under the CCS (Pension) Rules, 2021, if a government servant dies while in service (in harness), for what duration is the family entitled to the enhanced rate of Family Pension (50% of the last pay drawn)?
+A. For a strict period of five years from the immediate date of death
+B. For a strict period of seven years from the immediate date of death
+C. For a strict period of ten years from the immediate date of death
+D. Until the deceased employee would have hypothetically attained sixty years
+Answer: C
+Explanation: Rule 50(8) of the CCS (Pension) Rules, 2021 clearly stipulates that in the event of death while in service, the family pension is payable at the enhanced rate (50% of last pay drawn) for a period of ten years, without any upper age restriction tied to the deceased.
+
+Q100. Under Article 226 of the Constitution of India, against whom can a High Court issue a writ in the nature of Habeas Corpus?
+A. Exclusively against state police officers and central investigative agencies
+B. Exclusively against prison superintendents handling preventive detentions
+C. Against both governmental authorities and ordinary private individuals
+D. Only against public authorities detaining individuals without a court mandate
+Answer: C
+Explanation: The writ of Habeas Corpus ("to have the body") is uniquely potent and can be issued by the High Courts under Article 226 against both public authorities and private individuals who have illegally detained or confined a person against their will.
+
+Q101. Consider the following statements regarding the Fundamental Rights enshrined in Part III of the Constitution:
+1.	The right to freedom of speech and expression is absolute and not subject to any statutory restrictions.
+2.	Protection against double jeopardy is explicitly guaranteed under Article 20 of the Constitution.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: B
+Explanation: Article 19(2) allows the State to impose reasonable restrictions on freedom of speech, making it non-absolute. However, Article 20(2) explicitly guarantees protection against double jeopardy, stating no person shall be prosecuted and punished for the same offence more than once.
+________________________________________
+Q102. Under Article 43A of the Constitution (Directive Principles of State Policy), what specific mandate is given to the State?
+A. To secure a uniform civil code for all citizens across the entire nation
+B. To take steps to secure the participation of workers in the management of industries
+C. To ensure early childhood care and education for all children below six years
+D. To protect every monument or place of artistic or historic interest from destruction
+Answer: B
+Explanation: Inserted by the 42nd Amendment Act, 1976, Article 43A directs the State to take steps, by suitable legislation or in any other way, to secure the participation of workers in the management of undertakings, establishments, or other organizations engaged in any industry.
+________________________________________
+Q103. As per Article 222 of the Constitution, who possesses the constitutional authority to transfer a Judge from one High Court to any other High Court?
+A. The Chief Justice of India acting entirely upon his independent discretion
+B. The President of India after mandatory consultation with the Chief Justice of India
+C. The Governor of the transferring State in consultation with the Union Cabinet
+D. The Union Minister of Law and Justice following a parliamentary resolution
+Answer: B
+Explanation: Article 222(1) stipulates that the President may, after consultation with the Chief Justice of India, transfer a Judge from one High Court to any other High Court.
+________________________________________
+Q104. Under Article 311(2) of the Constitution, which of the following perfectly describes the first proviso (a) exception to holding a disciplinary inquiry?
+A. When a government servant is dismissed on the ground of conduct which has led to his conviction on a criminal charge
+B. When a government servant is suspended for a continuous period exceeding ninety days without a formal charge sheet
+C. When the disciplinary authority is convinced by preliminary evidence that an inquiry is highly impractical
+D. When the President issues a direct proclamation removing the servant on the grounds of acute financial irregularities
+Answer: A
+Explanation: The proviso (a) to Article 311(2) explicitly states that the constitutional safeguard of holding an inquiry shall not apply where a person is dismissed or removed or reduced in rank on the ground of conduct which has led to his conviction on a criminal charge.
+________________________________________
+Q105. Under Section 2 of the Bharatiya Nagarik Suraksha Sanhita, 2023, how is a “cognizable offence” formally defined?
+A. An offence for which a police officer cannot arrest the accused without a judicially issued warrant
+B. An offence for which a police officer may, in accordance with the First Schedule, arrest without warrant
+C. An offence exclusively triable by a Sessions Court and carrying a minimum sentence of ten years
+D. An offence restricted to crimes against the state, requiring direct approval from the Home Ministry
+Answer: B
+Explanation: Section 2(1)(g) of the BNSS, 2023 defines a “cognizable offence” as an offence for which, and “cognizable case” as a case in which, a police officer may, in accordance with the First Schedule or under any other law for the time being in force, arrest without warrant.
+________________________________________
+Q106. According to Section 20 of the Central Administrative Tribunal Act, 1985, under what condition can a tribunal ordinarily admit an application?
+A. Immediately upon the occurrence of a service dispute without any preliminary procedural delays
+B. Only after the applicant has exhausted all other remedies available under the relevant service rules
+C. When the applicant directly appeals to the Supreme Court concurrently with the tribunal filing
+D. Only if the departmental head grants specific written permission to the applicant to file a case
+Answer: B
+Explanation: Section 20(1) of the CAT Act, 1985 explicitly states that a Tribunal shall not ordinarily admit an application unless it is satisfied that the applicant had availed of all the remedies available to him under the relevant service rules as to redressal of grievances.
+________________________________________
+Q107. Under the Revenue Recovery Act, 1890, what is the procedure if a defaulter disputes the legality of the arrear after a certificate has been issued under Section 3?
+A. The receiving Collector must immediately suspend all recovery proceedings until the dispute is resolved
+B. The defaulter may institute a suit in a civil court against the Central Government or State Government
+C. The sending Collector must withdraw the certificate and initiate a direct criminal prosecution instead
+D. The defaulter’s property is permanently forfeited without any further scope for a judicial appeal
+Answer: B
+Explanation: Under Section 4(2) and Section 4(4) of the Revenue Recovery Act, 1890, the defaulter’s primary remedy is to pay the amount under protest and institute a suit in a civil court against the Government to recover the amount. Recovery proceedings are not automatically suspended.
+________________________________________
+Q108. As per the Prevention of Corruption Act, 1988 (as amended), which of the following constitutes “criminal misconduct” by a public servant under Section 13?
+A. Making a minor procedural error during the evaluation of a government tender without any malafide intent
+B. Intentionally enriching himself illicitly during the period of his office, resulting in disproportionate assets
+C. Recommending a subordinate for a departmental promotion purely based on merit and performance
+D. Receiving an official memento of nominal value during an authorized public government function
+Answer: B
+Explanation: Section 13(1)(b) of the amended PC Act, 1988 defines criminal misconduct by a public servant if he intentionally enriches himself illicitly during the period of his office, which is essentially possessing pecuniary resources or property disproportionate to his known sources of income.
+________________________________________
+Q109. Consider the following statements under the Right to Information Act, 2005:
+1.	Information which cannot be denied to the State Legislature or Parliament shall not be denied to any person.
+2.	Cabinet papers including records of deliberations of the Council of Ministers are permanently exempted from disclosure under all circumstances.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: A
+Explanation: The proviso to Section 8(1)(j) states that information which cannot be denied to Parliament or a State Legislature shall not be denied to any person. Statement 2 is incorrect because Section 8(1)(i) stipulates that decisions of the Council of Ministers shall be made public after the decision is complete.
+________________________________________
+Q110. Under Rule 4 of the RTI Rules, 2012, what is the prescribed format for an RTI application?
+A. It must be filed strictly on a specialized stamped paper purchased from a registered government vendor
+B. It must strictly follow the complex tabular format prescribed in Schedule I of the Official Secrets Act
+C. There is no strictly prescribed format, but it should contain the particulars of the information sought
+D. It must be submitted in triplicate with a mandatory notarized affidavit affirming the applicant’s identity
+Answer: C
+Explanation: While Rule 3 prescribes the application fee, the RTI Rules, 2012 do not mandate any rigid or specific form for the application itself. An application can be made on plain paper, provided it contains the necessary particulars of the information being sought along with the prescribed fee.
+________________________________________
+Q111. According to Rule 170 of the General Financial Rules (GFR), 2017, what is the standard percentage range for Bid Security (Earnest Money Deposit) in the procurement of goods?
+A. Between zero point five to one per cent of the estimated value of the goods
+B. Between two to five per cent of the estimated value of the goods to be procured
+C. Between five to ten per cent of the estimated value of the goods to be procured
+D. Between ten to fifteen per cent of the estimated value of the goods to be procured
+Answer: B
+Explanation: Rule 170(i) of GFR 2017 dictates that to safeguard against a bidder withdrawing or altering its bid, Bid Security (Earnest Money) is to be obtained. The amount of Bid Security should ordinarily range between two percent to five percent of the estimated value of the goods.
+________________________________________
+Q112. As per the Manual on Procurement of Works, what is the prescribed method for publicizing a tender enquiry for works above specified standard thresholds?
+A. Publishing exclusively in the official departmental gazette and local municipal notice boards
+B. Mandatory publishing of the complete bid details on the Central Public Procurement Portal (CPPP)
+C. Publishing strictly in at least two international newspapers and one national English newspaper
+D. Sending personalized email invitations to at least ten registered government civil contractors
+Answer: B
+Explanation: Under the Manual on Procurement of Works and GFR 159 regarding e-procurement guidelines, it is mandatory to publish all tender enquiries, corrigenda thereon, and details of bid awards on the Central Public Procurement Portal (CPPP) to ensure maximum transparency and competition.
+________________________________________
+Q113. Under the Manual on Procurement of Consultancy & Other Services, what does the “Least Cost System (LCS)” method of selection primarily entail?
+A. Selecting the consultant who scores the highest in the technical evaluation, regardless of their financial bid
+B. Selecting the lowest financial bid exclusively from among the technically qualified and responsive bidders
+C. Selecting a consultant through direct nomination based entirely on their past bureaucratic associations
+D. Selecting a bidder who provides the highest financial rebate irrespective of their technical capabilities
+Answer: B
+Explanation: Under the Least Cost System (LCS) method, the financial proposals of only those bidders who meet the minimum qualifying technical score are opened. The contract is then awarded strictly to the bidder whose financial proposal is the lowest among these technically qualified bidders.
+________________________________________
+Q114. Under the CCS (General Provident Fund) Rules, 1961, an advance granted for the purchase of consumer durables must ordinarily be recovered in a maximum of how many installments?
+A. In a maximum of twelve equal monthly installments
+B. In a maximum of twenty-four equal monthly installments
+C. In a maximum of thirty-six equal monthly installments
+D. In a maximum of sixty equal monthly installments
+Answer: D
+Explanation: According to Rule 14 of the CCS (GPF) Rules, 1961, the recovery of a GPF advance for standard permissible purposes (including the purchase of consumer durables) shall be made in a maximum of 60 equal monthly installments to ensure reasonable repayment terms.
+________________________________________
+Q115. According to Rule 20 of the CCS (Pension) Rules, 2021, does a period of boy service (service rendered before attaining the age of 18 years) count as qualifying service for pension?
+A. Yes, it fully counts as qualifying service without any restrictions or mathematical deductions
+B. No, service rendered before attaining the age of eighteen years does not count as qualifying service
+C. Yes, but it only counts as half qualifying service for the purpose of computing total pension
+D. No, unless the President of India specifically grants an exemption by a formal written order
+Answer: B
+Explanation: Rule 20 of the CCS (Pension) Rules, 2021 strictly states that service rendered by a Government servant before attaining the age of eighteen years shall not count as qualifying service for pensionary benefits under any normal circumstances.
+________________________________________
+Q116. Under the CCS (Pension) Rules, 2021, for what duration is the enhanced rate of family pension payable following the death of a government servant who dies while in service?
+A. For a period of five years from the date following the exact date of death
+B. For a period of seven years from the date following the exact date of death
+C. For a period of ten years from the date following the exact date of death
+D. For a period of fifteen years from the date following the exact date of death
+Answer: C
+Explanation: As per Rule 50 of the CCS (Pension) Rules, 2021, in the event of the death of a Government servant while in service, the family pension shall be payable at the enhanced rate (50% of the last pay drawn) for a continuous period of ten years from the date following the date of death.
+________________________________________
+Q117. Under the CCS (Commutation of Pension) Rules, 1981, what is the maximum time limit for a retiring employee to apply for commutation without undergoing a medical examination?
+A. Within three months from the date of their actual retirement on superannuation
+B. Within six months from the date of their actual retirement on superannuation
+C. Within one year from the date of their actual retirement on superannuation
+D. Within two years from the date of their actual retirement on superannuation
+Answer: C
+Explanation: Under Rule 12 of the CCS (Commutation of Pension) Rules, 1981, an applicant is eligible to commute a fraction of his pension without a medical examination if he applies in Form 1 within one year of the date of his retirement on superannuation.
+________________________________________
+Q118. As per the Sexual Harassment of Women at Workplace Act, 2013, which of the following statements regarding conciliation is correct?
+A. The Internal Committee can direct the respondent to pay a direct monetary settlement to close the case
+B. Conciliation can only be initiated upon the written request of the aggrieved woman before an inquiry
+C. The Internal Committee is legally mandated to force a conciliation before starting any formal inquiry
+D. The employer decides the exact terms of conciliation regardless of the aggrieved woman’s preferences
+Answer: B
+Explanation: Section 10(1) of the POSH Act, 2013 provides that the Internal Committee may, before initiating an inquiry, at the request of the aggrieved woman take steps to settle the matter through conciliation. However, the proviso explicitly prohibits monetary settlement as a basis of conciliation.
+________________________________________
+Q119. Under the Central Civil Services (Payment of Gratuity under NPS) Rules, 2021, what is the death gratuity payable if the subscriber dies after completing five years but less than eleven years of qualifying service?
+A. Two times of the monthly emoluments drawn at the time of death
+B. Six times of the monthly emoluments drawn at the time of death
+C. Twelve times of the monthly emoluments drawn at the time of death
+D. Twenty times of the monthly emoluments drawn at the time of death
+Answer: C
+Explanation: Rule 22 of the CCS (Payment of Gratuity under NPS) Rules, 2021 sets the scale of death gratuity. For qualifying service of 5 years or more but less than 11 years, the death gratuity payable is precisely 12 times the monthly emoluments.
+________________________________________
+Q120. According to the CCS (Implementation of NPS) Rules, 2021, what action must the Head of Office take regarding an NPS subscriber’s PRAN (Permanent Retirement Account Number)?
+A. Retain it permanently in the service book and never disclose it to the employee
+B. Ensure it is generated and registered within one month of joining government service
+C. Generate it only when the employee formally applies for their first withdrawal
+D. Ask the employee to procure it privately from a designated nationalized bank branch
+Answer: B
+Explanation: Rule 5 of the CCS (Implementation of NPS) Rules, 2021 mandates that the Head of Office shall ensure that the subscriber is registered with the Central Recordkeeping Agency (CRA) and a PRAN is generated within one month from the date of joining service.
+________________________________________
+Q121. Under Fundamental Rule (FR) 22(I)(a)(1), how is the initial pay fixed when a government servant is promoted to a higher post carrying duties and responsibilities of greater importance?
+A. By simply maintaining the current pay and adding a fixed monthly special allowance
+B. By granting one increment in the lower scale and placing them at the next higher stage in the promoted scale
+C. By strictly pegging the pay to the absolute minimum of the new promoted pay scale
+D. By averaging the pay of the last ten months and adding the current dearness allowance
+Answer: B
+Explanation: FR 22(I)(a)(1) governs pay fixation on promotion. It stipulates that pay is fixed by granting one notional increment in the lower post/level, and then placing the employee at a stage equal to this figure in the higher post/level, or at the next higher stage if no exact match exists.
+________________________________________
+Q122. According to the Supplementary Rules (SR) governing Travelling Allowance, what is the time limit for an employee to claim Travelling Allowance on retirement for settling down at their home town?
+A. The journey must be completed within six months of the official date of retirement
+B. The journey must be completed within one year of the official date of retirement
+C. The journey must be completed within two years of the official date of retirement
+D. The journey must be completed within three years of the official date of retirement
+Answer: B
+Explanation: Under the TA Rules (derived from SR), the concession for TA on retirement is admissible provided the journey to the home town or the selected place of residence is completed within one year after the official date of retirement.
+________________________________________
+Q123. In the context of the CCS (Joining Time) Rules, 1979, if a Government servant is transferred to a new station located at a distance of more than 2,000 kilometers, what is the maximum standard joining time admissible if travel is undertaken by air?
+A. 10 days
+B. 12 days
+C. 15 days
+D. 20 days
+Answer: B
+Explanation: Under the CCS (Joining Time) Rules, 1979, transfers involving a distance of more than 2,000 km ordinarily entitle the employee to 15 days of joining time. However, if the travel is undertaken by air, the maximum admissible joining time is strictly restricted to 12 days.________________________________________
+Q124. As per the DoPT instructions on the maintenance of Annual Performance Assessment Reports (APAR), what is the time limit given to an employee to submit a representation after receiving a copy of their APAR?
+A. Within seven days from the date of receipt of the APAR copy
+B. Within fifteen days from the date of receipt of the APAR copy
+C. Within thirty days from the date of receipt of the APAR copy
+D. Within forty-five days from the date of receipt of the APAR copy
+Answer: B
+Explanation: The DoPT OM strictly mandates that the APAR must be disclosed to the reported officer, who is then given a time limit of exactly fifteen days from the date of receipt to submit a representation, if any, against the remarks or grading.
+________________________________________
+Q125. Under the Service Discharge Benefit Scheme (SDBS) 2010 for Gramin Dak Sevaks, what percentage of the accumulated corpus must be invested to purchase a life annuity upon normal discharge at age 65?
+A. At least twenty per cent of the total accumulated pension wealth
+B. At least forty per cent of the total accumulated pension wealth
+C. At least sixty per cent of the total accumulated pension wealth
+D. At least eighty per cent of the total accumulated pension wealth
+Answer: B
+Explanation: Under the SDBS 2010 guidelines (aligned with NPS Lite), upon normal discharge at the age of 65, the GDS must utilize a minimum of 40% of the accumulated pension wealth to purchase a life annuity, while the remaining 60% can be withdrawn as a lump sum.
+________________________________________
+Q126. According to the Schedule of Financial Powers of Divisional Heads in the Department of Posts, up to what amount can a Superintendent of Post Offices sanction expenditure for the purchase of standard furniture per office per annum?
+A. Up to Rupees Five Thousand per office per annum
+B. Up to Rupees Ten Thousand per office per annum
+C. Up to Rupees Twenty Thousand per office per annum
+D. Up to Rupees Fifty Thousand per office per annum
+Answer: B
+Explanation: According to the Schedule of Financial Powers delegated to Divisional Heads (Superintendent/Senior Superintendent), the power to sanction expenditure for the purchase of ordinary office furniture is restricted to Rs. 10,000 per office in a single financial year.
+________________________________________
+Q127. As per the Welfare Measures for Departmental Employees, what is the quantum of financial assistance provided for the funeral expenses of a deceased Group C or MTS employee from the Circle Welfare Fund?
+A. Rupees Two Thousand Five Hundred only
+B. Rupees Five Thousand only
+C. Rupees Ten Thousand only
+D. Rupees Fifteen Thousand only
+Answer: B
+Explanation: Under the DoP Postal Services Staff Welfare Board guidelines, financial assistance of exactly Rs. 5,000 is authorized from the Circle Welfare Fund to meet the immediate funeral expenses of a deceased Group C or MTS departmental employee.
+________________________________________
+Q128. According to the P&T Financial Handbook Volume I, what is the primary duty of any government officer who discovers a defalcation or loss of public money?
+A. Immediately conceal the matter and internally adjust the accounting ledgers
+B. Inform only the local police station without notifying departmental superiors
+C. Report the matter immediately to the next higher authority and the Audit Officer
+D. Recover the amount personally from the subordinate staff before making any report
+Answer: C
+Explanation: Rule 17 of P&T FHB Vol I strictly mandates that any loss of public money, departmental revenue, or stores due to defalcation, fraud, or negligence must be reported immediately by the discovering officer to their immediate superior and concurrently to the Audit Officer.
+________________________________________
+Q129. Under Article 124(3) of the Constitution, which of the following is NOT a valid qualification for appointment as a Judge of the Supreme Court of India?
+A. Has been for at least five years a Judge of a High Court
+B. Has been for at least ten years an advocate of a High Court
+C. Is, in the opinion of the President, a distinguished jurist
+D. Has served as the Attorney General of India for five years
+Answer: D
+Explanation: Article 124(3) lists the constitutional qualifications for a Supreme Court judge: citizen of India, and either a High Court judge for 5 years, or a High Court advocate for 10 years, or a distinguished jurist in the President’s opinion. Serving as Attorney General is not an independent qualification.
+________________________________________
+Q130. As per Article 338A of the Constitution, what is the specific mandate of the National Commission for Scheduled Tribes regarding planning?
+A. To dictate the exact budgetary allocations for tribal welfare to the Union Finance Ministry
+B. To participate and advise on the planning process of socio-economic development of the Scheduled Tribes
+C. To single-handedly draft the state legislation regarding forest rights for tribal communities
+D. To exercise judicial review over all parliamentary acts affecting the Scheduled Areas
+Answer: B
+Explanation: Article 338A(5)(c) provides that it shall be the duty of the Commission to participate and advise on the planning process of socio-economic development of the Scheduled Tribes and to evaluate the progress of their development under the Union and any State.
+________________________________________
+Q131. Consider the following statements regarding Fundamental Duties under Article 51A:
+1.	Fundamental Duties were an integral part of the original Constitution adopted in 1949.
+2.	The duty to provide opportunities for education to children between 6 and 14 years was added by the 86th Amendment Act.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: B
+Explanation: Fundamental Duties were not in the original Constitution; they were added by the 42nd Amendment Act, 1976. Statement 2 is correct as Article 51A(k) (duty of parent/guardian to provide education) was inserted by the 86th Amendment Act, 2002.
+________________________________________
+Q132. Under Section 84 of the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023, which of the following is a legally mandated method for publishing a proclamation for an absconding person?
+A. Publishing strictly in a localized international newspaper
+B. Reading it publicly in some conspicuous place of the town or village where the person resides
+C. Broadcasting the proclamation on state-sponsored radio networks
+D. Sending a direct personalized email to the absconder's last known employer
+Answer: B
+Explanation: Section 84(2)(i)(a) of the BNSS, 2023 mandates that the proclamation shall be publicly read in some conspicuous place of the town or village in which the absconding person ordinarily resides.________________________________________
+Q133. According to Section 22 of the Central Administrative Tribunal Act, 1985, which of the following procedures regulates the Tribunal?
+A. The Tribunal is strictly bound by the intricate procedures laid down in the Code of Civil Procedure, 1908
+B. The Tribunal is entirely governed by the strict rules of evidence under the Indian Evidence Act, 1872
+C. The Tribunal is guided by the principles of natural justice and is not bound by the Code of Civil Procedure
+D. The Tribunal follows the absolute procedural rigidity of a formal military court-martial proceeding
+Answer: C
+Explanation: Section 22(1) of the CAT Act, 1985 clearly states that the Tribunal shall not be bound by the procedure laid down in the Code of Civil Procedure, 1908, but shall be guided by the principles of natural justice and subject to the other provisions of this Act.
+________________________________________
+Q134. Under the Revenue Recovery Act, 1890, what is the primary role of the “sending Collector”?
+A. To physically travel to the defaulter’s district and personally auction their real estate assets
+B. To prepare and issue the formal certificate stating the arrear amount and the defaulter’s details
+C. To provide direct financial compensation to the defaulter if the recovery process is deemed harsh
+D. To file a fresh civil suit in the Supreme Court against the defaulting taxpayer for immediate recovery
+Answer: B
+Explanation: As per Section 3 of the Revenue Recovery Act, 1890, the sending Collector is the officer of the district where the arrear accrued. Their role is to make a certificate in the prescribed form detailing the arrear and the defaulter, and send it to the receiving Collector where the defaulter has property.
+________________________________________
+Q135. As per the Prevention of Corruption Act, 1988, what does the term “undue advantage” precisely mean?
+A. Any gratification strictly limited to physical monetary cash transactions exceeding ten thousand rupees
+B. Any gratification whatever, other than legal remuneration, which a public servant is not permitted to accept
+C. Only high-value physical gifts received during formal administrative promotions or geographical transfers
+D. Any official financial award granted directly by the Central Government for exemplary meritorious service
+Answer: B
+Explanation: The 2018 amendment to the PC Act introduced Section 2(d), defining “undue advantage” as any gratification whatever, other than legal remuneration. The term “gratification” is explicitly not limited to pecuniary gratifications or to gratifications estimable in money.
+________________________________________
+Q136. Under the RTI Act, 2005, if a Public Information Officer (PIO) rejects a request for information, what mandatory details must be communicated to the requester?
+A. The reasons for rejection, the period within which an appeal may be preferred, and the appellate authority’s particulars
+B. Only the relevant clause under Section 8 which justifies the absolute and permanent rejection of the request
+C. A sworn affidavit from the departmental head confirming the physical impossibility of providing the data
+D. A simple one-line denial note without any statutory obligation to mention appellate procedures or timelines
+Answer: A
+Explanation: Section 7(8) of the RTI Act mandates that when a request is rejected, the CPIO/SPIO shall communicate to the requester (i) the reasons for such rejection, (ii) the period within which an appeal against such rejection may be preferred, and (iii) the particulars of the appellate authority.
+________________________________________
+Q137. According to Rule 144 of the General Financial Rules (GFR), 2017, what is a fundamental requirement regarding the technical specifications of a product being procured?
+A. Specifications must strictly mention a specific private brand name to ensure premium commercial quality
+B. Specifications should be based on national/international standards and avoid restrictive brand names
+C. Specifications must always legally favor imported foreign goods over indigenously manufactured items
+D. Specifications should be kept extremely vague to allow maximum unstructured supplier participation
+Answer: B
+Explanation: Rule 144(1)(b) of GFR 2017 outlines the fundamental principles of public buying. It explicitly states that technical specifications shall, to the extent practicable, be based on national technical regulations or recognized standards, and should not contain any reference to trademark, brand name, or patent.
+________________________________________
+Q138. As per the Manual on Procurement of Goods, what does the term “Single Tender Enquiry” (STE) refer to?
+A. A bidding process where only one specific supplier is invited to submit a bid due to proprietary reasons or emergencies
+B. A bidding process where multiple distinct suppliers submit their competitive bids in a single sealed envelope
+C. A competitive procurement method exclusively restricted to geographically recognized local municipal vendors
+D. An online auction system where the government sells scrap materials and obsolete goods to a single buyer
+Answer: A
+Explanation: According to the Procurement Manual and GFR 166, Procurement from a single source (Single Tender Enquiry) is resorted to when it is definitely known that only a particular firm is the manufacturer of the required goods (proprietary), or in emergencies, or for standardization of machinery.
+________________________________________
+Q139. Under the CCS (General Provident Fund) Rules, 1961, when does the GPF account of a subscriber finally become payable?
+A. Only when the subscriber legally completes exactly thirty-five years of continuous physical government service
+B. When the subscriber quits the service, retires, or is dismissed/removed from official government service
+C. Only upon the unfortunate physical demise of the subscriber while performing active government duty
+D. Exactly five calendar years prior to the official documented date of the subscriber’s superannuation
+Answer: B
+Explanation: Rules 29 and 30 of the CCS (GPF) Rules, 1961 outline that the amount standing to the credit of a subscriber in the Fund shall become payable when he quits the service, which broadly includes retirement, resignation, dismissal, or removal.
+________________________________________
+Q140. Consider the following statements regarding the CCS (Pension) Rules, 2021:
+1.	A government servant is eligible for a retiring pension if they retire in advance of the age of superannuation in accordance with the rules.
+2.	A compassionate allowance granted to a dismissed employee cannot under any circumstances exceed half of the standard pension.
+Which of the statements given above is/are correct?
+A. Statement 1 is correct but Statement 2 is incorrect
+B. Statement 2 is correct but Statement 1 is incorrect
+C. Both Statement 1 and Statement 2 are fully correct
+D. Neither Statement 1 nor Statement 2 are fully correct
+Answer: A
+Explanation: Statement 1 is correct (Rule 34 defines Retiring Pension). Statement 2 is incorrect because Rule 41 stipulates that the competent authority may grant a compassionate allowance not exceeding two-thirds (not half) of the pension or gratuity or both which would have been admissible.
+________________________________________
+Q141. Under the CCS (Commutation of Pension) Rules, 1981, if a pensioner commutes a portion of their pension, when is the commuted portion restored?
+A. After the completion of exactly ten years from the exact date the commutation became legally absolute
+B. After the completion of exactly twelve years from the exact date the commutation became legally absolute
+C. After the completion of exactly fifteen years from the exact date the commutation became legally absolute
+D. After the completion of exactly twenty years from the exact date the commutation became legally absolute
+Answer: C
+Explanation: Rule 10A of the CCS (Commutation of Pension) Rules, 1981 states that a pensioner who has commuted a fraction of his pension shall be entitled to the restoration of the commuted portion after the expiry of fifteen years from the date the commutation became absolute.
+________________________________________
+Q142. According to the Sexual Harassment of Women at Workplace Act, 2013, what constitutes the “Local Committee” (LC)?
+A. A committee formed by every private employer with strictly less than ten workers in their active office
+B. A committee constituted by the District Officer to receive complaints from establishments without an Internal Committee
+C. A committee set up by the State Police to exclusively investigate criminal assault cases in modern workplaces
+D. A temporary committee formed by the municipal corporation to randomly audit workplace safety standards
+Answer: B
+Explanation: Section 6(1) of the POSH Act requires the District Officer to constitute a Local Committee (formerly Local Complaints Committee) to receive complaints of sexual harassment from establishments where the Internal Committee has not been constituted due to having less than ten workers or if the complaint is against the employer.
+________________________________________
+Q143. Under the CCS (Payment of Gratuity under NPS) Rules, 2021, how is the “emoluments” defined for the purpose of calculating Retirement Gratuity?
+A. Only the basic pay drawn by the Government servant immediately before the official date of retirement
+B. The basic pay plus the dearness allowance strictly admissible on the exact date of retirement
+C. The basic pay, dearness allowance, and the standard house rent allowance drawn on the retirement date
+D. The calculated average of the gross salary drawn during the last ten months of active physical service
+Answer: B
+Explanation: Rule 2(1)(d) read with Rule 19 of the CCS (Payment of Gratuity under NPS) Rules, 2021 stipulates that “emoluments” for the purpose of gratuity shall mean basic pay as defined in FR 9(21)(a)(i) plus the Dearness Allowance admissible on the date of retirement or death.
+________________________________________
+Q144. As per Fundamental Rule (FR) 56, at what age does a Group ‘A’ government servant normally retire on superannuation?
+A. On the afternoon of the last day of the month in which they attain the age of fifty-eight years
+B. On the afternoon of the last day of the month in which they attain the age of sixty years
+C. On the exact date of their biological birthday when they attain the age of sixty-two years
+D. On the afternoon of the last day of the financial year in which they attain sixty years
+Answer: B
+Explanation: FR 56(a) explicitly states that except as otherwise provided in this specific rule, every Government servant shall retire from service on the afternoon of the last day of the month in which he attains the age of sixty years.
+________________________________________
+Q145. Under the Supplementary Rules (SR), what does a “Tour” fundamentally signify for a government servant?
+A. Absence from headquarters purely for personal vacation, medical recovery, and recreation purposes
+B. Absence from headquarters on duty either within or beyond their properly sanctioned sphere of duty
+C. A mandatory specialized training period spent at an internationally recognized educational institution
+D. A prolonged period of unauthorized absence resulting in the automatic deduction of accrued earned leave
+Answer: B
+Explanation: SR 61 defines that a Government servant is on tour when absent on duty from his headquarters either within or, with proper sanction, beyond his sphere of duty. It forms the legal basis for claiming daily allowance and travelling allowance.
+________________________________________
+Q146. According to the DoPT instructions on Casual Labourers, what is the primary significance of granting “Temporary Status”?
+A. It instantly converts the casual labourer into a permanent, pension-eligible gazetted officer
+B. It confers benefits like pro-rata leave, holidays, and eligibility for regularisation against MTS vacancies
+C. It guarantees a lifelong statutory pension under the old pension scheme irrespective of service length
+D. It legally allows the labourer to unilaterally decide their daily working hours without official supervision
+Answer: B
+Explanation: Under the Casual Labourers (Grant of Temporary Status and Regularisation) Scheme, 1993, granting temporary status does not immediately make them permanent but entitles them to benefits like wages at daily rates with reference to the minimum of the pay scale, pro-rata earn leave, maternity leave, and eligibility for regularisation against MTS vacancies.
+________________________________________
+Q147. As per the rules governing APARs, what is the consequence if the reporting officer fails to submit the APAR by the stipulated deadline?
+A. The reporting officer is immediately suspended without any preliminary departmental inquiry
+B. The reviewing officer may write the APAR directly, and the reporting officer forfeits the right to write it
+C. The employee being reported upon automatically receives a default “Outstanding” performance grade
+D. The APAR process is completely abandoned and legally nullified for that specific financial year
+Answer: B
+Explanation: DoPT guidelines strictly specify that if the reporting officer fails to write the APAR within the prescribed timeline, they forfeit the right to enter remarks. The reviewing officer is then competent to write the APAR directly based on the self-appraisal of the officer reported upon.
+________________________________________
+Q148. Under the Service Discharge Benefit Scheme (SDBS) 2010 for GDS, what is the mandatory age requirement for a GDS to be eligible for enrollment?
+A. The GDS must be strictly between 18 years and 50 years of age at the time of official enrollment
+B. The GDS must have completed a minimum of ten years of continuous unblemished departmental service
+C. The GDS must belong to an economically weaker section formally certified by the district collector
+D. The GDS must have opted out of the old ex-gratia gratuity scheme explicitly in a written affidavit
+Answer: A
+Explanation: The primary eligibility criteria under the SDBS 2010 guidelines clearly state that a Gramin Dak Sevak should be between 18 to 50 years of age to be enrolled in the scheme. Those above 50 were given the option to continue with the older Severance Amount scheme.
+________________________________________
+Q149. According to the Schedule of Financial Powers of Heads of Circle (HoC) in the Department of Posts, what is the financial limit for sanctioning honorarium to a non-departmental individual?
+A. Up to Rupees One Thousand in each distinct individual case
+B. Up to Rupees Five Thousand in each distinct individual case
+C. Up to Rupees Ten Thousand in each distinct individual case
+D. Up to Rupees Twenty-Five Thousand in each distinct individual case
+Answer: B
+Explanation: Under the Schedule of Financial Powers, the Head of Circle (Chief Postmaster General) is empowered to sanction honorarium to non-departmental individuals up to a maximum limit of Rs. 5,000 per case, subject to compliance with standard rules.
+________________________________________
+Q150. Under P&T Financial Handbook Volume II, how are unspent balances of contingencies handled at the close of the financial year?
+A. They are automatically carried forward and formally added to the budget of the next financial year
+B. They are distributed equally as a temporary bonus among the clerical staff of the concerned department
+C. They must be surrendered immediately to the government account as all budget grants lapse at year-end
+D. They are transferred temporarily to the personal bank account of the drawing and disbursing officer
+Answer: C
+Explanation: P&T FHB Vol II strictly dictates that all budget grants lapse at the close of the financial year (31st March). Any unspent balances drawn for contingencies cannot be kept in hand and must be immediately surrendered or refunded to the Government account to prevent financial irregularity.
+

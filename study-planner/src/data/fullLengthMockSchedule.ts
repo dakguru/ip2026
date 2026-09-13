@@ -97,7 +97,7 @@ export const FULL_LENGTH_MOCK_SCHEDULE: FullLengthMockTest[] = [
         questionCount: 150,
         marks: 300,
         duration: 180,
-        tier: "Silver",
+        tier: "Diamond",
         status: "live",
     },
     {
@@ -111,7 +111,7 @@ export const FULL_LENGTH_MOCK_SCHEDULE: FullLengthMockTest[] = [
         questionCount: 150,
         marks: 300,
         duration: 180,
-        tier: "Silver",
+        tier: "Diamond",
         status: "live",
     },
     {
@@ -125,7 +125,7 @@ export const FULL_LENGTH_MOCK_SCHEDULE: FullLengthMockTest[] = [
         questionCount: 150,
         marks: 300,
         duration: 180,
-        tier: "Silver",
+        tier: "Diamond",
         status: "live",
     },
     {
@@ -139,7 +139,7 @@ export const FULL_LENGTH_MOCK_SCHEDULE: FullLengthMockTest[] = [
         questionCount: 150,
         marks: 300,
         duration: 180,
-        tier: "Silver",
+        tier: "Diamond",
         status: "live",
     },
     {
@@ -153,7 +153,7 @@ export const FULL_LENGTH_MOCK_SCHEDULE: FullLengthMockTest[] = [
         questionCount: 150,
         marks: 300,
         duration: 180,
-        tier: "Silver",
+        tier: "Diamond",
         status: "live",
     }
 ];

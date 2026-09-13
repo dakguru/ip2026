@@ -1,0 +1,1020 @@
+Q1. Under the provisions of the Post Office Act, 2023, which authority is empowered to intercept any item transmitted through the Post Office on grounds of security of the State or public order?
+A. The Director General of Postal Services exclusively
+B. The Central Government or authorized State Government
+C. Any officer of the Post Office above the rank of Director
+D. The Secretary of the Department of Posts exclusively
+Answer: B
+Explanation: Section 9 of the Post Office Act, 2023 authorizes the Central Government, or an officer specially authorized by it, to intercept, open, or detain postal items on specified grounds including state security.
+
+Q2. According to Section 4 of the Post Office Act, 2023, what is the extent of liability of the Post Office for loss, mis-delivery, or damage to any item transmitted through it?
+A. Full compensation up to the declared value of the item
+B. Liability is strictly limited to the amount prescribed by Rules
+C. Liability equals the postage paid plus a standard penalty
+D. Absolute immunity from any liability regardless of service
+Answer: B
+Explanation: Section 4(1) of the Post Office Act, 2023 states that the Post Office incurs no liability for loss, mis-delivery, or damage, except to the extent and amount prescribed in the rules.
+
+Q3. As per the Government Savings Promotion Act, 1873, if a depositor dies and the deposit amount does not exceed the prescribed limit, to whom may the payment be made if there is no nomination or probate?
+A. To any person appearing to the authority to be entitled
+B. To the eldest surviving male member of the family
+C. To the State Government account after one year
+D. To the Reserve Bank of India unclaimed deposits
+Answer: A
+Explanation: Section 4A of the Government Savings Promotion Act allows payment to any person appearing to the prescribed authority to be entitled to receive it, up to the prescribed limit, absent a nomination or legal representation.
+
+Q4. Under the Prevention of Money Laundering Act, 2002, how long must a reporting entity maintain records of all transactions from the date of the transaction?
+A. For a period of exactly three years
+B. For a period of exactly five years
+C. For a period of exactly seven years
+D. For a period of exactly ten years
+Answer: B
+Explanation: Section 12(1)(e) of the PMLA, 2002 requires reporting entities to maintain records of all transactions for a period of five years from the date of the transaction between a client and the reporting entity.
+
+Q5. Under the Consumer Protection Act, 2019, what is the revised pecuniary jurisdiction of the District Commission for entertaining complaints regarding the value of goods or services paid as consideration?
+A. Value does not exceed fifty lakh rupees
+B. Value does not exceed one crore rupees
+C. Value does not exceed two crore rupees
+D. Value does not exceed five crore rupees
+Answer: A
+Explanation: Under the Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021, the District Commission's jurisdiction is for complaints where consideration paid does not exceed fifty lakh rupees.
+
+Q6. Under the Information Technology Act, 2000, which section provides for compensation for failure to protect sensitive personal data by a body corporate?
+A. Section 43A of the IT Act, 2000
+B. Section 65B of the IT Act, 2000
+C. Section 66C of the IT Act, 2000
+D. Section 67A of the IT Act, 2000
+Answer: A
+Explanation: Section 43A of the IT Act, 2000 makes a body corporate liable to pay damages by way of compensation if it is negligent in implementing reasonable security practices to protect sensitive personal data.
+
+Q7. Which of the following statements regarding the Post Office Savings Account Scheme, 2019 is correct?
+A. A single adult can open a maximum of two independent single accounts
+B. A joint account can be opened by a maximum of three adult individuals
+C. A minor above ten years cannot open a savings account in their own name
+D. An account can be opened by a pensioner for receiving pension only
+Answer: B
+Explanation: Under paragraph 3 of the Post Office Savings Account Scheme, 2019, a Joint account (Joint A or Joint B) can be opened by up to three adults. An adult can hold only one single account.
+
+Q8. Under the National Savings Recurring Deposit Scheme, 2019, what is the consequence of failing to deposit the monthly installment for four consecutive months?
+A. The account is immediately closed and the balance refunded
+B. The account becomes discontinued and cannot be revived
+C. The account becomes discontinued but can be revived within two months
+D. The account remains active but earns zero interest for the entire year
+Answer: C
+Explanation: Paragraph 7(2) of the RD Scheme, 2019 states that if four consecutive defaults occur, the account becomes discontinued. It can be revived within two months from the fourth default by paying arrears and penalty.
+
+Q9. In the National Savings Time Deposit Scheme, 2019, if a 5-year deposit is closed after 6 months but before 1 year from the date of deposit, what interest is payable?
+A. Interest is paid at the prevailing Time Deposit rate for 1 year
+B. Interest is paid at the prevailing Post Office Savings Account rate
+C. No interest is payable on the deposit amount in this scenario
+D. Interest is paid at the Time Deposit rate minus a 2 percent penalty
+Answer: C
+Explanation: Paragraph 8(1) of the TD Scheme, 2019 stipulates that if a deposit is withdrawn before the expiry of one year from the date of deposit, no interest shall be payable.
+
+Q10. Consider the following statements regarding the National Savings (Monthly Income Account) Scheme, 2019:
+
+1. The maximum investment limit for a single account is Rs. 9 lakh.
+2. The maximum investment limit for a joint account is Rs. 15 lakh.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under the amended MIS Scheme rules (2023), the maximum investment limit was raised to Rs. 9 lakh for a single account and Rs. 15 lakh for a joint account.
+
+Q11. Under the Senior Citizens' Savings Scheme, 2019, a retired civilian employee above 55 years but below 60 years can open an account subject to which condition?
+A. The account must be opened within three months of receiving retirement benefits
+B. The account must be opened within one month of receiving retirement benefits
+C. The account must be opened before the end of the financial year of retirement
+D. The account must be opened simultaneously with a regular savings account
+Answer: B
+Explanation: Paragraph 3(1)(ii) of the SCSS, 2019 allows retired civilian employees between 55 and 60 years to open an account provided it is opened within one month of receipt of retirement benefits.
+
+Q12. What is the maturity period of a National Savings Certificate (VIII Issue) Scheme, 2019?
+A. Exactly three years from the date of deposit
+B. Exactly five years from the date of deposit
+C. Exactly seven years from the date of deposit
+D. Exactly ten years from the date of deposit
+Answer: B
+Explanation: Paragraph 5(1) of the NSC (VIII Issue) Scheme, 2019 specifies that the deposit shall mature on the completion of five years from the date of the deposit.
+
+Q13. Under the Kisan Vikas Patra Scheme, 2019, premature closure is permissible after what minimum period from the date of deposit, barring exceptions like death or court order?
+A. After one year and six months from deposit date
+B. After two years and six months from deposit date
+C. After three years and six months from deposit date
+D. After four years and six months from deposit date
+Answer: B
+Explanation: Paragraph 7(1)(c) of the KVP Scheme, 2019 allows premature closure of the account at any time after the expiry of two years and six months from the date of deposit.
+
+Q14. In the Public Provident Fund Scheme, 2019, what is the maximum permissible deposit amount in a single financial year?
+A. Rupees one lakh and twenty-five thousand only
+B. Rupees one lakh and fifty thousand only
+C. Rupees one lakh and seventy-five thousand only
+D. Rupees two lakh and fifty thousand only
+Answer: B
+Explanation: Paragraph 4(1) of the PPF Scheme, 2019 limits the maximum total deposit in an account in a financial year to Rs. 1,50,000, inclusive of deposits made in a minor's account by a guardian.
+
+Q15. Under the Sukanya Samriddhi Account Scheme, 2019, deposits can be made until the completion of how many years from the date of opening the account?
+A. Up to the completion of exactly ten years
+B. Up to the completion of exactly fourteen years
+C. Up to the completion of exactly fifteen years
+D. Up to the completion of exactly twenty-one years
+Answer: C
+Explanation: Paragraph 4(3) of the SSA Scheme, 2019 states that deposits may be made in the account till the completion of fifteen years from the date of opening of the account.
+
+Q16. What is the maximum age limit for entry into the Post Office Life Insurance (PLI) Endowment Assurance (Santosh) Scheme?
+A. Maximum fifty years of age on next birthday
+B. Maximum fifty-five years of age on next birthday
+C. Maximum sixty years of age on next birthday
+D. Maximum sixty-five years of age on next birthday
+Answer: B
+Explanation: Under the Post Office Life Insurance Rules, 2011, the maximum age limit at entry for an Endowment Assurance (Santosh) policy is 55 years of age on the next birthday.
+
+Q17. According to the Book of BO Rules, who is responsible for the safe custody of cash and valuables at a Branch Post Office?
+A. The Sub Postmaster of the account office solely
+B. The Branch Postmaster of the respective office
+C. The Mail Overseer of the respective subdivision
+D. The Inspector of Posts of the respective subdivision
+Answer: B
+Explanation: Rule 9 of the Book of BO Rules explicitly states that the Branch Postmaster (BPM) is personally responsible for the safe custody of cash, stamps, and all valuables kept at the Branch Post Office.
+
+Q18. As per Postal Manual Volume II, which authority is competent to write off irrecoverable losses of public money up to Rs. 1,00,000 in a single case?
+A. The Chief Postmaster General of the Circle
+B. The Postmaster General of the Region
+C. The Senior Superintendent of Post Offices
+D. The Director General of Postal Services
+Answer: A
+Explanation: Under the Schedule of Financial Powers in Postal Manual Volume II, the Chief Postmaster General (CPMG) holds the delegated authority to write off irrecoverable losses of public money up to Rs. 1,00,000.
+
+Q19. According to Postal Manual Volume III, which of the following records is subject to permanent preservation?
+A. Attendance registers of the divisional office
+B. Order book of the Head Post Office
+C. Register of immovable government properties
+D. Invoice of articles received from stock depot
+Answer: C
+Explanation: Postal Manual Volume III, Appendix on preservation of records, specifies that the Register of immovable properties belonging to the Department is a permanent record.
+
+Q20. Under CCS (Leave) Rules, 1972 as applicable to Postal employees, what is the maximum amount of Earned Leave that can be accumulated by a Government servant?
+A. Two hundred and forty days of earned leave
+B. Three hundred days of earned leave
+C. Three hundred and sixty days of earned leave
+D. Four hundred and fifty days of earned leave
+Answer: B
+Explanation: Rule 26 of the CCS (Leave) Rules, 1972 stipulates that the accumulation of Earned Leave by a Government servant is subject to a maximum ceiling of 300 days.
+
+Q21. According to Postal Manual Volume IV, what is the minimum qualifying service required for a retiring Government servant to be eligible for regular pension?
+A. Minimum five years of qualifying service
+B. Minimum ten years of qualifying service
+C. Minimum fifteen years of qualifying service
+D. Minimum twenty years of qualifying service
+Answer: B
+Explanation: Under the CCS (Pension) Rules applicable to postal staff (per Manual Vol IV), a minimum of 10 years of qualifying service is required to be eligible for standard retiring pension.
+
+Q22. As per Postal Manual Volume VIII, what is the prescribed frequency for clearing letter boxes located outside the premises of a Post Office in urban areas?
+A. Once in the morning and once in the evening daily
+B. As determined by the Head of the Postal Circle
+C. At least twice a day on all working days
+D. Strictly once a day during the designated business hours
+Answer: B
+Explanation: Rule 13 of Postal Manual Volume VIII specifies that the frequency and timings of clearance of letter boxes are determined by the Head of the Circle based on local mail transmission needs.
+
+Q23. In the context of Mail Operations and Money Remittances, what is the maximum limit of cash remittance that can be carried by a single Mail Overseer?
+A. Rupees fifty thousand without security guard
+B. Rupees one lakh without any security guard
+C. Rupees two lakhs with a security guard
+D. Depends on limits fixed by the Head of Circle
+Answer: D
+Explanation: Limits for conveyance of cash by departmental officials, including Mail Overseers, are prescribed and periodically revised by the Head of the Circle based on local conditions and security assessments.
+
+Q24. According to Postal Manual Volume V, which class of mail is treated as 'First Class Mail' for the purpose of free air transmission within India?
+A. Parcels, book packets, and registered newspapers
+B. Letters, letter cards, and single/reply postcards
+C. Printed papers, blind literature packets, and parcels
+D. Value payable articles and insured parcels only
+Answer: B
+Explanation: Rule 23 of Postal Manual Volume V defines Letters, Inland Letter Cards, and Postcards as First Class mail, which are entitled to free air transmission wherever it expedites delivery.
+
+Q25. As per Postal Manual Volume VI, Part-I, what is the correct procedure when a registered article is received in a damaged condition at the delivery post office?
+A. It must be delivered immediately to the addressee
+B. It must be returned to the sender without opening
+C. A notice is sent to the addressee to take delivery at the PO
+D. It must be destroyed by the postmaster in front of witnesses
+Answer: C
+Explanation: Rule 128 of Postal Manual Vol VI Part-I dictates that if a registered article is received damaged, a notice must be issued inviting the addressee to attend the post office to take delivery.
+
+Q26. Under Postal Manual Volume VI, Part-II, what is the preservation period for the registers of Value Payable (VP) articles received for delivery?
+A. One year from the date of the last entry
+B. Two years from the date of the last entry
+C. Three years from the date of the last entry
+D. Five years from the date of the last entry
+Answer: C
+Explanation: As per the preservation of records schedule in Postal Manual Volume VI, Part-II, the register of VP articles received for delivery must be preserved for three years.
+
+Q27. In Postal Manual Volume VI, Part-III, what is the primary duty of a Sub-Account Assistant in a Head Post Office?
+A. Selling postage stamps to the general public
+B. Managing the accounting transactions of BOs/SOs
+C. Delivering insured articles to local addressees
+D. Sorting incoming forward mail for other divisions
+Answer: B
+Explanation: Rule 1 of Postal Manual Volume VI, Part-III states the Sub-Account Assistant is responsible for checking and incorporating the accounts of all Sub and Branch Post Offices in jurisdiction.
+
+Q28. According to Postal Manual Volume VII, which document is used to record the exchange of mails between a transit mail office and a running RMS section?
+A. The registered abstract of the mail office
+B. The mail list prepared by the dispatching office
+C. The transit register maintained by the RMS section
+D. The daily report submitted by the Head Sorter
+Answer: B
+Explanation: Rule 26 of Postal Manual Volume VII specifies that a Mail List must accompany every dispatch of mails, serving as the official receipt and record of exchange between offices and sections.
+
+Q29. Under the Pradhan Mantri Suraksha Bima Yojana (PMSBY), what is the annual premium amount deducted from the subscriber's post office savings account?
+A. Rupees twelve per annum per subscriber
+B. Rupees twenty per annum per subscriber
+C. Rupees three hundred and thirty per annum
+D. Rupees four hundred and thirty-six per annum
+Answer: B
+Explanation: Effective June 1, 2022, the annual premium for the Pradhan Mantri Suraksha Bima Yojana (PMSBY), covering accidental death and disability, was revised to Rs. 20.
+
+Q30. According to Post Office Guide Part-I, what is the maximum weight limit for a registered parcel booked at a Head Post Office?
+A. Ten kilograms per individual registered parcel
+B. Twenty kilograms per individual registered parcel
+C. Thirty kilograms per individual registered parcel
+D. Thirty-five kilograms per individual registered parcel
+Answer: B
+Explanation: Clause 174 of the Post Office Guide Part-I states that the maximum weight of a parcel that can be booked at or addressed to a Head or Sub Post Office is 20 kilograms.
+
+Q31. Consider the following statements regarding Blind Literature Packets under Post Office Guide Part-I:
+
+1. They are exempted from the payment of basic postage.
+2. They are exempted from the payment of registration fees.
+3. They are exempted from the payment of airmail surcharge.
+Which of the statements given above is/are correct?
+A. 1 and 2 only
+B. 1 and 3 only
+C. 2 and 3 only
+D. 1, 2 and 3
+Answer: A
+Explanation: Clause 137 of PO Guide Part-I exempts Blind Literature Packets from postage, registration fee, and fee for acknowledgment, but airmail surcharge must be paid if air transmission is desired.
+
+Q32. As per Post Office Guide Part-II, what is the maximum weight permissible for an international letter?
+A. One kilogram for any international destination
+B. Two kilograms for any international destination
+C. Three kilograms for any international destination
+D. Five kilograms for any international destination
+Answer: B
+Explanation: Under Section II of Post Office Guide Part-II, the maximum weight allowed for a foreign letter sent via international post is restricted to 2 kilograms.
+
+Q33. What is the fundamental structure of the proposed Digital Personal Identification Number (DIGIPIN) being developed by the Department of Posts?
+A. A ten-digit alphanumeric code tied to Aadhaar
+B. A ten-character alphanumeric geo-coded grid system
+C. A twelve-digit numeric code mapping specific households
+D. A six-character alpha-only code replacing traditional PIN codes
+Answer: B
+Explanation: DIGIPIN is conceptualized as a 10-character alphanumeric geo-coded grid system that uniformly maps locations across India, separate from personal identification like Aadhaar.
+
+Q34. Under the Mail Network Optimization Project (MNOP), what is the core objective of establishing Automated Mail Processing Centres (AMPCs)?
+A. To process un-registered letter mails manually at faster speeds
+B. To automate sorting of letter-class mails based on PIN codes
+C. To solely handle international incoming parcel shipments
+D. To replace all manual delivery processes by postmen
+Answer: B
+Explanation: The MNOP guidelines outline the establishment of AMPCs to mechanically and automatically sort high volumes of letter-class mail using Optical Character Recognition and PIN codes.
+
+Q35. According to the Policy Guidelines on Centralized Delivery, which of the following categories of articles is primarily targeted for nodal delivery?
+A. Unregistered ordinary letters and postcards
+B. Bulk ordinary parcels and Speed Post parcels
+C. Registered newspapers and blind literature packets
+D. Money orders and electronic money orders
+Answer: B
+Explanation: Centralized or Nodal delivery guidelines aim to optimize last-mile delivery specifically for larger, heavier items like Speed Post parcels and Business parcels to reduce the burden on beat postmen.
+
+Q36. What is the primary purpose of establishing a Dak Ghar Niryat Kendra (DNK)?
+A. To facilitate the import of foreign electronic goods seamlessly
+B. To provide a simplified export ecosystem for local artisans and MSMEs
+C. To handle domestic booking of ordinary bulk mail purely for corporates
+D. To function exclusively as an international money transfer hub
+Answer: B
+Explanation: Dak Ghar Niryat Kendras (DNKs) are established to promote commercial exports by MSMEs and local artisans by offering a simplified, paperless customs clearance and booking facility.
+
+Q37. Under the Post Office Savings Bank (POSB) Manual Volume I, what is the procedure if a depositor’s signature does not match the specimen on record during a withdrawal?
+A. The withdrawal is processed with an additional five percent deduction
+B. The postmaster must attest the mismatched signature and process it
+C. The depositor must be identified by a known person and provide a fresh specimen
+D. The account is immediately frozen for a mandatory period of six months
+Answer: C
+Explanation: Rule 34 of POSB Manual Vol I states that if signatures differ, the depositor must be properly identified and provide fresh specimen signatures before the transaction is permitted.
+
+Q38. According to POSB (CBS) Manual up to 31.12.2021, what action is taken when an account becomes a 'Silent Account'?
+A. The balance is transferred to the Senior Citizens Welfare Fund immediately
+B. No withdrawal is permitted until the account is formally revived by the depositor
+C. The account is permanently closed and no revival is possible under any rule
+D. The interest rate on the account balance is reduced to zero retrospectively
+Answer: B
+Explanation: Under CBS Manual rules, an account classified as 'Silent' (due to non-operation for 3 years) is restricted from withdrawals until the customer submits KYC documents and formally revives it.
+
+Q39. As per the Annual Report of the Department of Posts, which platform is used for the booking and delivery of Speed Post articles?
+A. Point of Sale (POS) integrated with the Core System Integrator (CSI)
+B. The standalone Finacle Core Banking Solution platform
+C. The legacy Meghdoot software package exclusively
+D. The Darpan application designed for Head Post Offices
+Answer: A
+Explanation: The CSI (Core System Integrator) platform, through its POS module, handles the entire lifecycle of mail operations including booking and delivery tracking of Speed Post articles.
+
+Q40. In the Core Banking Solutions (CBS) implemented in Post Offices, what is the purpose of a CIF (Customer Information File) ID?
+A. It uniquely identifies each specific transaction in the post office
+B. It uniquely identifies the depositor across all CBS post offices
+C. It denotes the specific branch code where the account is opened
+D. It serves as the transaction password for mobile banking operations
+Answer: B
+Explanation: In Finacle CBS, a CIF (Customer Information File) ID is a unique identification number assigned to a customer, linking all their POSB accounts across the entire CBS network.
+
+Q41. Under the PLI-CIS (Postal Life Insurance - Core Insurance Solution), how is the revival of a lapsed PLI policy processed?
+A. Exclusively by the original booking agent without medical certificate
+B. Automatically upon payment of a single overdue premium instalment
+C. Through the CIS portal upon collection of arrears, interest, and medical certificate if required
+D. Lapsed PLI policies cannot be revived under the CIS architecture
+Answer: C
+Explanation: Under PLI-CIS, revival is initiated in the system (McCamish) which calculates the required arrears and penal interest; a medical certificate of good health is required if the policy lapsed beyond the grace period.
+
+Q42. Which of the following statements regarding the India Post Payments Bank (IPPB) is not correct?
+A. IPPB is a 100% equity-owned entity of the Government of India
+B. IPPB accounts allow a maximum end-of-day balance of Rs. 2 lakh
+C. IPPB offers direct issuance of credit cards and commercial loans
+D. IPPB utilizes the network of Post Offices and Postmen as access points
+Answer: C
+Explanation: As a Payments Bank regulated by the RBI, IPPB is prohibited from issuing credit cards or directly advancing loans, distinguishing it from traditional commercial banks.
+
+Q43. According to the schedule for preservation and disposal of postal records, how long should the stock register of receipt books be preserved?
+A. Three years after the book is completely used
+B. Five years after the book is completely used
+C. Ten years after the book is completely used
+D. Permanently in the divisional office archives
+Answer: C
+Explanation: Under the general schedule for preservation of postal records, the stock register of receipt books must be preserved for 10 years after the closure of the register.
+
+Q44. Under the CCS (Conduct) Rules, 1964, a Government servant requires prior sanction of the prescribed authority to accept a gift from a near relative if its value exceeds:
+A. Rupees five thousand for Group A and B officers
+B. Rupees twenty-five thousand for Group A and B officers
+C. Rupees ten thousand for Group C and D staff
+D. Rupees fifty thousand for all classes of employees
+Answer: B
+Explanation: Under Rule 13 of the CCS (Conduct) Rules, a Group A or B officer must report/obtain sanction if a gift from a near relative on a special occasion exceeds Rs. 25,000.
+
+Q45. Which of the following constitutes a 'Minor Penalty' under Rule 11 of the CCS (CCA) Rules, 1965?
+A. Reduction to a lower time-scale of pay
+B. Compulsory retirement from government service
+C. Withholding of increments of pay
+D. Dismissal from the government service
+Answer: C
+Explanation: Rule 11 of the CCS (CCA) Rules categorizes penalties. Withholding of increments (clause iv) is a minor penalty, whereas reduction in rank, compulsory retirement, and dismissal are major penalties.
+
+Q46. Under the CCS (Temporary Service) Rules, 1965, a temporary Government servant's service can be terminated by either side by giving a notice of:
+A. Exactly fourteen days in writing
+B. Exactly one month in writing
+C. Exactly three months in writing
+D. Exactly six months in writing
+Answer: B
+Explanation: Rule 5(1) of the CCS (Temporary Service) Rules, 1965 stipulates that temporary service shall be liable to termination at any time by a notice in writing given either by the Government servant or the appointing authority, for one month.
+
+Q47. According to the GDS (Conduct and Engagement) Rules, 2020, what is the maximum duration for which a Gramin Dak Sevak may be placed under 'Put Off Duty' initially by the competent authority?
+A. Ninety days, after which it must be reviewed
+B. Sixty days, after which it must be reviewed
+C. One hundred and eighty days, pending inquiry
+D. There is no specific time limit prescribed for put off duty
+Answer: A
+Explanation: Rule 12 of GDS (Conduct and Engagement) Rules, 2020 (akin to suspension in CCS rules) requires that the order of 'Put Off Duty' must be reviewed within 90 days from the effective date.
+
+Q48. In the Post Office Act, 2023, what replaces the concept of "exclusive privilege" of the Central Government regarding letter conveyance found in the repealed 1898 Act?
+A. A strict licensing regime for private couriers
+B. The Act removes the statutory monopoly entirely
+C. A quota system for private letter conveyance
+D. State Governments are given the exclusive privilege
+Answer: B
+Explanation: The Post Office Act, 2023 significantly departs from the 1898 Act by completely abolishing the statutory exclusive privilege (monopoly) of the Central Government in conveying letters.
+
+Q49. Under the Government Savings Promotion Rules, 2018, what is the position on the nomination of a minor?
+A. A minor cannot be nominated under any circumstances
+B. A minor can be nominated, but a guardian must be appointed
+C. A minor can be nominated and can operate the account directly
+D. A minor can only be nominated if the account is a joint account
+Answer: B
+Explanation: Rule 14(4) of the GSP Rules, 2018 states that if a nominee is a minor, the depositor shall appoint a person to receive the eligible amount on behalf of the minor in the event of the depositor's death.
+
+Q50. Under the PMLA, 2002, the Adjudicating Authority shall consist of a Chairperson and how many other members?
+A. Not more than two other members
+B. Not more than three other members
+C. Exactly four other members
+D. Exactly five other members
+Answer: A
+Explanation: Section 6 of the Prevention of Money Laundering Act, 2002 specifies that the Adjudicating Authority shall consist of a Chairperson and two other members.
+
+Q51. Consider the following regarding the Consumer Protection Act, 2019:
+
+1. It introduced the concept of product liability.
+2. It established the Central Consumer Protection Authority.
+Which of the statements given above is/are not correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: D
+Explanation: Both statements are correct. The 2019 Act introduced Chapter VI on Product Liability and established the CCPA to regulate matters relating to violation of consumer rights. Therefore, neither is "not correct".
+
+Q52. Under the IT Act, 2000, what is the maximum penalty for publishing or transmitting obscene material in electronic form on the first conviction?
+A. Imprisonment up to two years and fine up to one lakh
+B. Imprisonment up to three years and fine up to five lakh
+C. Imprisonment up to five years and fine up to ten lakh
+D. Imprisonment up to seven years and fine up to five lakh
+Answer: B
+Explanation: Section 67 of the IT Act, 2000 prescribes punishment on first conviction for publishing obscene material in electronic form as imprisonment of either description for a term up to three years and fine up to five lakh rupees.
+
+Q53. Under the National Savings (Monthly Income Account) Scheme, 2019, if an account is closed after one year but before three years from the date of opening, what is the deduction applied to the principal?
+A. One percent of the principal amount
+B. Two percent of the principal amount
+C. Three percent of the principal amount
+D. No deduction is applied to the principal amount
+Answer: B
+Explanation: Paragraph 8(2) of the MIS Scheme, 2019 stipulates that if the account is closed after one year but before three years, an amount equal to two percent of the principal shall be deducted.
+
+Q54. According to the Senior Citizens' Savings Scheme, 2019, an account can be extended for a further block period of how many years after maturity?
+A. Extended for exactly one year only
+B. Extended for a block of two years
+C. Extended for a block of three years
+D. Extended for a block of five years
+Answer: C
+Explanation: Paragraph 8(1) of the SCSS, 2019 states that the depositor may extend the account for a further block period of three years by making an application within one year of maturity.
+
+Q55. In the context of the National Savings Certificate (VIII Issue) Scheme, 2019, can a certificate be transferred from one person to another?
+A. Yes, freely transferrable without any restrictions at any time
+B. No, the transfer of a certificate is strictly prohibited under all circumstances
+C. Yes, but only under specific conditions like court order, death, or pledge to authorities
+D. Yes, but only to a blood relative with the postmaster's discretionary permission
+Answer: C
+Explanation: Paragraph 12 of the NSC (VIII Issue) Scheme, 2019 restricts transferability. It can only be transferred in specific cases: death of holder, court order, or pledging to specified authorities.
+
+Q56. What is the consequence of not making the minimum mandatory deposit of Rs. 250 in a financial year in a Sukanya Samriddhi Account?
+A. The account is permanently closed without any recourse
+B. The account balance is transferred to a regular savings account
+C. The account is treated as defaulted and revived by paying Rs. 50 penalty per year
+D. The account continues to earn interest but withdrawals are completely blocked
+Answer: C
+Explanation: Paragraph 4(4) of the SSA Scheme, 2019 dictates that an account in default can be revived till 15 years from opening by paying a penalty of Rs. 50 per default year along with the minimum deposit.
+
+Q57. Under the Public Provident Fund Scheme, 2019, when does an account mature?
+A. After the completion of ten financial years from the end of the year of opening
+B. After the completion of fifteen financial years from the end of the year of opening
+C. After the completion of exactly fifteen years from the date of opening
+D. After the completion of twenty years from the end of the year of opening
+Answer: B
+Explanation: Paragraph 9(1) of the PPF Scheme, 2019 specifies that withdrawals of the entire balance can be made after the expiry of fifteen years from the end of the year in which the initial subscription was made.
+
+Q58. A Rural Postal Life Insurance (RPLI) policy requires a medical examination if the sum assured exceeds a certain threshold. Under prevailing rules, non-medical policies are allowed up to a maximum sum assured of:
+A. Rupees one lakh only
+B. Rupees two lakhs only
+C. Rupees three lakhs only
+D. Rupees five lakhs only
+Answer: A
+Explanation: Under RPLI guidelines, non-medical policies (where no medical examination by a doctor is required) are issued up to a maximum Sum Assured of Rs. 1,00,000, subject to age limits.
+
+Q59. According to the Book of BO Rules, how frequently must the Branch Postmaster (BPM) transmit the surplus cash to the Account Office?
+A. Exclusively on the last working day of the month
+B. Whenever the cash balance exceeds the authorized maximum limit
+C. Only when specifically instructed by the Sub Postmaster
+D. At the end of every week regardless of the cash balance
+Answer: B
+Explanation: Rule 13 of the BO Rules mandates that whenever the cash balance at a Branch Post Office exceeds the authorized maximum limit, the BPM must remit the surplus to the Account Office.
+
+Q60. Which rule of the CCS (Conduct) Rules, 1964 prohibits a Government servant from engaging in any trade or business without prior sanction?
+A. Rule 11 of the Conduct Rules
+B. Rule 13 of the Conduct Rules
+C. Rule 15 of the Conduct Rules
+D. Rule 18 of the Conduct Rules
+Answer: C
+Explanation: Rule 15 of the CCS (Conduct) Rules, 1964 explicitly states that no Government servant shall, except with previous sanction, engage directly or indirectly in any trade or business.
+
+Q61. Under the CCS (CCA) Rules, 1965, who acts as the ad hoc Disciplinary Authority for a minor penalty against a Postal Assistant if the regular authority is unavailable?
+A. Any officer holding the same rank as the delinquent official
+B. The officer immediately superior to the regular Disciplinary Authority
+C. The Head of the Postal Circle in all circumstances
+D. The Director General of Postal Services exclusively
+Answer: B
+Explanation: Under general principles and Rule 12 of CCS (CCA) Rules, if the designated Disciplinary Authority is unavailable or conflicted, the authority immediately superior exercises the disciplinary powers.
+
+Q62. What is the maximum period of suspension that can be ordered at a stretch without a review under the CCS (CCA) Rules, 1965?
+A. Exactly sixty days
+B. Exactly ninety days
+C. Exactly one hundred and twenty days
+D. Exactly one hundred and eighty days
+Answer: B
+Explanation: Rule 10(6) of the CCS (CCA) Rules mandates that an order of suspension shall be reviewed before the expiry of 90 days from the effective date; otherwise, it becomes invalid.
+
+Q63. According to the GDS (Conduct and Engagement) Rules, 2020, what is the age of discharge for a Gramin Dak Sevak?
+A. Exactly sixty years of age
+B. Exactly sixty-two years of age
+C. Exactly sixty-five years of age
+D. Exactly seventy years of age
+Answer: C
+Explanation: Rule 4(3) of the GDS (Conduct & Engagement) Rules, 2020 specifies that a Sevak shall be discharged from service on attaining the age of 65 years.
+
+Q64. As per Postal Manual Volume II, what is the primary role of the Circle Internal Check Organization (CICO)?
+A. To conduct the annual general inspection of all Head Post Offices
+B. To check the physical mail movement in the RMS sorting hubs
+C. To conduct internal audits and check the accounts of post offices
+D. To investigate major criminal frauds involving postal employees
+Answer: C
+Explanation: The CICO is established at the Circle level to conduct internal audits of accounting processes and financial transactions in Head and Sub Post Offices to ensure compliance with rules.
+
+Q65. Under Postal Manual Volume IV, which of the following is an essential condition for granting a family pension to the dependent of a deceased postal employee?
+A. The employee must have completed twenty years of service
+B. The employee must have held a confirmed permanent post
+C. The employee must have been drawing a salary above a specific tier
+D. The dependent must physically reside in the same postal division
+Answer: B
+Explanation: Under CCS (Pension) Rules (Vol IV), family pension is admissible to the family of a deceased government servant who was appointed in a pensionable establishment on a regular/permanent basis prior to 2004.
+
+Q66. According to Postal Manual Volume VIII, how are misdirected articles handled by a sorting office?
+A. They are detained for seven days before forwarding
+B. They are immediately sent to the Returned Letter Office (RLO)
+C. They are redirected to the correct destination by the next available mail
+D. They are returned to the original sender with a penalty fee
+Answer: C
+Explanation: Rule 110 of Postal Manual Volume VIII directs that misdirected articles (sent to wrong office by mistake) must be forwarded to their correct destination by the next available dispatch without delay.
+
+Q67. As per Postal Manual Volume VI, Part-I, what is the action required if a postman loses a registered letter during delivery?
+A. The postman must replace the contents of the letter from his salary
+B. The postmaster must immediately lodge an FIR and suspend the postman
+C. The postmaster makes inquiries, notes in the error book, and reports to the Superintendent
+D. The loss is ignored if the addressee does not file a formal complaint within a week
+Answer: C
+Explanation: Rule 145 of Vol VI Part-I states that loss of a registered article by a postman must be immediately recorded in the error book and reported to the Superintendent after preliminary inquiries.
+
+Q68. In Postal Manual Volume VII, what does 'Camp Bag' denote?
+A. A bag used strictly for international transit mail
+B. A bag containing mail for high government officials on tour
+C. A bag used for collecting mail from rural branch offices
+D. A bag meant for the exclusive use of army postal services
+Answer: B
+Explanation: Rule 54 of Postal Manual Volume VII defines a Camp Bag as a special bag containing mail addressed to high-ranking Government officials (like Ministers or the DG) when they are on tour.
+
+Q69. Under the Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) offered through POSB, what is the life cover amount provided to the subscriber?
+A. Rupees one lakh per subscriber
+B. Rupees two lakhs per subscriber
+C. Rupees three lakhs per subscriber
+D. Rupees five lakhs per subscriber
+Answer: B
+Explanation: The PMJJBY scheme provides a life insurance cover of Rs. 2 lakh to the subscriber in case of death due to any reason, subject to payment of the annual premium.
+
+Q70. According to Post Office Guide Part-I, can a sender recall a postal article after it has been posted but before it is delivered?
+A. No, an article once posted becomes the absolute property of the addressee
+B. Yes, by paying a prescribed fee and submitting a written application
+C. Yes, but only if the article is sent as a registered parcel
+D. Yes, free of charge if recalled on the same working day
+Answer: B
+Explanation: Clause 33 of the Post Office Guide Part-I allows the sender to recall an article or alter the address by submitting a written request and paying the prescribed fee, provided it hasn't been delivered.
+
+Q71. Under Post Office Guide Part-II, what is an 'Aerogramme'?
+A. A parcel specifically designed for air transmission
+B. A self-contained airmail letter printed on a single sheet of paper
+C. A customs declaration form for international mail
+D. An electronic notification of delivery for foreign parcels
+Answer: B
+Explanation: Under international postal rules in PO Guide Part-II, an Aerogramme is a lightweight, single-sheet piece of paper that folds into its own envelope, exclusively for airmail transmission at a unified rate.
+
+Q72. According to the Parcel Network Optimization Project (PNOP) guidelines, what is the primary role of a Parcel Hub?
+A. To sell retail packaging material to the public
+B. To manually sort letter mail in addition to parcels
+C. To consolidate, process, and route bulk parcel traffic
+D. To deliver parcels directly to the end customer's doorstep
+Answer: C
+Explanation: The PNOP focuses on creating a separate, mechanized network. Parcel Hubs are nodal points designed specifically to aggregate, mechanize the sorting, and route heavy parcel traffic efficiently.
+
+Q73. What is the fundamental difference between the National Savings Time Deposit (TD) and the National Savings Recurring Deposit (RD) schemes?
+A. TD requires monthly deposits, whereas RD requires a lump sum deposit
+B. TD requires a lump sum deposit, whereas RD requires monthly deposits
+C. TD is tax-free, whereas RD is fully taxable under all sections
+D. TD can only be opened by seniors, whereas RD is for minors only
+Answer: B
+Explanation: The TD scheme is a fixed deposit requiring a single lump sum investment, while the RD scheme requires the depositor to make equal monthly installments over a 5-year period.
+
+Q74. In the POSB (CBS) Manual, what transaction code is primarily used by the counter assistant to open a new savings account in Finacle?
+A. The transaction code CTM (Cash Transaction Maintenance)
+B. The transaction code HOAAC (Head Office Account Creation)
+C. The transaction code CXFER (Customer Transfer)
+D. The transaction code CPB (Customer Passbook Printing)
+Answer: B
+Explanation: In Finacle CBS utilized by India Post, the menu/transaction code HOAAC (or similar CIF/Account creation menus like CSBAOO) is used to open new deposit accounts based on CIF.
+
+Q75. Under IPPB guidelines, a customer holding a 'Regular Savings Account' can link it to their POSB account. What happens if the end-of-day balance in the IPPB account exceeds Rs. 2 lakh?
+A. The excess amount is forfeited to the IPPB penalty fund
+B. The excess amount is swept out to the linked POSB account
+C. The account is frozen until the customer visits the branch
+D. The excess amount earns a premium interest rate of 8%
+Answer: B
+Explanation: To adhere to RBI's 2-lakh limit for Payments Banks, IPPB offers a sweep-out facility where any balance exceeding Rs. 2 lakh at the end of the day is automatically transferred to the customer's linked POSB account.
+
+Q76. According to the GDS (Conduct and Engagement) Rules, 2020, what is the consequence if a GDS contests an election to a Gram Panchayat?
+A. They must resign from GDS service prior to contesting
+B. They are automatically promoted if they win the election
+C. They can contest freely and hold both positions simultaneously
+D. They must take a compulsory leave of one year without pay
+Answer: A
+Explanation: Rule 29 of the GDS Conduct & Engagement Rules specifically prohibits a Sevak from contesting elections to any legislative body or local authority (Panchayat). They must resign to contest.
+
+Q77. Under the CCS (Conduct) Rules, 1964, what is the restriction on a Government servant joining an association or union?
+A. They are absolutely prohibited from joining any union whatsoever
+B. They can only join associations recognized by the Government
+C. They can join any association as long as they don't hold office
+D. They can join associations but cannot participate in strikes
+Answer: D
+Explanation: Rule 7 restricts participating in strikes, but Rule 6 prohibits joining associations whose objects are prejudicial to the sovereignty of India. However, joining recognized unions is allowed, but striking is explicitly banned under Rule 7(ii).
+
+Q78. In the context of CCS (CCA) Rules, 1965, what is a 'Deemed Suspension'?
+A. When an employee takes unapproved leave for over 30 days
+B. When an employee is detained in custody for more than 48 hours
+C. When an employee fails a departmental promotional examination
+D. When an employee is transferred administratively without consent
+Answer: B
+Explanation: Rule 10(2) of the CCS (CCA) Rules, 1965 states a Government servant shall be deemed to have been placed under suspension if they are detained in custody for a period exceeding 48 hours.
+
+Q79. Which of the following is correct regarding the 'Date of Maturity' under the SCSS, 2019?
+A. Exactly five years from the date of opening the account
+B. Exactly eight years from the date of opening the account
+C. The day the depositor attains sixty-five years of age
+D. The last day of the financial year in which the account completes five years
+Answer: A
+Explanation: Paragraph 7 of the SCSS, 2019 dictates that the deposit shall mature after the expiry of five years from the date of opening of the account.
+
+Q80. As per the Prevention of Money Laundering Act, 2002, the burden of proof that proceeds of crime are untainted property lies on:
+A. The Investigating Officer of the Enforcement Directorate
+B. The Adjudicating Authority established under the Act
+C. The person accused of the offence under the Act
+D. The designated Special Court trying the offence
+Answer: C
+Explanation: Section 24 of the PMLA, 2002 clearly reverses the burden of proof, stating that in any proceeding relating to money-laundering, the burden of proving that proceeds of crime are untainted lies on the accused.
+
+Q81. Under the Consumer Protection Act, 2019, 'Deficiency' means any fault, imperfection, shortcoming or inadequacy in the:
+A. Physical characteristics of goods sold to consumers
+B. Quality, nature and manner of performance of a service
+C. Price displayed on the manufactured product
+D. Advertising content broadcasted by the manufacturer
+Answer: B
+Explanation: Section 2(11) of the CPA, 2019 defines "deficiency" specifically in relation to services—meaning a fault, imperfection, or shortcoming in the quality, nature, and manner of performance required by law.
+
+Q82. According to Section 66E of the Information Technology Act, 2000, what constitutes a violation of privacy?
+A. Sending unsolicited promotional emails to a generic address
+B. Publishing a person's name in a public government directory
+C. Capturing or publishing images of a person's private area without consent
+D. Decrypting a commercially available software for personal study
+Answer: C
+Explanation: Section 66E of the IT Act penalizes the intentional capturing, publishing, or transmitting of the image of a private area of any person without their consent, terming it a violation of privacy.
+
+Q83. Under the Post Office Rules, 2024, what happens if a postal article is reasonably suspected to contain goods whose import is prohibited under the Customs Act?
+A. It is delivered normally but a notice is sent to Customs
+B. It is returned to the sender immediately with a warning
+C. It is handed over to the Customs authorities for necessary action
+D. It is destroyed by the Head Postmaster within twenty-four hours
+Answer: C
+Explanation: Under the general principles codified in postal rules governing interception (and aligned with the PO Act 2023), articles suspected to contain customs-prohibited goods are handed over to Customs authorities.
+
+Q84. In the Book of BO Rules, what is a 'BO Slip'?
+A. A slip given to the public as a receipt for registered letters
+B. A document used to record the daily cash transactions of the BO
+C. A communication sent from the Account Office to the Branch Office
+D. A slip pasted on damaged parcels received at the BO
+Answer: C
+Explanation: Rule 16 of the BO Rules explains that a BO Slip is a document prepared by the Account Office and sent to the Branch Office, detailing the cash, stamps, and articles remitted to the BO.
+
+Q85. According to Postal Manual Volume III, which authority maintains the Service Book of a non-gazetted Postal Assistant?
+A. The Head of the Postal Circle
+B. The Head of the Office where the official is working
+C. The Director of Postal Accounts
+D. The Postal Directorate in New Delhi
+Answer: B
+Explanation: Under the rules in Vol III regarding Service records, the Service Book of a non-gazetted official must be maintained and kept in the custody of the Head of the Office.
+
+Q86. Under Postal Manual Volume IV, what is the maximum period of extra-ordinary leave (without medical certificate) that can be granted to a temporary government servant?
+A. One month
+B. Three months
+C. Six months
+D. Twelve months
+Answer: B
+Explanation: Under CCS (Leave) Rules applicable via Vol IV, extraordinary leave (without pay and allowances) can be granted to a temporary servant up to a maximum of 3 months without a medical certificate.
+
+Q87. As per Postal Manual Volume V, what is 'Poste Restante'?
+A. An expedited delivery service for high-value parcels
+B. An arrangement where articles are kept at the post office till called for
+C. A legal notice sent via registered post with acknowledgment due
+D. A specific class of international insured mail
+Answer: B
+Explanation: Rule 65 of PO Guide Part I and Vol V defines "Poste Restante" as an arrangement where postal articles addressed to strangers or travelers are retained at the post office for delivery upon application.
+
+Q88. In Postal Manual Volume VI, Part-I, what is the procedure for delivering an insured article of value Rs. 1000?
+A. It is delivered at the window of the Post Office only
+B. It is delivered by the postman at the addressee's residence
+C. It is handed over to the village headman for delivery
+D. It must be delivered only in the presence of a postal inspector
+Answer: A
+Explanation: Under Vol VI rules, insured articles exceeding Rs. 500 in value are not sent out with the postman; an intimation is sent, and delivery is made at the post office window.
+
+Q89. According to Postal Manual Volume VII, a 'Transit Bag' must be closed and sealed by:
+A. The Head Sorter or Mail Guard of the section
+B. The senior-most postman of the delivery office
+C. The Sub-Postmaster of the transit office only
+D. The Inspector of RMS exclusively
+Answer: A
+Explanation: Rule 63 of Vol VII states that a Transit Bag, which encloses several bags to a single destination, must be securely closed, labeled, and sealed by the Head Sorter or Mail Guard in charge.
+
+Q90. Consider the following regarding the Atal Pension Yojana (APY) offered at Post Offices:
+
+1. The minimum entry age is 18 years.
+2. The maximum entry age is 40 years.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: C
+Explanation: Under the APY scheme rules, any citizen of India can join the scheme provided they are between 18 and 40 years of age, making both statements factually correct.
+
+Q91. Under Post Office Guide Part-I, what happens if an inland registered article is refused by the addressee?
+A. It is kept at the delivery office for seven days
+B. It is immediately returned to the sender
+C. It is redirected to the Returned Letter Office
+D. It is opened and its contents are auctioned
+Answer: B
+Explanation: Clause 61 of PO Guide Part I stipulates that if the addressee outrightly refuses to accept a registered article, it is returned immediately to the sender without being detained.
+
+Q92. According to Post Office Guide Part-II, what is the maximum amount for which a foreign money order can be sent under normal bilateral agreements?
+A. Equivalent of USD 100
+B. Equivalent of USD 500
+C. It depends strictly on the bilateral agreement with the specific country
+D. Foreign money orders are completely abolished
+Answer: C
+Explanation: The limits for outward foreign money orders are not uniform and are governed entirely by the specific bilateral agreements and RBI exchange control regulations in force for that specific country.
+
+Q93. Under the Directorate Guidelines on Consolidation of Products, which two legacy services were primarily merged or redefined to streamline the parcel network?
+A. Book Packet and Registered Newspaper
+B. Business Parcel and Express Parcel
+C. Ordinary Parcel and Unregistered Letter
+D. Speed Post and Value Payable Post
+Answer: B
+Explanation: To optimize the network under PNOP and consolidation guidelines, Express Parcel and Business Parcel services were restructured, aligning them with the primary parcel network to reduce redundant handling.
+
+Q94. In the POSB Manual Volume II, what is the primary role of the 'Cheque Truncation System (CTS)' in Post Offices?
+A. To physically transport local cheques to the clearing house
+B. To process outward and inward clearing of cheques electronically using images
+C. To stop the payment of stolen post office identity cards
+D. To issue fresh cheque books to dormant accounts
+Answer: B
+Explanation: The CTS (Cheque Truncation System) is implemented in POSB to replace the physical movement of cheques with electronic image-based clearing, significantly reducing clearing time.
+
+Q95. Under IPPB operations, a 'Digital Savings Account' opened via the mobile app has a validity of how many months if full KYC is not completed?
+A. Three months
+B. Six months
+C. Twelve months
+D. Twenty-four months
+Answer: C
+Explanation: As per RBI norms governing digital accounts, an IPPB Digital Savings Account opened with OTP-based e-KYC is valid for 12 months, within which biometric full KYC must be completed.
+
+Q96. According to the Preservation and Disposal of Postal Records schedule, how long must the 'Order Book' of a Post Office be preserved?
+A. One year from the date of the last entry
+B. Three years from the date of the last entry
+C. Five years from the date of the last entry
+D. It is a permanent record
+Answer: B
+Explanation: Under the general preservation schedule (Appendix to Vol III/VI), the Order Book of a post office must be preserved for three years after the last entry is made in it.
+
+Q97. Under the CCS (Temporary Service) Rules, 1965, if a temporary employee is terminated under Rule 5, what compensation are they entitled to?
+A. Pay and allowances for the notice period if not given in advance
+B. A lump sum gratuity equal to six months' pay
+C. Immediate grant of standard retiring pension
+D. No compensation or pay is admissible under any circumstance
+Answer: A
+Explanation: Rule 5(1)(b) states that if termination is made without the requisite one-month notice, the employee is entitled to claim pay and allowances for the period by which the notice falls short.
+
+Q98. In the GDS (Conduct and Engagement) Rules, 2020, what is the minimum educational qualification required for engagement as a BPM (Branch Postmaster)?
+A. Primary school pass (5th standard)
+B. Middle school pass (8th standard)
+C. Secondary school pass (10th standard)
+D. Senior secondary pass (12th standard)
+Answer: C
+Explanation: The minimum educational qualification required for all categories of Gramin Dak Sevaks (including BPM) is Secondary School Examination pass certificate of 10th standard with passing marks in Mathematics and English.
+
+Q99. Under the PMLA, 2002, what is the maximum period of imprisonment for the offence of money laundering (not involving narcotics)?
+A. Up to three years rigorous imprisonment
+B. Up to five years rigorous imprisonment
+C. Up to seven years rigorous imprisonment
+D. Up to ten years rigorous imprisonment
+Answer: C
+Explanation: Section 4 of the PMLA prescribes rigorous imprisonment for a term which shall not be less than three years but may extend to seven years, and fine, for standard money laundering offences.
+
+Q100. According to Section 2(47) of the Consumer Protection Act, 2019, which of the following is considered an 'Unfair Trade Practice'?
+A. Offering a discount on the maximum retail price of a product
+B. Falsely representing that goods are of a particular standard or quality
+C. Refusing to sell goods below the cost of manufacturing
+D. Expanding the warranty period for an additional fee
+Answer: B
+Explanation: Section 2(47) of the CPA, 2019 defines "unfair trade practice" comprehensively, explicitly including the practice of making any statement which falsely represents that goods are of a particular standard, quality, or grade.
+
+Q101. Under the IT Act, 2000, digital signatures are authenticated using which specific cryptographic method?
+A. Symmetric Key Cryptography
+B. Asymmetric Crypto System and Hash Function
+C. Quantum Key Distribution System
+D. Simple Block Cipher Substitution
+Answer: B
+Explanation: Section 3(2) of the IT Act, 2000 states that the authentication of electronic records shall be effected by the use of an asymmetric crypto system and hash function to generate a digital signature.
+
+Q102. In the Post Office Act, 2023, Section 10 empowers the Post Office to deliver postal items to customs authorities. This applies to items that:
+A. Are suspected to contain duty-evaded or prohibited goods
+B. Weigh more than five kilograms regardless of content
+C. Are dispatched exclusively via unregistered surface mail
+D. Are addressed to foreign embassies within Indian territory
+Answer: A
+Explanation: Section 10 aligns with customs regulations, mandating that if an item is suspected of containing goods liable to duty or prohibited from import/export, the Post Office shall hand it over to Customs.
+
+Q103. Under the National Savings (Monthly Income Account) Scheme, 2019, who can open an account on behalf of a minor of unsound mind?
+A. The minor themselves if they have a medical certificate
+B. A guardian appointed by the local court exclusively
+C. A guardian acting on behalf of the minor
+D. The Postmaster of the local Head Post Office
+Answer: C
+Explanation: Paragraph 3(1)(b) of the MIS Scheme, 2019 permits a guardian to open the account on behalf of a minor or a person of unsound mind.
+
+Q104. In the Kisan Vikas Patra Scheme, 2019, if a certificate is lost or destroyed, an application for the issue of a duplicate certificate must be accompanied by:
+A. An indemnity bond and a copy of the FIR
+B. Only a simple written request from the holder
+C. A medical certificate from a registered practitioner
+D. A notarized affidavit from two independent witnesses
+Answer: A
+Explanation: Paragraph 13 of the KVP Scheme, 2019 stipulates that if a certificate is lost/destroyed, a duplicate can be issued upon application accompanied by an indemnity bond and, in cases of theft, a police FIR.
+
+Q105. Under the Post Office Life Insurance Rules, 2011, what is the grace period allowed for payment of monthly premium without incurring default?
+A. Until the 15th day of the current month
+B. Until the last day of the current month
+C. Until the 10th day of the succeeding month
+D. Until the last day of the succeeding month
+Answer: B
+Explanation: For PLI and RPLI, premiums are due on the first day of the month, but a grace period is allowed up to the last working day of the month for which the premium is due.
+
+Q106. According to the Book of BO Rules, which form is used by the BPM to prepare the daily account of the Branch Post Office?
+A. ACG-22 (Receipt Book)
+B. Pa-17 (Daily Account Form)
+C. MS-85 (Mail List Form)
+D. SS-11 (Savings Bank Ledger)
+Answer: B
+Explanation: The BO Daily Account (Pa-17 or its CSI equivalent) is the standard prescribed form used by the Branch Postmaster to compile the daily receipts and payments and report them to the Account Office.
+
+Q107. As per Postal Manual Volume II, who is the competent authority to grant an advance for the purchase of a motor car to a Postal employee?
+A. The Divisional Head (SSPO/SPO)
+B. The Head of the Circle (CPMG)
+C. The Postmaster of the Head Office
+D. The Postal Directorate exclusively
+Answer: B
+Explanation: Under the financial powers delegated in Vol II and general CCS rules, advances for motor cars are sanctioned by the Head of the Department, which at the Circle level is the CPMG.
+
+Q108. Under Postal Manual Volume IV, what is the normal age of superannuation for a regular Group C Postal employee?
+A. Fifty-eight years
+B. Sixty years
+C. Sixty-two years
+D. Sixty-five years
+Answer: B
+Explanation: Following the adoption of the 5th Pay Commission recommendations, the age of retirement on superannuation for Central Government employees (including Group C postal staff) is 60 years.
+
+Q109. According to Postal Manual Volume VIII, a 'Beat' of a postman refers to:
+A. The number of hours worked in a single shift
+B. The specific geographic area assigned for delivery
+C. The bag used to carry heavy registered parcels
+D. The sorting table used in a computerized mail office
+Answer: B
+Explanation: Rule 115 of Vol VIII defines a 'Beat' as the specific geographical area or portion of the delivery town/village allotted to a particular postman for the delivery of postal articles.
+
+Q110. In Postal Manual Volume VI, Part-II, what constitutes a 'V.P. Article'?
+A. Very Personal Article requiring special handling
+B. Value Payable Article where cost is collected on delivery
+C. Verified Postal Article checked by customs officials
+D. Voluminous Parcel Article exceeding twenty kilograms
+Answer: B
+Explanation: A V.P. (Value Payable) article is one where the Post Office undertakes to collect the specified amount (value) from the addressee upon delivery and remit it to the sender.
+
+Q111. Under the POSB (CBS) Manual, what is the procedure if a depositor loses their savings account passbook?
+A. The account is immediately closed and a new one must be opened
+B. A duplicate passbook is issued free of charge on oral request
+C. A duplicate passbook is issued upon written application and payment of prescribed fee
+D. The post office holds the account balance until the original is found
+Answer: C
+Explanation: Rule 44 of POSB Manual Vol I (and CBS Manual) allows for the issuance of a duplicate passbook if the original is lost, upon the depositor submitting an application and paying the prescribed fee.
+
+Q112. According to the GDS (Conduct and Engagement) Rules, 2020, how much Total Time Related Continuity Allowance (TRCA) is paid to a GDS BPM for 4 hours of duty?
+A. Level 1 TRCA scale
+B. Level 2 TRCA scale
+C. Level 3 TRCA scale
+D. Level 4 TRCA scale
+Answer: A
+Explanation: Under the revised TRCA structure for GDS, a minimum 4-hour workload corresponds to Level 1, while a 5-hour workload corresponds to Level 2.
+
+Q113. Consider the following regarding the CCS (CCA) Rules, 1965:
+
+1. Censure is a minor penalty.
+2. Recovery of pecuniary loss is a major penalty.
+Which of the statements given above is/are correct?
+A. 1 only
+B. 2 only
+C. Both 1 and 2
+D. Neither 1 nor 2
+Answer: A
+Explanation: Rule 11 of the CCS (CCA) Rules lists both "Censure" and "Recovery from pay of the whole or part of any pecuniary loss" as Minor Penalties. Thus, statement 2 is incorrect.
+
+Q114. Under the Government Savings Promotion Act, 1873, if an account holder has not operated their account for a continuous period of three years, the account is termed as:
+A. A Closed Account
+B. A Silent Account
+C. A Forfeited Account
+D. A Suspended Account
+Answer: B
+Explanation: As per standard post office savings rules derived under the Act, an account with no customer-induced transaction for three continuous financial years is classified as a 'Silent Account'.
+
+Q115. In the Consumer Protection Act, 2019, 'E-commerce' is explicitly defined and regulated. Who is liable for a defective product sold on an e-commerce platform?
+A. Only the delivery partner who transported the product
+B. The product seller, and under specific conditions, the platform
+C. The telecommunications provider facilitating the internet access
+D. The payment gateway used to process the digital transaction
+Answer: B
+Explanation: The CPA 2019 and E-commerce Rules hold the product seller primarily liable for product liability, while marketplace platforms also have specific duties and can be liable for failing to address grievances.
+
+Q116. Under the IT Act, 2000, the Indian Computer Emergency Response Team (CERT-In) serves as the national agency for:
+A. Selling digital signatures to commercial banks
+B. Regulating internet service providers' pricing
+C. Responding to computer security incidents as they occur
+D. Laying down fiber optic cables across the country
+Answer: C
+Explanation: Section 70B of the IT Act, 2000 establishes CERT-In as the national nodal agency for incident response, vulnerability assessment, and emergency measures related to cybersecurity.
+
+Q117. According to Post Office Guide Part-I, what is the compensation limit for the loss of a Speed Post article?
+A. Double the postage or Rs. 1000, whichever is less
+B. Double the postage or Rs. 1000, whichever is more
+C. Full declared value of the article up to Rs. 50,000
+D. Strictly restricted to the refund of the postage paid
+Answer: A
+Explanation: As per Post Office rules and guidelines for Speed Post, the compensation payable for loss, delay, or damage to a domestic Speed Post article is double the Speed Post charges or Rs. 1000, whichever is less.
+
+Q118. In Postal Manual Volume VII, a 'Sorting Mail Office' is primarily distinct from a 'Transit Mail Office' because:
+A. It only handles international parcels
+B. It physically opens bags and sorts the enclosed contents
+C. It merely forwards closed bags without opening them
+D. It acts exclusively as a delivery office for the public
+Answer: B
+Explanation: Rule 2 of Vol VII defines a Sorting Mail Office as an office charged with opening sorting bags and sorting their contents, whereas a Transit Mail Office only deals with closed bags.
+
+Q119. Under the Public Provident Fund Scheme, 2019, what is the penal interest rate applied if a subscriber takes a loan against their PPF balance?
+A. 1 percent per annum above the prevailing PPF interest rate
+B. 2 percent per annum above the prevailing PPF interest rate
+C. 5 percent per annum flat rate regardless of PPF rate
+D. No interest is charged on loans taken against PPF
+Answer: A
+Explanation: Paragraph 10(2) of the PPF Scheme, 2019 specifies that interest on a loan shall be charged at the rate of 1% per annum above the prevailing PPF interest rate, provided it is repaid within 36 months.
+
+Q120. According to the POSB (CBS) Manual, what is the minimum balance required to maintain a standard Post Office Savings Account without cheque facility?
+A. Rupees one hundred only
+B. Rupees two hundred and fifty only
+C. Rupees five hundred only
+D. Rupees one thousand only
+Answer: C
+Explanation: Under the POSB Account Scheme rules and CBS manual updates, the minimum balance required to be maintained in a standard PO Savings Account is Rs. 500.
+
+Q121. Under the CCS (Conduct) Rules, 1964, can a Government servant accept a part-time job outside office hours?
+A. Yes, without any permission if it doesn't clash with office hours
+B. Yes, but only with the prior sanction of the Government
+C. No, part-time jobs are absolutely barred under all circumstances
+D. Yes, provided the remuneration does not exceed basic pay
+Answer: B
+Explanation: Rule 15 of the CCS (Conduct) Rules prohibits a Government servant from undertaking any other employment, though the Government may grant prior sanction in exceptional cases.
+
+Q122. In the GDS (Conduct and Engagement) Rules, 2020, what is the maximum number of days of paid leave (paid at TRCA rates) a GDS can earn in a year?
+A. Ten days
+B. Twenty days
+C. Thirty days
+D. Forty-five days
+Answer: B
+Explanation: Rule 10 of the GDS Rules states that a Sevak shall be entitled to 20 days of paid leave in a year (credited as 10 days every half-year) without accumulation beyond 180 days.
+
+Q123. Under the National Savings Recurring Deposit Scheme, 2019, if an advance deposit of 6 to 11 installments is made, what rebate is provided to the depositor?
+A. Rupees ten per hundred rupees of denomination
+B. Rupees twenty per hundred rupees of denomination
+C. Rupees forty per hundred rupees of denomination
+D. No rebate is provided for advance deposits anymore
+Answer: A
+Explanation: Paragraph 6 of the RD Scheme, 2019 specifies a rebate of Rs. 10 for every 6 advance installments paid, and Rs. 40 for every 12 advance installments, per Rs. 100 denomination.
+
+Q124. According to Post Office Guide Part-II, 'Small Packets' sent by foreign post must not contain:
+A. Printed books and non-commercial documents
+B. Any personal correspondence or letters
+C. Small samples of merchandise or goods
+D. Electronic storage devices like USB drives
+Answer: B
+Explanation: Under UPU rules in PO Guide Part II, the "Small Packets" service is intended for small merchandise; it is strictly prohibited to include personal correspondence (letters) inside them.
+
+Q125. Under the Prevention of Money Laundering Act, 2002, which authority is responsible for receiving Cash Transaction Reports (CTRs) and Suspicious Transaction Reports (STRs) from Post Offices?
+A. The Central Bureau of Investigation (CBI)
+B. The Financial Intelligence Unit - India (FIU-IND)
+C. The Reserve Bank of India (RBI)
+D. The Postal Directorate Headquarters
+Answer: B
+Explanation: Under the PMLA Rules, all reporting entities, including the Department of Posts, must submit CTRs and STRs directly to the Director, Financial Intelligence Unit - India (FIU-IND).
