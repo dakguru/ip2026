@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Star, MessageSquare, ThumbsUp, Loader2, Shield } from "lucide-react";
+import { FULL_LENGTH_MOCK_SCHEDULE } from "@/data/fullLengthMockSchedule";
 
 // Test data mapping
 const SERIES_II_TESTS = [
@@ -32,10 +33,16 @@ const PSGB_TESTS = [
     { id: 'psgb-mock-2026-07-19', title: "PS Gr B - Weekly Mock Test 16", date: "Jul 18-19, 2026" }
 ];
 
+const FL_TESTS = FULL_LENGTH_MOCK_SCHEDULE.map(test => ({
+    id: test.id,
+    title: test.title,
+    date: `${test.startDate} to ${test.endDate}`
+}));
+
 export default function MockFeedbackDashboard() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    const [activeTab, setActiveTab] = useState<'s2' | 'psgb'>('s2');
+    const [activeTab, setActiveTab] = useState<'fl' | 's2' | 'psgb'>('fl');
     const [statsMap, setStatsMap] = useState<Record<string, any>>({});
     
     useEffect(() => {
@@ -59,7 +66,7 @@ export default function MockFeedbackDashboard() {
 
     const fetchStats = async () => {
         try {
-            const allTests = [...SERIES_II_TESTS, ...PSGB_TESTS];
+            const allTests = [...FL_TESTS, ...SERIES_II_TESTS, ...PSGB_TESTS];
             const promises = allTests.map(async (test) => {
                 const res = await fetch(`/api/mock-test/feedback?testId=${test.id}`);
                 const data = await res.json();
@@ -96,7 +103,7 @@ export default function MockFeedbackDashboard() {
         );
     }
 
-    const currentTests = activeTab === 's2' ? SERIES_II_TESTS : PSGB_TESTS;
+    const currentTests = activeTab === 'fl' ? FL_TESTS : activeTab === 's2' ? SERIES_II_TESTS : PSGB_TESTS;
 
     return (
         <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 p-6 md:p-12 transition-colors">
@@ -116,18 +123,24 @@ export default function MockFeedbackDashboard() {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex bg-zinc-200/50 dark:bg-zinc-800/50 p-1 rounded-xl w-max mb-8 border border-zinc-200 dark:border-zinc-800">
+                <div className="flex flex-wrap gap-2 bg-zinc-200/50 dark:bg-zinc-800/50 p-1 rounded-xl w-max mb-8 border border-zinc-200 dark:border-zinc-800">
+                    <button 
+                        onClick={() => setActiveTab('fl')}
+                        className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 'fl' ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 shadow-sm' : 'text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300'}`}
+                    >
+                        LDCE IP Full Length
+                    </button>
                     <button 
                         onClick={() => setActiveTab('s2')}
                         className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 's2' ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 shadow-sm' : 'text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300'}`}
                     >
-                        LDCE IP Series II
+                        LDCE IP Weekly (Archive)
                     </button>
                     <button 
                         onClick={() => setActiveTab('psgb')}
                         className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 'psgb' ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 shadow-sm' : 'text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300'}`}
                     >
-                        PS Group B
+                        PS Group B (Archive)
                     </button>
                 </div>
 
