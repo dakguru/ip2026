@@ -23,7 +23,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
             "It shall be recovered through local municipal taxation"
         ],
         "correctAnswer": 1,
-        "explanation": "As per Section 15 of the Post Office Act, 2023, any amount payable by a user for postal services that remains unpaid is legally recoverable as an arrear of land revenue, ensuring expedited recovery."
+        "explanation": "As per Section 7 of the Post Office Act, 2023, any amount payable by a user for postal services that remains unpaid is legally recoverable as an arrear of land revenue, ensuring expedited recovery."
     },
     {
         "id": "fl-p1-02-3",
@@ -99,7 +99,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-9",
-        "text": "What is the maximum permissible balance that can be maintained in a Basic Savings Bank Account under the Post Office Savings Account Scheme, 2019?",
+        "text": "What is the maximum permissible balance that can be maintained in a Post Office Savings Account under the Post Office Savings Account Scheme, 2019?",
         "options": [
             "Maximum limit of precisely rupees fifty thousand only",
             "Maximum limit of precisely rupees one lakh only",
@@ -107,7 +107,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
             "There is no maximum balance limit strictly prescribed"
         ],
         "correctAnswer": 3,
-        "explanation": "As per Para 3(1)(c) of the POSA Scheme 2019, while a Basic Savings Bank Account is meant for registered welfare beneficiaries, there is no maximum balance limit prescribed, mirroring the standard savings account rules regarding maximum balances."
+        "explanation": "Under the POSA Scheme, 2019, a minimum balance of Rs. 500 must be maintained, but there is no maximum balance limit prescribed for a Post Office Savings Account."
     },
     {
         "id": "fl-p1-02-10",
@@ -783,15 +783,15 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-66",
-        "text": "Under the IT 2.0 framework, what does \"CSI\" stand for in the context of India Post's modernization?",
+        "text": "Under IT 2.0, the Advanced Postal Technology (APT) platform of India Post is hosted on which cloud infrastructure?",
         "options": [
-            "Centralized Security Infrastructure",
-            "Core System Integrator",
-            "Cyber Security Initiative",
-            "Customer Service Interface"
+            "Amazon Web Services (AWS)",
+            "The Government of India's MeghRaj 2.0 cloud",
+            "Microsoft Azure Government",
+            "A private third-party data centre"
         ],
         "correctAnswer": 1,
-        "explanation": "CSI stands for Core System Integrator. It is the largest component of the India Post IT modernization project, integrating various postal operations (mail, finance, HR, logistics) into a unified enterprise SAP-based architecture."
+        "explanation": "APT - the in-house Postal and Logistics Solution developed by CEPT under IT 2.0 - is hosted on the Government of India's MeghRaj 2.0 cloud with BSNL connectivity, and replaced the legacy SAP-based Core System Integrator (CSI). Its rollout across all ~1.65 lakh offices culminated on 04.08.2025."
     },
     {
         "id": "fl-p1-02-67",
@@ -863,7 +863,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
             "The Postal Services Board"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 11 of the Post Office Act, 2023 strictly grants the Central Government the authority to delegate its powers (by notification) to any subordinate officer or authority specified in that notification."
+        "explanation": "Section 11 of the Post Office Act, 2023 empowers the Central Government, by notification, to delegate any of its powers under the Act (other than the power to make rules) to the Director General or any other specified officer or authority."
     },
     {
         "id": "fl-p1-02-73",
@@ -1287,15 +1287,15 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-108",
-        "text": "Under the APT Knowledge (IT 2.0) framework, the legacy RICT (Rural Information and Communication Technology) devices in Branch Post Offices are being replaced by which of the following?",
+        "text": "Under the Core Insurance Solution (PLI-CIS) of the Department of Posts, which software platform is used to administer Postal Life Insurance and Rural Postal Life Insurance policies?",
         "options": [
-            "Standardized Windows-based desktop computers with broadband",
-            "Advanced specialized biometric micro-ATMs designed by RBI",
-            "Android-based DARPAN smartphones with integrated mobile apps",
-            "Cloud-connected heavy duty ruggedized tablets without screens"
+            "Finacle",
+            "McCamish",
+            "Meghdoot",
+            "SAP-ERP"
         ],
-        "correctAnswer": 2,
-        "explanation": "Under the IT 2.0 modernization drive, the older, bulky RICT devices provided to Branch Post Offices under the DARPAN project are being replaced by modern, Android-based DARPAN smartphones loaded with integrated postal, banking, and insurance applications."
+        "correctAnswer": 1,
+        "explanation": "PLI and RPLI policies are administered on the McCamish platform under the Core Insurance Solution (PLI-CIS); the Post Office Savings Bank runs on Finacle (CBS), while mail, finance and logistics run on the Advanced Postal Technology (APT) platform under IT 2.0."
     },
     {
         "id": "fl-p1-02-109",
@@ -1499,6 +1499,6 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
             "The Post Office Life Insurance Fund Act, 1901"
         ],
         "correctAnswer": 2,
-        "explanation": "Section 17 of the Post Office Act, 2023 explicitly and entirely repeals the Indian Post Office Act, 1898, modernizing the legislative framework governing postal services in India and removing the archaic provisions of the colonial-era statute."
+        "explanation": "Section 16 of the Post Office Act, 2023 explicitly and entirely repeals the Indian Post Office Act, 1898, modernizing the legislative framework governing postal services in India and removing the archaic provisions of the colonial-era statute."
     }
 ];

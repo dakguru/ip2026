@@ -15,7 +15,7 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-2",
-        "text": "Consider the following statements regarding the liability of the Post Office under Section 4 of the Post Office Act, 2023:\n1. The Post Office is universally exempt from all liability regarding the wrong delivery of any postal article.\n2. Liability may be prescribed by the Central Government through specific rules regarding certain services.\nWhich of the statements given above is/are correct?",
+        "text": "Consider the following statements regarding the liability of the Post Office under Section 10 of the Post Office Act, 2023:\n1. The Post Office is universally exempt from all liability regarding the wrong delivery of any postal article.\n2. Liability may be prescribed by the Central Government through specific rules regarding certain services.\nWhich of the statements given above is/are correct?",
         "options": [
             "1 only",
             "2 only",
@@ -23,7 +23,7 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
             "Neither 1 nor 2"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 4 states the Post Office incurs no liability for loss, misdelivery, or delay except as may be prescribed by rules made by the Central Government, eliminating universal and absolute exemption across all possible future services."
+        "explanation": "Section 10 states the Post Office incurs no liability for loss, misdelivery, or delay except as may be prescribed by rules made by the Central Government, eliminating universal and absolute exemption across all possible future services."
     },
     {
         "id": "fl-p1-04-3",
@@ -159,15 +159,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-14",
-        "text": "In the Post Office Savings Account Scheme, 2019, what is the maximum balance allowed in a Basic Savings Account?",
+        "text": "In the Post Office Savings Account Scheme, 2019, what is the maximum balance allowed in a Post Office Savings Account?",
         "options": [
-            "There is no maximum limit applicable to a Basic Savings Account opened by an adult individual.",
+            "There is no maximum limit applicable to a Post Office Savings Account opened by an adult individual.",
             "The maximum balance allowed in a Basic Savings Account is restricted to rupees fifty thousand only.",
             "The maximum balance allowed in a Basic Savings Account is restricted to rupees one lakh only.",
             "The maximum balance allowed is rupees two lakhs, subject to standard KYC compliance and verification procedures."
         ],
         "correctAnswer": 0,
-        "explanation": "Under the Post Office Savings Account Scheme, 2019, there is no maximum balance limit for a regular Basic Savings Account, though there are limits for the zero-balance Jan Dhan/Basic Savings Bank Deposit Accounts in banking norms."
+        "explanation": "Under the Post Office Savings Account Scheme, 2019, a minimum balance of Rs. 500 must be maintained, but no maximum balance limit is prescribed for a Post Office Savings Account."
     },
     {
         "id": "fl-p1-04-15",
@@ -183,15 +183,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-16",
-        "text": "Under the National Savings Time Deposit Scheme, 2019, what happens if a 5-year Time Deposit is prematurely closed after 3 years?",
+        "text": "Under the National Savings Time Deposit Scheme, 2019, what happens if a 3-year Time Deposit is prematurely closed after completing 2 years from the date of deposit?",
         "options": [
-            "Interest will be paid at the rate applicable to a 3-year Time Deposit without any penal deduction.",
-            "Interest will be calculated at the PO Savings Account rate for the completed period of three years.",
-            "Interest is calculated at the rate applicable to a 3-year TD, less exactly two percent as a penalty.",
-            "The depositor receives the principal amount only, and all accumulated interest is entirely forfeited by the department."
+            "Interest will be paid at the rate applicable to a 2-year Time Deposit without any penal deduction.",
+            "Interest will be paid at the Post Office Savings Account rate for the entire completed period.",
+            "Interest is calculated at the rate applicable to a completed 2-year Time Deposit, less two percentage points.",
+            "The depositor receives the principal amount only, and all accumulated interest is entirely forfeited."
         ],
-        "correctAnswer": 1,
-        "explanation": "If a 5-year Time Deposit is closed prematurely after completing 3 years, the interest payable is calculated at the rate applicable to the Post Office Savings Account for the completed period, not the TD rate."
+        "correctAnswer": 2,
+        "explanation": "Under Rule 8(c) of the TD Scheme, 2019, where a 2/3/5-year deposit is withdrawn after the expiry of one year, interest for the completed years is calculated at the rate applicable to the corresponding completed-year TD, less two percentage points (the POSA rate applies for any part-period). A 5-year TD opened on/after 09.11.2023 cannot be closed before 4 years, so the rule is illustrated here with a 3-year TD."
     },
     {
         "id": "fl-p1-04-17",
@@ -519,15 +519,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-44",
-        "text": "Under the IT 2.0 (APT Knowledge) framework, what is the primary function of the 'CSI' (Core System Integrator) implemented in India Post?",
+        "text": "Under the IT 2.0 (APT Knowledge) framework, what is the Advanced Postal Technology (APT) platform implemented by India Post?",
         "options": [
-            "It is a standalone software used solely for tracking the GPS location of all mail motor service vehicles in real-time.",
-            "It integrates multiple distinct postal operations like HR, finance, mail operations, and logistics into a single unified SAP platform.",
-            "It is an independent hardware module installed in letter boxes to automatically weigh and sort ordinary mail.",
-            "It refers to the physical networking cables connecting the rural branch post offices directly to the central servers in Delhi."
+            "A standalone software used solely for tracking the GPS location of mail motor service vehicles in real-time.",
+            "An in-house, cloud-native platform that integrates mail, parcel, finance and logistics operations end-to-end on a single interface.",
+            "An independent hardware module installed in letter boxes to automatically weigh and sort ordinary mail.",
+            "The physical networking cables connecting rural branch post offices to the central servers."
         ],
         "correctAnswer": 1,
-        "explanation": "The Core System Integrator (CSI) under the IT modernization project utilizes SAP to bring disparate postal operations (HR, Finance, F&A, Mail Operations, Logistics) into one centralized, unified digital platform for real-time visibility."
+        "explanation": "Advanced Postal Technology (APT), developed in-house by CEPT under IT 2.0, is a microservices-based, cloud-native platform (on the MeghRaj 2.0 cloud) that unifies mail and parcel operations, finance and logistics on a single interface with QR/UPI payments and OTP-based delivery. It replaced the earlier SAP-based Core System Integrator (CSI); rollout completed 04.08.2025."
     },
     {
         "id": "fl-p1-04-45",
@@ -623,7 +623,7 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
             "The government is protected only if the loss occurred due to a natural calamity or an act of war, termed as force majeure."
         ],
         "correctAnswer": 1,
-        "explanation": "Section 4 of the Post Office Act, 2023, maintains the statutory protection that the Central Government and its officers incur no liability for loss, misdelivery, delay, or damage, except as explicitly prescribed by rules."
+        "explanation": "Section 10 of the Post Office Act, 2023, maintains the statutory protection that the Central Government and its officers incur no liability for loss, misdelivery, delay, or damage, except as explicitly prescribed by rules."
     },
     {
         "id": "fl-p1-04-53",
@@ -978,12 +978,12 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
         "text": "According to the Post Office Act, 2023, what is the penalty for an officer of the Post Office who fraudulently misappropriates any postal article entrusted to them?",
         "options": [
             "The officer is liable only for departmental dismissal and the recovery of the exact monetary value of the article.",
-            "The officer can be punished with imprisonment for a term up to three years, or a fine, or both, under standard IPC provisions as the specific Act penalty is removed.",
+            "The officer is liable to prosecution under the general criminal law (Bharatiya Nyaya Sanhita / Indian Penal Code) for criminal breach of trust by a public servant, in addition to departmental action.",
             "The officer is subject strictly to a minor penalty under the CCS (CCA) Rules, provided the item's value is below one thousand rupees.",
             "The officer must perform three months of unpaid community service in a rural branch post office as retribution."
         ],
         "correctAnswer": 1,
-        "explanation": "The Post Office Act, 2023, decriminilized many postal-specific offences that were in the 1898 Act. Misappropriation/theft by a postal officer is no longer heavily specifically penalized in this Act; it falls under the Bharatiya Nyaya Sanhita (BNS) / Indian Penal Code (IPC) for criminal breach of trust by a public servant. *Note: As the 2023 act removes the specific sections (like Sec 52 of the old act), it defaults to general criminal law.*"
+        "explanation": "The Post Office Act, 2023 removed the postal-specific offences of the 1898 Act. Misappropriation or theft of a postal article by an officer is therefore dealt with under the general criminal law - criminal breach of trust by a public servant (BNS Section 316(5) / IPC Section 409), which carries a much higher punishment (up to life imprisonment or ten years) - besides departmental major-penalty proceedings."
     },
     {
         "id": "fl-p1-04-83",

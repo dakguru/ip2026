@@ -251,10 +251,22 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
             "There is no such specific limit prescribed for Time Deposits"
         ],
         "correctAnswer": 1,
-        "explanation": "The standard preservation period for the Register of Undeliverable Passbooks (and most routine SB registers not permanently required) is five years, calculated from the close of the financial year in which the last entry was made."
+        "explanation": "According to POSB guidelines and SB Orders, Branch Post Offices can accept cash up to Rs. 50,000 per day per account for opening new accounts or subsequent deposits. Transactions exceeding this must be executed via cheque or account transfer."
     },
     {
         "id": "fl-p1-03-22",
+        "text": "As per the guidelines on the Preservation and Disposal of Postal Records, what is the preservation period for the \"Register of Undeliverable Passbooks\" in a Head Post Office?",
+        "options": [
+            "Three years from the end of the financial year of the last entry",
+            "Five years from the end of the financial year of the last entry",
+            "Ten years from the end of the financial year of the last entry",
+            "To be preserved permanently as a vital historical financial record"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The standard preservation period for the Register of Undeliverable Passbooks (and most routine SB registers not permanently required) is five years, calculated from the close of the financial year in which the last entry was made."
+    },
+    {
+        "id": "fl-p1-03-23",
         "text": "Under Rule 14 of the CCS (CCA) Rules, 1965, which of the following is a mandatory requirement before imposing a major penalty on a government servant?",
         "options": [
             "Immediate suspension of the official pending the final outcome",
@@ -266,7 +278,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 14 of the CCS (CCA) Rules, 1965 strictly mandates that no order imposing any of the major penalties shall be made except after an inquiry held, as far as may be, in the manner provided in the rule, ensuring natural justice."
     },
     {
-        "id": "fl-p1-03-23",
+        "id": "fl-p1-03-24",
         "text": "According to the GDS (Conduct & Engagement) Rules, 2020, what is the maximum duration for which a Gramin Dak Sevak can be put off duty (suspension equivalent) without obtaining approval from the appellate authority?",
         "options": [
             "Not exceeding forty-five days under any disciplinary circumstances",
@@ -278,7 +290,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the GDS (Conduct & Engagement) Rules, 2020, a GDS cannot be kept 'put off duty' for more than 90 days. If the period is to exceed 90 days, the prior approval of the appellate authority is mandatory."
     },
     {
-        "id": "fl-p1-03-24",
+        "id": "fl-p1-03-25",
         "text": "In the context of India Post Payments Bank (IPPB), what is the maximum day-end balance permissible in an IPPB regular savings account?",
         "options": [
             "Rupees one lakh only at the end of any given operational day",
@@ -290,7 +302,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per RBI guidelines for Payments Banks, the maximum end-of-day balance limit for an individual customer in an India Post Payments Bank (IPPB) account is currently capped at Rs. 2 lakh. Any excess amount can be swept out to a linked POSB account."
     },
     {
-        "id": "fl-p1-03-25",
+        "id": "fl-p1-03-26",
         "text": "Under the Post Office Guide Part-I, which of the following articles is STRICTLY prohibited from being transmitted by inland post?",
         "options": [
             "Live bees securely packed in appropriately ventilated containers",
@@ -302,7 +314,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "PO Guide Part-I explicitly prohibits the transmission of sharp instruments not properly protected, explosive/inflammable substances, and living creatures (with specific exceptions like live bees if properly packed). Unprotected sharp objects pose a risk to postal staff."
     },
     {
-        "id": "fl-p1-03-26",
+        "id": "fl-p1-03-27",
         "text": "As per the Jansuraksha Schemes, what is the annual premium for the Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) following the recent revision?",
         "options": [
             "Rupees three hundred and thirty per annum per individual member",
@@ -314,7 +326,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The annual premium for the Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) was revised by the Government of India from Rs. 330 to Rs. 436, effective from June 1, 2022."
     },
     {
-        "id": "fl-p1-03-27",
+        "id": "fl-p1-03-28",
         "text": "Under the CCS (Conduct) Rules, 1964, a Group 'C' official is required to report to the Government any transaction concerning movable property if the value exceeds:",
         "options": [
             "Two months' basic pay of the respective government servant",
@@ -326,7 +338,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per Rule 18 of the CCS (Conduct) Rules, 1964, any transaction in movable property must be reported to the prescribed authority if its value exceeds two months' basic pay of the Government servant."
     },
     {
-        "id": "fl-p1-03-28",
+        "id": "fl-p1-03-29",
         "text": "According to Postal Manual Volume VII, what is the primary function of a \"Transit Mail Office\" (TMO)?",
         "options": [
             "To sort all incoming unregistered mail for the entire postal circle",
@@ -338,7 +350,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Postal Manual Volume VII defines a Transit Mail Office (TMO) as an office that deals primarily with closed bags received and dispatched. It does not open the bags or sort the individual articles contained within them."
     },
     {
-        "id": "fl-p1-03-29",
+        "id": "fl-p1-03-30",
         "text": "Consider the following regarding the Post Office Savings Account Scheme, 2019:\n1. A single account can be converted into a joint account.\n2. A joint account cannot be converted into a single account.\nWhich of the statements is/are correct?",
         "options": [
             "Statement 1 is absolutely correct and statement 2 is incorrect",
@@ -350,7 +362,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the Post Office Savings Account Scheme, 2019, the conversion of a single account to a joint account, or vice versa, is strictly not permitted. Therefore, both statements are incorrect."
     },
     {
-        "id": "fl-p1-03-30",
+        "id": "fl-p1-03-31",
         "text": "Under the National Savings Certificate (VIII Issue) Scheme, 2019, a certificate may be pledged as security to which of the following entities?",
         "options": [
             "Any private moneylender registered under state legislation",
@@ -362,7 +374,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "NSC Rules, 2019 permit the pledging of certificates as security to specific authorities, including the President/Governor, RBI/Scheduled Banks, and Housing Finance Companies approved by the National Housing Bank, but not to private moneylenders or foreign missions."
     },
     {
-        "id": "fl-p1-03-31",
+        "id": "fl-p1-03-32",
         "text": "In Core Banking Solutions (CBS) of the Post Office, what does the menu command 'HFINZ' primarily execute?",
         "options": [
             "It is used to freeze a savings account due to non-kyc compliance",
@@ -374,7 +386,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "In Finacle (the CBS software used by the Department of Posts), the menu 'HFINZ' is utilized by the user for calculating the closure amount and performing the final closure process of a POSB account."
     },
     {
-        "id": "fl-p1-03-32",
+        "id": "fl-p1-03-33",
         "text": "Under the GDS (Conduct & Engagement) Rules, 2020, which of the following authorities is competent to impose the penalty of removal from engagement on a GDS?",
         "options": [
             "The Sub Divisional Inspector of Posts under any circumstances",
@@ -386,7 +398,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per the GDS Rules, 2020, major penalties such as removal or dismissal from engagement can only be imposed by the designated Engaging Authority of the respective GDS, or by an authority higher in rank than the Engaging Authority."
     },
     {
-        "id": "fl-p1-03-33",
+        "id": "fl-p1-03-34",
         "text": "Regarding Digital Personal Identification Number (DIGIPIN), what is its primary conceptual purpose as proposed by the Department of Posts?",
         "options": [
             "To replace the traditional Aadhaar card for all central subsidies",
@@ -398,7 +410,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "DIGIPIN is a conceptual initiative by the Department of Posts to establish a National Addressing Grid. It aims to provide a unique, geo-coded, alphanumeric digital address (Digital PIN) for every location to standardize addressing and facilitate accurate delivery."
     },
     {
-        "id": "fl-p1-03-34",
+        "id": "fl-p1-03-35",
         "text": "As per the Book of BO Rules, how often should the Sub Postmaster of the Account Office physically verify the cash and stamps balance of a Branch Office?",
         "options": [
             "Once every quarter during the routine administrative inspection",
@@ -410,7 +422,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under standard BO rules, the physical verification of cash, stamps, and balances at a Branch Post Office is the responsibility of the Mail Overseer or the Inspector of Posts during their inspections, not the Sub Postmaster of the Account Office."
     },
     {
-        "id": "fl-p1-03-35",
+        "id": "fl-p1-03-36",
         "text": "According to the CCS (Temporary Service) Rules, 1965, how much notice period is required to terminate the services of a temporary Government servant?",
         "options": [
             "Forthwith, without any requirement of providing a prior notice",
@@ -422,7 +434,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 5 of the CCS (Temporary Service) Rules, 1965 states that the service of a temporary Government servant may be terminated at any time by a notice in writing given either by the Government servant to the appointing authority, or vice versa, for a period of one month."
     },
     {
-        "id": "fl-p1-03-36",
+        "id": "fl-p1-03-37",
         "text": "Under the Consumer Protection Act, 2019, what is the limitation period for filing a complaint from the date on which the cause of action arises?",
         "options": [
             "One year from the exact date on which the cause of action arises",
@@ -434,7 +446,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 69 of the Consumer Protection Act, 2019 strictly stipulates that the District, State, or National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen."
     },
     {
-        "id": "fl-p1-03-37",
+        "id": "fl-p1-03-38",
         "text": "In PLI-CIS (Postal Life Insurance - Core Insurance Solution), what is the grace period allowed for payment of premium without penalty?",
         "options": [
             "Upto the last working day of the calendar month of the due date",
@@ -446,7 +458,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to the Post Office Life Insurance Rules, 2011, and integrated into PLI-CIS, the premium for any month must be paid on or before the last working day of that respective calendar month without attracting any default fee."
     },
     {
-        "id": "fl-p1-03-38",
+        "id": "fl-p1-03-39",
         "text": "Under the Post Office Rules, 2024, what is the maximum weight limit prescribed for an Inland Letter Card?",
         "options": [
             "Three grams excluding any external attachments or enclosures",
@@ -458,7 +470,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per the Post Office Rules and traditional PO Guide metrics retained, the maximum weight of an Inland Letter Card is restricted to 5 grams. No enclosures are permitted within an Inland Letter Card."
     },
     {
-        "id": "fl-p1-03-39",
+        "id": "fl-p1-03-40",
         "text": "According to Postal Manual Volume VIII, which official is primarily responsible for the safe custody of keys of the registration and parcel sorting cases in a Mail Office?",
         "options": [
             "The Head Record Officer of the respective Railway Mail Service division",
@@ -470,7 +482,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Postal Manual Volume VIII specifies that the Head Sorting Assistant (HSA) of the set is personally responsible for the safe custody of the keys of the sorting cases, stamps, and seals supplied to the set during its working hours."
     },
     {
-        "id": "fl-p1-03-40",
+        "id": "fl-p1-03-41",
         "text": "As per the Information Technology Act, 2000, which authority grants licenses to issue electronic signature certificates?",
         "options": [
             "The Director General of the National Informatics Centre directly",
@@ -482,7 +494,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 17 of the IT Act, 2000 provides for the appointment of the Controller of Certifying Authorities (CCA). The CCA is the competent authority responsible for licensing and regulating the working of Certifying Authorities who issue electronic signature certificates."
     },
     {
-        "id": "fl-p1-03-41",
+        "id": "fl-p1-03-42",
         "text": "Under the National Savings Recurring Deposit Scheme, 2019, if a depositor defaults on advance deposits for four consecutive months, what is the status of the account?",
         "options": [
             "The account is permanently closed and the balance is forcibly refunded",
@@ -494,7 +506,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to RD Scheme rules, if there are four consecutive defaults in monthly deposits, the account is treated as \"discontinued.\" It can be revived within a period of two months from the fourth default by paying the defaulted installments with the prescribed default fee."
     },
     {
-        "id": "fl-p1-03-42",
+        "id": "fl-p1-03-43",
         "text": "Consider the following regarding the Prevention of Money Laundering Act, 2002:\n1. The burden of proof to demonstrate that proceeds are untainted lies on the accused.\n2. An offence of money laundering can be investigated without a predicate offence being registered.\nWhich is/are correct?",
         "options": [
             "Only statement 1 is an accurate representation of the legal provision",
@@ -506,7 +518,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 24 of the PMLA explicitly places the burden of proof on the accused to prove that proceeds of crime are untainted property. However, a predicate (scheduled) offence must exist for a money laundering investigation to be sustained, making statement 2 incorrect."
     },
     {
-        "id": "fl-p1-03-43",
+        "id": "fl-p1-03-44",
         "text": "As per the guidelines on Centralized Delivery of Postal Articles, what is the primary objective of implementing mechanized delivery nodes?",
         "options": [
             "To entirely replace human postmen with automated delivery drones",
@@ -518,7 +530,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Mechanized delivery nodes (using two-wheelers/three-wheelers) under the PNOP guidelines aim to efficiently deliver heavy/bulk parcels, reduce the physical burden on delivery staff, increase the coverage radius, and improve the overall delivery percentage of trackable articles."
     },
     {
-        "id": "fl-p1-03-44",
+        "id": "fl-p1-03-45",
         "text": "Under the CCS (Conduct) Rules, 1964, what is the maximum value of a gift a Group 'B' officer can accept on occasions like weddings without prior sanction?",
         "options": [
             "Rupees five thousand from relatives or personal friends exclusively",
@@ -530,7 +542,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per Rule 13 of the CCS (Conduct) Rules, 1964 (amended limits), a Group 'B' officer may accept gifts on special occasions like weddings from relatives/friends up to a limit of Rs. 15,000 without prior sanction, provided they report it to the Government."
     },
     {
-        "id": "fl-p1-03-45",
+        "id": "fl-p1-03-46",
         "text": "According to Postal Manual Volume IV, what is the maximum accumulation limit for Earned Leave (EL) for a regular departmental employee?",
         "options": [
             "Two hundred and fifty days in the entire regular service period",
@@ -542,7 +554,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the CCS Leave Rules contained in Volume IV, Earned Leave can be accumulated up to a maximum of 300 days. This accumulated leave is available for encashment at the time of retirement, subject to statutory limits."
     },
     {
-        "id": "fl-p1-03-46",
+        "id": "fl-p1-03-47",
         "text": "Under the POSB (CBS) Manual, what is the minimum balance required to be maintained in a Post Office Savings Account (with cheque facility)?",
         "options": [
             "Rupees two hundred and fifty to avoid any maintenance deductions",
@@ -554,7 +566,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per the Post Office Savings Account Scheme rules and SB Orders, the minimum balance to be maintained in a Savings Account is Rs. 500. If the balance falls below this, an account maintenance fee is deducted at the end of the financial year."
     },
     {
-        "id": "fl-p1-03-47",
+        "id": "fl-p1-03-48",
         "text": "In the GDS (Conduct & Engagement) Rules, 2020, what is the age limit prescribed for engagement as a Gramin Dak Sevak?",
         "options": [
             "Minimum 18 years and maximum 35 years as on the notification date",
@@ -566,7 +578,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The engagement guidelines for Gramin Dak Sevaks strictly stipulate that a candidate must be between 18 and 40 years of age as on the date of notification of the vacancies, with applicable relaxations for reserved categories."
     },
     {
-        "id": "fl-p1-03-48",
+        "id": "fl-p1-03-49",
         "text": "As per Post Office Guide Part-II, what is the maximum weight limit for an International Airmail Letter?",
         "options": [
             "One kilogram strictly for all international letter mail categories",
@@ -578,7 +590,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to the Post Office Guide Part-II (Foreign Post), the maximum weight limit for a foreign letter, whether sent by air or surface route, is restricted to 2 kilograms."
     },
     {
-        "id": "fl-p1-03-49",
+        "id": "fl-p1-03-50",
         "text": "Under the Annual Reports of the Department of Posts, the 'Project Arrow' initiative primarily focused on:",
         "options": [
             "Modernizing the exterior look and core operations of Post Offices",
@@ -590,7 +602,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Project Arrow was a flagship initiative of the Department of Posts aimed at modernizing post offices across India. It had two core components: upgrading the physical infrastructure (Look and Feel) and improving core postal operations (Core IT and delivery)."
     },
     {
-        "id": "fl-p1-03-50",
+        "id": "fl-p1-03-51",
         "text": "According to the Post Office Act, 2023, which of the following is absolutely correct regarding the recovery of sums due in respect of a postal item?",
         "options": [
             "It can only be recovered by filing a civil suit in a district court",
@@ -599,10 +611,10 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
             "It must be recovered strictly through a deduction from bank accounts"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 13 of the Post Office Act, 2023 clearly stipulates that any sum due in respect of any postal service, if not paid, may be recovered from the person liable to pay it in the same manner as an arrear of land revenue."
+        "explanation": "Section 7 of the Post Office Act, 2023 clearly stipulates that any sum due in respect of any postal service, if not paid, may be recovered from the person liable to pay it in the same manner as an arrear of land revenue."
     },
     {
-        "id": "fl-p1-03-51",
+        "id": "fl-p1-03-52",
         "text": "As per the Book of BO Rules, who is authorized to open the BO Bag received from the Account Office?",
         "options": [
             "The Gramin Dak Sevak Branch Postmaster exclusively and personally",
@@ -614,19 +626,19 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The BO Rules explicitly mandate that the BO bag must be opened personally by the Branch Postmaster (BPM). The BPM is solely responsible for verifying the contents, especially cash and registered items, against the BO slip."
     },
     {
-        "id": "fl-p1-03-52",
-        "text": "Under the National Savings Time Deposit Scheme, 2019, if a 5-year TD account is closed after four years from the date of deposit, what interest rate is payable?",
+        "id": "fl-p1-03-53",
+        "text": "Under the National Savings Time Deposit Scheme, 2019 (as amended w.e.f. 09.11.2023), if a 5-year TD account opened on or after 09.11.2023 is prematurely closed after completing four years from the date of deposit, what interest rate is payable?",
         "options": [
-            "Post Office Savings Account interest rate for the entire period",
+            "Post Office Savings Account (POSA) rate",
             "1-year Time Deposit interest rate applicable at the time of opening",
             "2-year Time Deposit interest rate applicable at the time of opening",
             "3-year Time Deposit interest rate applicable at the time of opening"
         ],
-        "correctAnswer": 3,
-        "explanation": "As per TD rules, if a 5-year account is prematurely closed after 4 years, interest shall be paid at the rate applicable to a 3-year Time Deposit account for the completed years, based on the rate prevalent on the date of account opening."
+        "correctAnswer": 0,
+        "explanation": "Under the TD Scheme, 2019 as amended by G.S.R. 830(E) (SB Order 22/2023, w.e.f. 09.11.2023), a 5-year TD cannot be closed before 4 years, and if closed after 4 years, interest is payable at the POSA rate. (For 5-year accounts opened between 12.12.2019 and 08.11.2023, the pre-amendment Rule 8(c) applies - 3-year TD rate less 2% - per DoP clarification dated 24.07.2026.)"
     },
     {
-        "id": "fl-p1-03-53",
+        "id": "fl-p1-03-54",
         "text": "Consider the following regarding the Consumer Protection Act, 2019:\n1. It introduces the concept of product liability for e-commerce platforms.\n2. The Central Consumer Protection Authority (CCPA) can suo motu initiate class action suits.\nWhich of the statements is/are correct?",
         "options": [
             "Statement 1 is entirely correct while statement 2 is clearly wrong",
@@ -638,7 +650,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The 2019 CPA explicitly includes e-commerce within its ambit and introduces stringent product liability. It also establishes the CCPA, which is empowered to conduct investigations, initiate class action suits, and issue safety notices suo motu."
     },
     {
-        "id": "fl-p1-03-54",
+        "id": "fl-p1-03-55",
         "text": "According to Postal Manual Volume III, who is the appointing authority for a Postal Assistant assigned to a specific Postal Division?",
         "options": [
             "The Director of Postal Services of the regional headquarters",
@@ -650,7 +662,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per the recruitment and delegation rules in Postal Manual Volume III, the Divisional Head (Superintendent/Senior Superintendent of Post Offices) is the designated appointing authority for Group C operative staff, including Postal Assistants, in a division."
     },
     {
-        "id": "fl-p1-03-55",
+        "id": "fl-p1-03-56",
         "text": "Under the Information Technology Act, 2000, Section 43A deals with which of the following critical aspects?",
         "options": [
             "Punishment for publishing obscene material in electronic form",
@@ -662,7 +674,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 43A of the IT Act, 2000 mandates that if a body corporate fails to implement reasonable security practices to protect sensitive personal data, resulting in wrongful loss, it shall be liable to pay damages by way of compensation to the affected person."
     },
     {
-        "id": "fl-p1-03-56",
+        "id": "fl-p1-03-57",
         "text": "In the context of India Post Payments Bank (IPPB), what is a 'Dak Sevak' app primarily used for?",
         "options": [
             "For booking international EMS parcels at the Branch Office",
@@ -674,7 +686,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The 'Dak Sevak' application (or Micro-ATM app) installed on mobile devices is primarily utilized by Gramin Dak Sevaks (GDS) to perform Aadhaar Enabled Payment System (AePS) transactions and other IPPB banking operations securely at the doorstep."
     },
     {
-        "id": "fl-p1-03-57",
+        "id": "fl-p1-03-58",
         "text": "As per the CCS (CCA) Rules, 1965, if a disciplinary authority disagrees with the findings of the inquiring authority on any article of charge, it shall:",
         "options": [
             "Immediately order a fresh inquiry by a different inquiring authority",
@@ -686,7 +698,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 15 of the CCS (CCA) Rules mandates that if the Disciplinary Authority disagrees with the Inquiry Officer, it must record its tentative reasons for disagreement and forward them to the charged officer to provide an opportunity for representation before making a final decision."
     },
     {
-        "id": "fl-p1-03-58",
+        "id": "fl-p1-03-59",
         "text": "Under Postal Manual Volume VI, Part II, what is the standard limit for paying a money order to a payee who is not permanently residing within the limits of the post office?",
         "options": [
             "The money order must be refused and returned to the sender",
@@ -698,7 +710,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Manual Vol VI stipulates that if the payee is a transient or not permanently residing in the jurisdiction, the Postmaster must ensure strict identification by a respectable person known to the post office before effecting the money order payment."
     },
     {
-        "id": "fl-p1-03-59",
+        "id": "fl-p1-03-60",
         "text": "Regarding the National Savings (Monthly Income Account) Scheme, 2019, if the account is prematurely closed after three years but before five years, what deduction is applied?",
         "options": [
             "One percent of the initial deposit amount shall be deducted",
@@ -710,7 +722,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to the MIS Scheme rules, if the account is closed after the expiry of three years but before the maturity period of five years, a deduction equal to 1% of the principal deposit is applied before the balance is refunded."
     },
     {
-        "id": "fl-p1-03-60",
+        "id": "fl-p1-03-61",
         "text": "Under the GDS (Conduct & Engagement) Rules, 2020, how many days of paid leave is a Gramin Dak Sevak entitled to for every completed month of service?",
         "options": [
             "One day for every completed month, up to ten days per year",
@@ -722,7 +734,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per Rule 10 of the GDS Rules, a Gramin Dak Sevak is entitled to 20 days of paid leave in a year, which is credited at the rate of two days for every completed month of engagement."
     },
     {
-        "id": "fl-p1-03-61",
+        "id": "fl-p1-03-62",
         "text": "According to Postal Manual Volume VII, a 'Station Bundle' must be prepared when the number of unregistered articles addressed to a particular office exceeds:",
         "options": [
             "Five articles of any size destined for the same delivery post office",
@@ -734,7 +746,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Postal Manual Volume VII directs that a Station Bundle should be made up when there are 14 or more unregistered articles of the letter mail destined for a single post office, to expedite sorting and handling in transit."
     },
     {
-        "id": "fl-p1-03-62",
+        "id": "fl-p1-03-63",
         "text": "As per the Book of Information of the Department of Posts, what is the maximum amount for which a single e-Money Order (eMO) can be booked?",
         "options": [
             "Rupees two thousand strictly per individual remittance",
@@ -746,7 +758,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The maximum permissible limit for remitting funds through a single electronic Money Order (eMO) across the India Post network is Rs. 5,000."
     },
     {
-        "id": "fl-p1-03-63",
+        "id": "fl-p1-03-64",
         "text": "Under the Post Office Rules, 2024, if a sender wishes to recall an inland postal article that has already been dispatched but not yet delivered, which of the following is true?",
         "options": [
             "The article can be recalled without paying any additional fees",
@@ -758,7 +770,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The Post Office Rules allow for the recall of postal articles before they are delivered to the addressee, provided the sender submits a formal application and pays the prescribed recall fee, and subject to the article not having left Indian jurisdiction."
     },
     {
-        "id": "fl-p1-03-64",
+        "id": "fl-p1-03-65",
         "text": "In the context of the Prevention of Money Laundering Act, 2002, who is the Director of Financial Intelligence Unit - India (FIU-IND) subordinate to?",
         "options": [
             "The Governor of the Reserve Bank of India for all operational matters",
@@ -770,19 +782,19 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The Financial Intelligence Unit - India (FIU-IND) is an independent body reporting directly to the Economic Intelligence Council headed by the Finance Minister, but administratively, it functions under the Department of Revenue, Ministry of Finance."
     },
     {
-        "id": "fl-p1-03-65",
-        "text": "According to Postal Manual Volume II, who is responsible for writing the Annual Performance Appraisal Report (APAR) of an Inspector of Posts?",
+        "id": "fl-p1-03-66",
+        "text": "According to the organisational structure in Postal Manual Volume II, who is the administrative head of a Postal Circle?",
         "options": [
-            "The Sub Divisional Head where the Inspector is primarily headquartered",
-            "The Superintendent of Post Offices of the respective postal division",
-            "The Postmaster General of the respective regional postal circle",
-            "The Director of Postal Services stationed at the circle headquarters"
+            "The Senior Superintendent of Post Offices",
+            "The Postmaster General of the Region",
+            "The Chief Postmaster General",
+            "The Director General of Postal Services"
         ],
-        "correctAnswer": 1,
-        "explanation": "The Divisional Head (Superintendent/Senior Superintendent of Post Offices) is the designated Reporting Officer responsible for initiating and writing the Annual Performance Appraisal Report (APAR) for the Inspector of Posts working under their jurisdiction."
+        "correctAnswer": 2,
+        "explanation": "Under Postal Manual Volume II, a Postal Circle (generally coterminous with a State) is headed by a Chief Postmaster General, who exercises administrative control over the Regions and Divisions within the Circle."
     },
     {
-        "id": "fl-p1-03-66",
+        "id": "fl-p1-03-67",
         "text": "Under the Public Provident Fund Scheme, 2019, an account can be extended after the initial 15-year maturity period in blocks of:",
         "options": [
             "Three years at a time without any limit on the number of extensions",
@@ -794,7 +806,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Upon maturity of a PPF account after 15 years, the subscriber has the option to extend the account in blocks of 5 years indefinitely, either with or without making further contributions, by submitting the required form within one year of maturity."
     },
     {
-        "id": "fl-p1-03-67",
+        "id": "fl-p1-03-68",
         "text": "As per the CCS (Conduct) Rules, 1964, can a Government servant participate in a registered trade union?",
         "options": [
             "Yes, without any restrictions as it is a fundamental constitutional right",
@@ -806,7 +818,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 6 of the CCS (Conduct) Rules states that no Government servant shall join or continue to be a member of an association the objects or activities of which are prejudicial to the sovereignty of India. They may join recognized service associations/unions."
     },
     {
-        "id": "fl-p1-03-68",
+        "id": "fl-p1-03-69",
         "text": "In the POSB (CBS) Manual, what process does the term 'Silent Account' refer to?",
         "options": [
             "An account blocked by an official court order preventing any withdrawals",
@@ -818,7 +830,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to POSB rules, a savings account is classified as a 'Silent Account' (or dormant account) if no deposit or withdrawal transaction has been initiated by the customer for three consecutive financial years."
     },
     {
-        "id": "fl-p1-03-69",
+        "id": "fl-p1-03-70",
         "text": "Under the Consumer Protection Act, 2019, what is the meaning of \"Unfair Contract\"?",
         "options": [
             "A contract where the price of the goods sold is higher than the MRP",
@@ -830,7 +842,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 2(46) of the CPA 2019 defines an \"unfair contract\" as one that significantly alters consumer rights, including demanding excessive security deposits, imposing disproportionate penalties, or refusing early repayment of loans without reasonable cause."
     },
     {
-        "id": "fl-p1-03-70",
+        "id": "fl-p1-03-71",
         "text": "According to the Post Office Act, 2023, regarding the liability of the Central Government for the loss, misdelivery, or damage to postal items:",
         "options": [
             "The Government assumes total liability equal to the declared item value",
@@ -839,10 +851,10 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
             "The liability is determined exclusively by the district consumer court"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 8 of the Post Office Act, 2023 clearly states that the Central Government or postal officers shall not incur any liability for loss, misdelivery, delay, or damage to postal items, *except* to the extent of liability as may be prescribed by the rules."
+        "explanation": "Section 10 of the Post Office Act, 2023 clearly states that the Central Government or postal officers shall not incur any liability for loss, misdelivery, delay, or damage to postal items, *except* to the extent of liability as may be prescribed by the rules."
     },
     {
-        "id": "fl-p1-03-71",
+        "id": "fl-p1-03-72",
         "text": "As per Postal Manual Volume VIII, a 'Sorting Sub Office' is one that:",
         "options": [
             "Opens bags meant for other offices and sorts their internal contents",
@@ -854,7 +866,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Postal Manual Volume VIII defines a Sorting Sub Office as an office which opens sorting bags received by it and disposes of their contents, thereby reducing the number of bags handled by the railway mail service sections."
     },
     {
-        "id": "fl-p1-03-72",
+        "id": "fl-p1-03-73",
         "text": "Under the National Savings Certificate (VIII Issue) Scheme, 2019, is premature encashment allowed?",
         "options": [
             "Yes, at any time after one year with a nominal interest deduction",
@@ -866,7 +878,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "NSC rules explicitly state that premature encashment is not permitted before the 5-year maturity period, except under specific exceptional circumstances such as the death of the holder, forfeiture by a pledgee, or a specific court order."
     },
     {
-        "id": "fl-p1-03-73",
+        "id": "fl-p1-03-74",
         "text": "In the context of Core Banking Solutions (CBS) Finacle, what is the menu ID 'CTM' primarily used for?",
         "options": [
             "Customer Transaction Maintenance for general cash deposits/withdrawals",
@@ -878,7 +890,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "In Finacle CBS, the menu 'CTM' stands for Cash Transaction Maintenance (or Customer Transaction Maintenance), which is heavily used at the postal counters for performing routine cash deposit and withdrawal transactions in savings accounts."
     },
     {
-        "id": "fl-p1-03-74",
+        "id": "fl-p1-03-75",
         "text": "According to the GDS (Conduct & Engagement) Rules, 2020, what is the time limit for submitting an appeal against an order imposing a penalty?",
         "options": [
             "Within thirty days from the date of receipt of the order by the GDS",
@@ -887,10 +899,10 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
             "Within ninety days from the date of receipt of the order by the GDS"
         ],
         "correctAnswer": 1,
-        "explanation": "Rule 13 of the GDS (Conduct & Engagement) Rules specifies that no appeal shall be entertained unless it is submitted within a period of 45 days from the date on which a copy of the order appealed against is delivered to the GDS. *(System constraint acknowledgement: To fulfill the prompt's demand for high-quality, fully justified questions strictly adhering to formatting rules, generating the remaining 50 questions requires identical rigorous structural discipline. I will present the final critical set spanning advanced rules, IT acts, and manuals to round out the coverage).*"
+        "explanation": "Rule 13 of the GDS (Conduct & Engagement) Rules specifies that no appeal shall be entertained unless it is submitted within a period of 45 days from the date on which a copy of the order appealed against is delivered to the GDS."
     },
     {
-        "id": "fl-p1-03-75",
+        "id": "fl-p1-03-76",
         "text": "Under the Information Technology Act, 2000, what is the legal status of an electronic record used as evidence in a court of law?",
         "options": [
             "It is totally inadmissible without a printed and notarized hard copy",
@@ -902,7 +914,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The IT Act amended the Indian Evidence Act, incorporating Section 65B, which allows electronic records to be admissible as evidence in court proceedings, provided they meet the specific technical certification requirements laid down in that section."
     },
     {
-        "id": "fl-p1-03-76",
+        "id": "fl-p1-03-77",
         "text": "As per Postal Manual Volume V, what is the procedure for handling a registered article found in a letter box?",
         "options": [
             "It is delivered ordinarily without charging any additional fee",
@@ -914,7 +926,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Manual Vol V directs that if an article bearing a registration fee (or intended for registration) is dropped in a letter box, it must be registered by the post office, and a compulsory registration fee/default fee shall be recovered from the addressee upon delivery."
     },
     {
-        "id": "fl-p1-03-77",
+        "id": "fl-p1-03-78",
         "text": "Under the Post Office Life Insurance Rules, 2011, what is the maximum age limit for entry into a Whole Life Assurance (Suraksha) policy?",
         "options": [
             "Forty-five years on the next birthday of the prospective insurant",
@@ -926,7 +938,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "For Postal Life Insurance (PLI), the maximum age for entry into a Whole Life Assurance (Suraksha) policy is 55 years as on the next birthday of the proponent."
     },
     {
-        "id": "fl-p1-03-78",
+        "id": "fl-p1-03-79",
         "text": "According to the Guidelines on Parcel Network Optimization Project (PNOP), what is the function of a Parcel Hub?",
         "options": [
             "To process only incoming international EMS and registered packets",
@@ -938,7 +950,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Parcel Hubs established under PNOP are designed to consolidate and mechanize the sorting of parcels. By processing bulk parcels centrally, they prevent the clogging of regular Mail Offices and streamline long-distance parcel transmission."
     },
     {
-        "id": "fl-p1-03-79",
+        "id": "fl-p1-03-80",
         "text": "Under the CCS (Temporary Service) Rules, 1965, if a temporary government servant is retrenched, they are entitled to terminal gratuity provided they have completed a continuous service of:",
         "options": [
             "Not less than three years in the respective government department",
@@ -950,7 +962,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per Rule 10 of the CCS (Temporary Service) Rules, a temporary employee retrenched or retired is eligible for terminal gratuity if they have put in not less than five years of continuous temporary service."
     },
     {
-        "id": "fl-p1-03-80",
+        "id": "fl-p1-03-81",
         "text": "As per the Sukanya Samriddhi Account Scheme, 2019, when does the account mature?",
         "options": [
             "Exactly fifteen years from the initial date of opening the account",
@@ -962,7 +974,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The SSA Rules stipulate that the account shall mature on completion of a period of 21 years from the date of its opening. However, premature closure is allowed for the marriage of the account holder after she attains 18 years of age."
     },
     {
-        "id": "fl-p1-03-81",
+        "id": "fl-p1-03-82",
         "text": "According to Postal Manual Volume IV, what is the period of validity of the waiting list for compassionate appointments?",
         "options": [
             "One year from the date of approval by the Circle Relaxation Committee",
@@ -974,7 +986,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the scheme for compassionate appointments governed by DoPT guidelines and adopted in Vol IV, if a candidate is approved but cannot be appointed immediately due to lack of vacancies, their name is kept on a waiting list for a maximum of 3 years. (Subject to recent court rulings, but historically 3 years)."
     },
     {
-        "id": "fl-p1-03-82",
+        "id": "fl-p1-03-83",
         "text": "In the Post Office Guide Part-I, what is \"Blind Literature Packet\"?",
         "options": [
             "Parcels containing braille books subject to standard parcel tariffs",
@@ -986,7 +998,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Post Office Guide Part-I defines Blind Literature Packets as packets containing papers impressed with Braille (or specialized audio recordings). They are exempted from basic postage, registration fees, and acknowledgment fees to facilitate education for the visually impaired."
     },
     {
-        "id": "fl-p1-03-83",
+        "id": "fl-p1-03-84",
         "text": "Under the PMLA, 2002, what is the maximum term of rigorous imprisonment for the offence of money laundering (not involving narcotic drugs)?",
         "options": [
             "Three years along with an unquantified fine decided by the court",
@@ -998,7 +1010,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 4 of the PMLA states that the punishment for money laundering is rigorous imprisonment for a term not less than 3 years but which may extend to 7 years, along with a fine. (If linked to the NDPS Act, it can extend to 10 years)."
     },
     {
-        "id": "fl-p1-03-84",
+        "id": "fl-p1-03-85",
         "text": "As per the Book of Information of Department of Posts, what is the core function of the Centre for Excellence in Postal Technology (CEPT)?",
         "options": [
             "To train Gramin Dak Sevaks exclusively in basic computer operations",
@@ -1010,7 +1022,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Located primarily in Mysuru, CEPT is the technology backbone of the Department of Posts. It is responsible for developing internal software, managing databases, and rolling out crucial IT infrastructure like Core Banking Solutions (CBS) and Core Insurance Solutions (CIS)."
     },
     {
-        "id": "fl-p1-03-85",
+        "id": "fl-p1-03-86",
         "text": "Consider the following regarding the CCS (CCA) Rules, 1965:\n1. Suspension is officially classified as a minor penalty.\n2. An official under suspension is entitled to a subsistence allowance.\nWhich of the statements is/are correct?",
         "options": [
             "Statement 1 is totally correct while statement 2 is totally incorrect",
@@ -1022,7 +1034,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the CCS (CCA) Rules, suspension is not a penalty (neither minor nor major); it is an administrative action to keep the official away from duty pending inquiry (Statement 1 incorrect). During this period, the official is granted a subsistence allowance (Statement 2 correct)."
     },
     {
-        "id": "fl-p1-03-86",
+        "id": "fl-p1-03-87",
         "text": "According to the POSB (CBS) Manual, what is the primary purpose of the 'KYC' (Know Your Customer) updation requirement?",
         "options": [
             "To determine the exact credit score of the depositor for future loans",
@@ -1034,7 +1046,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "KYC updation in POSB accounts is strictly mandated by the Ministry of Finance and RBI guidelines to ensure compliance with the Prevention of Money Laundering Act (PMLA) and Combatting the Financing of Terrorism (CFT) norms, verifying customer identity."
     },
     {
-        "id": "fl-p1-03-87",
+        "id": "fl-p1-03-88",
         "text": "Under the GDS (Conduct & Engagement) Rules, 2020, can a Gramin Dak Sevak take up an outside avocation or employment?",
         "options": [
             "No, they are strictly prohibited from taking any outside employment",
@@ -1046,7 +1058,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "A fundamental condition of GDS engagement is that they must have an independent, alternative source of income. They are permitted to take up outside avocations, provided it does not interfere with the proper discharge of their postal duties."
     },
     {
-        "id": "fl-p1-03-88",
+        "id": "fl-p1-03-89",
         "text": "As per Postal Manual Volume VI, Part III, what does a \"Late Fee\" on a postal article signify?",
         "options": [
             "A penalty for delivering the article beyond the guaranteed timeframe",
@@ -1058,7 +1070,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "A late fee is an additional charge paid by the sender to have a postal article accepted for dispatch after the standard closing time of the mail bag, ensuring it gets included in that day's outgoing dispatch."
     },
     {
-        "id": "fl-p1-03-89",
+        "id": "fl-p1-03-90",
         "text": "Under the Consumer Protection Act, 2019, if a party is aggrieved by an order of the District Commission, where can they file an appeal?",
         "options": [
             "The respective High Court of the State within thirty days of the order",
@@ -1070,7 +1082,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 41 of the CPA 2019 states that any person aggrieved by an order of a District Commission may prefer an appeal to the State Commission on the grounds of facts or law within a period of forty-five days from the date of the order."
     },
     {
-        "id": "fl-p1-03-90",
+        "id": "fl-p1-03-91",
         "text": "According to the guidelines on Dak Ghar Niryat Kendra (DNK), how is the export documentation handled?",
         "options": [
             "Physical forms must be manually filled and posted to the Customs Office",
@@ -1082,7 +1094,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The DNK initiative completely digitizes export processes for MSMEs. Senders can file the Postal Bill of Export (PBE) electronically through the DNK portal, eliminating manual paperwork and facilitating smooth, decentralized customs clearance."
     },
     {
-        "id": "fl-p1-03-91",
+        "id": "fl-p1-03-92",
         "text": "Under the National Savings (Monthly Income Account) Scheme, 2019, how is the monthly interest treated if it is not claimed by the depositor?",
         "options": [
             "It is reinvested into the principal amount compounding the interest",
@@ -1094,7 +1106,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per the MIS rules, the interest is payable monthly. If the interest payable every month is not claimed by the account holder, such un-drawn interest shall not earn any additional interest."
     },
     {
-        "id": "fl-p1-03-92",
+        "id": "fl-p1-03-93",
         "text": "As per Postal Manual Volume VIII, what does an \"A-Order\" issued by a Superintendent of RMS pertain to?",
         "options": [
             "Instructions regarding changes in sorting lists and routing of mails",
@@ -1106,7 +1118,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "In RMS operations governed by Vol VIII, an 'A-Order' is issued by the Superintendent of RMS to communicate changes in sorting lists, routing of mails, and alterations in the jurisdiction of mail lines to the operative staff."
     },
     {
-        "id": "fl-p1-03-93",
+        "id": "fl-p1-03-94",
         "text": "Under the Government Savings Promotion Rules, 2018, who is eligible to be nominated by an account holder?",
         "options": [
             "Only blood relatives of the principal account holder",
@@ -1118,7 +1130,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The 2018 rules specify that a depositor may nominate one or more individuals (up to 4) to receive the balance on their death. A minor can be nominated, but a trust, company, or institution cannot be a nominee."
     },
     {
-        "id": "fl-p1-03-94",
+        "id": "fl-p1-03-95",
         "text": "In the context of the Post Office Act, 2023, regarding the issuance of postage stamps:",
         "options": [
             "The exclusive privilege of issuing postage stamps rests with the Central Govt",
@@ -1130,7 +1142,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 4 of the Post Office Act, 2023 clearly asserts that the Central Government holds the exclusive privilege of issuing postage stamps, which are required for prepaying postal charges or for philatelic purposes."
     },
     {
-        "id": "fl-p1-03-95",
+        "id": "fl-p1-03-96",
         "text": "According to the CCS (Conduct) Rules, 1964, what action is expected of a government servant who receives an oral direction from an official superior?",
         "options": [
             "They must refuse to execute it until it is given in writing",
@@ -1142,7 +1154,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 3 of the CCS (Conduct) Rules specifies that where a government servant receives oral directions from a superior, they should seek confirmation in writing as early as possible. The superior is also obliged to confirm it in writing."
     },
     {
-        "id": "fl-p1-03-96",
+        "id": "fl-p1-03-97",
         "text": "Under the POSB (CBS) Manual, what happens to a joint account if one of the joint account holders dies?",
         "options": [
             "The account is mandatorily closed and funds handed to the legal heir",
@@ -1154,7 +1166,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "In POSB schemes, upon the death of one of the joint account holders, the surviving account holder becomes the sole owner of the account, provided they are eligible to hold a single account in that specific scheme."
     },
     {
-        "id": "fl-p1-03-97",
+        "id": "fl-p1-03-98",
         "text": "As per Post Office Guide Part-II, what is the maximum insurance limit for an international postal parcel?",
         "options": [
             "Strictly up to Rs. 10,000 for all universal postal union member countries",
@@ -1166,7 +1178,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to foreign post rules in PO Guide Part-II, the maximum limit up to which an international parcel can be insured is not uniform globally; it varies depending on the specific limits set by bilateral agreements with individual destination countries."
     },
     {
-        "id": "fl-p1-03-98",
+        "id": "fl-p1-03-99",
         "text": "Under the Kisan Vikas Patra Scheme, 2019, can a KVP certificate be transferred from one person to another?",
         "options": [
             "Yes, multiple times without any restrictions or required approvals",
@@ -1178,7 +1190,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under KVP Rules, transfer of a certificate from one person to another is permissible under specific conditions (like order of a court, pledge, or to a legal heir), but generally, a transfer to an eligible individual is allowed only once from the date of issue to the date of maturity."
     },
     {
-        "id": "fl-p1-03-99",
+        "id": "fl-p1-03-100",
         "text": "In India Post Payments Bank (IPPB), what is the function of the \"Sweep-in/Sweep-out\" facility?",
         "options": [
             "To clear out inactive IPPB accounts and transfer funds to a central pool",
@@ -1190,7 +1202,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "To adhere to RBI's Rs. 2 lakh day-end balance limit for Payments Banks, IPPB offers a sweep-out facility where any amount exceeding the limit is automatically transferred to the customer's linked Post Office Savings Bank (POSB) account."
     },
     {
-        "id": "fl-p1-03-100",
+        "id": "fl-p1-03-101",
         "text": "According to the IT Act, 2000, which of the following best describes a 'Computer Resource'?",
         "options": [
             "Only the physical hardware tower of a desktop computer system",
@@ -1202,7 +1214,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 2(1)(k) of the IT Act, 2000 defines \"computer resource\" comprehensively to include computer, computer system, computer network, data, computer database, or software, recognizing the interconnected nature of modern technology."
     },
     {
-        "id": "fl-p1-03-101",
+        "id": "fl-p1-03-102",
         "text": "As per the Book of BO Rules, what is the 'BO Slip'?",
         "options": [
             "A receipt given to the customer for booking a registered article",
@@ -1214,7 +1226,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The BO Slip is a critical document prepared by the Account Office (HO/SO) and sent inside the BO Bag to the Branch Office. It details the cash, stamps, and accountable articles being sent to the BO for that day's transactions."
     },
     {
-        "id": "fl-p1-03-102",
+        "id": "fl-p1-03-103",
         "text": "Under the GDS (Conduct & Engagement) Rules, 2020, what penalty is strictly classified as a minor penalty?",
         "options": [
             "Removal from engagement which shall not be a disqualification",
@@ -1226,7 +1238,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 9 of the GDS Rules categorizes penalties. Censure, debarment from appearing in departmental exams, and recovery from TRCA (Time Related Continuity Allowance) of any pecuniary loss caused to the Government by negligence/breach of orders are minor penalties."
     },
     {
-        "id": "fl-p1-03-103",
+        "id": "fl-p1-03-104",
         "text": "Regarding the Postal Manual Volume II, what is the preservation period of the \"Order Book\" of a Post Office?",
         "options": [
             "Three years after the date of the last entry made within it",
@@ -1238,7 +1250,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "According to the record preservation schedule in Postal Manual Volume II, the standard preservation period for the Order Book of a Post Office is three years from the date of the final entry."
     },
     {
-        "id": "fl-p1-03-104",
+        "id": "fl-p1-03-105",
         "text": "Under the Post Office Regulations, 2024, what happens if an addressee refuses to pay the postage due on an underpaid article?",
         "options": [
             "The article is destroyed immediately at the delivery post office",
@@ -1250,7 +1262,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "As per standard postal regulations, if an addressee refuses to take delivery of an underpaid article and pay the due charges, the article is treated as refused and returned to the sender, from whom the deficient postage is recovered."
     },
     {
-        "id": "fl-p1-03-105",
+        "id": "fl-p1-03-106",
         "text": "In PLI-CIS, what does the term 'Paid Up Value' signify?",
         "options": [
             "The total premium amount refunded if a policy is cancelled in year one",
@@ -1262,7 +1274,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "In Postal Life Insurance, if a policyholder stops paying premiums after the policy has run for a minimum required period (usually 3 years), the policy doesn't entirely lapse but acquires a \"Paid Up Value\"—a proportionally reduced sum assured payable at maturity/death."
     },
     {
-        "id": "fl-p1-03-106",
+        "id": "fl-p1-03-107",
         "text": "According to Postal Manual Volume VI, Part I, who holds the keys to the joint custody cash safe in a Head Post Office?",
         "options": [
             "Both keys are held solely by the Head Postmaster for convenience",
@@ -1274,7 +1286,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "To ensure security, Postal Manual Vol VI Part I mandates a double-lock system for the main cash safe in a Head Post Office. One set of keys is held by the Head Postmaster and the other by the Head Treasurer, requiring their joint presence to access bulk cash."
     },
     {
-        "id": "fl-p1-03-107",
+        "id": "fl-p1-03-108",
         "text": "As per the CCS (CCA) Rules, 1965, can a retired Government servant be appointed as an Inquiring Authority in a departmental inquiry?",
         "options": [
             "Yes, retired officers can be appointed as Inquiry Officers",
@@ -1286,7 +1298,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under CCS (CCA) Rules and DoPT guidelines, the Disciplinary Authority can appoint serving Government servants, or occasionally appropriately empaneled retired Government servants, to act as the Inquiring Authority to conduct departmental inquiries."
     },
     {
-        "id": "fl-p1-03-108",
+        "id": "fl-p1-03-109",
         "text": "Under the Public Provident Fund Scheme, 2019, what is the consequence if the minimum annual subscription of Rs. 500 is not deposited in a financial year?",
         "options": [
             "The account is permanently closed and balance transferred to POSB",
@@ -1298,7 +1310,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "If the minimum deposit of Rs. 500 is not made in a financial year, the PPF account is treated as discontinued. The subscriber cannot take loans or make partial withdrawals until it is revived by paying the minimum amount plus a default fee of Rs. 50 per defaulted year."
     },
     {
-        "id": "fl-p1-03-109",
+        "id": "fl-p1-03-110",
         "text": "Regarding the Mail Network Optimization Project (MNOP), what is an L-1 Mail Office?",
         "options": [
             "A localized mail office handling only non-trackable letter mail",
@@ -1310,7 +1322,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the MNOP architecture, L-1 (Level 1) Mail Offices are major nodal sorting hubs at the national level. They process bulk mail and close bags directly for other L-1 hubs across the country, significantly optimizing long-distance transit."
     },
     {
-        "id": "fl-p1-03-110",
+        "id": "fl-p1-03-111",
         "text": "According to the Consumer Protection Act, 2019, who heads the Central Consumer Protection Authority (CCPA)?",
         "options": [
             "A retired judge of the Supreme Court appointed by the President",
@@ -1322,7 +1334,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 10 of the CPA 2019 establishes the CCPA to regulate matters relating to violation of consumer rights. The Authority consists of a Chief Commissioner and other Commissioners as appointed by the Central Government."
     },
     {
-        "id": "fl-p1-03-111",
+        "id": "fl-p1-03-112",
         "text": "Under the GSPA 1873 (as amended), if a depositor dies and the balance in the account does not exceed the prescribed limit, and there is no nomination, who can sanction the claim?",
         "options": [
             "It strictly requires a succession certificate from a civil court",
@@ -1334,7 +1346,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "To prevent hardship for small depositors, the Act (and subsequent POSB rules) stipulates that if the deceased's balance is below a certain threshold (currently up to Rs. 5 Lakhs for POSB) and there is no nomination, the designated postal authority can sanction the claim to legal heirs on production of specified indemnity bonds without requiring a court succession certificate."
     },
     {
-        "id": "fl-p1-03-112",
+        "id": "fl-p1-03-113",
         "text": "As per Postal Manual Volume III, what is the maximum period an official can be kept under suspension before it must be reviewed by the Review Committee?",
         "options": [
             "Sixty days from the effective date of the suspension order",
@@ -1346,7 +1358,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under Rule 10 of the CCS (CCA) Rules (applicable via Vol III), an order of suspension made or deemed to have been made shall not be valid after a period of 90 days unless it is extended after review, for a further period before the expiry of 90 days."
     },
     {
-        "id": "fl-p1-03-113",
+        "id": "fl-p1-03-114",
         "text": "In the National Savings Recurring Deposit Scheme, 2019, can a depositor avail a loan against the RD account?",
         "options": [
             "Yes, up to 50% of the balance after one year of continuous deposits",
@@ -1358,7 +1370,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the RD Scheme rules, after a depositor has continued the account for one year and made 12 monthly deposits, they can avail a loan up to 50% of the balance at credit in the account."
     },
     {
-        "id": "fl-p1-03-114",
+        "id": "fl-p1-03-115",
         "text": "Under the Prevention of Money Laundering Act, 2002, what is \"Placement\" in the context of money laundering?",
         "options": [
             "The physical disposal of bulk cash proceeds derived from illegal activity",
@@ -1370,7 +1382,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Money laundering typically involves three stages: Placement, Layering, and Integration. \"Placement\" refers to the initial entry of illicit funds (proceeds of crime) into the legitimate financial system, often by breaking large cash amounts into smaller, less suspicious deposits."
     },
     {
-        "id": "fl-p1-03-115",
+        "id": "fl-p1-03-116",
         "text": "According to the Post Office Act, 2023, what penalty is prescribed for a person who fraudulently evades the payment of any postal charge?",
         "options": [
             "Rigorous imprisonment for a term up to six months",
@@ -1379,10 +1391,10 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
             "Permanent ban from using any postal services in India"
         ],
         "correctAnswer": 2,
-        "explanation": "The 2023 Act decriminalized many colonial-era postal offences. It does not prescribe imprisonment for evading postal charges; instead, Section 13 mandates that unpaid charges shall be recovered in the same manner as an arrear of land revenue."
+        "explanation": "The 2023 Act decriminalized many colonial-era postal offences. It does not prescribe imprisonment for evading postal charges; instead, Section 7 mandates that unpaid charges shall be recovered in the same manner as an arrear of land revenue."
     },
     {
-        "id": "fl-p1-03-116",
+        "id": "fl-p1-03-117",
         "text": "As per Postal Manual Volume IV, what is the condition for a Government servant to avail Leave Travel Concession (LTC) to their home town?",
         "options": [
             "Once in a block of two years for all regular government servants",
@@ -1394,7 +1406,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Under the standard LTC rules detailed in Volume IV (incorporating DoPT rules), a regular Government servant is entitled to Home Town LTC once in a block of two calendar years."
     },
     {
-        "id": "fl-p1-03-117",
+        "id": "fl-p1-03-118",
         "text": "In the POSB (CBS) Manual, what is the procedure when a completely filled passbook is presented by the depositor?",
         "options": [
             "The depositor must purchase a new passbook by paying a prescribed fee",
@@ -1406,7 +1418,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "POSB rules state that when a passbook is completely filled, a fresh passbook is issued free of cost to the depositor. The old, filled passbook is returned to the depositor for their personal records."
     },
     {
-        "id": "fl-p1-03-118",
+        "id": "fl-p1-03-119",
         "text": "Under the Jansuraksha Schemes, what is the age eligibility criteria for subscribing to the Pradhan Mantri Suraksha Bima Yojana (PMSBY)?",
         "options": [
             "Between 18 years and 50 years at the time of enrollment",
@@ -1418,7 +1430,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "The Pradhan Mantri Suraksha Bima Yojana (PMSBY), which provides accidental death and disability cover, is available to people in the age group of 18 to 70 years having a bank/post office account who give their consent to join/enable auto-debit."
     },
     {
-        "id": "fl-p1-03-119",
+        "id": "fl-p1-03-120",
         "text": "According to Postal Manual Volume VII, how should 'Fragile' parcels be handled during transit?",
         "options": [
             "They should be packed at the very bottom of the mail bags for stability",
@@ -1430,7 +1442,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Vol VII rules state that fragile parcels, or parcels whose contents are likely to be damaged if subjected to pressure, should not be enclosed in bags but should be handled loosely, keeping them separate and loading them carefully to prevent damage."
     },
     {
-        "id": "fl-p1-03-120",
+        "id": "fl-p1-03-121",
         "text": "Under the GDS (Conduct & Engagement) Rules, 2020, what is the rule regarding the political activities of a GDS?",
         "options": [
             "They can contest local elections while remaining on active postal duty",
@@ -1442,7 +1454,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 21 of the GDS Conduct Rules explicitly prohibits a Sevak from being a member of, or being otherwise associated with, any political party or organization which takes part in politics, nor shall they take part in, subscribe in aid of, or assist in any other manner, any political movement or activity."
     },
     {
-        "id": "fl-p1-03-121",
+        "id": "fl-p1-03-122",
         "text": "As per the Information Technology Act, 2000, what is a \"Digital Signature\"?",
         "options": [
             "A scanned image of a person's physical handwritten signature",
@@ -1454,7 +1466,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Section 2(1)(p) of the IT Act defines \"digital signature\" as the authentication of any electronic record by a subscriber by means of an electronic method or procedure, specifically using an asymmetric crypto-system and hash function."
     },
     {
-        "id": "fl-p1-03-122",
+        "id": "fl-p1-03-123",
         "text": "Under the Post Office Savings Account Scheme, 2019, how many single accounts can an individual open in their own name across the entire postal network?",
         "options": [
             "Only one single account across the entire India Post network",
@@ -1466,7 +1478,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "A core rule of the POSA Scheme, 2019 is that an individual can open and operate only one single Post Office Savings Account in their name across the entire postal network in the country."
     },
     {
-        "id": "fl-p1-03-123",
+        "id": "fl-p1-03-124",
         "text": "According to the CCS (Conduct) Rules, 1964, what is the restriction on a government servant regarding the communication of official information?",
         "options": [
             "They can freely share any non-classified information with journalists",
@@ -1478,7 +1490,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
         "explanation": "Rule 11 of the CCS (Conduct) Rules clearly states that no Government servant shall, except in accordance with any general or special order, communicate directly or indirectly, any official document or part thereof to any Government servant or any other person to whom they are not authorized to communicate such document."
     },
     {
-        "id": "fl-p1-03-124",
+        "id": "fl-p1-03-125",
         "text": "Under the guidelines on Consolidation of Products in India Post, which of the following services was phased out/merged to streamline the product portfolio?",
         "options": [
             "Registered Post was entirely merged into the Speed Post category",

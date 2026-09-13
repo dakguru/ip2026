@@ -15,7 +15,7 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-2",
-        "text": "According to Section 4 of the Post Office Act, 2023, what is the extent of liability of the Post Office for loss, mis-delivery, or damage to any item transmitted through it?",
+        "text": "According to Section 10 of the Post Office Act, 2023, what is the extent of liability of the Post Office for loss, mis-delivery, or damage to any item transmitted through it?",
         "options": [
             "Full compensation up to the declared value of the item",
             "Liability is strictly limited to the amount prescribed by Rules",
@@ -23,7 +23,7 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
             "Absolute immunity from any liability regardless of service"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 4(1) of the Post Office Act, 2023 states that the Post Office incurs no liability for loss, mis-delivery, or damage, except to the extent and amount prescribed in the rules."
+        "explanation": "Section 10 of the Post Office Act, 2023 states that the Post Office incurs no liability for loss, mis-delivery, or damage, except to the extent and amount prescribed in the rules."
     },
     {
         "id": "fl-p1-05-3",
@@ -99,15 +99,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-9",
-        "text": "In the National Savings Time Deposit Scheme, 2019, if a 5-year deposit is closed after 6 months but before 1 year from the date of deposit, what interest is payable?",
+        "text": "Under the National Savings Time Deposit Scheme, 2019, if a Time Deposit is prematurely closed after 6 months but before the expiry of 1 year from the date of deposit, what interest is payable?",
         "options": [
-            "Interest is paid at the prevailing Time Deposit rate for 1 year",
-            "Interest is paid at the prevailing Post Office Savings Account rate",
-            "No interest is payable on the deposit amount in this scenario",
-            "Interest is paid at the Time Deposit rate minus a 2 percent penalty"
+            "Interest at the relevant Time Deposit rate for the completed period",
+            "Interest at the prevailing Post Office Savings Account (POSA) rate",
+            "No interest is payable on the deposit amount",
+            "Interest at the Time Deposit rate minus a 2 percent penalty"
         ],
-        "correctAnswer": 2,
-        "explanation": "Paragraph 8(1) of the TD Scheme, 2019 stipulates that if a deposit is withdrawn before the expiry of one year from the date of deposit, no interest shall be payable."
+        "correctAnswer": 1,
+        "explanation": "Under Rule 8(b) of the TD Scheme, 2019, where a 1/2/3/5-year deposit is withdrawn after 6 months but before one year, interest is payable at the Post Office Savings Account rate for the completed months. (A 5-year TD opened on/after 09.11.2023 cannot be closed before 4 years; this early-closure rule therefore applies to the shorter-tenure TDs and to older 5-year accounts.)"
     },
     {
         "id": "fl-p1-05-10",
@@ -459,15 +459,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-39",
-        "text": "As per the Annual Report of the Department of Posts, which platform is used for the booking and delivery of Speed Post articles?",
+        "text": "Under IT 2.0, which platform now handles the end-to-end booking and delivery of Speed Post and other mail articles across India Post?",
         "options": [
-            "Point of Sale (POS) integrated with the Core System Integrator (CSI)",
-            "The standalone Finacle Core Banking Solution platform",
-            "The legacy Meghdoot software package exclusively",
-            "The Darpan application designed for Head Post Offices"
+            "Advanced Postal Technology (APT)",
+            "The standalone Finacle Core Banking Solution",
+            "The legacy Meghdoot software package",
+            "The SAP-based Core System Integrator (CSI)"
         ],
         "correctAnswer": 0,
-        "explanation": "The CSI (Core System Integrator) platform, through its POS module, handles the entire lifecycle of mail operations including booking and delivery tracking of Speed Post articles."
+        "explanation": "Advanced Postal Technology (APT), rolled out under IT 2.0 (completed 04.08.2025), provides a single end-to-end platform from booking to delivery for mail and parcels, replacing the legacy SAP-based CSI and the older Meghdoot system."
     },
     {
         "id": "fl-p1-05-40",
@@ -1215,7 +1215,7 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-102",
-        "text": "In the Post Office Act, 2023, Section 10 empowers the Post Office to deliver postal items to customs authorities. This applies to items that:",
+        "text": "In the Post Office Act, 2023, Section 9 empowers the Post Office to deliver postal items to customs authorities. This applies to items that:",
         "options": [
             "Are suspected to contain duty-evaded or prohibited goods",
             "Weigh more than five kilograms regardless of content",
@@ -1223,7 +1223,7 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
             "Are addressed to foreign embassies within Indian territory"
         ],
         "correctAnswer": 0,
-        "explanation": "Section 10 aligns with customs regulations, mandating that if an item is suspected of containing goods liable to duty or prohibited from import/export, the Post Office shall hand it over to Customs."
+        "explanation": "Section 9 aligns with customs regulations, providing that if an item is suspected of containing goods liable to duty or prohibited from import/export, the Post Office may hand it over to Customs."
     },
     {
         "id": "fl-p1-05-103",
@@ -1271,7 +1271,7 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
             "SS-11 (Savings Bank Ledger)"
         ],
         "correctAnswer": 1,
-        "explanation": "The BO Daily Account (Pa-17 or its CSI equivalent) is the standard prescribed form used by the Branch Postmaster to compile the daily receipts and payments and report them to the Account Office."
+        "explanation": "The BO Daily Account (Pa-17 or its APT equivalent) is the standard prescribed form used by the Branch Postmaster to compile the daily receipts and payments and report them to the Account Office."
     },
     {
         "id": "fl-p1-05-107",

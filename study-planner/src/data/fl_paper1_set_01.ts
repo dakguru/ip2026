@@ -51,15 +51,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-5",
-        "text": "Under the Post Office Savings Account Scheme, 2019, what is the mandatory consequence if an account holder fails to maintain the prescribed minimum balance at the end of the financial year?",
+        "text": "Under the Post Office Savings Account Scheme, 2019 (as amended), what account maintenance fee is deducted at the end of the financial year if the prescribed minimum balance of Rs. 500 is not maintained?",
         "options": [
-            "The account is immediately closed and the balance is fully forfeited",
-            "A maintenance fee of one hundred rupees is deducted from the account",
-            "A maintenance fee of fifty rupees is deducted and the account freezes",
-            "The account is suspended until the depositor restores the said balance"
+            "Rupees one hundred inclusive of GST",
+            "Rupees fifty inclusive of GST",
+            "Rupees twenty-five inclusive of GST",
+            "No fee is levied; the account is only frozen"
         ],
         "correctAnswer": 1,
-        "explanation": "As per Paragraph 4(6) of the Post Office Savings Account Scheme, 2019, if the minimum balance is not maintained, a maintenance fee of Rs. 100 (inclusive of GST) shall be deducted at the end of the financial year."
+        "explanation": "By Ministry of Finance notification dated 09.04.2021 amending the POSA Scheme 2019, the account maintenance fee for non-maintenance of the Rs. 500 minimum balance was reduced from Rs. 100 to Rs. 50 (inclusive of GST), deducted at the end of the financial year; if the balance becomes nil after this deduction, the account stands automatically closed."
     },
     {
         "id": "fl-p1-01-6",
@@ -75,15 +75,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-7",
-        "text": "In the National Savings Time Deposit Scheme, 2019, what is the interest calculation rule if a 5-year Time Deposit is prematurely closed after completing 3 years from the date of deposit?",
+        "text": "Under the National Savings Time Deposit Scheme, 2019, what is the interest calculation rule if a 3-year Time Deposit is prematurely closed after completing 2 years from the date of deposit?",
         "options": [
             "Interest is paid at the Post Office Savings Account (POSA) rate for the full period",
-            "Interest is calculated at the rate applicable to a completed 3-year Time Deposit minus 2%",
+            "Interest is calculated at the rate applicable to a completed 2-year Time Deposit minus 2%",
             "Interest is calculated at the rate applicable to a completed 2-year Time Deposit minus 1%",
             "The principal is refunded completely without any interest"
         ],
         "correctAnswer": 1,
-        "explanation": "As per Para 9 of the TD Scheme 2019, if a 5-year TD account is closed after 1, 2, or 3 years, interest shall be calculated at the rate applicable to the completed 1-year, 2-year, or 3-year TD respectively, less two percentage points. (The POSA rate only applies if closed between 6 to 12 months, or after 4 years under the 2023 amendment)."
+        "explanation": "Under Rule 8(c) of the TD Scheme, 2019, where a 2/3/5-year deposit is withdrawn after the expiry of one year, interest for the completed years is calculated at the rate applicable to the corresponding completed-year TD, less two percentage points (the POSA rate applies for any part-period and for closures between 6 and 12 months). Note: a 5-year TD opened on/after 09.11.2023 cannot be closed before 4 years, so the rule is illustrated here with a 3-year TD."
     },
     {
         "id": "fl-p1-01-8",
@@ -411,15 +411,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-35",
-        "text": "Under the IT 2.0 (APT Knowledge) framework, what does the acronym \"DARPAN\" stand for in the context of rural postal modernization?",
+        "text": "Under the IT Modernization Project 2.0 (IT 2.0) of the Department of Posts, what is the name of the new in-house Postal and Logistics Solution rolled out across all post offices in 2025?",
         "options": [
-            "Digital Advancement of Rural Post Office for A New India",
-            "Data Analytics and Routing Protocol for A Networked India",
-            "Digital Access to Remote Postal Accounts for New India",
-            "Departmental Automation of Rural Postmen for A New India"
+            "Core System Integrator (CSI)",
+            "Meghdoot",
+            "Advanced Postal Technology (APT)",
+            "Sanchay Post"
         ],
-        "correctAnswer": 0,
-        "explanation": "DARPAN stands for \"Digital Advancement of Rural Post Office for A New India,\" a project aimed at modernizing Branch Post Offices (BOs) through handheld devices to provide core banking, insurance, and mail services."
+        "correctAnswer": 2,
+        "explanation": "Under IT 2.0, the Department of Posts rolled out Advanced Postal Technology (APT) - an indigenous, microservices-based Postal and Logistics Solution developed by the Centre for Excellence in Postal Technology (CEPT), hosted on the MeghRaj 2.0 cloud with BSNL connectivity. Its nationwide rollout across all ~1.65 lakh offices culminated on 04.08.2025, replacing the legacy SAP-based CSI. (Syllabus item 12 - APT Knowledge / IT 2.0.)"
     },
     {
         "id": "fl-p1-01-36",
@@ -435,7 +435,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-37",
-        "text": "Under Rule 14 of the CCS (Conduct) Rules, 1964, can a Government servant communicate directly with the press regarding an official policy without prior sanction?",
+        "text": "Under the CCS (Conduct) Rules, 1964, can a Government servant communicate directly with the press regarding an official policy without prior sanction?",
         "options": [
             "Yes, if the communication does not criticize the Government",
             "Yes, provided the servant uses a recognized pseudonym",
@@ -587,7 +587,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "To regulate the telecommunication bandwidth of ISPs"
         ],
         "correctAnswer": 0,
-        "explanation": "Section 24 of the Information Technology Act, 2000 establishes the role of the Certifying Authority, which is licensed by the Controller of Certifying Authorities to issue Electronic Signature (Digital Signature) Certificates to users."
+        "explanation": "Section 35 of the Information Technology Act, 2000 provides that a Certifying Authority, licensed by the Controller of Certifying Authorities, may issue an Electronic Signature (Digital Signature) Certificate to an applicant."
     },
     {
         "id": "fl-p1-01-50",
@@ -695,7 +695,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "The Ministry of Finance directly prints and sells all postage stamps"
         ],
         "correctAnswer": 0,
-        "explanation": "Section 7 of the Post Office Act, 2023 clearly establishes that the Post Office shall have the exclusive privilege of issuing postage stamps in India, maintaining the state's monopoly on official postal franking."
+        "explanation": "Section 4 of the Post Office Act, 2023 clearly establishes that the Post Office shall have the exclusive privilege of issuing postage stamps in India, maintaining the state's monopoly on official postal franking."
     },
     {
         "id": "fl-p1-01-59",
@@ -831,7 +831,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-70",
-        "text": "According to Rule 14 of the CCS (Conduct) Rules, 1964, regarding \"Honorary Work\", what must a government servant do before undertaking an honorary position in a charitable society?",
+        "text": "According to Rule 15 of the CCS (Conduct) Rules, 1964, regarding \"Honorary Work\", what must a government servant do before undertaking an honorary position in a charitable society?",
         "options": [
             "Merely inform their immediate supervisor via a written note",
             "Obtain explicit prior sanction of the prescribed competent authority",
@@ -887,7 +887,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "Third-party logistics apps hold the exclusive right to track mail"
         ],
         "correctAnswer": 2,
-        "explanation": "Section 5 of the Post Office Act, 2023 enables the Post Office to provide tracking facilities for specified classes of postal articles as prescribed, moving beyond basic untracked letters to modernized accountable mail."
+        "explanation": "Under the Post Office Act, 2023, the services provided by the Post Office (Section 3) and the standards for their provision — including tracking for prescribed classes of articles — are governed by the rules and regulations made under the Act (Sections 12 and 13). Tracking is therefore provided for such classes of items as may be prescribed."
     },
     {
         "id": "fl-p1-01-75",
@@ -1047,15 +1047,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-88",
-        "text": "In the Post Office Savings Account Scheme, 2019, who among the following is legally permitted to open a Basic Savings Bank Account?",
+        "text": "Under the Post Office Savings Account Scheme, 2019, who among the following is legally permitted to open a single savings account in his or her own name?",
         "options": [
-            "Any adult individual residing in an urban metropolitan area",
+            "Only an adult individual residing in an urban metropolitan area",
             "A registered cooperative society maintaining community funds",
-            "An adult member of any registered government welfare scheme",
-            "A minor above ten years of age independently"
+            "A minor who has attained the age of ten years, in his or her own name",
+            "Only a member of a registered government welfare scheme"
         ],
         "correctAnswer": 2,
-        "explanation": "Under Para 3(1)(c) of the POSA Scheme 2019, a Basic Savings Bank Account can only be opened by an adult member of any registered government welfare scheme to receive direct benefit transfers."
+        "explanation": "Under the POSA Scheme, 2019, a savings account may be opened by a single adult, jointly by up to three adults, by a guardian on behalf of a minor or a person of unsound mind, and by a minor who has attained the age of ten years in his or her own name. It is not restricted to welfare-scheme members, and societies or institutions cannot open such an account."
     },
     {
         "id": "fl-p1-01-89",
@@ -1107,15 +1107,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-93",
-        "text": "Under the Post Office Rules, 2024, what is the consequence of posting a postal article bearing a fictitious or previously used postage stamp?",
+        "text": "Under the Post Office Rules/Regulations, 2024, how is a postal article bearing a fictitious or previously used postage stamp treated for the purpose of postage?",
         "options": [
-            "The article is delivered but charged double the regular postage",
-            "The article is returned to the sender with a warning notice",
-            "The article is intercepted and forwarded to the police authorities",
-            "The article is delivered normally but the sender's account is flagged"
+            "The stamp is treated as having no value and the article is charged as unpaid/insufficiently paid",
+            "The article is delivered free of charge with a warning to the sender",
+            "The article is prosecuted as a postal criminal offence by the delivery office",
+            "The article is delivered normally and the postage is waived"
         ],
-        "correctAnswer": 2,
-        "explanation": "The postal rules treat the use of fictitious or washed/used stamps as a criminal offense (fraud). Such articles are intercepted, detained, and the matter is reported to the competent authorities (police) for investigation."
+        "correctAnswer": 0,
+        "explanation": "A fictitious or previously used stamp has no prepayment value, so the article is treated as unpaid or insufficiently paid and the deficient postage is recovered as for an unpaid article. (Postal-specific offences under the 1898 Act were removed by the Jan Vishwas Act, 2023 and the Post Office Act, 2023, so such an article is handled as a postage-deficiency matter, not a postal criminal offence.)"
     },
     {
         "id": "fl-p1-01-94",
@@ -1139,7 +1139,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "Neither 1 nor 2"
         ],
         "correctAnswer": 2,
-        "explanation": "The Post Office Act, 2023 repealed the 1898 Act (Section 17). It also removed the statutory \"exclusive privilege\" (monopoly) on conveying letters that existed in the 1898 Act, aiming to regulate a modern logistics-driven service."
+        "explanation": "The Post Office Act, 2023 repealed the 1898 Act (Section 16). It also removed the statutory \"exclusive privilege\" (monopoly) on conveying letters that existed in the 1898 Act, aiming to regulate a modern logistics-driven service."
     },
     {
         "id": "fl-p1-01-96",
@@ -1163,7 +1163,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "To handle all international mail accounting and financial settlements"
         ],
         "correctAnswer": 1,
-        "explanation": "CEPT, located in Mysuru (with branches elsewhere), is the technological backbone of India Post, responsible for the development, implementation, and maintenance of core IT projects like CBS, CSI, and DARPAN."
+        "explanation": "CEPT, located in Mysuru (with branches elsewhere), is the technological backbone of India Post, responsible for the development, implementation, and maintenance of core IT solutions such as CBS, the Advanced Postal Technology (APT) platform under IT 2.0, and the Core Insurance Solution (PLI-CIS)."
     },
     {
         "id": "fl-p1-01-98",
@@ -1295,7 +1295,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "The requirement of filing reports within seven working days"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 14 and the PMLA Rules mandate strict confidentiality. Informing a customer that a Suspicious Transaction Report (STR) is being filed constitutes \"tipping off,\" which is strictly prohibited and compromises the investigation framework."
+        "explanation": "The PMLA and the PML (Maintenance of Records) Rules mandate strict confidentiality. Informing a customer that a Suspicious Transaction Report (STR) is being filed constitutes \"tipping off,\" which is strictly prohibited and compromises the investigation framework."
     },
     {
         "id": "fl-p1-01-109",
