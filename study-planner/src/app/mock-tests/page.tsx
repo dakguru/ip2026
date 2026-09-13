@@ -260,7 +260,8 @@ export default function MockTestsPage() {
             if (now > endDate) {
                 status = 'completed';
             } else if (now >= startDate) {
-                status = 'live';
+                // Temporarily disable live attempts for Full Length Mock Tests
+                status = 'upcoming'; 
             } else {
                 status = 'upcoming';
             }
@@ -1457,7 +1458,7 @@ function MockTestCard({
 }) {
     const isTimeReached = new Date() >= mock.startDate;
     const isEnded = new Date() > mock.endDate;
-    const isLive = mock.status === 'live' || (isTimeReached && !isEnded);
+    const isLive = mock.status === 'live';
     const isCompleted = mock.status === 'completed';
     const isExempt = membershipLevel === 'gold' || membershipLevel === 'silver';
     const canAccess = isExempt || isPaid || role === 'admin';

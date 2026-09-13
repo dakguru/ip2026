@@ -628,9 +628,15 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
 
     // Live Window Logic
     const testConfig = TEST_CONFIG_MAP[testId];
-    const isLiveWindow = testConfig?.startDate && testConfig?.endDate 
+    let isLiveWindow = testConfig?.startDate && testConfig?.endDate 
         ? (new Date() >= testConfig.startDate && new Date() < testConfig.endDate) 
         : false;
+
+    // Temporarily disable full length mock tests
+    if (testId.startsWith('fl-')) {
+        isLiveWindow = false;
+    }
+
     const canSeeLeaderboard = isAdmin; // Only visible to admin as requested
 
     // Load Data & Check Access
