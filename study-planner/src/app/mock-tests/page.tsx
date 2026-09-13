@@ -1660,12 +1660,25 @@ function MockTestCard({
                     ) : isLive ? (
                         hasAttempted ? (
                             <div className="flex gap-2 w-full">
-                                <button
-                                    disabled
-                                    className="flex-1 py-2.5 sm:py-3 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-xs flex items-center justify-center gap-1.5 cursor-not-allowed border border-zinc-200 dark:border-zinc-700 px-1 sm:px-2 min-w-0"
-                                >
-                                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" /> <span>Submitted</span>
-                                </button>
+                                {mock.id.startsWith("fl-") ? (
+                                    <Link
+                                        href={`/mock-tests/weekly/${mock.id}?reattempt=true`}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+                                        }}
+                                        className="flex-1 py-2.5 sm:py-3 bg-white dark:bg-zinc-800 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-xs flex items-center justify-center gap-1.5 transition-all active:scale-[0.97] shadow-sm px-1 sm:px-2 min-w-0"
+                                    >
+                                        <History className="w-3.5 h-3.5 shrink-0" /> <span>Reattempt</span>
+                                    </Link>
+                                ) : (
+                                    <button
+                                        disabled
+                                        className="flex-1 py-2.5 sm:py-3 bg-zinc-100 dark:bg-zinc-800/80 text-zinc-400 dark:text-zinc-500 rounded-xl sm:rounded-2xl font-bold text-[11px] sm:text-xs flex items-center justify-center gap-1.5 cursor-not-allowed border border-zinc-200 dark:border-zinc-700 px-1 sm:px-2 min-w-0"
+                                    >
+                                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0" /> <span>Submitted</span>
+                                    </button>
+                                )}
                                 <button
                                     onClick={(e) => {
                                         e.stopPropagation();

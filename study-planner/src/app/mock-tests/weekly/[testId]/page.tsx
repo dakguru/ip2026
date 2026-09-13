@@ -727,8 +727,8 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                     return;
                 }
 
-                // For reattempts, ensure the test has actually ended (not upcoming)
-                if (isReattempt && !isEnded) {
+                // For reattempts, ensure the test has actually ended (not upcoming), except for Full Length tests
+                if (isReattempt && !isEnded && !testId.startsWith('fl-')) {
                     alert("Reattempts are only available after the test window has ended.");
                     router.push("/mock-tests");
                     return;
@@ -1787,7 +1787,7 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
                                         const startDate = config ? config.startDate : new Date("2026-01-17T00:00:00+05:30");
                                         const now = new Date();
                                         const endDateTime = config?.endDate || new Date(startDate.getTime() + 48 * 60 * 60 * 1000);
-                                        const canReattempt = (now > endDateTime) || isAdmin;
+                                        const canReattempt = (now > endDateTime) || isAdmin || testId.startsWith("fl-");
 
                                         if (!canReattempt) return null;
 
