@@ -251,7 +251,12 @@ export default function MockTestsPage() {
 
     const fullLengthMockTests = useMemo(() => {
         return FULL_LENGTH_MOCK_SCHEDULE.map(test => {
-            const startDate = new Date(test.startDate + "T00:00:00+05:30");
+            let startDate = new Date(test.startDate + "T00:00:00+05:30");
+            if (test.id.startsWith("fl-p1-")) {
+                startDate = new Date(test.startDate + "T10:00:00+05:30");
+            } else if (test.id.startsWith("fl-p3-")) {
+                startDate = new Date(test.startDate + "T18:00:00+05:30");
+            }
             const endDate = new Date(test.endDate + "T23:59:59+05:30");
             
             let status: 'live' | 'upcoming' | 'completed' = 'upcoming';
@@ -260,8 +265,7 @@ export default function MockTestsPage() {
             if (now > endDate) {
                 status = 'completed';
             } else if (now >= startDate) {
-                // Temporarily disable live attempts for Full Length Mock Tests
-                status = 'upcoming'; 
+                status = 'live';
             } else {
                 status = 'upcoming';
             }

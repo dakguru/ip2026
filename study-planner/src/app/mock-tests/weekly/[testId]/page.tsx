@@ -321,52 +321,52 @@ const TEST_CONFIG_MAP: Record<string, TestConfig> = {
         title: "Weekly Mock Test - S2-15"
     },
     "fl-p1-set-01": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T10:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Full Length Mock Test - Paper I - Set 1"
     },
     "fl-p1-set-02": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T10:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Full Length Mock Test - Paper I - Set 2"
     },
     "fl-p1-set-03": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T10:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Full Length Mock Test - Paper I - Set 3"
     },
     "fl-p1-set-04": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T10:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Full Length Mock Test - Paper I - Set 4"
     },
     "fl-p1-set-05": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T10:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Full Length Mock Test - Paper I - Set 5"
     },
     "fl-p3-set-01": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T18:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Mock Test - Paper III - Set 1"
     },
     "fl-p3-set-02": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T18:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Mock Test - Paper III - Set 2"
     },
     "fl-p3-set-03": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T18:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Mock Test - Paper III - Set 3"
     },
     "fl-p3-set-04": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T18:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Mock Test - Paper III - Set 4"
     },
     "fl-p3-set-05": {
-        startDate: new Date("2026-09-13T00:00:00+05:30"),
+        startDate: new Date("2026-09-13T18:00:00+05:30"),
         endDate: new Date("2026-09-27T23:59:59+05:30"),
         title: "Mock Test - Paper III - Set 5"
     }
@@ -631,11 +631,6 @@ export default function WeeklyMockTestRunner({ params, searchParams }: PageProps
     let isLiveWindow = testConfig?.startDate && testConfig?.endDate 
         ? (new Date() >= testConfig.startDate && new Date() < testConfig.endDate) 
         : false;
-
-    // Temporarily disable full length mock tests
-    if (testId.startsWith('fl-')) {
-        isLiveWindow = false;
-    }
 
     const canSeeLeaderboard = isAdmin; // Only visible to admin as requested
 
