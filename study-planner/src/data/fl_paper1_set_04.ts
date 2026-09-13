@@ -207,15 +207,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-18",
-        "text": "A retired civilian employee aged 58 years wishes to open a Senior Citizens' Savings Scheme (SCSS) account. Which of the following conditions must be met?",
+        "text": "A retired civilian employee aged 58 years wishes to open a Senior Citizens' Savings Scheme (SCSS) account. According to the SCSS (Fourth Amendment) Scheme, 2023, what is the maximum time limit within which the account must be opened after receiving retirement benefits?",
         "options": [
-            "The individual must have retired strictly under an active Voluntary Retirement Scheme, regardless of the retirement benefits received.",
-            "The account must be opened within exactly three months of receiving the retirement benefits, and proof of disbursal is mandatory.",
-            "The individual must invest an amount strictly exceeding rupees ten lakh from their personal savings outside of retirement benefits.",
-            "The account must be opened within exactly one month of receipt of retirement benefits, investing only the benefit amount."
+            "Within one month from the date of receipt of the retirement benefits",
+            "Within three months from the date of receipt of the retirement benefits",
+            "Within six months from the date of receipt of the retirement benefits",
+            "Within one year from the date of receipt of the retirement benefits"
         ],
-        "correctAnswer": 3,
-        "explanation": "Civilian employees retiring between 55 and 60 years can open an SCSS account on the condition that the account is opened within one month of receipt of retirement benefits, and the investment doesn't exceed the benefits received."
+        "correctAnswer": 1,
+        "explanation": "The Senior Citizen's Savings (Fourth Amendment) Scheme, 2023, revised the eligibility window. Retirees between 55 and 60 years of age can now open an SCSS account within three months from the date of receiving their retirement benefits, significantly extending the previous one-month restriction."
     },
     {
         "id": "fl-p1-04-19",
@@ -267,15 +267,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-23",
-        "text": "According to the Book of BO Rules, what is the prescribed period for retaining the Branch Office Journal (Paishgi Register) before it can be destroyed?",
+        "text": "As per the Book of BO Rules, for what specific purpose is the \"B.O. Journal\" (Form Pa-5) primarily maintained by the Branch Postmaster?",
         "options": [
-            "It must be retained for exactly one year after the close of the financial year in which it was completed.",
-            "It must be retained for exactly three years after the close of the financial year in which it was completed.",
-            "It must be retained for exactly five years after the close of the financial year in which it was completed.",
-            "It must be retained permanently as an essential historical record of the Branch Post Office's financial transactions."
+            "To record the daily attendance and leave of Gramin Dak Sevaks",
+            "To maintain a detailed, continuous daily abstract of all monetary transactions and cash balances",
+            "To document all undelivered registered letters and parcels permanently",
+            "To track advance payments made exclusively to temporary mail carriers"
         ],
         "correctAnswer": 1,
-        "explanation": "According to the rules governing the preservation of records in Branch Post Offices, routine financial journals like the BO Journal are generally preserved for three years after the close of the financial year in which they are completed."
+        "explanation": "The B.O. Journal (Form Pa-5) is the primary, fundamental financial ledger at a Branch Post Office. The Branch Postmaster uses it to record the daily abstract of all monetary receipts, payments, and the closing balance at the end of the working day."
     },
     {
         "id": "fl-p1-04-24",
@@ -363,15 +363,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-31",
-        "text": "Consider the following statements regarding the delivery of insured articles as per Postal Manual Volume VI, Part III:\n1. An insured article exceeding Rs. 500 must be delivered exclusively at the Post Office window, and not through the postman.\n2. The addressee must sign both the receipt and the acknowledgment card in ink when accepting delivery of an insured article.\nWhich of the statements given above is/are correct?",
+        "text": "Under the IT Modernization Project 2.0 (IT 2.0), the Advanced Postal Technology (APT) platform utilizes which of the following architectures?",
         "options": [
-            "1 only",
-            "2 only",
-            "Both 1 and 2",
-            "Neither 1 nor 2"
+            "A monolithic, decentralized standalone desktop architecture",
+            "A microservices-based, cloud-native architecture hosted on MeghRaj 2.0",
+            "A legacy SAP-ERP framework dependent on local physical servers",
+            "A blockchain-based purely decentralized ledger without central control"
         ],
-        "correctAnswer": 2,
-        "explanation": "According to Vol VI Part III, insured articles for value exceeding Rs. 500 are normally delivered at the post office window. The addressee is required to sign the receipt and the acknowledgment card in ink upon delivery."
+        "correctAnswer": 1,
+        "explanation": "Advanced Postal Technology (APT), developed by CEPT under IT 2.0, represents a paradigm shift to a modern, microservices-based, cloud-native architecture deployed on the Government of India's MeghRaj 2.0 cloud platform."
     },
     {
         "id": "fl-p1-04-32",
@@ -399,15 +399,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-34",
-        "text": "As per the Post Office Guide Part-I, what is the maximum weight limit for a parcel booked by an unregistered customer at a standard Branch Post Office (BO)?",
+        "text": "According to the Post Office Guide Part-I, what is the maximum weight limit for an unregistered parcel booked at any Post Office?",
         "options": [
-            "The maximum weight limit for a parcel booked at a Branch Post Office is strictly restricted to exactly four kilograms.",
-            "The maximum weight limit for a parcel booked at a Branch Post Office is strictly restricted to exactly ten kilograms.",
-            "The maximum weight limit for a parcel booked at a Branch Post Office is strictly restricted to exactly twenty kilograms.",
-            "The maximum weight limit for a parcel booked at a Branch Post Office is strictly restricted to exactly thirty-five kilograms."
+            "2 kilograms",
+            "4 kilograms",
+            "10 kilograms",
+            "20 kilograms"
         ],
         "correctAnswer": 1,
-        "explanation": "According to the Post Office Guide Part-I, the maximum weight of an unregistered parcel is 4 kg. The maximum weight of a registered parcel booked at or addressed to a Branch Post Office (BO) is 10 kg."
+        "explanation": "The maximum weight of an unregistered parcel is strictly restricted to 4 kilograms, whereas a registered parcel can weigh up to 10 kg at a BO and 20 kg at an SO/HO."
     },
     {
         "id": "fl-p1-04-35",
@@ -435,15 +435,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-37",
-        "text": "What is the fundamental structure of the proposed Digital Personal Identification Number (DIGIPIN) system introduced for address geolocation?",
+        "text": "What is the fundamental structure of the Digital Postal Index Number (DIGIPIN) system introduced by the Department of Posts for address geolocation?",
         "options": [
-            "A highly complex 12-character alphanumeric code that includes the user's permanent Aadhaar number and state code.",
-            "A 10-digit numeric code specifically designed to form a geographical grid system dividing India into 4m x 4m uniform blocks.",
-            "A 6-digit alphanumeric code replacing the current PIN code system, utilizing dynamic GPS coordinates updated daily.",
-            "A 16-digit purely numeric string linked directly to the individual's passport and permanent account number (PAN)."
+            "A 10-digit strictly numeric code tied to the Aadhaar database.",
+            "A 10-character alphanumeric code forming a geographical grid system.",
+            "A 6-digit alphanumeric code replacing the current PIN system.",
+            "A 12-character alphanumeric code linked to the PAN network."
         ],
         "correctAnswer": 1,
-        "explanation": "DIGIPIN (Digital Postal Index Number) is designed as a 10-digit numeric grid-based addressing system, structurally dividing the country into standardized 4m x 4m geographic blocks, completely independent of personal identity markers."
+        "explanation": "DIGIPIN is designed as a 10-character alphanumeric geo-coded grid system dividing India into standardized 4m x 4m blocks, completely independent of personal identity markers."
     },
     {
         "id": "fl-p1-04-38",
@@ -495,15 +495,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-42",
-        "text": "In Core Banking Solutions (CBS) terminology used in POSB, what does the menu command 'HOAA' typically stand for?",
+        "text": "In the Core Banking Solutions (CBS) Finacle software used in Post Offices, which menu command is typically used to inquire about the detailed transaction history of a savings account?",
         "options": [
-            "Head Office Account Authorization, used exclusively to approve transactions exceeding fifty thousand rupees.",
-            "Halt Ordinary Account Activity, used to temporarily freeze a savings account suspected of fraudulent transactions.",
-            "History of Account Activity, used to view or print the detailed transaction ledger of a specific customer account.",
-            "Head Office Audit Application, used by postal inspectors to conduct annual financial inspections of sub-offices."
+            "HOAAC",
+            "HACLI",
+            "CTM",
+            "CXFER"
         ],
-        "correctAnswer": 2,
-        "explanation": "In the Finacle CBS software used by the Department of Posts, 'HOAA' stands for History of Account Activity, a standard menu option used by counter operators to inquire about and view the transaction history of a savings account."
+        "correctAnswer": 1,
+        "explanation": "In Finacle CBS, HACLI (History of Account Ledger Inquiry) and HAFI are the standard menu options used by counter operators to inquire about and view the detailed transaction history of a specific customer account."
     },
     {
         "id": "fl-p1-04-43",
@@ -891,15 +891,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-75",
-        "text": "According to Postal Manual Volume IV, what is the maximum period of extra-ordinary leave (EOL) that can be granted to a permanent government servant in special circumstances without medical certificate?",
+        "text": "Under the CCS (Leave) Rules, 1972 (as referenced in Postal Manual Volume IV), what is the maximum limit of continuous leave of any kind that can generally be granted to a Government servant?",
         "options": [
-            "A maximum of exactly three months on any single occasion.",
-            "A maximum of exactly six months on any single occasion.",
-            "A maximum of exactly twelve months on any single occasion.",
-            "A maximum of exactly twenty-four months on any single occasion."
+            "One year",
+            "Three years",
+            "Five years",
+            "Seven years"
         ],
-        "correctAnswer": 0,
-        "explanation": "Under the CCS (Leave) Rules 1972 (Vol IV), Extraordinary Leave (EOL) without a medical certificate to a permanent government servant is generally limited to a maximum of 3 months on any one occasion."
+        "correctAnswer": 2,
+        "explanation": "Rule 12(1) of the CCS (Leave) Rules, 1972 mandates that no Government servant shall be granted leave of any kind for a continuous period exceeding five years, except with the explicit sanction of the President."
     },
     {
         "id": "fl-p1-04-76",
@@ -1251,15 +1251,15 @@ export const FL_PAPER1_SET_04_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-04-105",
-        "text": "According to Postal Manual Volume VI, Part III, what is the procedure for the delivery of a Value Payable (VP) article?",
+        "text": "Under the Post Office Savings Account Scheme, 2019, if a depositor wishes to open a Basic Savings Account, which of the following conditions applies?",
         "options": [
-            "The VP article is delivered to the addressee only upon the physical recovery of the specified value payable amount and associated charges.",
-            "The VP article is delivered immediately, and the addressee is given a grace period of seven days to remit the specified amount.",
-            "The VP article can be delivered without payment if the addressee signs a legal promissory note guaranteeing payment within the month.",
-            "The VP article is never sent out with the postman; the addressee must always collect it directly from the Head Postmaster's office."
+            "It can only be opened by a registered commercial corporate entity",
+            "It is opened by a beneficiary of any Government welfare scheme and requires zero minimum balance",
+            "It mandates a minimum initial deposit of Rs. 10,000",
+            "It is strictly reserved for retired central government pensioners"
         ],
-        "correctAnswer": 0,
-        "explanation": "A Value Payable (VP) article is essentially a cash-on-delivery item. Vol VI Part III dictates that a VP article can only be delivered to the addressee or their agent upon full payment of the amount specified for recovery, plus any applicable fees."
+        "correctAnswer": 1,
+        "explanation": "The POSA Scheme 2019 defines a Basic Savings Account as an account opened by a beneficiary of any Government welfare scheme. Unlike standard accounts, it does not require the maintenance of a minimum balance of Rs. 500."
     },
     {
         "id": "fl-p1-04-106",

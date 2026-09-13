@@ -315,15 +315,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-27",
-        "text": "According to the Post Office Guide Part-I, what is the maximum weight limit for a parcel booked by an unregistered customer at a Branch Post Office (BO)?",
+        "text": "According to the Post Office Guide Part-I, what is the maximum weight limit for an unregistered parcel booked at a Branch Post Office (BO)?",
         "options": [
-            "Maximum limit of precisely four kilograms",
-            "Maximum limit of precisely ten kilograms",
-            "Maximum limit of precisely twenty kilograms",
-            "Maximum limit of precisely thirty-five kilograms"
+            "Maximum limit of exactly 2 kilograms",
+            "Maximum limit of exactly 4 kilograms",
+            "Maximum limit of exactly 10 kilograms",
+            "Maximum limit of exactly 20 kilograms"
         ],
         "correctAnswer": 1,
-        "explanation": "According to the PO Guide Part-I, while the maximum weight for a parcel at a Head or Sub Post Office is 20 kg, the maximum weight limit for a parcel booked at or addressed to a Branch Post Office is 10 kg."
+        "explanation": "As per Post Office Guide Part-I, the maximum weight of an unregistered parcel is strictly restricted to 4 kilograms across all post offices, including Branch Post Offices. (Registered parcels can weigh up to 10 kg at BOs)."
     },
     {
         "id": "fl-p1-01-28",
@@ -459,15 +459,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-39",
-        "text": "As per Rule 10 of the GDS (Conduct and Engagement) Rules, 2020, which of the following is considered a minor penalty?",
+        "text": "As per the GDS (Conduct and Engagement) Rules, 2020, which rule specifically lists the nature of penalties (Minor and Major) that can be imposed on a Gramin Dak Sevak?",
         "options": [
-            "Removal from engagement which shall not be a disqualification",
-            "Dismissal from engagement which shall be a disqualification",
-            "Reduction to a lower TRCA slab for a specified time period",
-            "Censure documented formally in the service record"
+            "Rule 8",
+            "Rule 9",
+            "Rule 10",
+            "Rule 11"
         ],
-        "correctAnswer": 3,
-        "explanation": "According to Rule 10 of the GDS (Conduct & Engagement) Rules, 2020, Censure is the lowest form of penalty and is categorized as a Minor Penalty, whereas reduction, removal, and dismissal are Major Penalties."
+        "correctAnswer": 1,
+        "explanation": "Under the GDS (Conduct & Engagement) Rules, 2020, the various minor and major penalties (like Censure, Debarment, Removal, Dismissal) are explicitly listed under Rule 9. Rule 10 details the procedure for imposing major penalties."
     },
     {
         "id": "fl-p1-01-40",
@@ -483,15 +483,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-41",
-        "text": "According to the Postal Manual Volume VI, Part-I, what is the standard retention period for a \"V.P. Article\" (Value Payable) at the delivery post office if it cannot be delivered on the first attempt?",
+        "text": "According to Postal Manual Volume VI, Part I, Chapter I, what is the primary purpose of an 'Oblong Datestamp'?",
         "options": [
-            "Three days from the date of the first presentation",
-            "Seven days from the date of the first presentation",
-            "Fourteen days from the date of the first presentation",
-            "Thirty days from the date of the first presentation"
+            "It is used to cancel postage stamps on un-registered letter mail",
+            "It is used to stamp all incoming money orders at the delivery post office",
+            "It is used for impressing on all receipts given to the public for registered articles and parcels",
+            "It is exclusively used for closing transit mail bags in the RMS"
         ],
-        "correctAnswer": 1,
-        "explanation": "As per Post Office rules and Volume VI Part-I, a V.P. article is kept in deposit at the delivery post office for a maximum of 7 days following the date of the first presentation to the addressee."
+        "correctAnswer": 2,
+        "explanation": "According to Chapter I of Postal Manual Volume VI, Part I, the oblong datestamp is specifically supplied to post offices for stamping the receipts given to the public for accountable items like registered letters, parcels, and insured articles."
     },
     {
         "id": "fl-p1-01-42",
@@ -543,7 +543,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-46",
-        "text": "As per Postal Manual Volume V, who is responsible for providing a \"Village Sorting List\" (Form M-52) to a Branch Post Office?",
+        "text": "As per Postal Manual Volume VI, Part I, who is responsible for providing a \"Village Sorting List\" (Form M-52) to a Branch Post Office?",
         "options": [
             "The Divisional Superintendent of Post Offices",
             "The Sub-Divisional Inspector of Post Offices",
@@ -551,7 +551,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
             "The Sub Postmaster of the Account Office"
         ],
         "correctAnswer": 1,
-        "explanation": "According to Postal Manual Volume V, the Sub-Divisional Inspector of Post Offices prepares and supplies the Village Sorting List to guide the Branch Postmaster in correctly routing mails for adjoining villages."
+        "explanation": "According to Rule 8 of Postal Manual Volume VI, Part I, the Sub-Divisional Inspector of Post Offices prepares and supplies the Village Sorting List (Form M-52) to guide the Branch Postmaster in correctly routing mails for adjoining villages."
     },
     {
         "id": "fl-p1-01-47",
@@ -1107,15 +1107,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-93",
-        "text": "Under the Post Office Rules/Regulations, 2024, how is a postal article bearing a fictitious or previously used postage stamp treated for the purpose of postage?",
+        "text": "As per Postal Manual Volume VI, Part III, which document is prepared by the Sub-Account Assistant to communicate cash and stamp balance discrepancies to a Sub Office?",
         "options": [
-            "The stamp is treated as having no value and the article is charged as unpaid/insufficiently paid",
-            "The article is delivered free of charge with a warning to the sender",
-            "The article is prosecuted as a postal criminal offence by the delivery office",
-            "The article is delivered normally and the postage is waived"
+            "B.O. Slip (Form Pa-4)",
+            "S.O. Slip (Form Pa-3)",
+            "Error Book (Form MS-2)",
+            "Sub-Office Daily Account (Form Pa-6)"
         ],
-        "correctAnswer": 0,
-        "explanation": "A fictitious or previously used stamp has no prepayment value, so the article is treated as unpaid or insufficiently paid and the deficient postage is recovered as for an unpaid article. (Postal-specific offences under the 1898 Act were removed by the Jan Vishwas Act, 2023 and the Post Office Act, 2023, so such an article is handled as a postage-deficiency matter, not a postal criminal offence.)"
+        "correctAnswer": 1,
+        "explanation": "In Sub-Account operations (Vol VI Part III), the S.O. Slip (Form Pa-3) is prepared by the Head Office to acknowledge remittances, supply cash/stamps, and communicate any discrepancies or instructions to the Sub Postmaster."
     },
     {
         "id": "fl-p1-01-94",
@@ -1395,15 +1395,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-117",
-        "text": "What is the prescribed preservation period for the \"Nominal Roll\" of clerks maintained in a post office, as per Postal Manual Volume II?",
+        "text": "What is the prescribed preservation period for the \"Nominal Roll\" of clerks (MS-12) maintained in a post office, as per the schedule of preservation of postal records?",
         "options": [
             "Preserved permanently as a historical service record",
             "Preserved for ten years after the last entry is made",
             "Preserved for five years after the last entry is made",
             "Preserved for three years after the last entry is made"
         ],
-        "correctAnswer": 0,
-        "explanation": "According to the Schedule of Preservation of Records in Postal Manual Volume II, the Nominal Roll of clerks/staff of an office is classified as a permanent record and must be preserved permanently."
+        "correctAnswer": 1,
+        "explanation": "According to the Schedule of Preservation of Records, the Nominal Roll of clerks/staff (Form MS-12) must be preserved for a period of 10 years, whereas records like the Post Office Order Book are preserved permanently."
     },
     {
         "id": "fl-p1-01-118",
@@ -1455,15 +1455,15 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-122",
-        "text": "According to Postal Manual Volume VI, what is the maximum weight limit for a postal article that mandates it must be delivered strictly at the post office window rather than through a postman?",
+        "text": "Under Postal Manual Volume V, what is the prescribed procedure when a 'Due Mail' bag is not received at the expected time?",
         "options": [
-            "Parcels weighing above five kilograms",
-            "Parcels weighing above ten kilograms",
-            "Parcels weighing above fifteen kilograms",
-            "Parcels weighing above twenty kilograms"
+            "The postmaster must wait 24 hours before reporting the matter",
+            "A 'Mail Note' must be issued to the RMS immediately",
+            "The receiving office must immediately dispatch a telegraphic or digital error report (Mail Irregularity) to the dispatching office",
+            "The dispatching office is automatically fined from the salary of the sorter"
         ],
-        "correctAnswer": 1,
-        "explanation": "Under the delivery rules of Postal Manual Vol VI Part I and the PO Guide, any parcel weighing more than 10 kilograms is not delivered at the addressee’s door by a regular postman; an intimation is served, and it is delivered at the post office window."
+        "correctAnswer": 2,
+        "explanation": "In mail operations (Vol V), the non-receipt of a 'Due Mail' bag must be immediately reported by issuing a telegraphic/digital error report or Mail Irregularity report to the dispatching office and higher authorities to track the missing bag."
     },
     {
         "id": "fl-p1-01-123",

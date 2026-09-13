@@ -291,27 +291,27 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-25",
-        "text": "Under Postal Manual Volume VI, Part-I, what is the maximum limit for which a \"Blind Literature Packet\" can be insured?",
+        "text": "Under the Post Office Act, 2023, which of the following is correct regarding the fixing of charges for postal services?",
         "options": [
-            "It can be insured up to a maximum of exactly five hundred rupees",
-            "It can be insured up to a maximum of exactly one thousand rupees",
-            "It can be insured up to a maximum of exactly two thousand rupees",
-            "A Blind Literature Packet cannot legally be insured for any amount"
+            "Charges are fixed exclusively by the Parliament through annual finance bills",
+            "The Central Government fixes the charges for all services universally",
+            "The Director General of Postal Services may make regulations to fix charges, with the prior approval of the Central Government",
+            "The Chief Postmaster General fixes the charges for their respective postal circle"
         ],
-        "correctAnswer": 3,
-        "explanation": "As per Post Office regulations and Volume VI, Blind Literature Packets are exempted from postage and registration fees but cannot be insured or sent as Value Payable (V.P.) articles under any circumstances."
+        "correctAnswer": 2,
+        "explanation": "Under Section 13 of the Post Office Act, 2023, the Director General is empowered to make regulations regarding the charges for services and the dimensions and weights of postal items, subject to the prior approval of the Central Government."
     },
     {
         "id": "fl-p1-02-26",
-        "text": "Consider the following statements based on Postal Manual Volume VI, Part-II regarding Telegraphic Money Orders (TMOs):\n1. TMO services have been officially discontinued by India Post.\n2. The rules for TMOs are still actively used for rural remittances.\nWhich of the statements given above is/are legally accurate?",
+        "text": "Under Postal Manual Volume VI, Part-II, what is the maximum period of currency for an Indian Postal Order from the last day of the month of issue, without paying any additional second commission?",
         "options": [
-            "1 only",
-            "2 only",
-            "Both 1 and 2",
-            "Neither 1 nor 2"
+            "Exactly twelve months",
+            "Exactly twenty-four months",
+            "Exactly thirty-six months",
+            "Indian Postal Orders do not have an expiration period"
         ],
-        "correctAnswer": 0,
-        "explanation": "Statement 1 is correct. The Department of Posts officially discontinued Telegraphic Money Orders (along with the cessation of general telegraph services in India). Volume VI Part-II's provisions on TMOs are historically obsolete and removed from current active operations."
+        "correctAnswer": 1,
+        "explanation": "According to the guidelines on Indian Postal Orders in Postal Manual Volume VI, Part-II, an IPO is valid for 24 months from the last day of the month of its issue. It can be extended for another 12 months upon payment of a second commission."
     },
     {
         "id": "fl-p1-02-27",
@@ -603,15 +603,15 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-51",
-        "text": "According to the Information Technology Act, 2000, what is the primary role of the Indian Computer Emergency Response Team (CERT-In)?",
+        "text": "Under the Information Technology Act, 2000, what legal recognition is granted to electronic records under Section 4?",
         "options": [
-            "To issue digital certificates to all domestic e-commerce platforms",
-            "To strictly regulate the pricing of broadband data plans in India",
-            "To serve as the national agency for responding to computer security incidents",
-            "To adjudicate all civil disputes arising from online commercial contracts"
+            "They are legally recognized only for commercial transactions exceeding one lakh rupees",
+            "They are granted the same legal recognition as physical written documents, provided they are accessible for subsequent reference",
+            "They are recognized as evidence only if certified physically by a Gazetted Officer",
+            "They hold no legal validity in central government departments or post offices"
         ],
-        "correctAnswer": 2,
-        "explanation": "Section 70B of the IT Act, 2000 establishes CERT-In to serve as the national nodal agency for incident response, vulnerability analysis, and issuing guidelines relating to information security practices and cyber incidents."
+        "correctAnswer": 1,
+        "explanation": "Section 4 of the IT Act, 2000 grants full legal recognition to electronic records, stipulating that where any law requires information to be in writing or in printed form, that requirement is satisfied if the information is rendered or made available in an electronic form and is accessible so as to be usable for a subsequent reference."
     },
     {
         "id": "fl-p1-02-52",
@@ -723,7 +723,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-61",
-        "text": "Under Postal Manual Volume V, what is a \"Beat Instruction Register\"?",
+        "text": "Under the Delivery Department rules of Postal Manual Volume VI, what is a \"Beat Instruction Register\" (Postman's Book / MS-27)?",
         "options": [
             "A ledger detailing the financial allowances of rural mail carriers",
             "A register containing specific delivery instructions for a postman's beat",
@@ -731,19 +731,19 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
             "A daily attendance log for all Group D staff in a Head Post Office"
         ],
         "correctAnswer": 1,
-        "explanation": "The Beat Instruction Register (or Postman’s Book) contains standing instructions, redirects, and special delivery instructions (e.g., change of address) pertaining to a specific beat, guiding the postman in accurate mail delivery."
+        "explanation": "The Beat Instruction Register (or Postman’s Book, MS-27) is a critical delivery record maintained under Volume VI. It contains standing instructions, redirects, and special delivery instructions pertaining to a specific beat, guiding the postman in accurate mail delivery."
     },
     {
         "id": "fl-p1-02-62",
-        "text": "According to Postal Manual Volume VI, Part-I, what is the mandatory requirement for booking a \"Value Payable\" (V.P.) article?",
+        "text": "According to the Post Office Rules, 2024, which of the following items is strictly prohibited from transmission by inland post?",
         "options": [
-            "The sender must attach a copy of their income tax return for the year",
-            "The sender must strictly insure the article for double the V.P. amount",
-            "The sender must submit a filled V.P. money order form with the article",
-            "The sender must declare the contents as completely non-commercial"
+            "Properly packed sharp instruments",
+            "Any ticket or proposal relating to an unauthorized lottery",
+            "Human blood samples packed in hermetically sealed containers",
+            "Live bees enclosed in specialized wooden boxes"
         ],
-        "correctAnswer": 2,
-        "explanation": "Volume VI mandates that every V.P. article presented for booking must be accompanied by a duly filled V.P. money order form. This form is used by the delivery office to remit the recovered amount back to the sender."
+        "correctAnswer": 1,
+        "explanation": "The Post Office Rules, 2024 maintain the strict prohibition on the transmission of any ticket, proposal, or advertisement relating to a lottery not organized or authorized by the Government."
     },
     {
         "id": "fl-p1-02-63",
@@ -1107,15 +1107,15 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-93",
-        "text": "As per Postal Manual Volume VI, Part-I, what is the maximum value of a Value Payable (V.P.) article that a postman is authorized to deliver directly at the addressee's residence?",
+        "text": "As per Postal Manual Volume VI, Part III, what is the primary purpose of maintaining the \"Sub-Office Summary\" (Form Pa-12) in a Head Post Office?",
         "options": [
-            "A value not exceeding exactly one hundred rupees",
-            "A value not exceeding exactly five hundred rupees",
-            "A value not exceeding exactly one thousand rupees",
-            "A value not exceeding exactly five thousand rupees"
+            "To summarize the daily attendance of all Sub Office staff members",
+            "To compile and check the daily monetary transactions and balances of all subordinate Sub Offices",
+            "To record the physical condition of transit mail bags received from branch routes",
+            "To register public complaints directed against Sub Postmasters"
         ],
         "correctAnswer": 1,
-        "explanation": "Under the delivery rules of Volume VI Part-I, V.P. articles exceeding Rs. 500 in value are ordinarily not sent out through the postman for door delivery; instead, an intimation is served, and the addressee must take delivery at the post office window."
+        "explanation": "The Sub-Office Summary (Form Pa-12) is maintained in the Sub-Account branch of a Head Office to systematically compile, record, and verify the daily financial transactions, receipts, payments, and balances reported by all subordinate Sub Offices under its jurisdiction."
     },
     {
         "id": "fl-p1-02-94",
@@ -1359,15 +1359,15 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-114",
-        "text": "Under Rule 11 of the GDS (Conduct and Engagement) Rules, 2020, which of the following penalties requires the holding of a formal inquiry before imposition?",
+        "text": "Under the GDS (Conduct and Engagement) Rules, 2020, the detailed procedure for imposing a major penalty (such as removal or dismissal) on a Sevak is laid down in which rule?",
         "options": [
-            "Censure recorded formally in the service record of the official",
-            "Debarment from appearing in the departmental promotional examination",
-            "Recovery from TRCA of the whole or part of any pecuniary loss",
-            "Removal from engagement which shall not be a disqualification"
+            "Rule 9",
+            "Rule 10",
+            "Rule 11",
+            "Rule 12"
         ],
-        "correctAnswer": 3,
-        "explanation": "Under the GDS Rules, Censure, Debarment, and Recovery are classified as minor penalties and do not mandate a detailed formal inquiry. Removal is a major penalty and strictly requires the holding of a formal inquiry procedure as laid down in Rule 10."
+        "correctAnswer": 1,
+        "explanation": "While Rule 9 categorizes the penalties, Rule 10 of the GDS Rules strictly prescribes the detailed procedure (including the holding of a formal departmental inquiry) for imposing major penalties."
     },
     {
         "id": "fl-p1-02-115",

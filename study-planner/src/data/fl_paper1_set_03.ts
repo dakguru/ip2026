@@ -183,15 +183,15 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-16",
-        "text": "According to Postal Manual Volume IV, what is the maximum period of extra-ordinary leave (EOL) that can be granted to a permanent official on medical certificate at one time?",
+        "text": "According to the CCS (Leave) Rules, 1972 (as referenced in Postal Manual Volume IV), what is the maximum period of Earned Leave (EL) that can be granted at a time to a Government servant employed in India?",
         "options": [
-            "Twelve months continuously without any service break restriction",
-            "Eighteen months continuously for specified severe illnesses",
-            "Twenty-four months continuously under any medical circumstance",
-            "Thirty-six months continuously exclusively for terminal diseases"
+            "90 days",
+            "120 days",
+            "180 days",
+            "300 days"
         ],
-        "correctAnswer": 1,
-        "explanation": "As per leave rules in Postal Manual Volume IV, Extra-Ordinary Leave (EOL) up to a maximum of 18 months can be granted to a permanent official at one time on a medical certificate for specified severe ailments like TB, leprosy, or cancer."
+        "correctAnswer": 2,
+        "explanation": "Under Rule 26 of the CCS (Leave) Rules, 1972, the maximum amount of Earned Leave that can be granted to a Government servant at a single time is capped at 180 days (with specific exceptions for leave preparatory to retirement)."
     },
     {
         "id": "fl-p1-03-17",
@@ -723,15 +723,15 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-61",
-        "text": "Under the GDS (Conduct & Engagement) Rules, 2020, how many days of paid leave is a Gramin Dak Sevak entitled to for every completed month of service?",
+        "text": "Under the GDS (Conduct & Engagement) Rules, 2020, what is the prescribed quantum of paid leave granted to a Gramin Dak Sevak in a year?",
         "options": [
-            "One day for every completed month, up to ten days per year",
-            "One and a half days for every month, up to fifteen days per year",
-            "Two days for every completed month, up to twenty days per year",
-            "Two and a half days for every month, up to thirty days per year"
+            "15 days in a year, credited at once on the 1st of January",
+            "20 days in a year, credited as 10 days for every half-year",
+            "30 days in a year, credited as 15 days for every half-year",
+            "Paid leave is strictly calculated at 2.5 days per completed month"
         ],
-        "correctAnswer": 2,
-        "explanation": "As per Rule 10 of the GDS Rules, a Gramin Dak Sevak is entitled to 20 days of paid leave in a year, which is credited at the rate of two days for every completed month of engagement."
+        "correctAnswer": 1,
+        "explanation": "As per Rule 7 of the GDS (Conduct & Engagement) Rules, 2020, Gramin Dak Sevaks are granted paid leave at the rate of 20 days in a year, which is credited in advance at the rate of 10 days for every half-year (on 1st January and 1st July)."
     },
     {
         "id": "fl-p1-03-62",
@@ -807,15 +807,15 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-68",
-        "text": "As per the CCS (Conduct) Rules, 1964, can a Government servant participate in a registered trade union?",
+        "text": "Under the CCS (Conduct) Rules, 1964, what is the regulatory stance on a Government servant joining a service association?",
         "options": [
-            "Yes, without any restrictions as it is a fundamental constitutional right",
-            "Yes, provided the union is officially recognized by the Government",
-            "No, participation in any kind of trade union is strictly prohibited",
-            "Yes, but only after seeking prior permission from the departmental head"
+            "They are strictly prohibited from joining any association during their entire service",
+            "They may join an association provided it is officially recognized under the CCS (RSA) Rules",
+            "They can form a registered trade union and engage in collective bargaining strikes",
+            "They can join an unrecognized association if it operates solely at the district level"
         ],
         "correctAnswer": 1,
-        "explanation": "Rule 6 of the CCS (Conduct) Rules states that no Government servant shall join or continue to be a member of an association the objects or activities of which are prejudicial to the sovereignty of India. They may join recognized service associations/unions."
+        "explanation": "Rule 6 of the CCS (Conduct) Rules allows Government servants to join service associations provided the association's objectives are not prejudicial to the sovereignty of India. They are governed by the CCS (Recognition of Service Associations) Rules, 1993, and cannot act as industrial \"Trade Unions\"."
     },
     {
         "id": "fl-p1-03-69",
@@ -975,15 +975,15 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-82",
-        "text": "According to Postal Manual Volume IV, what is the period of validity of the waiting list for compassionate appointments?",
+        "text": "According to the consolidated DoPT guidelines on compassionate appointments adopted in Postal Manual Volume IV, what is the current time limit for keeping a deserving candidate's name on the waiting list for compassionate appointment?",
         "options": [
-            "One year from the date of approval by the Circle Relaxation Committee",
-            "Three years from the date of approval by the Circle Relaxation Committee",
-            "Five years from the date of approval by the Circle Relaxation Committee",
-            "There is no time limit; it remains valid until the candidate is appointed"
+            "Exactly one year from the date of death of the government servant",
+            "Exactly three years, after which the case is permanently closed",
+            "Exactly five years, subject to an annual review of indigence",
+            "The previous time limit of three years has been formally withdrawn"
         ],
-        "correctAnswer": 1,
-        "explanation": "Under the scheme for compassionate appointments governed by DoPT guidelines and adopted in Vol IV, if a candidate is approved but cannot be appointed immediately due to lack of vacancies, their name is kept on a waiting list for a maximum of 3 years. (Subject to recent court rulings, but historically 3 years)."
+        "correctAnswer": 3,
+        "explanation": "Based on DoPT O.M. No. 14014/3/2011-Estt.(D) dated 26th July 2012, the earlier instruction prescribing a strict three-year time limit for considering cases of compassionate appointment was withdrawn. Deserving cases can be kept open subject to periodic review of the family's penurious condition."
     },
     {
         "id": "fl-p1-03-83",
@@ -1275,15 +1275,15 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-107",
-        "text": "According to Postal Manual Volume VI, Part I, who holds the keys to the joint custody cash safe in a Head Post Office?",
+        "text": "According to the Post Office Savings Bank (POSB) CBS Manual, what is the procedure if a depositor wishes to change the nomination in an active savings account?",
         "options": [
-            "Both keys are held solely by the Head Postmaster for convenience",
-            "One key by the Postmaster and the other by the Head Treasurer",
-            "One key by the Head Treasurer and the other by the Sorting Assistant",
-            "Both keys are held by the Inspector of Posts of the subdivision"
+            "Nomination can only be changed once during the lifetime of the account free of charge.",
+            "The depositor must close the account and open a new one with the revised nomination.",
+            "The depositor can change or cancel the nomination at any time by submitting the prescribed application along with the applicable fee.",
+            "Nominations can only be altered by an explicit order from a competent civil court."
         ],
-        "correctAnswer": 1,
-        "explanation": "To ensure security, Postal Manual Vol VI Part I mandates a double-lock system for the main cash safe in a Head Post Office. One set of keys is held by the Head Postmaster and the other by the Head Treasurer, requiring their joint presence to access bulk cash."
+        "correctAnswer": 2,
+        "explanation": "POSB Rules and the Government Savings Promotion Rules, 2018, explicitly permit a depositor to cancel or vary a nomination at any time before maturity or death by submitting the prescribed form and paying the requisite administrative fee."
     },
     {
         "id": "fl-p1-03-108",
@@ -1395,15 +1395,15 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-117",
-        "text": "As per Postal Manual Volume IV, what is the condition for a Government servant to avail Leave Travel Concession (LTC) to their home town?",
+        "text": "Under the recruitment and establishment norms consolidated in Postal Manual Volume IV, what is the standard age relaxation admissible to Scheduled Caste (SC) and Scheduled Tribe (ST) candidates for direct recruitment to central civil services?",
         "options": [
-            "Once in a block of two years for all regular government servants",
-            "Once every year without any restriction on the block period",
-            "Only once in their entire career just before superannuation",
-            "Once in a block of four years exclusively for Group A officers"
+            "3 years over the prescribed upper age limit",
+            "5 years over the prescribed upper age limit",
+            "7 years over the prescribed upper age limit",
+            "10 years over the prescribed upper age limit"
         ],
-        "correctAnswer": 0,
-        "explanation": "Under the standard LTC rules detailed in Volume IV (incorporating DoPT rules), a regular Government servant is entitled to Home Town LTC once in a block of two calendar years."
+        "correctAnswer": 1,
+        "explanation": "According to the consolidated DoPT guidelines on age relaxation for direct recruitment (which govern establishment norms in Volume IV), SC and ST candidates are universally entitled to a standard age relaxation of 5 years over the prescribed upper age limit."
     },
     {
         "id": "fl-p1-03-118",

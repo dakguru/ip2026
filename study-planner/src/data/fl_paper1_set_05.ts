@@ -291,15 +291,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-25",
-        "text": "As per Postal Manual Volume VI, Part-I, what is the correct procedure when a registered article is received in a damaged condition at the delivery post office?",
+        "text": "Under the Government Savings Promotion Act, 1873, what is the legal effect of an account holder pledging their savings account?",
         "options": [
-            "It must be delivered immediately to the addressee",
-            "It must be returned to the sender without opening",
-            "A notice is sent to the addressee to take delivery at the PO",
-            "It must be destroyed by the postmaster in front of witnesses"
+            "The pledgee becomes the absolute legal owner permanently overriding all heirs",
+            "The account ceases to earn any statutory interest during the pledge period",
+            "The pledgee is authorized to receive the amount due on the account to the extent of the pledge",
+            "Pledging of a government savings account is entirely prohibited and void"
         ],
         "correctAnswer": 2,
-        "explanation": "Rule 128 of Postal Manual Vol VI Part-I dictates that if a registered article is received damaged, a notice must be issued inviting the addressee to attend the post office to take delivery."
+        "explanation": "According to Section 4B of the Government Savings Promotion Act, 1873, when an account is legally pledged, the pledgee is legally authorized to receive the eligible amount from the account to satisfy the debt or obligation."
     },
     {
         "id": "fl-p1-05-26",
@@ -795,15 +795,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-67",
-        "text": "As per Postal Manual Volume VI, Part-I, what is the action required if a postman loses a registered letter during delivery?",
+        "text": "Under the Consumer Protection Act, 2019, what does the term \"Product Liability\" encompass?",
         "options": [
-            "The postman must replace the contents of the letter from his salary",
-            "The postmaster must immediately lodge an FIR and suspend the postman",
-            "The postmaster makes inquiries, notes in the error book, and reports to the Superintendent",
-            "The loss is ignored if the addressee does not file a formal complaint within a week"
+            "The liability of a consumer to pay taxes on the product",
+            "The responsibility of a product manufacturer or seller to compensate for harm caused by a defective product",
+            "The absolute immunity of the manufacturer from all civil lawsuits",
+            "The obligation of the consumer to properly maintain the product"
         ],
-        "correctAnswer": 2,
-        "explanation": "Rule 145 of Vol VI Part-I states that loss of a registered article by a postman must be immediately recorded in the error book and reported to the Superintendent after preliminary inquiries."
+        "correctAnswer": 1,
+        "explanation": "Section 2(34) of the CPA, 2019 defines \"product liability\" as the responsibility of a product manufacturer, product seller, or product service provider to compensate for any harm caused to a consumer by a defective product or deficiency in services."
     },
     {
         "id": "fl-p1-05-68",
@@ -1047,15 +1047,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-88",
-        "text": "In Postal Manual Volume VI, Part-I, what is the procedure for delivering an insured article of value Rs. 1000?",
+        "text": "According to the Prevention of Money Laundering Act, 2002, what is a \"Reporting Entity\"?",
         "options": [
-            "It is delivered at the window of the Post Office only",
-            "It is delivered by the postman at the addressee's residence",
-            "It is handed over to the village headman for delivery",
-            "It must be delivered only in the presence of a postal inspector"
+            "A journalist or media house investigating financial crimes",
+            "A banking company, financial institution, intermediary, or a person carrying on a designated business or profession",
+            "Only the Enforcement Directorate and the Financial Intelligence Unit",
+            "Any foreign bank operating exclusively outside Indian territory"
         ],
-        "correctAnswer": 0,
-        "explanation": "Under Vol VI rules, insured articles exceeding Rs. 500 in value are not sent out with the postman; an intimation is sent, and delivery is made at the post office window."
+        "correctAnswer": 1,
+        "explanation": "Section 2(wa) of the PMLA, 2002 explicitly defines a \"reporting entity\" as a banking company, financial institution, intermediary, or a person carrying on a designated business or profession, which includes the Department of Posts for its financial operations."
     },
     {
         "id": "fl-p1-05-89",
@@ -1191,15 +1191,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-100",
-        "text": "According to Section 2(47) of the Consumer Protection Act, 2019, which of the following is considered an 'Unfair Trade Practice'?",
+        "text": "According to the Consumer Protection Act, 2019, how is a consumer complaint involving the Post Office's liability regarding Speed Post delivery typically resolved based on statutory frameworks?",
         "options": [
-            "Offering a discount on the maximum retail price of a product",
-            "Falsely representing that goods are of a particular standard or quality",
-            "Refusing to sell goods below the cost of manufacturing",
-            "Expanding the warranty period for an additional fee"
+            "The Post Office is directed to pay full emotional distress damages without limits",
+            "Compensation is strictly limited to the statutory liability (double the speed post charge or Rs. 1000, whichever is less) unless gross negligence or fraud is proven",
+            "The District Commission always waives the postal charges without awarding any financial compensation",
+            "Consumer forums are entirely barred from hearing any case involving the Department of Posts"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 2(47) of the CPA, 2019 defines \"unfair trade practice\" comprehensively, explicitly including the practice of making any statement which falsely represents that goods are of a particular standard, quality, or grade."
+        "explanation": "Consumer Commissions uphold the statutory protection granted under the Post Office Act and related rules. For Speed Post, compensation for delay or loss is statutorily limited to double the postage or Rs. 1000 (whichever is less). Higher damages are generally only awarded if explicit proof of willful fraud or deliberate gross negligence by a postal official is established."
     },
     {
         "id": "fl-p1-05-101",
@@ -1263,27 +1263,27 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-106",
-        "text": "According to the Book of BO Rules, which form is used by the BPM to prepare the daily account of the Branch Post Office?",
+        "text": "According to the Book of BO Rules, which specific form is used by the Branch Postmaster to prepare the Branch Office Daily Account sent to the Account Office?",
         "options": [
-            "ACG-22 (Receipt Book)",
-            "Pa-17 (Daily Account Form)",
-            "MS-85 (Mail List Form)",
-            "SS-11 (Savings Bank Ledger)"
+            "Form Pa-4",
+            "Form Pa-5",
+            "Form Pa-6",
+            "Form MS-85"
         ],
-        "correctAnswer": 1,
-        "explanation": "The BO Daily Account (Pa-17 or its APT equivalent) is the standard prescribed form used by the Branch Postmaster to compile the daily receipts and payments and report them to the Account Office."
+        "correctAnswer": 2,
+        "explanation": "The Branch Office Daily Account, which reflects the daily cash balances, stamp balances, and accountable postal transactions, is prepared by the Branch Postmaster in Form Pa-6 (or its vernacular equivalent) to be dispatched to the Account Office (SO or HO)."
     },
     {
         "id": "fl-p1-05-107",
-        "text": "As per Postal Manual Volume II, who is the competent authority to grant an advance for the purchase of a motor car to a Postal employee?",
+        "text": "Following the implementations of the 7th Central Pay Commission regarding government advances, which of the following interest-bearing advances was officially retained for Central Government (Postal) employees?",
         "options": [
-            "The Divisional Head (SSPO/SPO)",
-            "The Head of the Circle (CPMG)",
-            "The Postmaster of the Head Office",
-            "The Postal Directorate exclusively"
+            "Motor Car Advance",
+            "Festival Advance",
+            "Personal Computer (PC) Advance",
+            "Bicycle Advance"
         ],
-        "correctAnswer": 1,
-        "explanation": "Under the financial powers delegated in Vol II and general CCS rules, advances for motor cars are sanctioned by the Head of the Department, which at the Circle level is the CPMG."
+        "correctAnswer": 2,
+        "explanation": "Following the 7th CPC recommendations, most traditional advances such as the Motor Car, Bicycle, and Festival advances were completely abolished. The Personal Computer (PC) Advance was retained as a standard interest-bearing advance to promote digital literacy among government servants."
     },
     {
         "id": "fl-p1-05-108",
@@ -1311,15 +1311,15 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-110",
-        "text": "In Postal Manual Volume VI, Part-II, what constitutes a 'V.P. Article'?",
+        "text": "In the context of Anti-Money Laundering (AML) norms applicable to Post Offices, what timeframe is mandated for filing a Suspicious Transaction Report (STR)?",
         "options": [
-            "Very Personal Article requiring special handling",
-            "Value Payable Article where cost is collected on delivery",
-            "Verified Postal Article checked by customs officials",
-            "Voluminous Parcel Article exceeding twenty kilograms"
+            "Within 7 working days of arriving at a conclusion that any transaction is suspicious",
+            "Strictly within 24 hours of the transaction taking place",
+            "By the 15th of the succeeding month",
+            "Within 30 days of the end of the financial year"
         ],
-        "correctAnswer": 1,
-        "explanation": "A V.P. (Value Payable) article is one where the Post Office undertakes to collect the specified amount (value) from the addressee upon delivery and remit it to the sender."
+        "correctAnswer": 0,
+        "explanation": "Under the PML (Maintenance of Records) Rules and departmental guidelines, the Principal Officer of a reporting entity must furnish an STR to FIU-IND not later than 7 working days on being satisfied that the transaction is suspicious."
     },
     {
         "id": "fl-p1-05-111",
