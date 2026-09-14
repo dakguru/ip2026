@@ -130,8 +130,8 @@ export const FL_PAPER3_SET_01_QUESTIONS: Question[] = [
             "Up to Rupees One Lakh on each occasion",
             "Up to Rupees Two Lakhs on each occasion"
         ],
-        "correctAnswer": 0,
-        "explanation": "Under Rule 154 of the GFR 2017, the purchase of goods up to the value of Rs. 25,000/- (Rupees Twenty-Five Thousand) only on each occasion may be made without inviting quotations or bids, subject to a certificate recorded by the competent authority."
+        "correctAnswer": 1,
+        "explanation": "Under Rule 154 of the GFR 2017 (as amended by the Ministry of Finance in July 2024), the purchase of goods up to the value of Rs. 50,000/- (Rupees Fifty Thousand) only on each occasion may be made without inviting quotations or bids, subject to a certificate recorded by the competent authority. The threshold was increased from the original Rs. 25,000/- limit to simplify smaller procurements."
     },
     {
         "id": "fl-p3-01-12",
