@@ -254,7 +254,7 @@ D. A formal insurance document for international business parcels
 Answer: B
 Explanation: In Universal Postal Union (UPU) operations and PO Guide Part-II, CN 22 is a standard customs declaration label affixed to small packets and letter-post items whose value falls below the threshold requiring the more detailed CN 23 form.
 
-Q32. What is the fundamental architecture of the Digital Personal Identification Number (DIGIPIN) proposed by India Post?
+Q32. What is the fundamental architecture of the Digital Postal Index Number (DIGIPIN) proposed by India Post?
 A. A highly randomized 12-digit alphanumeric code linked to Aadhaar
 B. A strictly 16-character digital signature for financial transactions
 C. A 10-character alphanumeric geo-spatial grid-based addressing code
@@ -814,7 +814,7 @@ D. Maximum weight strictly up to ten kilograms
 Answer: B
 Explanation: Under UPU conventions detailed in PO Guide Part-II, the general maximum weight limit for Printed Papers in international mail is 2 kilograms (though an exception exists allowing up to 5 kg for a single volume book, 2 kg is the standard category limit).
 
-Q100. Regarding the structure of the proposed Digital Personal Identification Number (DIGIPIN), how many characters constitute this geo-spatial addressing code?
+Q100. Regarding the structure of the proposed Digital Postal Index Number (DIGIPIN), how many characters constitute this geo-spatial addressing code?
 A. Exactly eight alphanumeric characters
 B. Exactly ten alphanumeric characters
 C. Exactly twelve alphanumeric characters

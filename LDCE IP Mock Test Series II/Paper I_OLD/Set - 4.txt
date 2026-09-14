@@ -320,7 +320,7 @@ D. The packet must contain exclusively printed books or magazines and must be le
 Answer: B
 Explanation: Post Office Guide Part-II stipulates that International Tracked Packets are designed for small e-commerce items, must not exceed 2 kg in weight, and must carry the appropriate CN22/CN23 customs declaration form for international clearance.
 
-Q37. What is the fundamental structure of the proposed Digital Personal Identification Number (DIGIPIN) system introduced for address geolocation?
+Q37. What is the fundamental structure of the proposed Digital Postal Index Number (DIGIPIN) system introduced for address geolocation?
 A. A highly complex 12-character alphanumeric code that includes the user's permanent Aadhaar number and state code.
 B. A 10-digit numeric code specifically designed to form a geographical grid system dividing India into 4m x 4m uniform blocks.
 C. A 6-digit alphanumeric code replacing the current PIN code system, utilizing dynamic GPS coordinates updated daily.

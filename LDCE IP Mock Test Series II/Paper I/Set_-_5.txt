@@ -263,7 +263,7 @@ D. Five kilograms for any international destination
 Answer: B
 Explanation: Under Section II of Post Office Guide Part-II, the maximum weight allowed for a foreign letter sent via international post is restricted to 2 kilograms.
 
-Q33. What is the fundamental structure of the proposed Digital Personal Identification Number (DIGIPIN) being developed by the Department of Posts?
+Q33. What is the fundamental structure of the proposed Digital Postal Index Number (DIGIPIN) being developed by the Department of Posts?
 A. A ten-digit alphanumeric code tied to Aadhaar
 B. A ten-character alphanumeric geo-coded grid system
 C. A twelve-digit numeric code mapping specific households

@@ -399,7 +399,7 @@ export const FL_PAPER1_SET_03_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-03-34",
-        "text": "Regarding Digital Personal Identification Number (DIGIPIN), what is its primary conceptual purpose as proposed by the Department of Posts?",
+        "text": "Regarding Digital Postal Index Number (DIGIPIN), what is its primary conceptual purpose as proposed by the Department of Posts?",
         "options": [
             "To replace the traditional Aadhaar card for all central subsidies",
             "To create a standardized, geo-coded addressing system for India",

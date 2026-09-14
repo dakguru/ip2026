@@ -230,7 +230,7 @@ D. A telegram transmitted via international postal networks
 Answer: C
 Explanation: Under PO Guide Part-II, an Aerogramme is a specific category of foreign mail consisting of a suitably folded single sheet of paper with gummed flaps, intended exclusively for airmail transmission without enclosures.
 
-Q29. What is the fundamental concept behind the Digital Personal Identification Number (DIGIPIN) project initiated by the Department of Posts?
+Q29. What is the fundamental concept behind the Digital Postal Index Number (DIGIPIN) project initiated by the Department of Posts?
 A. Creating a biometric database of all rural postal customers
 B. Issuing a unique alphanumeric address code for geo-location
 C. Generating a digital tracker for high-value financial parcels

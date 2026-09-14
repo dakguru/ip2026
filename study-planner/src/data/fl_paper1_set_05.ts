@@ -387,7 +387,7 @@ export const FL_PAPER1_SET_05_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-05-33",
-        "text": "What is the fundamental structure of the proposed Digital Personal Identification Number (DIGIPIN) being developed by the Department of Posts?",
+        "text": "What is the fundamental structure of the proposed Digital Postal Index Number (DIGIPIN) being developed by the Department of Posts?",
         "options": [
             "A ten-digit alphanumeric code tied to Aadhaar",
             "A ten-character alphanumeric geo-coded grid system",

@@ -277,7 +277,7 @@ D. The Postmaster General of the Circle without any delegation
 Answer: B
 Explanation: As per the GDS Rules, 2020, major penalties such as removal or dismissal from engagement can only be imposed by the designated Engaging Authority of the respective GDS, or by an authority higher in rank than the Engaging Authority.
 
-Q34. Regarding Digital Personal Identification Number (DIGIPIN), what is its primary conceptual purpose as proposed by the Department of Posts?
+Q34. Regarding Digital Postal Index Number (DIGIPIN), what is its primary conceptual purpose as proposed by the Department of Posts?
 A. To replace the traditional Aadhaar card for all central subsidies
 B. To create a standardized, geo-coded addressing system for India
 C. To encrypt internal emails transmitted between postal employees

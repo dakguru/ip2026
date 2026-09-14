@@ -375,7 +375,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-32",
-        "text": "What is the fundamental architecture of the Digital Personal Identification Number (DIGIPIN) proposed by India Post?",
+        "text": "What is the fundamental architecture of the Digital Postal Index Number (DIGIPIN) proposed by India Post?",
         "options": [
             "A highly randomized 12-digit alphanumeric code linked to Aadhaar",
             "A strictly 16-character digital signature for financial transactions",
@@ -1191,7 +1191,7 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-100",
-        "text": "Regarding the structure of the proposed Digital Personal Identification Number (DIGIPIN), how many characters constitute this geo-spatial addressing code?",
+        "text": "Regarding the structure of the proposed Digital Postal Index Number (DIGIPIN), how many characters constitute this geo-spatial addressing code?",
         "options": [
             "Exactly eight alphanumeric characters",
             "Exactly ten alphanumeric characters",

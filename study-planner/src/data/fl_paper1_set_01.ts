@@ -339,7 +339,7 @@ export const FL_PAPER1_SET_01_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-01-29",
-        "text": "What is the fundamental concept behind the Digital Personal Identification Number (DIGIPIN) project initiated by the Department of Posts?",
+        "text": "What is the fundamental concept behind the Digital Postal Index Number (DIGIPIN) project initiated by the Department of Posts?",
         "options": [
             "Creating a biometric database of all rural postal customers",
             "Issuing a unique alphanumeric address code for geo-location",

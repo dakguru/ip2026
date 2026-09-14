@@ -305,7 +305,7 @@ const PDF_DATA: Record<string, Note[]> = {
         // 33. DIGIPIN
         {
             title: "DIGIPIN",
-            description: "Basic understanding of Digital Personal Identification Number.",
+            description: "Basic understanding of Digital Postal Index Number.",
             filename: "DIGIPIN.pdf",
             path: "/notes/paper-1/DIGIPIN.pdf",
             size: "4.4 MB",

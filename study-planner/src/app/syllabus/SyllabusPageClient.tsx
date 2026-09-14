@@ -91,7 +91,7 @@ const syllabusData = {
                 category: "6. Ops & Guidelines",
                 icon: <Mail className="w-5 h-5" />,
                 items: [
-                    { name: "DIGIPIN (Digital Personal Identification Number)", link: "https://www.indiapost.gov.in/" },
+                    { name: "DIGIPIN (Digital Postal Index Number)", link: "https://www.indiapost.gov.in/" },
                     { name: "Operational: MNOP, PNOP, Niryat Kendra", link: "https://www.indiapost.gov.in/MBE/Pages/Content/Parcel-Network.aspx" },
                     { name: "Preservation & Disposal of Records", link: "https://swachhportal.gov.in/" },
                     { name: "APT Knowledge (IT 2.0)", link: "https://www.indiapost.gov.in/" },
