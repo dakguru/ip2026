@@ -142,13 +142,13 @@ D. The account holder must provide a financial guarantee certificate
 Answer: B
 Explanation: Para 11 of the SSA Scheme 2019 permits premature closure for the intended marriage of the account holder provided she has attained the age of eighteen years, and the application is supported by a valid age declaration/evidence.
 
-Q18. According to the Post Office Life Insurance Rules, 2011, what happens to a policy if the insurant commits suicide within two years from the date of acceptance of the policy?
-A. The entire sum assured is unconditionally paid to the nominee
-B. The policy becomes completely null and void without any refund
-C. Only the premium paid, without interest, is refunded to the heirs
-D. Half of the sum assured is paid strictly to the legal successors
-Answer: B
-Explanation: Under Rule 55 of the POLI Rules 2011, if an insurant commits suicide within two years from the date of acceptance of the policy (or revival), the policy shall become void, and no claim for sum assured or premium refund is admissible.
+Q18. According to the Post Office Life Insurance Rules, 2011 (as amended in 2021), what happens to a policy if the insurant commits suicide within one year from the date of acceptance or revival of the policy?
+A. The entire sum assured is treated as a normal death claim and paid unconditionally
+B. The policy becomes completely null and void without any claim for sum assured or premium refund
+C. 80% of the premiums paid or the surrender value, whichever is higher, is refunded
+D. Only the base premium paid, without interest, is refunded to the legal successors
+Answer: C
+Explanation: Under the April 2021 amendments to Rule 16(i) and Rule 61 of the POLI Rules, 2011, the departmental regulations regarding suicide cases were significantly updated. If an insurant commits suicide before the expiry of one year from the date of acceptance or the date of revival (whichever is later), the claim is settled by refunding 80% of the premiums paid or the surrender value, whichever is higher. The previous unamended rule—which voided the policy entirely for suicides within two years—is obsolete. Furthermore, if a suicide occurs after the one-year mark, the case is treated on par with other standard death claim cases. Integrating this updated framework ensures that current test preparations and study materials accurately reflect active government service rules.
 
 Q19. Under the Book of BO Rules, which of the following items is strictly prohibited from being kept in the BO cash bag during transit to the Account Office?
 A. Defective or mutilated currency notes received from the public

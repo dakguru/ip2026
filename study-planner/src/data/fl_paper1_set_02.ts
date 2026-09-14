@@ -207,15 +207,15 @@ export const FL_PAPER1_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p1-02-18",
-        "text": "According to the Post Office Life Insurance Rules, 2011, what happens to a policy if the insurant commits suicide within two years from the date of acceptance of the policy?",
+        "text": "According to the Post Office Life Insurance Rules, 2011 (as amended in 2021), what happens to a policy if the insurant commits suicide within one year from the date of acceptance or revival of the policy?",
         "options": [
-            "The entire sum assured is unconditionally paid to the nominee",
-            "The policy becomes completely null and void without any refund",
-            "Only the premium paid, without interest, is refunded to the heirs",
-            "Half of the sum assured is paid strictly to the legal successors"
+            "The entire sum assured is treated as a normal death claim and paid unconditionally",
+            "The policy becomes completely null and void without any claim for sum assured or premium refund",
+            "80% of the premiums paid or the surrender value, whichever is higher, is refunded",
+            "Only the base premium paid, without interest, is refunded to the legal successors"
         ],
-        "correctAnswer": 1,
-        "explanation": "Under Rule 55 of the POLI Rules 2011, if an insurant commits suicide within two years from the date of acceptance of the policy (or revival), the policy shall become void, and no claim for sum assured or premium refund is admissible."
+        "correctAnswer": 2,
+        "explanation": "Under the April 2021 amendments to Rule 16(i) and Rule 61 of the POLI Rules, 2011, the departmental regulations regarding suicide cases were significantly updated. If an insurant commits suicide before the expiry of one year from the date of acceptance or the date of revival (whichever is later), the claim is settled by refunding 80% of the premiums paid or the surrender value, whichever is higher. The previous unamended rule—which voided the policy entirely for suicides within two years—is obsolete. Furthermore, if a suicide occurs after the one-year mark, the case is treated on par with other standard death claim cases. Integrating this updated framework ensures that current test preparations and study materials accurately reflect active government service rules."
     },
     {
         "id": "fl-p1-02-19",
