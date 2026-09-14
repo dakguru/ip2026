@@ -339,8 +339,8 @@ A. Up to Rupees Twenty-Five Thousand through any available supplier on GeM
 B. Up to Rupees Fifty Thousand through any available supplier on GeM
 C. Up to Rupees One Lakh through any available supplier on GeM
 D. Up to Rupees Two Lakhs through any available supplier on GeM
-Answer: A
-Explanation: According to Rule 149(i) of the GFR 2017, direct online purchases on GeM can be made without competitive bidding for transactions up to Rs. 25,000/- through any of the available suppliers on the platform meeting the requisite quality and delivery requirements.
+Answer: B
+Explanation: According to Rule 149(i) of the GFR 2017 (as amended on 10.07.2024), direct online purchases on GeM can be made without competitive bidding for transactions up to Rs. 50,000/- through any of the available suppliers on the platform meeting the requisite quality and delivery requirements.
 
 Q41. Consider the following statements regarding the CCS (Commutation of Pension) Rules, 1981. Which of the statements given above is/are not correct?
 
@@ -939,8 +939,8 @@ A. Above Rs. 25,000 and up to Rs. 2,50,000 on each occasion
 B. Above Rs. 50,000 and up to Rs. 5,00,000 on each occasion
 C. Above Rs. 1,00,000 and up to Rs. 10,00,000 on each occasion
 D. Above Rs. 2,50,000 and up to Rs. 25,00,000 on each occasion
-Answer: A
-Explanation: Rule 155 of the GFR 2017 specifies that purchase of goods costing above Rs. 25,000/- and up to Rs. 2,50,000/- on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members.
+Answer: B
+Explanation: Rule 155 of the GFR 2017 (as amended on 10.07.2024) specifies that purchase of goods costing above Rs. 50,000/- and up to Rs. 5,00,000/- on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members.
 
 Q112. In the Manual on Procurement of Consultancy Services, when is 'Single Source Selection' (nomination) of a consultant considered an acceptable procurement strategy?
 A. When the estimated cost of the consultancy exceeds Rupees Five Crores
@@ -1146,7 +1146,7 @@ B. The Sub-Office Summary Register (SO Summary)
 C. The Treasurer's rough daily notebook
 D. The Branch Office daily balance sheet
 Answer: A
-Explanation: The Head Office Cash Book (HO Cash Book) is the primary, fundamental accounting record in a Head Post Office where the daily consolidation of all cash transactions—both receipts and payments—is formally and meticulously recorded as prescribed in P&T FHB Vol II.
+Explanation: The Head Office Cash Book (HO Cash Book) is the primary, fundamental accounting record in a Head Post Office where the daily consolidation of all cash transactionsÃ¢â‚¬â€both receipts and paymentsÃ¢â‚¬â€is formally and meticulously recorded as prescribed in P&T FHB Vol II.
 
 Q137. Article 43B of the Constitution, inserted by the 97th Constitutional Amendment Act, directs the State to endeavor to promote the voluntary formation and autonomous functioning of which of the following?
 A. Village level agrarian trade unions

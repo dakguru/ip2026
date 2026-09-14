@@ -827,7 +827,7 @@ export const FL_PAPER3_SET_03_QUESTIONS: Question[] = [
             "Total pension divided by the commutation factor multiplied by twelve"
         ],
         "correctAnswer": 1,
-        "explanation": "Rule 8 of the CCS (Commutation of Pension) Rules, 1981 states the lump sum payable is calculated as: Fraction of pension commuted × Commutation factor (applicable to the age next birthday) × 12."
+        "explanation": "Rule 8 of the CCS (Commutation of Pension) Rules, 1981 states the lump sum payable is calculated as: Fraction of pension commuted Ã— Commutation factor (applicable to the age next birthday) Ã— 12."
     },
     {
         "id": "fl-p3-03-70",

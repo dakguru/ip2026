@@ -106,12 +106,12 @@ export const FL_PAPER3_SET_04_QUESTIONS: Question[] = [
             "Up to Rupees One Lakh on each occasion",
             "Up to Rupees Two Lakhs on each occasion"
         ],
-        "correctAnswer": 1,
-        "explanation": "Rule 154 of GFR 2017 allows the purchase of goods up to the value of Rs. 25,000/- (Rupees Twenty-Five Thousand only) on each occasion without inviting quotations or bids, based on a certificate by the competent authority."
+        "correctAnswer": 0,
+        "explanation": "Rule 154 of GFR 2017 (as amended on 10.07.2024) allows the purchase of goods up to the value of Rs. 50,000/- (Rupees Fifty Thousand only) on each occasion without inviting quotations or bids, based on a certificate by the competent authority."
     },
     {
         "id": "fl-p3-04-10",
-        "text": "Consider the following statements regarding the Purchase Committee under Rule 155 of GFR 2017:\n1. It is constituted for the purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion.\n2. The committee must consist of a minimum of three members of an appropriate level as decided by the Head of the Department.\nWhich of the statements given above is/are correct?",
+        "text": "Consider the following statements regarding the Purchase Committee under Rule 155 of GFR 2017:\n1. It is constituted for the purchase of goods costing above Rs. 50,000 and up to Rs. 5,00,000 on each occasion.\n2. The committee must consist of a minimum of three members of an appropriate level as decided by the Head of the Department.\nWhich of the statements given above is/are correct?",
         "options": [
             "Statement 1 is correct but Statement 2 is incorrect",
             "Statement 2 is correct but Statement 1 is incorrect",
@@ -119,7 +119,7 @@ export const FL_PAPER3_SET_04_QUESTIONS: Question[] = [
             "Neither Statement 1 nor Statement 2 are fully correct"
         ],
         "correctAnswer": 2,
-        "explanation": "Rule 155 of GFR 2017 states that purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members."
+        "explanation": "Rule 155 of GFR 2017 (as amended) states that purchase of goods costing above Rs. 50,000 and up to Rs. 5,00,000 on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members."
     },
     {
         "id": "fl-p3-04-11",

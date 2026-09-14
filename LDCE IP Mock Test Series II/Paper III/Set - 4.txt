@@ -71,12 +71,12 @@ A. Up to Rupees Fifty Thousand on each occasion
 B. Up to Rupees Twenty-Five Thousand on each occasion
 C. Up to Rupees One Lakh on each occasion
 D. Up to Rupees Two Lakhs on each occasion
-Answer: B
-Explanation: Rule 154 of GFR 2017 allows the purchase of goods up to the value of Rs. 25,000/- (Rupees Twenty-Five Thousand only) on each occasion without inviting quotations or bids, based on a certificate by the competent authority.
+Answer: A
+Explanation: Rule 154 of GFR 2017 (as amended on 10.07.2024) allows the purchase of goods up to the value of Rs. 50,000/- (Rupees Fifty Thousand only) on each occasion without inviting quotations or bids, based on a certificate by the competent authority.
 
 Q10. Consider the following statements regarding the Purchase Committee under Rule 155 of GFR 2017:
 
-1. It is constituted for the purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion.
+1. It is constituted for the purchase of goods costing above Rs. 50,000 and up to Rs. 5,00,000 on each occasion.
 2. The committee must consist of a minimum of three members of an appropriate level as decided by the Head of the Department.
 Which of the statements given above is/are correct?
 A. Statement 1 is correct but Statement 2 is incorrect
@@ -84,7 +84,7 @@ B. Statement 2 is correct but Statement 1 is incorrect
 C. Both Statement 1 and Statement 2 are fully correct
 D. Neither Statement 1 nor Statement 2 are fully correct
 Answer: C
-Explanation: Rule 155 of GFR 2017 states that purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members.
+Explanation: Rule 155 of GFR 2017 (as amended) states that purchase of goods costing above Rs. 50,000 and up to Rs. 5,00,000 on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members.
 
 Q11. Under the Manual on Procurement of Goods, what is the minimum percentage of the estimated value of goods that must be collected as Performance Security from the successful bidder?
 A. Two to five percent of the value of the contract

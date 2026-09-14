@@ -119,7 +119,7 @@ Answer: C
 Explanation: Section 11(4) of the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 explicitly mandates that the inquiry by the Internal Committee shall be completed within a period of ninety days.
 
 Q16. According to the Central Civil Services (Implementation of NPS) Rules, 2021, what action is required if a subscriber's NPS account cannot be opened due to administrative delay?
-A. The employee’s mandatory contribution is waived entirely for the delayed months.
+A. The employeeâ€™s mandatory contribution is waived entirely for the delayed months.
 B. The contributions are deducted and kept in a non-interest bearing suspense account.
 C. The employee receives interest on delayed contributions at the GPF prescribed rate.
 D. The deduction commences only prospectively from the date of PRAN generation.
@@ -1135,7 +1135,7 @@ B. Exactly 8.19 strictly multiplied by the commuted portion and then multiplied 
 C. Exactly 8.37 strictly multiplied by the commuted portion and then multiplied by twelve.
 D. Exactly 9.15 strictly multiplied by the commuted portion and then multiplied by twelve.
 Answer: B
-Explanation: As per the Commutation Table revised by the 6th/7th CPC, the commutation factor corresponding to the age next birthday of 60 years is 8.194. The lump sum is calculated as: fraction × factor × 12.
+Explanation: As per the Commutation Table revised by the 6th/7th CPC, the commutation factor corresponding to the age next birthday of 60 years is 8.194. The lump sum is calculated as: fraction Ã— factor Ã— 12.
 
 Q138. According to the PoSH Act, 2013, an aggrieved woman can request the ICC for interim relief during the pendency of an inquiry, which may include:
 A. Immediate monetary compensation of Rupees One Lakh directly from the respondent's salary.

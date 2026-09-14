@@ -143,7 +143,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "The subscriber themselves via a self-deposit portal"
         ],
         "correctAnswer": 1,
-        "explanation": "Under Rule 7 of the CCS (Implementation of NPS) Rules, 2021, the Drawing and Disbursing Officer (DDO) is legally responsible for deducting the subscriber’s contribution from their salary every month and ensuring it is remitted to the designated Pension Fund."
+        "explanation": "Under Rule 7 of the CCS (Implementation of NPS) Rules, 2021, the Drawing and Disbursing Officer (DDO) is legally responsible for deducting the subscriberÃ¢â‚¬â„¢s contribution from their salary every month and ensuring it is remitted to the designated Pension Fund."
     },
     {
         "id": "fl-p3-02-13",
@@ -190,8 +190,8 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Goods up to the value of Rupees Two Lakh Fifty Thousand on each occasion",
             "Goods up to the value of Rupees Five Lakh on each occasion"
         ],
-        "correctAnswer": 2,
-        "explanation": "Rule 155 of GFR 2017 allows the purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion on the recommendations of a duly constituted Local Purchase Committee without inviting formal quotations."
+        "correctAnswer": 3,
+        "explanation": "Rule 155 of GFR 2017 (as amended) allows the purchase of goods costing above Rs. 50,000 and up to Rs. 5,00,000 on each occasion on the recommendations of a duly constituted Local Purchase Committee without inviting formal quotations."
     },
     {
         "id": "fl-p3-02-17",
@@ -430,8 +430,8 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Up to Rupees One Lakh without comparing multiple suppliers",
             "Up to Rupees Two Lakhs without comparing multiple suppliers"
         ],
-        "correctAnswer": 0,
-        "explanation": "Rule 149(i) of GFR 2017 stipulates that for procurements up to Rs. 25,000 through GeM, buyers can purchase from any of the available suppliers on the platform, provided the quality, specifications, and delivery period meet the requisite needs."
+        "correctAnswer": 1,
+        "explanation": "Rule 149(i) of GFR 2017 (as amended on 10.07.2024) stipulates that for procurements up to Rs. 50,000 through GeM, buyers can purchase from any of the available suppliers on the platform, provided the quality, specifications, and delivery period meet the requisite needs."
     },
     {
         "id": "fl-p3-02-37",
@@ -683,7 +683,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Neither Statement 1 nor Statement 2 are fully correct"
         ],
         "correctAnswer": 2,
-        "explanation": "Under DoPT’s 1993 Casual Labourers (Grant of Temporary Status) Scheme, female casual labourers with temporary status are eligible for maternity leave. Additionally, they are paid daily wages calculated at 1/30th of the minimum of the pay scale of a Group D (now MTS) official plus Dearness Allowance."
+        "explanation": "Under DoPTÃ¢â‚¬â„¢s 1993 Casual Labourers (Grant of Temporary Status) Scheme, female casual labourers with temporary status are eligible for maternity leave. Additionally, they are paid daily wages calculated at 1/30th of the minimum of the pay scale of a Group D (now MTS) official plus Dearness Allowance."
     },
     {
         "id": "fl-p3-02-58",
@@ -1103,7 +1103,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Neither Statement 1 nor Statement 2 are fully correct"
         ],
         "correctAnswer": 1,
-        "explanation": "DoPT instructions completely revamped the APAR system following a Supreme Court directive (Dev Dutt case). Now, the entire APAR—not just adverse remarks—including the final grading, must be communicated to the officer reported upon to ensure absolute transparency. Statement 1 is outdated and incorrect."
+        "explanation": "DoPT instructions completely revamped the APAR system following a Supreme Court directive (Dev Dutt case). Now, the entire APARÃ¢â‚¬â€not just adverse remarksÃ¢â‚¬â€including the final grading, must be communicated to the officer reported upon to ensure absolute transparency. Statement 1 is outdated and incorrect."
     },
     {
         "id": "fl-p3-02-93",
@@ -1251,7 +1251,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-105",
-        "text": "Under Section 2 of the Bharatiya Nagarik Suraksha Sanhita, 2023, how is a “cognizable offence” formally defined?",
+        "text": "Under Section 2 of the Bharatiya Nagarik Suraksha Sanhita, 2023, how is a Ã¢â‚¬Å“cognizable offenceÃ¢â‚¬Â formally defined?",
         "options": [
             "An offence for which a police officer cannot arrest the accused without a judicially issued warrant",
             "An offence for which a police officer may, in accordance with the First Schedule, arrest without warrant",
@@ -1259,7 +1259,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "An offence restricted to crimes against the state, requiring direct approval from the Home Ministry"
         ],
         "correctAnswer": 1,
-        "explanation": "Section 2(1)(g) of the BNSS, 2023 defines a “cognizable offence” as an offence for which, and “cognizable case” as a case in which, a police officer may, in accordance with the First Schedule or under any other law for the time being in force, arrest without warrant. ________________________________________"
+        "explanation": "Section 2(1)(g) of the BNSS, 2023 defines a Ã¢â‚¬Å“cognizable offenceÃ¢â‚¬Â as an offence for which, and Ã¢â‚¬Å“cognizable caseÃ¢â‚¬Â as a case in which, a police officer may, in accordance with the First Schedule or under any other law for the time being in force, arrest without warrant. ________________________________________"
     },
     {
         "id": "fl-p3-02-106",
@@ -1280,14 +1280,14 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "The receiving Collector must immediately suspend all recovery proceedings until the dispute is resolved",
             "The defaulter may institute a suit in a civil court against the Central Government or State Government",
             "The sending Collector must withdraw the certificate and initiate a direct criminal prosecution instead",
-            "The defaulter’s property is permanently forfeited without any further scope for a judicial appeal"
+            "The defaulterÃ¢â‚¬â„¢s property is permanently forfeited without any further scope for a judicial appeal"
         ],
         "correctAnswer": 1,
-        "explanation": "Under Section 4(2) and Section 4(4) of the Revenue Recovery Act, 1890, the defaulter’s primary remedy is to pay the amount under protest and institute a suit in a civil court against the Government to recover the amount. Recovery proceedings are not automatically suspended. ________________________________________"
+        "explanation": "Under Section 4(2) and Section 4(4) of the Revenue Recovery Act, 1890, the defaulterÃ¢â‚¬â„¢s primary remedy is to pay the amount under protest and institute a suit in a civil court against the Government to recover the amount. Recovery proceedings are not automatically suspended. ________________________________________"
     },
     {
         "id": "fl-p3-02-108",
-        "text": "As per the Prevention of Corruption Act, 1988 (as amended), which of the following constitutes “criminal misconduct” by a public servant under Section 13?",
+        "text": "As per the Prevention of Corruption Act, 1988 (as amended), which of the following constitutes Ã¢â‚¬Å“criminal misconductÃ¢â‚¬Â by a public servant under Section 13?",
         "options": [
             "Making a minor procedural error during the evaluation of a government tender without any malafide intent",
             "Intentionally enriching himself illicitly during the period of his office, resulting in disproportionate assets",
@@ -1316,7 +1316,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "It must be filed strictly on a specialized stamped paper purchased from a registered government vendor",
             "It must strictly follow the complex tabular format prescribed in Schedule I of the Official Secrets Act",
             "There is no strictly prescribed format, but it should contain the particulars of the information sought",
-            "It must be submitted in triplicate with a mandatory notarized affidavit affirming the applicant’s identity"
+            "It must be submitted in triplicate with a mandatory notarized affidavit affirming the applicantÃ¢â‚¬â„¢s identity"
         ],
         "correctAnswer": 2,
         "explanation": "While Rule 3 prescribes the application fee, the RTI Rules, 2012 do not mandate any rigid or specific form for the application itself. An application can be made on plain paper, provided it contains the necessary particulars of the information being sought along with the prescribed fee. ________________________________________"
@@ -1347,7 +1347,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-113",
-        "text": "Under the Manual on Procurement of Consultancy & Other Services, what does the “Least Cost System (LCS)” method of selection primarily entail?",
+        "text": "Under the Manual on Procurement of Consultancy & Other Services, what does the Ã¢â‚¬Å“Least Cost System (LCS)Ã¢â‚¬Â method of selection primarily entail?",
         "options": [
             "Selecting the consultant who scores the highest in the technical evaluation, regardless of their financial bid",
             "Selecting the lowest financial bid exclusively from among the technically qualified and responsive bidders",
@@ -1412,7 +1412,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "The Internal Committee can direct the respondent to pay a direct monetary settlement to close the case",
             "Conciliation can only be initiated upon the written request of the aggrieved woman before an inquiry",
             "The Internal Committee is legally mandated to force a conciliation before starting any formal inquiry",
-            "The employer decides the exact terms of conciliation regardless of the aggrieved woman’s preferences"
+            "The employer decides the exact terms of conciliation regardless of the aggrieved womanÃ¢â‚¬â„¢s preferences"
         ],
         "correctAnswer": 1,
         "explanation": "Section 10(1) of the POSH Act, 2013 provides that the Internal Committee may, before initiating an inquiry, at the request of the aggrieved woman take steps to settle the matter through conciliation. However, the proviso explicitly prohibits monetary settlement as a basis of conciliation. ________________________________________"
@@ -1431,7 +1431,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-120",
-        "text": "According to the CCS (Implementation of NPS) Rules, 2021, what action must the Head of Office take regarding an NPS subscriber’s PRAN (Permanent Retirement Account Number)?",
+        "text": "According to the CCS (Implementation of NPS) Rules, 2021, what action must the Head of Office take regarding an NPS subscriberÃ¢â‚¬â„¢s PRAN (Permanent Retirement Account Number)?",
         "options": [
             "Retain it permanently in the service book and never disclose it to the employee",
             "Ensure it is generated and registered within one month of joining government service",
@@ -1547,7 +1547,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Has served as the Attorney General of India for five years"
         ],
         "correctAnswer": 3,
-        "explanation": "Article 124(3) lists the constitutional qualifications for a Supreme Court judge: citizen of India, and either a High Court judge for 5 years, or a High Court advocate for 10 years, or a distinguished jurist in the President’s opinion. Serving as Attorney General is not an independent qualification. ________________________________________"
+        "explanation": "Article 124(3) lists the constitutional qualifications for a Supreme Court judge: citizen of India, and either a High Court judge for 5 years, or a High Court advocate for 10 years, or a distinguished jurist in the PresidentÃ¢â‚¬â„¢s opinion. Serving as Attorney General is not an independent qualification. ________________________________________"
     },
     {
         "id": "fl-p3-02-130",
@@ -1599,10 +1599,10 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-134",
-        "text": "Under the Revenue Recovery Act, 1890, what is the primary role of the “sending Collector”?",
+        "text": "Under the Revenue Recovery Act, 1890, what is the primary role of the Ã¢â‚¬Å“sending CollectorÃ¢â‚¬Â?",
         "options": [
-            "To physically travel to the defaulter’s district and personally auction their real estate assets",
-            "To prepare and issue the formal certificate stating the arrear amount and the defaulter’s details",
+            "To physically travel to the defaulterÃ¢â‚¬â„¢s district and personally auction their real estate assets",
+            "To prepare and issue the formal certificate stating the arrear amount and the defaulterÃ¢â‚¬â„¢s details",
             "To provide direct financial compensation to the defaulter if the recovery process is deemed harsh",
             "To file a fresh civil suit in the Supreme Court against the defaulting taxpayer for immediate recovery"
         ],
@@ -1611,7 +1611,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-135",
-        "text": "As per the Prevention of Corruption Act, 1988, what does the term “undue advantage” precisely mean?",
+        "text": "As per the Prevention of Corruption Act, 1988, what does the term Ã¢â‚¬Å“undue advantageÃ¢â‚¬Â precisely mean?",
         "options": [
             "Any gratification strictly limited to physical monetary cash transactions exceeding ten thousand rupees",
             "Any gratification whatever, other than legal remuneration, which a public servant is not permitted to accept",
@@ -1619,13 +1619,13 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Any official financial award granted directly by the Central Government for exemplary meritorious service"
         ],
         "correctAnswer": 1,
-        "explanation": "The 2018 amendment to the PC Act introduced Section 2(d), defining “undue advantage” as any gratification whatever, other than legal remuneration. The term “gratification” is explicitly not limited to pecuniary gratifications or to gratifications estimable in money. ________________________________________"
+        "explanation": "The 2018 amendment to the PC Act introduced Section 2(d), defining Ã¢â‚¬Å“undue advantageÃ¢â‚¬Â as any gratification whatever, other than legal remuneration. The term Ã¢â‚¬Å“gratificationÃ¢â‚¬Â is explicitly not limited to pecuniary gratifications or to gratifications estimable in money. ________________________________________"
     },
     {
         "id": "fl-p3-02-136",
         "text": "Under the RTI Act, 2005, if a Public Information Officer (PIO) rejects a request for information, what mandatory details must be communicated to the requester?",
         "options": [
-            "The reasons for rejection, the period within which an appeal may be preferred, and the appellate authority’s particulars",
+            "The reasons for rejection, the period within which an appeal may be preferred, and the appellate authorityÃ¢â‚¬â„¢s particulars",
             "Only the relevant clause under Section 8 which justifies the absolute and permanent rejection of the request",
             "A sworn affidavit from the departmental head confirming the physical impossibility of providing the data",
             "A simple one-line denial note without any statutory obligation to mention appellate procedures or timelines"
@@ -1647,7 +1647,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-138",
-        "text": "As per the Manual on Procurement of Goods, what does the term “Single Tender Enquiry” (STE) refer to?",
+        "text": "As per the Manual on Procurement of Goods, what does the term Ã¢â‚¬Å“Single Tender EnquiryÃ¢â‚¬Â (STE) refer to?",
         "options": [
             "A bidding process where only one specific supplier is invited to submit a bid due to proprietary reasons or emergencies",
             "A bidding process where multiple distinct suppliers submit their competitive bids in a single sealed envelope",
@@ -1664,7 +1664,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "Only when the subscriber legally completes exactly thirty-five years of continuous physical government service",
             "When the subscriber quits the service, retires, or is dismissed/removed from official government service",
             "Only upon the unfortunate physical demise of the subscriber while performing active government duty",
-            "Exactly five calendar years prior to the official documented date of the subscriber’s superannuation"
+            "Exactly five calendar years prior to the official documented date of the subscriberÃ¢â‚¬â„¢s superannuation"
         ],
         "correctAnswer": 1,
         "explanation": "Rules 29 and 30 of the CCS (GPF) Rules, 1961 outline that the amount standing to the credit of a subscriber in the Fund shall become payable when he quits the service, which broadly includes retirement, resignation, dismissal, or removal. ________________________________________"
@@ -1695,7 +1695,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-142",
-        "text": "According to the Sexual Harassment of Women at Workplace Act, 2013, what constitutes the “Local Committee” (LC)?",
+        "text": "According to the Sexual Harassment of Women at Workplace Act, 2013, what constitutes the Ã¢â‚¬Å“Local CommitteeÃ¢â‚¬Â (LC)?",
         "options": [
             "A committee formed by every private employer with strictly less than ten workers in their active office",
             "A committee constituted by the District Officer to receive complaints from establishments without an Internal Committee",
@@ -1707,7 +1707,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-143",
-        "text": "Under the CCS (Payment of Gratuity under NPS) Rules, 2021, how is the “emoluments” defined for the purpose of calculating Retirement Gratuity?",
+        "text": "Under the CCS (Payment of Gratuity under NPS) Rules, 2021, how is the Ã¢â‚¬Å“emolumentsÃ¢â‚¬Â defined for the purpose of calculating Retirement Gratuity?",
         "options": [
             "Only the basic pay drawn by the Government servant immediately before the official date of retirement",
             "The basic pay plus the dearness allowance strictly admissible on the exact date of retirement",
@@ -1715,11 +1715,11 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
             "The calculated average of the gross salary drawn during the last ten months of active physical service"
         ],
         "correctAnswer": 1,
-        "explanation": "Rule 2(1)(d) read with Rule 19 of the CCS (Payment of Gratuity under NPS) Rules, 2021 stipulates that “emoluments” for the purpose of gratuity shall mean basic pay as defined in FR 9(21)(a)(i) plus the Dearness Allowance admissible on the date of retirement or death. ________________________________________"
+        "explanation": "Rule 2(1)(d) read with Rule 19 of the CCS (Payment of Gratuity under NPS) Rules, 2021 stipulates that Ã¢â‚¬Å“emolumentsÃ¢â‚¬Â for the purpose of gratuity shall mean basic pay as defined in FR 9(21)(a)(i) plus the Dearness Allowance admissible on the date of retirement or death. ________________________________________"
     },
     {
         "id": "fl-p3-02-144",
-        "text": "As per Fundamental Rule (FR) 56, at what age does a Group ‘A’ government servant normally retire on superannuation?",
+        "text": "As per Fundamental Rule (FR) 56, at what age does a Group Ã¢â‚¬ËœAÃ¢â‚¬â„¢ government servant normally retire on superannuation?",
         "options": [
             "On the afternoon of the last day of the month in which they attain the age of fifty-eight years",
             "On the afternoon of the last day of the month in which they attain the age of sixty years",
@@ -1731,7 +1731,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-145",
-        "text": "Under the Supplementary Rules (SR), what does a “Tour” fundamentally signify for a government servant?",
+        "text": "Under the Supplementary Rules (SR), what does a Ã¢â‚¬Å“TourÃ¢â‚¬Â fundamentally signify for a government servant?",
         "options": [
             "Absence from headquarters purely for personal vacation, medical recovery, and recreation purposes",
             "Absence from headquarters on duty either within or beyond their properly sanctioned sphere of duty",
@@ -1743,7 +1743,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
     },
     {
         "id": "fl-p3-02-146",
-        "text": "According to the DoPT instructions on Casual Labourers, what is the primary significance of granting “Temporary Status”?",
+        "text": "According to the DoPT instructions on Casual Labourers, what is the primary significance of granting Ã¢â‚¬Å“Temporary StatusÃ¢â‚¬Â?",
         "options": [
             "It instantly converts the casual labourer into a permanent, pension-eligible gazetted officer",
             "It confers benefits like pro-rata leave, holidays, and eligibility for regularisation against MTS vacancies",
@@ -1759,7 +1759,7 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
         "options": [
             "The reporting officer is immediately suspended without any preliminary departmental inquiry",
             "The reviewing officer may write the APAR directly, and the reporting officer forfeits the right to write it",
-            "The employee being reported upon automatically receives a default “Outstanding” performance grade",
+            "The employee being reported upon automatically receives a default Ã¢â‚¬Å“OutstandingÃ¢â‚¬Â performance grade",
             "The APAR process is completely abandoned and legally nullified for that specific financial year"
         ],
         "correctAnswer": 1,

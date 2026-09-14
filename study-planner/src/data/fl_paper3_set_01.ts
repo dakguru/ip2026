@@ -478,8 +478,8 @@ export const FL_PAPER3_SET_01_QUESTIONS: Question[] = [
             "Up to Rupees One Lakh through any available supplier on GeM",
             "Up to Rupees Two Lakhs through any available supplier on GeM"
         ],
-        "correctAnswer": 0,
-        "explanation": "According to Rule 149(i) of the GFR 2017, direct online purchases on GeM can be made without competitive bidding for transactions up to Rs. 25,000/- through any of the available suppliers on the platform meeting the requisite quality and delivery requirements."
+        "correctAnswer": 1,
+        "explanation": "According to Rule 149(i) of the GFR 2017 (as amended on 10.07.2024), direct online purchases on GeM can be made without competitive bidding for transactions up to Rs. 50,000/- through any of the available suppliers on the platform meeting the requisite quality and delivery requirements."
     },
     {
         "id": "fl-p3-01-41",
@@ -1330,8 +1330,8 @@ export const FL_PAPER3_SET_01_QUESTIONS: Question[] = [
             "Above Rs. 1,00,000 and up to Rs. 10,00,000 on each occasion",
             "Above Rs. 2,50,000 and up to Rs. 25,00,000 on each occasion"
         ],
-        "correctAnswer": 0,
-        "explanation": "Rule 155 of the GFR 2017 specifies that purchase of goods costing above Rs. 25,000/- and up to Rs. 2,50,000/- on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members."
+        "correctAnswer": 1,
+        "explanation": "Rule 155 of the GFR 2017 (as amended on 10.07.2024) specifies that purchase of goods costing above Rs. 50,000/- and up to Rs. 5,00,000/- on each occasion may be made on the recommendations of a duly constituted Local Purchase Committee consisting of three members."
     },
     {
         "id": "fl-p3-01-112",
@@ -1631,7 +1631,7 @@ export const FL_PAPER3_SET_01_QUESTIONS: Question[] = [
             "The Branch Office daily balance sheet"
         ],
         "correctAnswer": 0,
-        "explanation": "The Head Office Cash Book (HO Cash Book) is the primary, fundamental accounting record in a Head Post Office where the daily consolidation of all cash transactions—both receipts and payments—is formally and meticulously recorded as prescribed in P&T FHB Vol II."
+        "explanation": "The Head Office Cash Book (HO Cash Book) is the primary, fundamental accounting record in a Head Post Office where the daily consolidation of all cash transactionsÃ¢â‚¬â€both receipts and paymentsÃ¢â‚¬â€is formally and meticulously recorded as prescribed in P&T FHB Vol II."
     },
     {
         "id": "fl-p3-01-137",

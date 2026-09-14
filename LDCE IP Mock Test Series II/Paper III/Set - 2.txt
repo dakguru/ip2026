@@ -101,7 +101,7 @@ B. The Drawing and Disbursing Officer (DDO)
 C. The Head of Office strictly at the end of the financial year
 D. The subscriber themselves via a self-deposit portal
 Answer: B
-Explanation: Under Rule 7 of the CCS (Implementation of NPS) Rules, 2021, the Drawing and Disbursing Officer (DDO) is legally responsible for deducting the subscriber’s contribution from their salary every month and ensuring it is remitted to the designated Pension Fund.
+Explanation: Under Rule 7 of the CCS (Implementation of NPS) Rules, 2021, the Drawing and Disbursing Officer (DDO) is legally responsible for deducting the subscriberÃ¢â‚¬â„¢s contribution from their salary every month and ensuring it is remitted to the designated Pension Fund.
 
 Q13. Under the CCS (Commutation of Pension) Rules, 1981, when does the commuted value of pension become absolute for an applicant retiring on superannuation?
 A. On the date following the date of retirement if applied before retirement
@@ -132,8 +132,8 @@ A. Goods up to the value of Rupees Twenty-Five Thousand on each occasion
 B. Goods up to the value of Rupees Fifty Thousand on each occasion
 C. Goods up to the value of Rupees Two Lakh Fifty Thousand on each occasion
 D. Goods up to the value of Rupees Five Lakh on each occasion
-Answer: C
-Explanation: Rule 155 of GFR 2017 allows the purchase of goods costing above Rs. 25,000 and up to Rs. 2,50,000 on each occasion on the recommendations of a duly constituted Local Purchase Committee without inviting formal quotations.
+Answer: D
+Explanation: Rule 155 of GFR 2017 (as amended) allows the purchase of goods costing above Rs. 50,000 and up to Rs. 5,00,000 on each occasion on the recommendations of a duly constituted Local Purchase Committee without inviting formal quotations.
 
 Q17. Under the Fundamental Rules (FR), which of the following best defines a "Lien"?
 A. The right of a government servant to hold substantively a permanent post
@@ -300,8 +300,8 @@ A. Up to Rupees Twenty-Five Thousand without comparing multiple suppliers
 B. Up to Rupees Fifty Thousand without comparing multiple suppliers
 C. Up to Rupees One Lakh without comparing multiple suppliers
 D. Up to Rupees Two Lakhs without comparing multiple suppliers
-Answer: A
-Explanation: Rule 149(i) of GFR 2017 stipulates that for procurements up to Rs. 25,000 through GeM, buyers can purchase from any of the available suppliers on the platform, provided the quality, specifications, and delivery period meet the requisite needs.
+Answer: B
+Explanation: Rule 149(i) of GFR 2017 (as amended on 10.07.2024) stipulates that for procurements up to Rs. 50,000 through GeM, buyers can purchase from any of the available suppliers on the platform, provided the quality, specifications, and delivery period meet the requisite needs.
 
 Q37. Under Article 338 of the Constitution, what power does the National Commission for Scheduled Castes possess while investigating any matter?
 A. The power of a High Court exercising its appellate criminal jurisdiction
@@ -480,7 +480,7 @@ B. Statement 2 is correct but Statement 1 is incorrect
 C. Both Statement 1 and Statement 2 are fully correct
 D. Neither Statement 1 nor Statement 2 are fully correct
 Answer: C
-Explanation: Under DoPT’s 1993 Casual Labourers (Grant of Temporary Status) Scheme, female casual labourers with temporary status are eligible for maternity leave. Additionally, they are paid daily wages calculated at 1/30th of the minimum of the pay scale of a Group D (now MTS) official plus Dearness Allowance.
+Explanation: Under DoPTÃ¢â‚¬â„¢s 1993 Casual Labourers (Grant of Temporary Status) Scheme, female casual labourers with temporary status are eligible for maternity leave. Additionally, they are paid daily wages calculated at 1/30th of the minimum of the pay scale of a Group D (now MTS) official plus Dearness Allowance.
 
 Q58. As per the P&T Financial Handbook Volume I, to whom must any defalcation or loss of public money be reported immediately upon discovery?
 A. The local police station having jurisdiction over the concerned post office
@@ -776,7 +776,7 @@ B. Statement 2 is correct but Statement 1 is incorrect
 C. Both Statement 1 and Statement 2 are fully correct
 D. Neither Statement 1 nor Statement 2 are fully correct
 Answer: B
-Explanation: DoPT instructions completely revamped the APAR system following a Supreme Court directive (Dev Dutt case). Now, the entire APAR—not just adverse remarks—including the final grading, must be communicated to the officer reported upon to ensure absolute transparency. Statement 1 is outdated and incorrect.
+Explanation: DoPT instructions completely revamped the APAR system following a Supreme Court directive (Dev Dutt case). Now, the entire APARÃ¢â‚¬â€not just adverse remarksÃ¢â‚¬â€including the final grading, must be communicated to the officer reported upon to ensure absolute transparency. Statement 1 is outdated and incorrect.
 
 Q93. Under the Service Discharge Benefit Scheme (SDBS) 2010 for Gramin Dak Sevaks, what is the entry age limit prescribed for joining the scheme?
 A. Gramin Dak Sevaks between 18 and 50 years of age are strictly eligible
@@ -877,13 +877,13 @@ D. When the President issues a direct proclamation removing the servant on the g
 Answer: A
 Explanation: The proviso (a) to Article 311(2) explicitly states that the constitutional safeguard of holding an inquiry shall not apply where a person is dismissed or removed or reduced in rank on the ground of conduct which has led to his conviction on a criminal charge.
 ________________________________________
-Q105. Under Section 2 of the Bharatiya Nagarik Suraksha Sanhita, 2023, how is a “cognizable offence” formally defined?
+Q105. Under Section 2 of the Bharatiya Nagarik Suraksha Sanhita, 2023, how is a Ã¢â‚¬Å“cognizable offenceÃ¢â‚¬Â formally defined?
 A. An offence for which a police officer cannot arrest the accused without a judicially issued warrant
 B. An offence for which a police officer may, in accordance with the First Schedule, arrest without warrant
 C. An offence exclusively triable by a Sessions Court and carrying a minimum sentence of ten years
 D. An offence restricted to crimes against the state, requiring direct approval from the Home Ministry
 Answer: B
-Explanation: Section 2(1)(g) of the BNSS, 2023 defines a “cognizable offence” as an offence for which, and “cognizable case” as a case in which, a police officer may, in accordance with the First Schedule or under any other law for the time being in force, arrest without warrant.
+Explanation: Section 2(1)(g) of the BNSS, 2023 defines a Ã¢â‚¬Å“cognizable offenceÃ¢â‚¬Â as an offence for which, and Ã¢â‚¬Å“cognizable caseÃ¢â‚¬Â as a case in which, a police officer may, in accordance with the First Schedule or under any other law for the time being in force, arrest without warrant.
 ________________________________________
 Q106. According to Section 20 of the Central Administrative Tribunal Act, 1985, under what condition can a tribunal ordinarily admit an application?
 A. Immediately upon the occurrence of a service dispute without any preliminary procedural delays
@@ -897,11 +897,11 @@ Q107. Under the Revenue Recovery Act, 1890, what is the procedure if a defaulter
 A. The receiving Collector must immediately suspend all recovery proceedings until the dispute is resolved
 B. The defaulter may institute a suit in a civil court against the Central Government or State Government
 C. The sending Collector must withdraw the certificate and initiate a direct criminal prosecution instead
-D. The defaulter’s property is permanently forfeited without any further scope for a judicial appeal
+D. The defaulterÃ¢â‚¬â„¢s property is permanently forfeited without any further scope for a judicial appeal
 Answer: B
-Explanation: Under Section 4(2) and Section 4(4) of the Revenue Recovery Act, 1890, the defaulter’s primary remedy is to pay the amount under protest and institute a suit in a civil court against the Government to recover the amount. Recovery proceedings are not automatically suspended.
+Explanation: Under Section 4(2) and Section 4(4) of the Revenue Recovery Act, 1890, the defaulterÃ¢â‚¬â„¢s primary remedy is to pay the amount under protest and institute a suit in a civil court against the Government to recover the amount. Recovery proceedings are not automatically suspended.
 ________________________________________
-Q108. As per the Prevention of Corruption Act, 1988 (as amended), which of the following constitutes “criminal misconduct” by a public servant under Section 13?
+Q108. As per the Prevention of Corruption Act, 1988 (as amended), which of the following constitutes Ã¢â‚¬Å“criminal misconductÃ¢â‚¬Â by a public servant under Section 13?
 A. Making a minor procedural error during the evaluation of a government tender without any malafide intent
 B. Intentionally enriching himself illicitly during the period of his office, resulting in disproportionate assets
 C. Recommending a subordinate for a departmental promotion purely based on merit and performance
@@ -924,7 +924,7 @@ Q110. Under Rule 4 of the RTI Rules, 2012, what is the prescribed format for an 
 A. It must be filed strictly on a specialized stamped paper purchased from a registered government vendor
 B. It must strictly follow the complex tabular format prescribed in Schedule I of the Official Secrets Act
 C. There is no strictly prescribed format, but it should contain the particulars of the information sought
-D. It must be submitted in triplicate with a mandatory notarized affidavit affirming the applicant’s identity
+D. It must be submitted in triplicate with a mandatory notarized affidavit affirming the applicantÃ¢â‚¬â„¢s identity
 Answer: C
 Explanation: While Rule 3 prescribes the application fee, the RTI Rules, 2012 do not mandate any rigid or specific form for the application itself. An application can be made on plain paper, provided it contains the necessary particulars of the information being sought along with the prescribed fee.
 ________________________________________
@@ -944,7 +944,7 @@ D. Sending personalized email invitations to at least ten registered government 
 Answer: B
 Explanation: Under the Manual on Procurement of Works and GFR 159 regarding e-procurement guidelines, it is mandatory to publish all tender enquiries, corrigenda thereon, and details of bid awards on the Central Public Procurement Portal (CPPP) to ensure maximum transparency and competition.
 ________________________________________
-Q113. Under the Manual on Procurement of Consultancy & Other Services, what does the “Least Cost System (LCS)” method of selection primarily entail?
+Q113. Under the Manual on Procurement of Consultancy & Other Services, what does the Ã¢â‚¬Å“Least Cost System (LCS)Ã¢â‚¬Â method of selection primarily entail?
 A. Selecting the consultant who scores the highest in the technical evaluation, regardless of their financial bid
 B. Selecting the lowest financial bid exclusively from among the technically qualified and responsive bidders
 C. Selecting a consultant through direct nomination based entirely on their past bureaucratic associations
@@ -988,7 +988,7 @@ Q118. As per the Sexual Harassment of Women at Workplace Act, 2013, which of the
 A. The Internal Committee can direct the respondent to pay a direct monetary settlement to close the case
 B. Conciliation can only be initiated upon the written request of the aggrieved woman before an inquiry
 C. The Internal Committee is legally mandated to force a conciliation before starting any formal inquiry
-D. The employer decides the exact terms of conciliation regardless of the aggrieved woman’s preferences
+D. The employer decides the exact terms of conciliation regardless of the aggrieved womanÃ¢â‚¬â„¢s preferences
 Answer: B
 Explanation: Section 10(1) of the POSH Act, 2013 provides that the Internal Committee may, before initiating an inquiry, at the request of the aggrieved woman take steps to settle the matter through conciliation. However, the proviso explicitly prohibits monetary settlement as a basis of conciliation.
 ________________________________________
@@ -1000,7 +1000,7 @@ D. Twenty times of the monthly emoluments drawn at the time of death
 Answer: C
 Explanation: Rule 22 of the CCS (Payment of Gratuity under NPS) Rules, 2021 sets the scale of death gratuity. For qualifying service of 5 years or more but less than 11 years, the death gratuity payable is precisely 12 times the monthly emoluments.
 ________________________________________
-Q120. According to the CCS (Implementation of NPS) Rules, 2021, what action must the Head of Office take regarding an NPS subscriber’s PRAN (Permanent Retirement Account Number)?
+Q120. According to the CCS (Implementation of NPS) Rules, 2021, what action must the Head of Office take regarding an NPS subscriberÃ¢â‚¬â„¢s PRAN (Permanent Retirement Account Number)?
 A. Retain it permanently in the service book and never disclose it to the employee
 B. Ensure it is generated and registered within one month of joining government service
 C. Generate it only when the employee formally applies for their first withdrawal
@@ -1077,7 +1077,7 @@ B. Has been for at least ten years an advocate of a High Court
 C. Is, in the opinion of the President, a distinguished jurist
 D. Has served as the Attorney General of India for five years
 Answer: D
-Explanation: Article 124(3) lists the constitutional qualifications for a Supreme Court judge: citizen of India, and either a High Court judge for 5 years, or a High Court advocate for 10 years, or a distinguished jurist in the President’s opinion. Serving as Attorney General is not an independent qualification.
+Explanation: Article 124(3) lists the constitutional qualifications for a Supreme Court judge: citizen of India, and either a High Court judge for 5 years, or a High Court advocate for 10 years, or a distinguished jurist in the PresidentÃ¢â‚¬â„¢s opinion. Serving as Attorney General is not an independent qualification.
 ________________________________________
 Q130. As per Article 338A of the Constitution, what is the specific mandate of the National Commission for Scheduled Tribes regarding planning?
 A. To dictate the exact budgetary allocations for tribal welfare to the Union Finance Ministry
@@ -1113,24 +1113,24 @@ D. The Tribunal follows the absolute procedural rigidity of a formal military co
 Answer: C
 Explanation: Section 22(1) of the CAT Act, 1985 clearly states that the Tribunal shall not be bound by the procedure laid down in the Code of Civil Procedure, 1908, but shall be guided by the principles of natural justice and subject to the other provisions of this Act.
 ________________________________________
-Q134. Under the Revenue Recovery Act, 1890, what is the primary role of the “sending Collector”?
-A. To physically travel to the defaulter’s district and personally auction their real estate assets
-B. To prepare and issue the formal certificate stating the arrear amount and the defaulter’s details
+Q134. Under the Revenue Recovery Act, 1890, what is the primary role of the Ã¢â‚¬Å“sending CollectorÃ¢â‚¬Â?
+A. To physically travel to the defaulterÃ¢â‚¬â„¢s district and personally auction their real estate assets
+B. To prepare and issue the formal certificate stating the arrear amount and the defaulterÃ¢â‚¬â„¢s details
 C. To provide direct financial compensation to the defaulter if the recovery process is deemed harsh
 D. To file a fresh civil suit in the Supreme Court against the defaulting taxpayer for immediate recovery
 Answer: B
 Explanation: As per Section 3 of the Revenue Recovery Act, 1890, the sending Collector is the officer of the district where the arrear accrued. Their role is to make a certificate in the prescribed form detailing the arrear and the defaulter, and send it to the receiving Collector where the defaulter has property.
 ________________________________________
-Q135. As per the Prevention of Corruption Act, 1988, what does the term “undue advantage” precisely mean?
+Q135. As per the Prevention of Corruption Act, 1988, what does the term Ã¢â‚¬Å“undue advantageÃ¢â‚¬Â precisely mean?
 A. Any gratification strictly limited to physical monetary cash transactions exceeding ten thousand rupees
 B. Any gratification whatever, other than legal remuneration, which a public servant is not permitted to accept
 C. Only high-value physical gifts received during formal administrative promotions or geographical transfers
 D. Any official financial award granted directly by the Central Government for exemplary meritorious service
 Answer: B
-Explanation: The 2018 amendment to the PC Act introduced Section 2(d), defining “undue advantage” as any gratification whatever, other than legal remuneration. The term “gratification” is explicitly not limited to pecuniary gratifications or to gratifications estimable in money.
+Explanation: The 2018 amendment to the PC Act introduced Section 2(d), defining Ã¢â‚¬Å“undue advantageÃ¢â‚¬Â as any gratification whatever, other than legal remuneration. The term Ã¢â‚¬Å“gratificationÃ¢â‚¬Â is explicitly not limited to pecuniary gratifications or to gratifications estimable in money.
 ________________________________________
 Q136. Under the RTI Act, 2005, if a Public Information Officer (PIO) rejects a request for information, what mandatory details must be communicated to the requester?
-A. The reasons for rejection, the period within which an appeal may be preferred, and the appellate authority’s particulars
+A. The reasons for rejection, the period within which an appeal may be preferred, and the appellate authorityÃ¢â‚¬â„¢s particulars
 B. Only the relevant clause under Section 8 which justifies the absolute and permanent rejection of the request
 C. A sworn affidavit from the departmental head confirming the physical impossibility of providing the data
 D. A simple one-line denial note without any statutory obligation to mention appellate procedures or timelines
@@ -1145,7 +1145,7 @@ D. Specifications should be kept extremely vague to allow maximum unstructured s
 Answer: B
 Explanation: Rule 144(1)(b) of GFR 2017 outlines the fundamental principles of public buying. It explicitly states that technical specifications shall, to the extent practicable, be based on national technical regulations or recognized standards, and should not contain any reference to trademark, brand name, or patent.
 ________________________________________
-Q138. As per the Manual on Procurement of Goods, what does the term “Single Tender Enquiry” (STE) refer to?
+Q138. As per the Manual on Procurement of Goods, what does the term Ã¢â‚¬Å“Single Tender EnquiryÃ¢â‚¬Â (STE) refer to?
 A. A bidding process where only one specific supplier is invited to submit a bid due to proprietary reasons or emergencies
 B. A bidding process where multiple distinct suppliers submit their competitive bids in a single sealed envelope
 C. A competitive procurement method exclusively restricted to geographically recognized local municipal vendors
@@ -1157,7 +1157,7 @@ Q139. Under the CCS (General Provident Fund) Rules, 1961, when does the GPF acco
 A. Only when the subscriber legally completes exactly thirty-five years of continuous physical government service
 B. When the subscriber quits the service, retires, or is dismissed/removed from official government service
 C. Only upon the unfortunate physical demise of the subscriber while performing active government duty
-D. Exactly five calendar years prior to the official documented date of the subscriber’s superannuation
+D. Exactly five calendar years prior to the official documented date of the subscriberÃ¢â‚¬â„¢s superannuation
 Answer: B
 Explanation: Rules 29 and 30 of the CCS (GPF) Rules, 1961 outline that the amount standing to the credit of a subscriber in the Fund shall become payable when he quits the service, which broadly includes retirement, resignation, dismissal, or removal.
 ________________________________________
@@ -1180,7 +1180,7 @@ D. After the completion of exactly twenty years from the exact date the commutat
 Answer: C
 Explanation: Rule 10A of the CCS (Commutation of Pension) Rules, 1981 states that a pensioner who has commuted a fraction of his pension shall be entitled to the restoration of the commuted portion after the expiry of fifteen years from the date the commutation became absolute.
 ________________________________________
-Q142. According to the Sexual Harassment of Women at Workplace Act, 2013, what constitutes the “Local Committee” (LC)?
+Q142. According to the Sexual Harassment of Women at Workplace Act, 2013, what constitutes the Ã¢â‚¬Å“Local CommitteeÃ¢â‚¬Â (LC)?
 A. A committee formed by every private employer with strictly less than ten workers in their active office
 B. A committee constituted by the District Officer to receive complaints from establishments without an Internal Committee
 C. A committee set up by the State Police to exclusively investigate criminal assault cases in modern workplaces
@@ -1188,15 +1188,15 @@ D. A temporary committee formed by the municipal corporation to randomly audit w
 Answer: B
 Explanation: Section 6(1) of the POSH Act requires the District Officer to constitute a Local Committee (formerly Local Complaints Committee) to receive complaints of sexual harassment from establishments where the Internal Committee has not been constituted due to having less than ten workers or if the complaint is against the employer.
 ________________________________________
-Q143. Under the CCS (Payment of Gratuity under NPS) Rules, 2021, how is the “emoluments” defined for the purpose of calculating Retirement Gratuity?
+Q143. Under the CCS (Payment of Gratuity under NPS) Rules, 2021, how is the Ã¢â‚¬Å“emolumentsÃ¢â‚¬Â defined for the purpose of calculating Retirement Gratuity?
 A. Only the basic pay drawn by the Government servant immediately before the official date of retirement
 B. The basic pay plus the dearness allowance strictly admissible on the exact date of retirement
 C. The basic pay, dearness allowance, and the standard house rent allowance drawn on the retirement date
 D. The calculated average of the gross salary drawn during the last ten months of active physical service
 Answer: B
-Explanation: Rule 2(1)(d) read with Rule 19 of the CCS (Payment of Gratuity under NPS) Rules, 2021 stipulates that “emoluments” for the purpose of gratuity shall mean basic pay as defined in FR 9(21)(a)(i) plus the Dearness Allowance admissible on the date of retirement or death.
+Explanation: Rule 2(1)(d) read with Rule 19 of the CCS (Payment of Gratuity under NPS) Rules, 2021 stipulates that Ã¢â‚¬Å“emolumentsÃ¢â‚¬Â for the purpose of gratuity shall mean basic pay as defined in FR 9(21)(a)(i) plus the Dearness Allowance admissible on the date of retirement or death.
 ________________________________________
-Q144. As per Fundamental Rule (FR) 56, at what age does a Group ‘A’ government servant normally retire on superannuation?
+Q144. As per Fundamental Rule (FR) 56, at what age does a Group Ã¢â‚¬ËœAÃ¢â‚¬â„¢ government servant normally retire on superannuation?
 A. On the afternoon of the last day of the month in which they attain the age of fifty-eight years
 B. On the afternoon of the last day of the month in which they attain the age of sixty years
 C. On the exact date of their biological birthday when they attain the age of sixty-two years
@@ -1204,7 +1204,7 @@ D. On the afternoon of the last day of the financial year in which they attain s
 Answer: B
 Explanation: FR 56(a) explicitly states that except as otherwise provided in this specific rule, every Government servant shall retire from service on the afternoon of the last day of the month in which he attains the age of sixty years.
 ________________________________________
-Q145. Under the Supplementary Rules (SR), what does a “Tour” fundamentally signify for a government servant?
+Q145. Under the Supplementary Rules (SR), what does a Ã¢â‚¬Å“TourÃ¢â‚¬Â fundamentally signify for a government servant?
 A. Absence from headquarters purely for personal vacation, medical recovery, and recreation purposes
 B. Absence from headquarters on duty either within or beyond their properly sanctioned sphere of duty
 C. A mandatory specialized training period spent at an internationally recognized educational institution
@@ -1212,7 +1212,7 @@ D. A prolonged period of unauthorized absence resulting in the automatic deducti
 Answer: B
 Explanation: SR 61 defines that a Government servant is on tour when absent on duty from his headquarters either within or, with proper sanction, beyond his sphere of duty. It forms the legal basis for claiming daily allowance and travelling allowance.
 ________________________________________
-Q146. According to the DoPT instructions on Casual Labourers, what is the primary significance of granting “Temporary Status”?
+Q146. According to the DoPT instructions on Casual Labourers, what is the primary significance of granting Ã¢â‚¬Å“Temporary StatusÃ¢â‚¬Â?
 A. It instantly converts the casual labourer into a permanent, pension-eligible gazetted officer
 B. It confers benefits like pro-rata leave, holidays, and eligibility for regularisation against MTS vacancies
 C. It guarantees a lifelong statutory pension under the old pension scheme irrespective of service length
@@ -1223,7 +1223,7 @@ ________________________________________
 Q147. As per the rules governing APARs, what is the consequence if the reporting officer fails to submit the APAR by the stipulated deadline?
 A. The reporting officer is immediately suspended without any preliminary departmental inquiry
 B. The reviewing officer may write the APAR directly, and the reporting officer forfeits the right to write it
-C. The employee being reported upon automatically receives a default “Outstanding” performance grade
+C. The employee being reported upon automatically receives a default Ã¢â‚¬Å“OutstandingÃ¢â‚¬Â performance grade
 D. The APAR process is completely abandoned and legally nullified for that specific financial year
 Answer: B
 Explanation: DoPT guidelines strictly specify that if the reporting officer fails to write the APAR within the prescribed timeline, they forfeit the right to enter remarks. The reviewing officer is then competent to write the APAR directly based on the self-appraisal of the officer reported upon.

@@ -593,7 +593,7 @@ B. Amount commuted multiplied by the commutation factor multiplied by twelve
 C. Amount commuted multiplied by the commutation factor multiplied by ten
 D. Total pension divided by the commutation factor multiplied by twelve
 Answer: B
-Explanation: Rule 8 of the CCS (Commutation of Pension) Rules, 1981 states the lump sum payable is calculated as: Fraction of pension commuted × Commutation factor (applicable to the age next birthday) × 12.
+Explanation: Rule 8 of the CCS (Commutation of Pension) Rules, 1981 states the lump sum payable is calculated as: Fraction of pension commuted Ã— Commutation factor (applicable to the age next birthday) Ã— 12.
 
 Q70. According to the Post and Telegraph Financial Handbook (P&T FHB) Volume I, what is the strict rule regarding the correction of errors in cash accounts?
 A. Errors must be carefully erased and overwritten with red ink

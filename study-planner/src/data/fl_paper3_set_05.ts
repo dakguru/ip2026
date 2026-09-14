@@ -185,7 +185,7 @@ export const FL_PAPER3_SET_05_QUESTIONS: Question[] = [
         "id": "fl-p3-05-16",
         "text": "According to the Central Civil Services (Implementation of NPS) Rules, 2021, what action is required if a subscriber's NPS account cannot be opened due to administrative delay?",
         "options": [
-            "The employee’s mandatory contribution is waived entirely for the delayed months.",
+            "The employeeâ€™s mandatory contribution is waived entirely for the delayed months.",
             "The contributions are deducted and kept in a non-interest bearing suspense account.",
             "The employee receives interest on delayed contributions at the GPF prescribed rate.",
             "The deduction commences only prospectively from the date of PRAN generation."
@@ -1643,7 +1643,7 @@ export const FL_PAPER3_SET_05_QUESTIONS: Question[] = [
             "Exactly 9.15 strictly multiplied by the commuted portion and then multiplied by twelve."
         ],
         "correctAnswer": 1,
-        "explanation": "As per the Commutation Table revised by the 6th/7th CPC, the commutation factor corresponding to the age next birthday of 60 years is 8.194. The lump sum is calculated as: fraction × factor × 12."
+        "explanation": "As per the Commutation Table revised by the 6th/7th CPC, the commutation factor corresponding to the age next birthday of 60 years is 8.194. The lump sum is calculated as: fraction Ã— factor Ã— 12."
     },
     {
         "id": "fl-p3-05-138",
