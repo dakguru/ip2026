@@ -462,12 +462,12 @@ export const FL_PAPER3_SET_02_QUESTIONS: Question[] = [
         "text": "According to the Manual on Procurement of Works, what is the percentage of Performance Security generally required from the successful bidder?",
         "options": [
             "Generally restricted to two per cent of the total final contract value",
-            "Generally stipulated between five to ten per cent of the contract value",
+            "Generally stipulated between three to ten per cent of the contract value",
             "Generally stipulated between ten to fifteen per cent of the contract value",
             "Generally restricted to twenty per cent of the total final contract value"
         ],
         "correctAnswer": 1,
-        "explanation": "The Manual on Procurement of Works and GFR 171 indicate that Performance Security is ordinarily obtained from the successful bidder at a rate of 5 to 10 percent of the value of the contract to ensure due performance."
+        "explanation": "The Manual on Procurement of Works and GFR 171 indicate that Performance Security is ordinarily obtained from the successful bidder at a rate of 3 to 10 percent of the value of the contract to ensure due performance."
     },
     {
         "id": "fl-p3-02-40",
