@@ -330,13 +330,13 @@ D. No notice period is required for any temporary government servant
 Answer: B
 Explanation: Rule 5 of the CCS (Temporary Service) Rules, 1965, states that the services of a temporary Government servant can be terminated at any time by a notice in writing given either by the Government servant to the appointing authority or vice versa, and the period of such notice shall be one month.
 
-Q41. According to Postal Manual Volume VI, Part I, Chapter I, what is the primary purpose of an 'Oblong Datestamp'?
+Q41. According to Postal Manual Volume VI, Part I, Chapter I, what is the primary purpose of the 'Oblong Money Order Stamp'?
 A. It is used to cancel postage stamps on un-registered letter mail
 B. It is used to stamp all incoming money orders at the delivery post office
 C. It is used for impressing on all receipts given to the public for registered articles and parcels
-D. It is exclusively used for closing transit mail bags in the RMS
-Answer: C
-Explanation: According to Chapter I of Postal Manual Volume VI, Part I, the oblong datestamp is specifically supplied to post offices for stamping the receipts given to the public for accountable items like registered letters, parcels, and insured articles.
+D. It is supplied specifically for stamping money order receipts and money orders issued
+Answer: D
+Explanation: According to Rule 8 of Postal Manual Volume VI, Part I, Chapter I, the Oblong Money Order Stamp is supplied to Head and Sub-Post offices specifically for the purpose of stamping money order receipts and money orders issued. It is kept under the personal custody of the Postmaster. Receipts for accountable items like registered articles and parcels (Option C) require the Registration or Parcel date-stamps, not the oblong stamp.
 
 Q42. Under the provisions of the Post Office Act, 2023, what action must the Post Office take regarding a postal article containing goods prohibited under any law for the time being in force?
 A. Deliver it with a warning letter to the intended addressee
