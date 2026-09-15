@@ -1,6 +1,42 @@
 {
     "entries": [
         {
+            "_id": "6aa8b268fc722b89b5c7127d",
+            "title": "Welfare Measures: GDS Loans, Fund Management & Master Comparison",
+            "rule_number": "O.M. No. 20-09/2019-WL & Sports dt. 11.02.2026",
+            "act_name": "Welfare Measures for Dept Employees & GDS",
+            "category": "Explanation",
+            "effective_date": "2026-02-11T00:00:00.000Z",
+            "exam_tags": [
+                "LDCE IP",
+                "PS Group B"
+            ]
+        },
+        {
+            "_id": "6aa8b268fc722b89b5c7127c",
+            "title": "Welfare Measures: CWFGDS — Membership, Grants & GDS Benefits",
+            "rule_number": "O.M. No. 20-09/2019-WL & Sports dt. 11.02.2026",
+            "act_name": "Welfare Measures for Dept Employees & GDS",
+            "category": "Explanation",
+            "effective_date": "2026-02-11T00:00:00.000Z",
+            "exam_tags": [
+                "LDCE IP",
+                "PS Group B"
+            ]
+        },
+        {
+            "_id": "6aa8b268fc722b89b5c7127b",
+            "title": "Welfare Measures: Departmental Employee Welfare Schemes & Framework",
+            "rule_number": "O.M. No. 1-01/2024-Wl&Sps dt. 22.12.2025",
+            "act_name": "Welfare Measures for Dept Employees & GDS",
+            "category": "Explanation",
+            "effective_date": "2025-12-22T00:00:00.000Z",
+            "exam_tags": [
+                "LDCE IP",
+                "PS Group B"
+            ]
+        },
+        {
             "_id": "6a00b31668a9068ff2d7fccc",
             "title": "CCS (Leave) Rules, 1972 â Part 2: Study Leave & WRIIL",
             "rule_number": "Various Rules",
