@@ -2,7 +2,7 @@
 
 import DashboardCarousel from "@/components/dashboard/DashboardCarousel";
 import Link from "next/link";
-import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper, AlertCircle, Shield, FileDown } from "lucide-react";
+import { BookOpen, Layers, PenTool, FileText, Globe, GraduationCap, ChevronRight, Crown, Sparkles, Menu, X, LogOut, Search, User, Home, Lightbulb, MessageCircle, Info, History, Bell, TrendingUp, ChevronRight as ArrowIcon, CheckCircle2, PlayCircle, Trophy, Newspaper, AlertCircle, Shield, FileDown, Target } from "lucide-react";
 import { Capacitor } from "@capacitor/core";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -345,6 +345,53 @@ export default function MobileDashboard({ displayName }: MobileDashboardProps) {
 
                 {/* --- ANNOUNCEMENT BANNER (Clean & Professional) --- */}
                 <LiveMockTestBanner />
+
+                {/* --- LDCE IP 2026 CUT-OFF PREDICTION (Compact) --- */}
+                <div className="px-5">
+                    <Link href="/cutoff-prediction" className="group relative block active:scale-[0.98] transition-transform duration-200" aria-label="LDCE IP 2026 Cut-Off Prediction">
+                        <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-amber-400 to-cyan-400 cop-gradient-flow opacity-50 blur-md"></div>
+                        <div className="relative overflow-hidden rounded-2xl p-[1.5px]">
+                            <div
+                                className="absolute left-1/2 top-1/2 w-[200%] aspect-square -translate-x-1/2 -translate-y-1/2 cop-spin-slow"
+                                style={{ background: "conic-gradient(from 0deg, #f43f5e, #f59e0b, #facc15, #22c55e, #06b6d4, #6366f1, #d946ef, #f43f5e)" }}
+                            ></div>
+                            <div className="relative overflow-hidden rounded-[calc(1rem-1.5px)] bg-[#0b0820]">
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-950 via-fuchsia-950/80 to-slate-950 cop-gradient-flow"></div>
+                                <div className="absolute -top-10 -left-6 w-32 h-32 rounded-full bg-fuchsia-500/30 blur-[50px] cop-drift"></div>
+                                <div className="absolute -bottom-12 right-0 w-36 h-36 rounded-full bg-cyan-400/25 blur-[55px] cop-drift [animation-delay:-5s]"></div>
+                                <span className="absolute left-[62%] top-[20%] w-1 h-1 rounded-full bg-white shadow-[0_0_6px_2px_rgba(255,255,255,0.7)] cop-twinkle"></span>
+                                <span className="absolute left-[80%] top-[72%] w-1 h-1 rounded-full bg-white shadow-[0_0_6px_2px_rgba(255,255,255,0.7)] cop-twinkle [animation-delay:1.2s]"></span>
+                                <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent cop-sweep pointer-events-none"></div>
+
+                                <div className="relative z-10 flex items-center gap-3 px-4 py-3.5">
+                                    <div className="relative shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-amber-300 via-orange-400 to-pink-500 p-[1.5px] shadow-[0_0_18px_rgba(251,146,60,0.5)]">
+                                        <div className="w-full h-full rounded-[calc(0.75rem-1.5px)] bg-[#150d2e]/90 flex items-center justify-center">
+                                            <Target className="w-5 h-5 text-amber-300" strokeWidth={2.2} />
+                                        </div>
+                                        <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-400 border-2 border-[#0b0820]"></span>
+                                        </span>
+                                    </div>
+                                    <div className="flex-1 min-w-0 text-left">
+                                        <span className="inline-flex items-center gap-1 px-1.5 py-px rounded-full bg-emerald-400/15 border border-emerald-300/30 text-[8px] font-black uppercase tracking-[0.14em] text-emerald-300 mb-0.5">
+                                            <span className="w-1 h-1 rounded-full bg-emerald-400 animate-pulse"></span>
+                                            Live · Answer Keys Out
+                                        </span>
+                                        <p className="text-sm font-black leading-tight">
+                                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-pink-200 to-cyan-200">LDCE IP 2026</span>{" "}
+                                            <span className="text-white">Cut-Off Prediction</span>
+                                        </p>
+                                        <p className="text-[10px] text-indigo-200/80 font-medium truncate">Enter your marks · See your all-India rank</p>
+                                    </div>
+                                    <div className="shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-[0_0_14px_rgba(255,255,255,0.4)]">
+                                        <ChevronRight className="w-4 h-4 text-[#1a1040]" strokeWidth={2.75} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
 
 
 

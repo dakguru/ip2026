@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState, type ComponentType } from "react";
 import {
-    ArrowLeft, Award, BarChart3, CheckCircle2, Crown, Download, FileCheck2, Gauge,
-    Info, Loader2, Lock, Medal, PencilLine, Search, Share2, ShieldCheck, Sparkles, Target, TrendingUp, Trophy, Users,
+    ArrowLeft, BarChart3, CheckCircle2, Crown, Download, FileCheck2, Gauge,
+    Info, Loader2, Lock, PencilLine, Search, Share2, ShieldCheck, Sparkles, Target, TrendingUp, Trophy, Users,
 } from "lucide-react";
 
 // ─── Config ────────────────────────────────────────────────────────────────
@@ -200,8 +200,6 @@ export default function CutoffPredictionClient() {
     }, [leaderboard, query]);
 
     const showForm = !mine || editing;
-    const podium = query ? [] : leaderboard.slice(0, 3);
-    const rest = query ? filtered : leaderboard.slice(3);
 
     return (
         <div className="relative min-h-screen bg-[#06041a] text-white overflow-x-hidden font-sans selection:bg-fuchsia-500/40">
@@ -519,7 +517,7 @@ export default function CutoffPredictionClient() {
                         <SectionTitle icon={Trophy} eyebrow="All India" title="Toppers leaderboard" className="mb-0" />
                         <div className="relative sm:w-72">
                             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/35" />
-                            <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search name or circle" className="cop-input pl-10" />
+                            <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search name or circle" className="cop-input" style={{ paddingLeft: "2.5rem" }} />
                         </div>
                     </div>
 
@@ -538,13 +536,7 @@ export default function CutoffPredictionClient() {
                         </Glass>
                     ) : (
                         <>
-                            {podium.length > 0 && (
-                                <div className="grid grid-cols-3 gap-2 sm:gap-5 items-end mb-6">
-                                    {[podium[1], podium[0], podium[2]].map((e, i) => e ? <PodiumCard key={e.id} entry={e} place={[2, 1, 3][i] as 1 | 2 | 3} isMe={mine?.id === e.id} /> : <div key={i} />)}
-                                </div>
-                            )}
-
-                            {rest.length > 0 && (
+                            {filtered.length > 0 && (
                                 <Glass className="overflow-hidden">
                                     <div className="hidden sm:grid grid-cols-[64px_1fr_repeat(3,80px)_100px] gap-2 px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white/40 border-b border-white/[0.06]">
                                         <span>Rank</span><span>Candidate</span>
@@ -552,7 +544,7 @@ export default function CutoffPredictionClient() {
                                         <span className="text-right">Total</span>
                                     </div>
                                     <ul className="divide-y divide-white/[0.05]">
-                                        {rest.map(e => <LeaderRow key={e.id} entry={e} isMe={mine?.id === e.id} />)}
+                                        {filtered.map(e => <LeaderRow key={e.id} entry={e} isMe={mine?.id === e.id} />)}
                                     </ul>
                                 </Glass>
                             )}
@@ -771,29 +763,6 @@ function Distribution({ stats, myTotal }: { stats: Stats | null; myTotal: number
             {stats?.projection && (
                 <p className="mt-3 text-[11px] text-white/45 flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-gradient-to-t from-amber-600 to-pink-400"></span> Bands overlapping the indicative cut-off zone</p>
             )}
-        </div>
-    );
-}
-
-function PodiumCard({ entry, place, isMe }: { entry: Entry; place: 1 | 2 | 3; isMe: boolean }) {
-    const style = {
-        1: { ring: "from-amber-200 via-yellow-400 to-amber-600", glow: "shadow-[0_0_50px_-5px_rgba(251,191,36,0.6)]", icon: Crown, iconTint: "text-amber-300", height: "pt-8 pb-7 sm:pt-10 sm:pb-9", label: "Champion" },
-        2: { ring: "from-slate-100 via-slate-300 to-slate-500", glow: "shadow-[0_0_40px_-8px_rgba(203,213,225,0.45)]", icon: Medal, iconTint: "text-slate-200", height: "pt-6 pb-5 sm:pt-8 sm:pb-7", label: "2nd" },
-        3: { ring: "from-orange-200 via-amber-600 to-orange-800", glow: "shadow-[0_0_40px_-8px_rgba(217,119,6,0.45)]", icon: Award, iconTint: "text-orange-300", height: "pt-5 pb-4 sm:pt-7 sm:pb-6", label: "3rd" },
-    }[place];
-    const Icon = style.icon;
-    return (
-        <div className={`relative rounded-2xl sm:rounded-3xl p-[1.5px] bg-gradient-to-b ${style.ring} ${style.glow} ${place === 1 ? "cop-rise" : ""}`}>
-            <div className={`relative overflow-hidden rounded-[calc(1rem-1.5px)] sm:rounded-[calc(1.5rem-1.5px)] bg-[#0d0828] px-2 sm:px-5 text-center ${style.height}`}>
-                {place === 1 && <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-transparent via-amber-200/15 to-transparent cop-sweep pointer-events-none"></div>}
-                <Icon className={`w-6 h-6 sm:w-8 sm:h-8 mx-auto ${style.iconTint} drop-shadow-[0_0_10px_currentColor]`} />
-                <p className="mt-2 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-white/45">#{entry.rank} · {style.label}</p>
-                <p className="mt-1.5 text-xs sm:text-base font-extrabold leading-tight line-clamp-2 break-words">{entry.name}</p>
-                {entry.circle && <p className="text-[9px] sm:text-[11px] text-white/40 truncate mt-0.5">{entry.circle}</p>}
-                <p className={`mt-2 sm:mt-3 text-xl sm:text-4xl font-black tabular-nums text-transparent bg-clip-text bg-gradient-to-b ${style.ring}`}>{fmt(entry.total)}</p>
-                <p className="text-[9px] sm:text-[10px] text-white/35 font-bold">/ {GRAND_TOTAL}</p>
-                {isMe && <span className="mt-2 inline-block rounded-full bg-emerald-400/15 border border-emerald-300/30 px-2 py-0.5 text-[9px] font-black uppercase tracking-wider text-emerald-300">You</span>}
-            </div>
         </div>
     );
 }
