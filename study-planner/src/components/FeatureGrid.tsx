@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield, Bell, FileDown } from "lucide-react";
+import { CheckCircle2, Layout, BookOpen, Zap, FileText, Newspaper, Mail, Lock, Unlock, FileQuestion, MessageCircleQuestion, Shield, Bell, FileDown, Trophy } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
 import { useState, useEffect } from "react";
@@ -71,7 +71,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
     // Helper to check access using numeric level equivalence
     // Free=1, Silver/Platinum=2, Gold/Diamond=3
     const hasAccess = (requiredBadge: string) => {
-        if (requiredBadge === "Free") return true;
+        if (requiredBadge === "Free" || requiredBadge === "Live") return true;
         if (requiredBadge === "Admin") return role === 'admin';
         const userLevel = getMembershipLevel(membershipLevel);
         if (requiredBadge === "Silver") return userLevel >= 2;
@@ -96,6 +96,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
             { title: "Dak Sutra", desc: "Postal Rules Simplified", color: "text-blue-700", bg: "bg-blue-50 dark:bg-blue-900/20", border: "group-hover:border-blue-600", shadow: "group-hover:shadow-blue-600/20", icon: Newspaper, link: "/dak-sutra", badge: "Free" },
             { title: "PDF Notes", desc: "Downloadable Content", color: "text-rose-600", bg: "bg-rose-50 dark:bg-rose-900/20", border: "group-hover:border-rose-500", shadow: "group-hover:shadow-rose-500/20", icon: FileText, link: "/notes", badge: "Gold" },
             { title: "MCQs", desc: "Practice Questions", color: "text-emerald-600", bg: "bg-emerald-50 dark:bg-emerald-900/20", border: "group-hover:border-emerald-500", shadow: "group-hover:shadow-emerald-500/20", icon: CheckCircle2, link: "/quiz", badge: "Silver" },
+            { title: "Mock Tests", desc: "All India Mock Tests", color: "text-purple-600", bg: "bg-purple-50 dark:bg-purple-900/20", border: "group-hover:border-purple-500", shadow: "group-hover:shadow-purple-500/20", icon: Trophy, link: "/mock-tests", badge: "Live" },
             { title: "Flash Cards", desc: "Quick Revision", color: "text-amber-600", bg: "bg-amber-50 dark:bg-amber-900/20", border: "group-hover:border-amber-500", shadow: "group-hover:shadow-amber-500/20", icon: Zap, link: "/flashcards", badge: "Gold" },
             { title: "Study Planner", desc: "Organize Learning", color: "text-violet-600", bg: "bg-violet-50 dark:bg-violet-900/20", border: "group-hover:border-violet-500", shadow: "group-hover:shadow-violet-500/20", icon: Layout, link: "/planner", badge: "Free" },
             { title: "Previous Year Questions", desc: "Previous Years", color: "text-cyan-600", bg: "bg-cyan-50 dark:bg-cyan-900/20", border: "group-hover:border-cyan-500", shadow: "group-hover:shadow-cyan-500/20", icon: FileQuestion, link: "/pyq", badge: "Silver" },
@@ -250,6 +251,7 @@ export default function FeatureGrid({ membershipLevel, role }: FeatureGridProps)
                                         <span className={`px-1.5 py-0.5 text-[8px] md:px-2.5 md:py-1 md:text-[10px] font-bold uppercase tracking-wider rounded-full shadow-sm ${item.badge === 'Free' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300' :
                                             item.badge === 'Silver' ? (isPsGroupB ? 'bg-gradient-to-r from-sky-200 to-blue-300 text-blue-900 border border-blue-300 dark:from-sky-700 dark:to-blue-600 dark:text-blue-100' : 'bg-gradient-to-r from-slate-200 to-zinc-300 text-slate-800 border border-slate-300') :
                                                 item.badge === 'Gold' ? (isPsGroupB ? 'bg-gradient-to-r from-cyan-200 to-teal-300 text-teal-900 dark:from-cyan-700 dark:to-teal-600 dark:text-cyan-100 border border-cyan-300' : 'bg-gradient-to-r from-amber-200 to-yellow-400 text-amber-900 dark:from-amber-700 dark:to-yellow-600 dark:text-amber-100 border border-amber-300') :
+                                                    item.badge === 'Live' ? 'bg-red-100 text-red-700 border border-red-200 dark:bg-red-900/50 dark:text-red-300 dark:border-red-800 animate-pulse' :
                                                     'bg-zinc-800 text-white dark:bg-zinc-100 dark:text-zinc-900'
                                             }`}>
                                             {item.badge === 'Silver' ? (isPsGroupB ? 'Platinum' : 'Silver') :

@@ -1,71 +1,15 @@
 "use client";
 
 import { useIsMobileApp } from "@/hooks/use-mobile-app";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useCourse } from "@/contexts/CourseContext";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, Target } from "lucide-react";
 
 interface WelcomeSectionProps {
     displayName: string;
     isLoggedIn: boolean;
 }
 
-
-function CountdownTimer({ course, isLoggedIn }: { course: string | null, isLoggedIn: boolean }) {
-    const [timeLeft, setTimeLeft] = useState<{ days: number, hours: number, minutes: number, seconds: number } | null>(null);
-
-    useEffect(() => {
-        const targetDate = new Date('2026-01-17T00:00:00');
-
-        const calculateTimeLeft = () => {
-            const difference = +targetDate - +new Date();
-            if (difference > 0) {
-                return {
-                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    minutes: Math.floor((difference / 1000 / 60) % 60),
-                    seconds: Math.floor((difference / 1000) % 60),
-                };
-            }
-            return null;
-        };
-
-        setTimeLeft(calculateTimeLeft());
-
-        const timer = setInterval(() => {
-            setTimeLeft(calculateTimeLeft());
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, []);
-
-    const testText = isLoggedIn
-        ? (course === 'PS_GR_B'
-            ? "All India Mock Tests for PS Group B 2026"
-            : "All India Mock Tests for LDCE IP 2026")
-        : "Live All India Mock Test : Login to Participate";
-
-    if (!timeLeft) {
-        return <span>{testText}</span>;
-    }
-
-    return (
-        <span className="flex items-center gap-2">
-            <span className="flex items-baseline gap-1">
-                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.days}d</span>
-                <span className="text-[10px] sm:text-xs opacity-80 decoration-0"> : </span>
-                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.hours}h</span>
-                <span className="text-[10px] sm:text-xs opacity-80 decoration-0"> : </span>
-                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.minutes}m</span>
-                <span className="text-[10px] sm:text-xs opacity-80 decoration-0"> : </span>
-                <span className="font-mono font-black text-yellow-300 text-base sm:text-lg">{timeLeft.seconds}s</span>
-            </span>
-            <span className="mx-1 opacity-50">|</span>
-            <span>{testText}</span>
-        </span>
-    );
-}
 
 export default function WelcomeSection({ displayName, isLoggedIn }: WelcomeSectionProps) {
     const isMobileApp = useIsMobileApp();
@@ -121,61 +65,82 @@ export default function WelcomeSection({ displayName, isLoggedIn }: WelcomeSecti
                 </Link>
             </div>
 
-            {/* ✨ All India Mock Test — Premium Live Banner */}
-            <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 px-4">
-                <Link href={isLoggedIn ? "/mock-tests" : "/login?redirect=/mock-tests"} className="relative group w-full max-w-xl block">
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border border-white/[0.08] shadow-[0_8px_40px_-12px_rgba(99,102,241,0.35)] hover:shadow-[0_12px_50px_-10px_rgba(99,102,241,0.45)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]">
+            {/* ✨ LDCE IP 2026 Cut-Off Prediction — Premium Animated Banner */}
+            <div className="mt-8 md:mt-12 flex justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 px-1 sm:px-4">
+                <Link href="/cutoff-prediction" className="relative group w-full max-w-2xl block" aria-label="LDCE IP 2026 Cut-Off Prediction">
+                    {/* Outer glow */}
+                    <div className="absolute -inset-1 rounded-[1.4rem] bg-gradient-to-r from-fuchsia-500 via-amber-400 to-cyan-400 cop-gradient-flow opacity-60 blur-xl group-hover:opacity-90 transition-opacity duration-500"></div>
 
-                        {/* Animated aurora blobs */}
-                        <div className="absolute -top-20 -right-20 w-56 h-56 bg-indigo-500/20 rounded-full blur-[80px] animate-pulse"></div>
-                        <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-violet-500/15 rounded-full blur-[70px] animate-pulse [animation-delay:1s]"></div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-amber-400/10 rounded-full blur-[60px] animate-pulse [animation-delay:2s]"></div>
+                    {/* Spinning rainbow border */}
+                    <div className="relative overflow-hidden rounded-[1.25rem] p-[2px] shadow-[0_20px_60px_-15px_rgba(168,85,247,0.55)] transition-transform duration-500 group-hover:-translate-y-0.5 group-active:scale-[0.98]">
+                        <div
+                            className="absolute left-1/2 top-1/2 w-[200%] aspect-square -translate-x-1/2 -translate-y-1/2 cop-spin-slow"
+                            style={{ background: "conic-gradient(from 0deg, #f43f5e, #f59e0b, #facc15, #22c55e, #06b6d4, #6366f1, #d946ef, #f43f5e)" }}
+                        ></div>
 
-                        {/* Subtle grid texture */}
-                        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+                        <div className="relative overflow-hidden rounded-[calc(1.25rem-2px)] bg-[#0b0820]">
+                            {/* Aurora layers */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-950 via-fuchsia-950/80 to-slate-950 cop-gradient-flow"></div>
+                            <div className="absolute -top-16 -left-10 w-56 h-56 rounded-full bg-fuchsia-500/30 blur-[70px] cop-drift"></div>
+                            <div className="absolute -bottom-20 right-0 w-64 h-64 rounded-full bg-cyan-400/25 blur-[80px] cop-drift [animation-delay:-5s]"></div>
+                            <div className="absolute top-0 left-1/3 w-40 h-40 rounded-full bg-amber-400/20 blur-[60px] cop-drift [animation-delay:-9s]"></div>
 
-                        {/* Shimmer sweep on hover */}
-                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms] ease-in-out bg-gradient-to-r from-transparent via-white/[0.06] to-transparent pointer-events-none"></div>
+                            {/* Twinkling stars */}
+                            {[["12%", "22%", "0s"], ["28%", "78%", "0.6s"], ["70%", "15%", "1.2s"], ["82%", "70%", "1.8s"], ["50%", "88%", "0.9s"], ["92%", "35%", "2.2s"]].map(([left, top, delay], i) => (
+                                <span key={i} className="absolute w-1 h-1 rounded-full bg-white shadow-[0_0_6px_2px_rgba(255,255,255,0.7)] cop-twinkle" style={{ left, top, animationDelay: delay }}></span>
+                            ))}
 
-                        {/* Content */}
-                        <div className="relative z-10 flex items-center gap-4 px-5 py-4 sm:px-6 sm:py-5">
+                            {/* Continuous shine sweep */}
+                            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent cop-sweep pointer-events-none"></div>
 
-                            {/* Trophy Icon */}
-                            <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-500/10 backdrop-blur-md border border-amber-400/20 flex items-center justify-center shadow-inner">
-                                <svg className="w-6 h-6 sm:w-7 sm:h-7 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.4)]" fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14c.55 0 1 .45 1 1v2c0 2.76-2.24 5-5 5h-.42c-.77 1.15-1.84 1.92-3.08 2.27V16h1.5c1.38 0 2.5 1.12 2.5 2.5V20H8.5v-1.5C8.5 17.12 9.62 16 11 16h1.5v-2.73c-1.24-.35-2.31-1.12-3.08-2.27H9c-2.76 0-5-2.24-5-5V4c0-.55.45-1 1-1zm0 3v1c0 1.66 1.34 3 3 3h.42c.34-.9.89-1.69 1.58-2.28V6H5zm14 0h-5v1.72c.69.59 1.24 1.38 1.58 2.28H16c1.66 0 3-1.34 3-3V6zM7 21h10v1H7v-1z"/></svg>
-                                {/* Live ping dot */}
-                                <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500 border-2 border-slate-900"></span>
-                                </span>
-                            </div>
-
-                            {/* Text block */}
-                            <div className="flex-1 min-w-0">
-                                {/* LIVE badge */}
-                                <div className="inline-flex items-center gap-1.5 px-2.5 py-[3px] rounded-full bg-red-500/15 border border-red-500/25 mb-1.5">
-                                    <span className="relative flex h-1.5 w-1.5">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
+                            {/* Content */}
+                            <div className="relative z-10 flex items-center gap-3 sm:gap-5 px-4 py-4 sm:px-6 sm:py-5">
+                                {/* Icon */}
+                                <div className="relative shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-pink-500 p-[1.5px] shadow-[0_0_25px_rgba(251,146,60,0.55)]">
+                                    <div className="w-full h-full rounded-[calc(1rem-1.5px)] bg-[#150d2e]/90 flex items-center justify-center">
+                                        <Target className="w-6 h-6 sm:w-8 sm:h-8 text-amber-300 drop-shadow-[0_0_8px_rgba(252,211,77,0.7)] group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" strokeWidth={2.2} />
+                                    </div>
+                                    <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400 border-2 border-[#0b0820]"></span>
                                     </span>
-                                    <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] text-red-400">Live Now</span>
                                 </div>
 
-                                {/* Title */}
-                                <h3 className="text-[15px] sm:text-lg font-black text-white leading-tight tracking-tight">
-                                    <CountdownTimer course={course} isLoggedIn={isLoggedIn} />
-                                </h3>
-                                <p className="text-[10px] sm:text-xs text-indigo-300/70 font-medium mt-0.5 truncate">Compete with top rankers across India</p>
+                                {/* Text */}
+                                <div className="flex-1 min-w-0 text-left">
+                                    <div className="flex items-center gap-1.5 sm:gap-2 mb-1 flex-wrap">
+                                        <span className="inline-flex items-center gap-1 px-2 py-[2px] rounded-full bg-emerald-400/15 border border-emerald-300/30 text-[8.5px] sm:text-[10px] font-black uppercase tracking-[0.16em] text-emerald-300">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                            Live
+                                        </span>
+                                        <span className="inline-flex items-center gap-1 px-2 py-[2px] rounded-full bg-amber-300/15 border border-amber-200/30 text-[8.5px] sm:text-[10px] font-black uppercase tracking-[0.16em] text-amber-200">
+                                            <Sparkles className="w-2.5 h-2.5" /> Answer Keys Out
+                                        </span>
+                                    </div>
+                                    <h3 className="text-[15px] min-[380px]:text-base sm:text-2xl font-black leading-tight tracking-tight">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-pink-200 to-cyan-200 cop-gradient-flow">LDCE IP 2026</span>{" "}
+                                        <span className="text-white">Cut-Off Prediction</span>
+                                    </h3>
+                                    <p className="text-[10.5px] sm:text-sm text-indigo-200/80 font-medium mt-0.5 sm:mt-1 leading-snug">
+                                        Enter your Paper I, II &amp; III marks · See your all-India standing
+                                    </p>
+                                </div>
+
+                                {/* CTA */}
+                                <div className="shrink-0 flex items-center">
+                                    <span className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-[#1a1040] text-sm font-extrabold shadow-[0_0_20px_rgba(255,255,255,0.35)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.55)] transition-all">
+                                        Predict Now
+                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={2.75} />
+                                    </span>
+                                    <span className="sm:hidden w-9 h-9 rounded-full bg-white flex items-center justify-center shadow-[0_0_18px_rgba(255,255,255,0.4)]">
+                                        <ArrowRight className="w-4 h-4 text-[#1a1040]" strokeWidth={2.75} />
+                                    </span>
+                                </div>
                             </div>
 
-                            {/* Arrow */}
-                            <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/[0.07] backdrop-blur-md border border-white/10 flex items-center justify-center group-hover:bg-white/[0.12] group-hover:border-white/20 transition-all duration-300">
-                                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300" strokeWidth={2.5} />
-                            </div>
+                            {/* Bottom rainbow line */}
+                            <div className="h-[2px] bg-gradient-to-r from-fuchsia-500 via-amber-300 to-cyan-400 cop-gradient-flow"></div>
                         </div>
-
-                        {/* Bottom accent line */}
-                        <div className="h-[2px] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
                     </div>
                 </Link>
             </div>

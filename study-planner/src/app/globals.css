@@ -474,3 +474,98 @@ textarea {
     background-position: 0% 50%;
   }
 }
+/* ── LDCE IP 2026 Cut-Off Prediction ── */
+@keyframes cop-gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes cop-sweep {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  60%, 100% { transform: translateX(260%) skewX(-20deg); }
+}
+
+@keyframes cop-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cop-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(30px, -24px, 0) scale(1.08); }
+  66% { transform: translate3d(-24px, 18px, 0) scale(0.95); }
+}
+
+@keyframes cop-twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.6); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cop-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cop-bar {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+.cop-gradient-flow {
+  background-size: 300% 300%;
+  animation: cop-gradient-flow 8s ease infinite;
+}
+
+.cop-sweep {
+  animation: cop-sweep 3.6s ease-in-out infinite;
+}
+
+.cop-spin-slow {
+  animation: cop-spin 6s linear infinite;
+}
+
+.cop-drift {
+  animation: cop-drift 14s ease-in-out infinite;
+}
+
+.cop-twinkle {
+  animation: cop-twinkle 2.8s ease-in-out infinite;
+}
+
+.cop-rise {
+  animation: cop-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cop-bar {
+  transform-origin: bottom;
+  animation: cop-bar 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cop-gradient-flow, .cop-sweep, .cop-spin-slow, .cop-drift, .cop-twinkle, .cop-rise, .cop-bar {
+    animation: none;
+  }
+}
+
+.cop-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.cop-input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.cop-input:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}

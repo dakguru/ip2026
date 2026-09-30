@@ -17,7 +17,8 @@ export async function middleware(request: NextRequest) {
         pathname === '/terms' ||
         pathname === '/disclaimer' ||
         pathname === '/refund-policy' ||
-        pathname === '/mock-tests';
+        pathname === '/mock-tests' ||
+        pathname.startsWith('/cutoff-prediction');
 
     const isLogout = request.nextUrl.searchParams.get('logout') === 'true';
     const reason = request.nextUrl.searchParams.get('reason');
