@@ -8,6 +8,8 @@ const CutoffPredictionSchema = new mongoose.Schema({
     exam:       { type: String, default: 'LDCE_IP_2026', index: true },
     name:       { type: String, required: true, trim: true, maxlength: 60 },
     circle:     { type: String, default: '', trim: true, maxlength: 60 },
+    // Required for new entries; '' only for rows created before the field existed.
+    category:   { type: String, enum: ['UR', 'ST', 'SC', 'PH', ''], default: '', index: true },
 
     paper1:     { type: Number, required: true, min: 0, max: 250 },
     paper2:     { type: Number, required: true, min: 0, max: 50 },

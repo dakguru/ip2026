@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState, type ComponentType } from "react";
 import {
     ArrowLeft, BarChart3, CheckCircle2, Crown, Download, FileCheck2, Gauge,
-    Info, Loader2, Lock, PencilLine, Search, Share2, ShieldCheck, Sparkles, Target, TrendingUp, Trophy, Users,
+    Check, Copy, Facebook, Info, Linkedin, Loader2, Lock, Mail, MessageCircle, PencilLine, Search, Send, Share2, Twitter, ShieldCheck, Sparkles, Target, TrendingUp, Trophy, Users,
 } from "lucide-react";
 
 // ─── Config ────────────────────────────────────────────────────────────────
@@ -13,6 +13,9 @@ const MAX = { paper1: 250, paper2: 50, paper3: 300 } as const;
 const GRAND_TOTAL = MAX.paper1 + MAX.paper2 + MAX.paper3;
 const TOKEN_KEY = "dg_cutoff_ldce_ip_2026_token";
 const ANSWER_KEY_PDF = "/pdfs/LDCE_IP_2026_Provisional_Answer_Keys.pdf";
+const SHARE_URL = "https://dakguru.com/cutoff-prediction";
+const SHARE_TITLE = "LDCE IP 2026 Cut-Off Prediction";
+const SHARE_TEXT = "🎯 LDCE IP 2026 Cut-Off Prediction is LIVE on Dak Guru!\n\nEnter your Paper I, II & III marks (verified with the official Provisional Answer Key) and see your All-India rank, percentile and the indicative cut-off zone. No login needed.\n\nMore genuine entries = more accurate prediction for all of us. Please share with fellow aspirants 🙏";
 
 const CIRCLES = [
     "Andhra Pradesh", "Assam", "Bihar", "Chhattisgarh", "Delhi", "Gujarat", "Haryana", "Himachal Pradesh",
@@ -28,6 +31,9 @@ const PAPERS = [
 ] as const;
 
 type PaperKey = typeof PAPERS[number]["key"];
+
+const CATEGORIES = ["UR", "ST", "SC", "PH"] as const;
+type Category = typeof CATEGORIES[number];
 type IconType = ComponentType<{ className?: string }>;
 const errorMessage = (e: unknown, fallback: string) => (e instanceof Error && e.message ? e.message : fallback);
 
@@ -36,6 +42,7 @@ interface Entry {
     rank: number;
     name: string;
     circle: string;
+    category: string;
     paper1: number;
     paper2: number;
     paper3: number;
@@ -55,6 +62,7 @@ interface Stats {
     projection: { low: number; high: number; basis: string } | null;
     minEntriesForProjection: number;
     distribution: { from: number; to: number; count: number }[];
+    byCategory?: { category: Category; count: number; average: number; highest: number; projection: { low: number; high: number } | null }[];
 }
 
 const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(2).replace(/0$/, ""));
@@ -69,12 +77,16 @@ function writeToken(t: string) {
 // ─── Page ──────────────────────────────────────────────────────────────────
 export default function CutoffPredictionClient() {
     const [leaderboard, setLeaderboard] = useState<Entry[]>([]);
+    const [categoryBoards, setCategoryBoards] = useState<Partial<Record<Category, Entry[]>>>({});
+    const [boardView, setBoardView] = useState<"ALL" | Category>("ALL");
+    const [locked, setLocked] = useState(true);
+    const [ipSubmitted, setIpSubmitted] = useState(false);
     const [stats, setStats] = useState<Stats | null>(null);
     const [mine, setMine] = useState<Mine | null>(null);
     const [loading, setLoading] = useState(true);
     const [loadError, setLoadError] = useState("");
 
-    const [form, setForm] = useState({ name: "", circle: "", paper1: "", paper2: "", paper3: "", website: "" });
+    const [form, setForm] = useState({ name: "", circle: "", category: "", paper1: "", paper2: "", paper3: "", website: "" });
     const [declaration, setDeclaration] = useState(false);
     const [editing, setEditing] = useState(false);
     const [submitting, setSubmitting] = useState(false);
@@ -91,6 +103,9 @@ export default function CutoffPredictionClient() {
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || "Failed to load");
             setLeaderboard(data.leaderboard || []);
+            setCategoryBoards(data.categoryLeaderboards || {});
+            setLocked(data.locked !== false);
+            setIpSubmitted(!!data.ipSubmitted);
             setStats(data.stats || null);
             setMine(data.mine || null);
             setLoadError("");
@@ -125,13 +140,13 @@ export default function CutoffPredictionClient() {
         return sum + (typeof v === "number" && !Number.isNaN(v) ? v : 0);
     }, 0);
 
-    const formValid = form.name.trim().length >= 2 &&
+    const formValid = form.name.trim().length >= 2 && form.category !== "" &&
         (["paper1", "paper2", "paper3"] as PaperKey[]).every(k => typeof marks[k] === "number" && !Number.isNaN(marks[k])) &&
         declaration;
 
     const startEdit = () => {
         if (!mine) return;
-        setForm({ name: mine.name, circle: mine.circle || "", paper1: String(mine.paper1), paper2: String(mine.paper2), paper3: String(mine.paper3), website: "" });
+        setForm({ name: mine.name, circle: mine.circle || "", category: mine.category || "", paper1: String(mine.paper1), paper2: String(mine.paper2), paper3: String(mine.paper3), website: "" });
         setDeclaration(false);
         setEditing(true);
         setSuccess("");
@@ -143,7 +158,7 @@ export default function CutoffPredictionClient() {
         setError("");
         setSuccess("");
         if (!formValid) {
-            setError("Please fill in your name, valid marks for all three papers and tick the declaration.");
+            setError("Please fill in your name, category, valid marks for all three papers and tick the declaration.");
             return;
         }
         setSubmitting(true);
@@ -154,6 +169,7 @@ export default function CutoffPredictionClient() {
                 body: JSON.stringify({
                     name: form.name,
                     circle: form.circle,
+                    category: form.category,
                     paper1: marks.paper1,
                     paper2: marks.paper2,
                     paper3: marks.paper3,
@@ -163,12 +179,18 @@ export default function CutoffPredictionClient() {
                 }),
             });
             const data = await res.json();
-            if (!res.ok) throw new Error(data.error || "Submission failed");
+            if (!res.ok) {
+                if (data.ipSubmitted) {
+                    setIpSubmitted(true);
+                    await load(true);
+                }
+                throw new Error(data.error || "Submission failed");
+            }
             writeToken(data.token);
             setMine(data.mine);
             setEditing(false);
             setSuccess(data.updated ? "Your prediction has been updated." : "Your prediction is live on the leaderboard!");
-            setForm({ name: "", circle: "", paper1: "", paper2: "", paper3: "", website: "" });
+            setForm({ name: "", circle: "", category: "", paper1: "", paper2: "", paper3: "", website: "" });
             setDeclaration(false);
             await load(true);
             setTimeout(() => document.getElementById("standing")?.scrollIntoView({ behavior: "smooth", block: "center" }), 150);
@@ -180,26 +202,25 @@ export default function CutoffPredictionClient() {
     };
 
     const share = async () => {
-        const url = typeof window !== "undefined" ? `${window.location.origin}/cutoff-prediction` : "https://dakguru.com/cutoff-prediction";
-        const text = "LDCE IP 2026 Cut-Off Prediction — enter your marks & see the all-India leaderboard (no login needed)";
         try {
             if (navigator.share) {
-                await navigator.share({ title: "LDCE IP 2026 Cut-Off Prediction", text, url });
+                await navigator.share({ title: SHARE_TITLE, text: SHARE_TEXT, url: SHARE_URL });
                 return;
             }
-            await navigator.clipboard.writeText(url);
+            await copyToClipboard(SHARE_URL);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch { /* user cancelled */ }
     };
 
+    const board = useMemo(() => (boardView === "ALL" ? leaderboard : (categoryBoards[boardView] || [])), [boardView, leaderboard, categoryBoards]);
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
-        if (!q) return leaderboard;
-        return leaderboard.filter(e => e.name.toLowerCase().includes(q) || (e.circle || "").toLowerCase().includes(q));
-    }, [leaderboard, query]);
+        if (!q) return board;
+        return board.filter(e => e.name.toLowerCase().includes(q) || (e.circle || "").toLowerCase().includes(q));
+    }, [board, query]);
 
-    const showForm = !mine || editing;
+    const showForm = (!mine && !ipSubmitted) || editing;
 
     return (
         <div className="relative min-h-screen bg-[#06041a] text-white overflow-x-hidden font-sans selection:bg-fuchsia-500/40">
@@ -282,7 +303,7 @@ export default function CutoffPredictionClient() {
                                         <Step n={4}>For <b className="text-white">Paper II</b> (descriptive), enter a realistic, conservative estimate.</Step>
                                     </ol>
                                     <p className="mt-4 text-xs text-white/45 leading-relaxed">
-                                        Inflated or casual entries distort the prediction for everyone. The leaderboard is only as reliable as the data you feed.
+                                        Inflated or casual entries distort the prediction for everyone. The toppers leaderboard unlocks only after you submit your own details and marks.
                                     </p>
                                 </div>
 
@@ -327,20 +348,27 @@ export default function CutoffPredictionClient() {
                                             <h2 className="text-2xl font-extrabold mt-1">Enter your marks</h2>
                                         </div>
                                         <div className="hidden sm:flex items-center gap-1.5 text-[11px] font-semibold text-white/45">
-                                            <Lock className="w-3.5 h-3.5" /> No login required
+                                            <Lock className="w-3.5 h-3.5" /> No login · One entry per candidate
                                         </div>
                                     </div>
 
                                     <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                                        <Field label="Your Name" required>
+                                        <Field label="Your Name" required className="sm:col-span-2">
                                             <input
                                                 value={form.name}
                                                 onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                                                 maxLength={60}
-                                                placeholder="e.g. Arun Selvaraj"
+                                                placeholder="Enter your full name"
                                                 autoComplete="name"
                                                 className="cop-input"
                                             />
+                                        </Field>
+                                        <Field label="Category" required>
+                                            <select value={form.category} onChange={e => setForm(f => ({ ...f, category: e.target.value }))} required
+                                                className={`cop-input appearance-none cursor-pointer ${form.category ? "" : "!text-white/40"}`}>
+                                                <option value="" disabled className="bg-[#140c33]">Choose</option>
+                                                {CATEGORIES.map(c => <option key={c} value={c} className="bg-[#140c33] text-white">{c}</option>)}
+                                            </select>
                                         </Field>
                                         <Field label="Postal Circle">
                                             <select value={form.circle} onChange={e => setForm(f => ({ ...f, circle: e.target.value }))} className="cop-input appearance-none cursor-pointer">
@@ -403,7 +431,14 @@ export default function CutoffPredictionClient() {
                                         </div>
                                     </div>
 
-                                    <label className="mt-6 flex items-start gap-3 cursor-pointer group">
+                                    {!editing && (
+                                        <p className="mt-5 flex items-start gap-2 text-[12px] text-amber-200/80 leading-relaxed">
+                                            <Info className="w-4 h-4 shrink-0 mt-px" />
+                                            Only one entry is allowed per IP address. Double-check your marks before submitting. You can edit them later from this device.
+                                        </p>
+                                    )}
+
+                                    <label className="mt-4 flex items-start gap-3 cursor-pointer group">
                                         <input type="checkbox" checked={declaration} onChange={e => setDeclaration(e.target.checked)} className="peer sr-only" />
                                         <span className="mt-0.5 w-5 h-5 shrink-0 rounded-md border border-white/25 bg-white/5 flex items-center justify-center peer-checked:bg-emerald-500 peer-checked:border-emerald-400 peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-300 transition-colors">
                                             {declaration && <CheckCircle2 className="w-4 h-4 text-white" />}
@@ -430,6 +465,21 @@ export default function CutoffPredictionClient() {
                                         )}
                                     </div>
                                 </form>
+                            ) : !mine ? (
+                                <div className="h-full flex flex-col justify-center text-center py-6">
+                                    <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center shadow-[0_0_40px_rgba(251,146,60,0.45)] mb-5">
+                                        <ShieldCheck className="w-8 h-8 text-white" />
+                                    </div>
+                                    <h2 className="text-2xl font-extrabold">Entry already submitted</h2>
+                                    <p className="text-sm text-white/55 mt-2 max-w-md mx-auto leading-relaxed">
+                                        A prediction has already been submitted from this IP address. To keep the prediction genuine, only one entry is allowed per candidate. If the entry is yours, you can edit it from the device and browser you used to submit.
+                                    </p>
+                                    <div className="mt-6 flex justify-center">
+                                        <a href="#share" className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-extrabold text-sm text-[#12093a] bg-white hover:bg-white/90">
+                                            <Share2 className="w-4 h-4" /> Invite fellow aspirants
+                                        </a>
+                                    </div>
+                                </div>
                             ) : (
                                 <div className="h-full flex flex-col justify-center text-center py-6">
                                     <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-[0_0_40px_rgba(52,211,153,0.45)] mb-5">
@@ -443,9 +493,9 @@ export default function CutoffPredictionClient() {
                                         <button onClick={startEdit} className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-bold text-sm bg-white/[0.07] border border-white/15 hover:bg-white/10">
                                             <PencilLine className="w-4 h-4" /> Edit my marks
                                         </button>
-                                        <button onClick={share} className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-extrabold text-sm text-[#12093a] bg-white hover:bg-white/90">
-                                            <Share2 className="w-4 h-4" /> {copied ? "Link copied" : "Invite fellow candidates"}
-                                        </button>
+                                        <a href="#share" className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-extrabold text-sm text-[#12093a] bg-white hover:bg-white/90">
+                                            <Share2 className="w-4 h-4" /> Invite fellow aspirants
+                                        </a>
                                     </div>
                                 </div>
                             )}
@@ -455,6 +505,11 @@ export default function CutoffPredictionClient() {
                     <div id="standing" className="lg:col-span-2 cop-rise [animation-delay:280ms]">
                         <StandingCard mine={mine} stats={stats} />
                     </div>
+                </section>
+
+                {/* ── Share ── */}
+                <section id="share" className="mt-10 scroll-mt-24 cop-rise [animation-delay:320ms]">
+                    <ShareSection />
                 </section>
 
                 {/* ── Insights ── */}
@@ -511,11 +566,35 @@ export default function CutoffPredictionClient() {
                     </div>
                 </section>
 
+                {stats?.byCategory && (
+                    <section className="mt-6 cop-rise [animation-delay:370ms]">
+                        <Glass className="p-6">
+                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-300 mb-4">Category-wise indicative zone</p>
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                                {stats.byCategory.map(c => (
+                                    <div key={c.category} className={`rounded-2xl border p-4 ${mine?.category === c.category ? "border-emerald-300/40 bg-emerald-400/[0.06]" : "border-white/[0.07] bg-white/[0.03]"}`}>
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-lg font-black">{c.category}</span>
+                                            <span className="text-[10px] font-bold text-white/40 tabular-nums">{c.count} entr{c.count === 1 ? "y" : "ies"}</span>
+                                        </div>
+                                        <p className="mt-3 text-xl font-black tabular-nums">
+                                            {c.projection ? (
+                                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-cyan-200">{fmt(c.projection.low)} – {fmt(c.projection.high)}</span>
+                                            ) : <span className="text-sm font-bold text-white/45">Needs {stats.minEntriesForProjection}+ entries</span>}
+                                        </p>
+                                        <p className="mt-1 text-[11px] text-white/45 tabular-nums">Avg {c.count ? fmt(c.average) : "—"} · Top {c.count ? fmt(c.highest) : "—"}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </Glass>
+                    </section>
+                )}
+
                 {/* ── Leaderboard ── */}
                 <section id="leaderboard" className="mt-14 scroll-mt-24 cop-rise [animation-delay:400ms]">
                     <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
                         <SectionTitle icon={Trophy} eyebrow="All India" title="Toppers leaderboard" className="mb-0" />
-                        <div className="relative sm:w-72">
+                        <div className={`relative sm:w-72 ${locked ? "hidden" : ""}`}>
                             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/35" />
                             <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search name or circle" className="cop-input" style={{ paddingLeft: "2.5rem" }} />
                         </div>
@@ -528,6 +607,8 @@ export default function CutoffPredictionClient() {
                             <p className="text-rose-200 font-semibold">{loadError}</p>
                             <button onClick={() => load()} className="mt-4 rounded-full px-5 py-2 text-sm font-bold bg-white/10 hover:bg-white/15">Retry</button>
                         </Glass>
+                    ) : locked ? (
+                        <LockedLeaderboard count={stats?.count ?? 0} />
                     ) : leaderboard.length === 0 ? (
                         <Glass className="p-12 text-center">
                             <Trophy className="w-10 h-10 text-amber-300/70 mx-auto mb-3" />
@@ -536,6 +617,20 @@ export default function CutoffPredictionClient() {
                         </Glass>
                     ) : (
                         <>
+                            <div className="mb-4 flex gap-2 overflow-x-auto pb-1 -mx-1 px-1" role="tablist" aria-label="Filter leaderboard by category">
+                                {(["ALL", ...CATEGORIES] as const).map(v => {
+                                    const count = v === "ALL" ? stats?.count : stats?.byCategory?.find(c => c.category === v)?.count;
+                                    const active = boardView === v;
+                                    return (
+                                        <button key={v} role="tab" aria-selected={active} onClick={() => setBoardView(v)}
+                                            className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-extrabold border transition-all ${active ? "bg-white text-[#12093a] border-white shadow-[0_0_20px_rgba(255,255,255,0.25)]" : "bg-white/[0.04] text-white/70 border-white/10 hover:bg-white/[0.08]"}`}>
+                                            {v === "ALL" ? "All India" : v}
+                                            {count !== undefined && <span className={`tabular-nums text-[10px] ${active ? "text-[#12093a]/60" : "text-white/40"}`}>{count}</span>}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
                             {filtered.length > 0 && (
                                 <Glass className="overflow-hidden">
                                     <div className="hidden sm:grid grid-cols-[64px_1fr_repeat(3,80px)_100px] gap-2 px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white/40 border-b border-white/[0.06]">
@@ -548,10 +643,14 @@ export default function CutoffPredictionClient() {
                                     </ul>
                                 </Glass>
                             )}
-                            {query && filtered.length === 0 && (
-                                <Glass className="p-8 text-center text-white/50 text-sm">No candidates match “{query}”.</Glass>
+                            {filtered.length === 0 && (
+                                <Glass className="p-8 text-center text-white/50 text-sm">
+                                    {query ? <>No candidates match “{query}”.</> : <>No {boardView} category predictions yet.</>}
+                                </Glass>
                             )}
-                            <p className="mt-4 text-center text-[11px] text-white/35">Showing the top {leaderboard.length} predictions · refreshes automatically every minute</p>
+                            <p className="mt-4 text-center text-[11px] text-white/35">
+                                Showing the top {board.length} {boardView === "ALL" ? "" : `${boardView} category `}predictions{boardView === "ALL" ? "" : " · ranks are within the category"} · refreshes automatically every minute
+                            </p>
                         </>
                     )}
                 </section>
@@ -610,9 +709,9 @@ function Step({ n, children }: { n: number; children: React.ReactNode }) {
     );
 }
 
-function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
+function Field({ label, required, className = "", children }: { label: string; required?: boolean; className?: string; children: React.ReactNode }) {
     return (
-        <label className="block">
+        <label className={`block ${className}`}>
             <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-white/50 mb-1.5">
                 {label}{required && <span className="text-fuchsia-300"> *</span>}
             </span>
@@ -682,7 +781,7 @@ function StandingCard({ mine, stats }: { mine: Mine | null; stats: Stats | null 
             <div className="relative h-full overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-[#0d0828] p-6 sm:p-8">
                 <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-fuchsia-500/25 blur-[70px]"></div>
                 <p className="relative text-[10px] font-black uppercase tracking-[0.2em] text-amber-200">Your standing</p>
-                <p className="relative mt-1 font-bold text-white/85 truncate">{mine.name}{mine.circle ? <span className="text-white/40 font-medium"> · {mine.circle}</span> : null}</p>
+                <p className="relative mt-1 font-bold text-white/85 truncate">{mine.name}{mine.category ? <span className="text-white/40 font-medium"> · {mine.category}</span> : null}{mine.circle ? <span className="text-white/40 font-medium"> · {mine.circle}</span> : null}</p>
 
                 <div className="relative mt-6 flex items-center gap-6">
                     <div className="relative w-32 h-32 shrink-0">
@@ -767,6 +866,137 @@ function Distribution({ stats, myTotal }: { stats: Stats | null; myTotal: number
     );
 }
 
+async function copyToClipboard(text: string) {
+    try {
+        await navigator.clipboard.writeText(text);
+    } catch {
+        // Fallback for older WebViews without the async clipboard API
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+    }
+}
+
+function ShareSection() {
+    const [copied, setCopied] = useState<"" | "link" | "message">("");
+
+    const message = `${SHARE_TEXT}\n\n👉 ${SHARE_URL}`;
+    const u = encodeURIComponent(SHARE_URL);
+    const channels = [
+        { name: "WhatsApp", icon: MessageCircle, href: `https://wa.me/?text=${encodeURIComponent(message)}`, cls: "from-[#25D366] to-[#128C7E]", glow: "rgba(37,211,102,0.45)" },
+        { name: "Telegram", icon: Send, href: `https://t.me/share/url?url=${u}&text=${encodeURIComponent(SHARE_TEXT)}`, cls: "from-[#37AEE2] to-[#1E96C8]", glow: "rgba(55,174,226,0.45)" },
+        { name: "Facebook", icon: Facebook, href: `https://www.facebook.com/sharer/sharer.php?u=${u}`, cls: "from-[#1877F2] to-[#0b5fcc]", glow: "rgba(24,119,242,0.45)" },
+        { name: "X", icon: Twitter, href: `https://twitter.com/intent/tweet?text=${encodeURIComponent("🎯 LDCE IP 2026 Cut-Off Prediction is LIVE — enter your marks & see your All-India rank. No login needed.")}&url=${u}`, cls: "from-zinc-700 to-black", glow: "rgba(255,255,255,0.2)" },
+        { name: "LinkedIn", icon: Linkedin, href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`, cls: "from-[#0A66C2] to-[#084d93]", glow: "rgba(10,102,194,0.45)" },
+        { name: "Email", icon: Mail, href: `mailto:?subject=${encodeURIComponent(SHARE_TITLE)}&body=${encodeURIComponent(message)}`, cls: "from-rose-500 to-orange-500", glow: "rgba(244,63,94,0.4)" },
+    ];
+
+    const copy = async (what: "link" | "message") => {
+        await copyToClipboard(what === "link" ? SHARE_URL : message);
+        setCopied(what);
+        setTimeout(() => setCopied(""), 2000);
+    };
+
+    return (
+        <div className="relative rounded-3xl p-[1.5px] bg-gradient-to-r from-emerald-400 via-amber-300 to-fuchsia-500 cop-gradient-flow shadow-[0_20px_70px_-25px_rgba(251,191,36,0.45)]">
+            <div className="relative overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-[#0c0726] p-5 sm:p-8">
+                <div className="absolute -top-20 -right-10 w-64 h-64 rounded-full bg-amber-400/15 blur-[80px] cop-drift"></div>
+                <div className="absolute -bottom-24 -left-10 w-64 h-64 rounded-full bg-emerald-400/15 blur-[80px] cop-drift [animation-delay:-7s]"></div>
+
+                <div className="relative flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+                    <div className="lg:w-[38%]">
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-300">Spread the word</p>
+                        <h2 className="text-2xl sm:text-3xl font-extrabold mt-1 leading-tight">Share with fellow aspirants</h2>
+                        <p className="text-sm text-white/55 mt-2 leading-relaxed">
+                            The prediction gets sharper with every genuine entry. Share this link in your WhatsApp and Telegram groups so more LDCE IP 2026 candidates can take part.
+                        </p>
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5 sm:gap-3">
+                            {channels.map(c => (
+                                <a key={c.name} href={c.href} target="_blank" rel="noopener noreferrer"
+                                    className="group flex flex-col items-center gap-2 rounded-2xl border border-white/[0.08] bg-white/[0.03] py-3.5 hover:bg-white/[0.07] hover:-translate-y-0.5 transition-all">
+                                    <span className={`w-11 h-11 rounded-full bg-gradient-to-br ${c.cls} flex items-center justify-center group-hover:scale-110 transition-transform`} style={{ boxShadow: `0 0 18px ${c.glow}` }}>
+                                        <c.icon className="w-5 h-5 text-white" />
+                                    </span>
+                                    <span className="text-[11px] font-bold text-white/75">{c.name}</span>
+                                </a>
+                            ))}
+                        </div>
+
+                        <div className="mt-4 flex flex-col sm:flex-row gap-2.5">
+                            <div className="flex-1 min-w-0 flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 pl-4 pr-1.5 py-1.5">
+                                <span className="flex-1 min-w-0 truncate text-sm font-semibold text-white/70">{SHARE_URL.replace("https://", "")}</span>
+                                <button onClick={() => copy("link")} className="shrink-0 inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-xs font-extrabold text-[#12093a] bg-white hover:bg-white/90 transition-colors">
+                                    {copied === "link" ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                                    {copied === "link" ? "Copied" : "Copy link"}
+                                </button>
+                            </div>
+                            <button onClick={() => copy("message")} className="inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-xs font-bold text-white/80 border border-white/15 hover:bg-white/[0.07] transition-colors">
+                                {copied === "message" ? <Check className="w-3.5 h-3.5 text-emerald-300" /> : <Copy className="w-3.5 h-3.5" />}
+                                {copied === "message" ? "Message copied" : "Copy message"}
+                            </button>
+                            <button onClick={() => (typeof navigator.share === "function" ? navigator.share({ title: SHARE_TITLE, text: SHARE_TEXT, url: SHARE_URL }).catch(() => {}) : copy("message"))}
+                                className="inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-xs font-bold text-white/80 border border-white/15 hover:bg-white/[0.07] transition-colors">
+                                <Share2 className="w-3.5 h-3.5" /> More apps
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function LockedLeaderboard({ count }: { count: number }) {
+    return (
+        <div className="relative overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.03]">
+            {/* Blurred placeholder rows — no real data is sent until the viewer submits */}
+            <ul aria-hidden="true" className="divide-y divide-white/[0.05] blur-[6px] select-none pointer-events-none">
+                {Array.from({ length: 7 }, (_, i) => (
+                    <li key={i} className="grid grid-cols-[48px_1fr_auto] sm:grid-cols-[64px_1fr_repeat(3,80px)_100px] gap-2 items-center px-4 sm:px-5 py-4">
+                        <span className="h-3 w-8 rounded bg-white/20"></span>
+                        <div className="space-y-1.5">
+                            <span className="block h-3 rounded bg-white/25" style={{ width: `${45 + ((i * 17) % 35)}%` }}></span>
+                            <span className="block h-2 w-20 rounded bg-white/10"></span>
+                        </div>
+                        <span className="hidden sm:block h-3 w-10 ml-auto rounded bg-sky-300/25"></span>
+                        <span className="hidden sm:block h-3 w-8 ml-auto rounded bg-fuchsia-300/25"></span>
+                        <span className="hidden sm:block h-3 w-10 ml-auto rounded bg-amber-300/25"></span>
+                        <span className="h-4 w-12 ml-auto rounded bg-white/30"></span>
+                    </li>
+                ))}
+            </ul>
+
+            <div className="absolute inset-0 flex items-center justify-center p-5 bg-gradient-to-b from-[#06041a]/40 via-[#06041a]/75 to-[#06041a]/90">
+                <div className="text-center max-w-md">
+                    <div className="relative mx-auto w-16 h-16 mb-4">
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-300 via-fuchsia-400 to-cyan-400 cop-gradient-flow blur-md opacity-70"></div>
+                        <div className="relative w-full h-full rounded-2xl bg-[#130b33] border border-white/15 flex items-center justify-center">
+                            <Lock className="w-7 h-7 text-amber-200" />
+                        </div>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-extrabold">Leaderboard locked</h3>
+                    <p className="text-sm text-white/60 mt-2 leading-relaxed">
+                        Submit your details and verified marks to unlock the all-India toppers list
+                        {count > 0 ? <> of <b className="text-white">{count}</b> candidate{count === 1 ? "" : "s"}</> : null}.
+                        Every entry makes the prediction more accurate for everyone.
+                    </p>
+                    <a href="#predict" className="mt-5 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-extrabold text-[#12093a] bg-gradient-to-r from-amber-200 via-white to-cyan-200 cop-gradient-flow shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-shadow">
+                        <Sparkles className="w-4 h-4" /> Enter my marks to unlock
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function LeaderRow({ entry, isMe }: { entry: Entry; isMe: boolean }) {
     return (
         <li className={`grid grid-cols-[48px_1fr_auto] sm:grid-cols-[64px_1fr_repeat(3,80px)_100px] gap-2 items-center px-4 sm:px-5 py-3.5 transition-colors ${isMe ? "bg-emerald-400/[0.08]" : "hover:bg-white/[0.03]"}`}>
@@ -777,6 +1007,7 @@ function LeaderRow({ entry, isMe }: { entry: Entry; isMe: boolean }) {
                     {isMe && <span className="rounded-full bg-emerald-400/15 border border-emerald-300/30 px-1.5 py-px text-[9px] font-black uppercase tracking-wider text-emerald-300">You</span>}
                 </p>
                 <p className="text-[11px] text-white/40 truncate">
+                    {entry.category && <span className="mr-1.5 inline-block rounded bg-white/[0.08] border border-white/10 px-1.5 text-[9px] font-black tracking-wider text-white/70 align-[1px]">{entry.category}</span>}
                     {entry.circle || "—"}
                     <span className="sm:hidden"> · {fmt(entry.paper1)} / {fmt(entry.paper2)} / {fmt(entry.paper3)}</span>
                 </p>

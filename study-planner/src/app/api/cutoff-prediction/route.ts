@@ -11,7 +11,7 @@ const MAX = { paper1: 250, paper2: 50, paper3: 300 } as const;
 const GRAND_TOTAL = MAX.paper1 + MAX.paper2 + MAX.paper3;
 const LEADERBOARD_SIZE = 100;
 const MIN_ENTRIES_FOR_PROJECTION = 20;
-const MAX_NEW_ENTRIES_PER_IP_PER_DAY = 5;
+const CATEGORIES = ["UR", "ST", "SC", "PH"] as const;
 
 function hashIp(req: Request) {
     const raw = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || "unknown";
@@ -47,8 +47,8 @@ const avg = (arr: number[]) => arr.length ? Math.round((arr.reduce((a, b) => a +
 
 async function buildStats() {
     const all = await CutoffPrediction.find({ exam: EXAM, hidden: false })
-        .select("paper1 paper2 paper3 total")
-        .lean<{ paper1: number; paper2: number; paper3: number; total: number }[]>();
+        .select("paper1 paper2 paper3 total category")
+        .lean<{ paper1: number; paper2: number; paper3: number; total: number; category?: string }[]>();
 
     const totals = all.map(e => e.total).sort((a, b) => a - b);
     const count = totals.length;
@@ -92,6 +92,18 @@ async function buildStats() {
             : null,
         minEntriesForProjection: MIN_ENTRIES_FOR_PROJECTION,
         distribution: buckets,
+        byCategory: CATEGORIES.map(category => {
+            const t = all.filter(e => e.category === category).map(e => e.total).sort((a, b) => a - b);
+            return {
+                category,
+                count: t.length,
+                average: avg(t),
+                highest: t.length ? t[t.length - 1] : 0,
+                projection: t.length >= MIN_ENTRIES_FOR_PROJECTION
+                    ? { low: percentile(t, 0.75), high: percentile(t, 0.9) }
+                    : null,
+            };
+        }),
     };
 }
 
@@ -99,6 +111,7 @@ interface StoredEntry {
     _id: unknown;
     name: string;
     circle: string;
+    category?: string;
     paper1: number;
     paper2: number;
     paper3: number;
@@ -111,7 +124,7 @@ interface StoredEntry {
 async function findMine(token: string | null) {
     if (!token || token.length < 20) return null;
     const mine = await CutoffPrediction.findOne({ exam: EXAM, editToken: token })
-        .select("name circle paper1 paper2 paper3 total hidden createdAt updatedAt")
+        .select("name circle category paper1 paper2 paper3 total hidden createdAt updatedAt")
         .lean<StoredEntry>();
     if (!mine || mine.hidden) return null;
     const higher = await CutoffPrediction.countDocuments({ exam: EXAM, hidden: false, total: { $gt: mine.total } });
@@ -121,6 +134,7 @@ async function findMine(token: string | null) {
         id: String(mine._id),
         name: mine.name,
         circle: mine.circle,
+        category: mine.category || "",
         paper1: mine.paper1,
         paper2: mine.paper2,
         paper3: mine.paper3,
@@ -131,41 +145,56 @@ async function findMine(token: string | null) {
     };
 }
 
+// Standard competition ranking (ties share a rank)
+function rankEntries(entries: StoredEntry[]) {
+    let lastTotal: number | null = null;
+    let lastRank = 0;
+    return entries.map((e, i) => {
+        if (e.total !== lastTotal) { lastRank = i + 1; lastTotal = e.total; }
+        return {
+            id: String(e._id),
+            rank: lastRank,
+            name: e.name,
+            circle: e.circle,
+            category: e.category || "",
+            paper1: e.paper1,
+            paper2: e.paper2,
+            paper3: e.paper3,
+            total: e.total,
+            createdAt: e.createdAt,
+        };
+    });
+}
+
 export async function GET(req: Request) {
     try {
         await dbConnect();
         const url = new URL(req.url);
         const token = url.searchParams.get("token");
 
-        const [top, stats, mine] = await Promise.all([
-            CutoffPrediction.find({ exam: EXAM, hidden: false })
-                .sort({ total: -1, createdAt: 1 })
-                .limit(LEADERBOARD_SIZE)
-                .select("name circle paper1 paper2 paper3 total createdAt")
-                .lean<StoredEntry[]>(),
-            buildStats(),
-            findMine(token),
-        ]);
+        const [stats, mine, admin] = await Promise.all([buildStats(), findMine(token), isAdmin()]);
 
-        // Standard competition ranking (ties share a rank)
-        let lastTotal: number | null = null;
-        let lastRank = 0;
-        const leaderboard = top.map((e, i) => {
-            if (e.total !== lastTotal) { lastRank = i + 1; lastTotal = e.total; }
-            return {
-                id: String(e._id),
-                rank: lastRank,
-                name: e.name,
-                circle: e.circle,
-                paper1: e.paper1,
-                paper2: e.paper2,
-                paper3: e.paper3,
-                total: e.total,
-                createdAt: e.createdAt,
-            };
-        });
+        // An entry already exists from this IP (e.g. submitted from another browser on the same connection).
+        // Such visitors may not submit again, but they have contributed, so they can view the leaderboard.
+        const ipSubmitted = !mine && !!(await CutoffPrediction.exists({ exam: EXAM, ipHash: hashIp(req) }));
 
-        return NextResponse.json({ leaderboard, stats, mine }, { headers: { "Cache-Control": "no-store" } });
+        // The leaderboard is unlocked only for candidates who have submitted their marks.
+        const locked = !mine && !ipSubmitted && !admin;
+        const fetchTop = (extra: Record<string, unknown> = {}) => CutoffPrediction.find({ exam: EXAM, hidden: false, ...extra })
+            .sort({ total: -1, createdAt: 1 })
+            .limit(LEADERBOARD_SIZE)
+            .select("name circle category paper1 paper2 paper3 total createdAt")
+            .lean<StoredEntry[]>();
+
+        const [overall, ...perCategory] = locked
+            ? [[], ...CATEGORIES.map(() => [])] as StoredEntry[][]
+            : await Promise.all([fetchTop(), ...CATEGORIES.map(category => fetchTop({ category }))]);
+
+        const leaderboard = rankEntries(overall);
+        // Category-wise toppers, ranked within the category
+        const categoryLeaderboards = Object.fromEntries(CATEGORIES.map((c, i) => [c, rankEntries(perCategory[i])]));
+
+        return NextResponse.json({ leaderboard, categoryLeaderboards, locked, ipSubmitted, stats, mine }, { headers: { "Cache-Control": "no-store" } });
     } catch (error) {
         console.error("Cutoff prediction GET error:", error);
         return NextResponse.json({ error: "Unable to load predictions right now." }, { status: 500 });
@@ -187,12 +216,16 @@ export async function POST(req: Request) {
 
         const name = cleanText(body.name, 60);
         const circle = cleanText(body.circle, 60);
+        const category = typeof body.category === "string" ? body.category.trim().toUpperCase() : "";
         const paper1 = parseMark(body.paper1, MAX.paper1);
         const paper2 = parseMark(body.paper2, MAX.paper2);
         const paper3 = parseMark(body.paper3, MAX.paper3);
 
         if (name.length < 2) {
             return NextResponse.json({ error: "Please enter your name (at least 2 characters)." }, { status: 400 });
+        }
+        if (!(CATEGORIES as readonly string[]).includes(category)) {
+            return NextResponse.json({ error: "Please select your category (UR / ST / SC / PH)." }, { status: 400 });
         }
         if (paper1 === null) return NextResponse.json({ error: `Paper I marks must be between 0 and ${MAX.paper1}.` }, { status: 400 });
         if (paper2 === null) return NextResponse.json({ error: `Paper II marks must be between 0 and ${MAX.paper2}.` }, { status: 400 });
@@ -208,17 +241,20 @@ export async function POST(req: Request) {
         if (token.length >= 20) {
             const existing = await CutoffPrediction.findOne({ exam: EXAM, editToken: token });
             if (existing && !existing.hidden) {
-                existing.set({ name, circle, paper1, paper2, paper3, total });
+                existing.set({ name, circle, category, paper1, paper2, paper3, total });
                 await existing.save();
                 const mine = await findMine(token);
                 return NextResponse.json({ success: true, updated: true, token, mine });
             }
         }
 
-        const since = new Date(Date.now() - 24 * 60 * 60 * 1000);
-        const recentFromIp = await CutoffPrediction.countDocuments({ exam: EXAM, ipHash, createdAt: { $gte: since } });
-        if (recentFromIp >= MAX_NEW_ENTRIES_PER_IP_PER_DAY) {
-            return NextResponse.json({ error: "Too many submissions from this network today. Please try again tomorrow." }, { status: 429 });
+        // One entry per IP address. Hidden (moderated) entries still count, so spam can't simply be re-submitted.
+        const alreadyFromIp = await CutoffPrediction.exists({ exam: EXAM, ipHash });
+        if (alreadyFromIp) {
+            return NextResponse.json({
+                error: "A prediction has already been submitted from this IP address. Only one entry is allowed per candidate. If it is yours, you can edit it from the device you used to submit.",
+                ipSubmitted: true,
+            }, { status: 409 });
         }
 
         const duplicate = await CutoffPrediction.findOne({
@@ -231,7 +267,7 @@ export async function POST(req: Request) {
         }
 
         const newToken = crypto.randomBytes(24).toString("hex");
-        await CutoffPrediction.create({ exam: EXAM, name, circle, paper1, paper2, paper3, total, editToken: newToken, ipHash });
+        await CutoffPrediction.create({ exam: EXAM, name, circle, category, paper1, paper2, paper3, total, editToken: newToken, ipHash });
 
         const mine = await findMine(newToken);
         return NextResponse.json({ success: true, updated: false, token: newToken, mine }, { status: 201 });

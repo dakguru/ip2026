@@ -7,6 +7,7 @@ import { X, Calendar, CheckCircle2, Sparkles, Bell } from "lucide-react";
 interface UpdateItem {
     title: string;
     desc: string | ReactNode;
+    href?: string; // makes the marquee title clickable
 }
 
 interface UpdateGroup {
@@ -15,6 +16,38 @@ interface UpdateGroup {
 }
 
 const UPDATES_DATA: UpdateGroup[] = [
+    {
+        date: "30.09.2026",
+        items: [
+            {
+                title: "🎯 LIVE: LDCE IP 2026 Cut-Off Prediction — Enter your marks & unlock the All-India Leaderboard",
+                href: "/cutoff-prediction",
+                desc: (
+                    <div className="space-y-4">
+                        <p className="text-zinc-700 dark:text-zinc-300">
+                            The <strong className="text-fuchsia-600 dark:text-fuchsia-400">LDCE IP 2026 Cut-Off Prediction</strong> is now live. Enter your marks for <strong className="text-zinc-900 dark:text-zinc-100">Paper I (250), Paper II (50) and Paper III (300)</strong> to see your all-India rank, percentile and the crowd-sourced indicative cut-off zone. No login required.
+                        </p>
+
+                        <div className="grid grid-cols-1 gap-2 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                            <div className="bg-gradient-to-r from-fuchsia-50 to-amber-50 dark:from-fuchsia-900/20 dark:to-amber-900/20 p-4 rounded-xl border border-fuchsia-200 dark:border-fuchsia-800/50 shadow-sm">
+                                <p className="font-bold text-fuchsia-700 dark:text-fuchsia-300 text-[10px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-500 animate-pulse"></span>
+                                    Feed genuine marks
+                                </p>
+                                <p className="text-zinc-800 dark:text-zinc-200 text-[12px] font-medium leading-relaxed">
+                                    Compare your <strong>Carbonless Copy of the OMR Sheet</strong> with the <strong>Official Provisional Answer Key</strong> (available on the page) before submitting. The leaderboard unlocks once you submit your marks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <Link href="/cutoff-prediction" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-amber-500 text-white text-xs font-bold shadow-md hover:opacity-90">
+                            Predict Now →
+                        </Link>
+                    </div>
+                )
+            }
+        ]
+    },
     {
         date: "12.09.2026",
         items: [
@@ -2956,10 +2989,12 @@ interface UpdatesDrawerProps {
 export interface UpdateMarqueeItem {
     date: string;
     titles: string[];
+    links: (string | undefined)[];
 }
 export const LATEST_3_DAYS_UPDATES: UpdateMarqueeItem[] = UPDATES_DATA.slice(0, 3).map((group) => ({
     date: group.date,
-    titles: group.items.map((item) => item.title)
+    titles: group.items.map((item) => item.title),
+    links: group.items.map((item) => item.href)
 }));
 
 export default function UpdatesDrawer({ isOpen, onClose }: UpdatesDrawerProps) {

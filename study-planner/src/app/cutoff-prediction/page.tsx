@@ -11,6 +11,11 @@ export const metadata: Metadata = {
         siteName: "Dak Guru",
         type: "website",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "LDCE IP 2026 Cut-Off Prediction | Dak Guru",
+        description: "Enter your Paper I, II & III marks and see your All-India rank. No login needed.",
+    },
 };
 
 export default function CutoffPredictionPage() {

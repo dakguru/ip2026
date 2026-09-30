@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { LATEST_3_DAYS_UPDATES } from './UpdatesDrawer';
 
 export default function HomepageMarquee() {
@@ -10,7 +11,13 @@ export default function HomepageMarquee() {
                     <span className="text-indigo-200 text-[10px] mr-2">({day.date})</span>
                     {day.titles.map((title, titleIdx) => (
                         <React.Fragment key={titleIdx}>
-                            <span className="text-white/90">{title}</span>
+                            {day.links[titleIdx] ? (
+                                <Link href={day.links[titleIdx]!} className="relative inline-flex items-center px-2.5 py-0.5 rounded-full bg-gradient-to-r from-fuchsia-500/40 via-amber-400/40 to-cyan-400/40 border border-amber-300/50 text-amber-100 font-extrabold shadow-[0_0_12px_rgba(251,191,36,0.35)] hover:text-white transition-colors">
+                                    {title}
+                                </Link>
+                            ) : (
+                                <span className="text-white/90">{title}</span>
+                            )}
                             {titleIdx < day.titles.length - 1 && (
                                 <span className="mx-2 text-indigo-300">•</span>
                             )}
