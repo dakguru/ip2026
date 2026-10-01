@@ -649,7 +649,7 @@ export default function CutoffPredictionClient() {
                                 </Glass>
                             )}
                             <p className="mt-4 text-center text-[11px] text-white/35">
-                                Showing the top {board.length} {boardView === "ALL" ? "" : `${boardView} category `}predictions{boardView === "ALL" ? "" : " · ranks are within the category"} · refreshes automatically every minute
+                                Showing all {filtered.length} {boardView === "ALL" ? "" : `${boardView} category `}predictions{boardView === "ALL" ? "" : " · ranks are within the category"} · refreshes automatically every minute
                             </p>
                         </>
                     )}
@@ -999,7 +999,7 @@ function LockedLeaderboard({ count }: { count: number }) {
 
 function LeaderRow({ entry, isMe }: { entry: Entry; isMe: boolean }) {
     return (
-        <li className={`grid grid-cols-[48px_1fr_auto] sm:grid-cols-[64px_1fr_repeat(3,80px)_100px] gap-2 items-center px-4 sm:px-5 py-3.5 transition-colors ${isMe ? "bg-emerald-400/[0.08]" : "hover:bg-white/[0.03]"}`}>
+        <li className={`grid grid-cols-[48px_1fr_auto] sm:grid-cols-[64px_1fr_repeat(3,80px)_100px] gap-2 items-center px-4 sm:px-5 py-3.5 transition-colors cop-row ${isMe ? "bg-emerald-400/[0.08]" : "hover:bg-white/[0.03]"}`}>
             <span className="text-sm font-black tabular-nums text-white/60">#{entry.rank}</span>
             <div className="min-w-0">
                 <p className="font-bold truncate flex items-center gap-2">

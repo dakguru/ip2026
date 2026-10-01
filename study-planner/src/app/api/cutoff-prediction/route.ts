@@ -9,7 +9,8 @@ export const dynamic = "force-dynamic";
 const EXAM = "LDCE_IP_2026";
 const MAX = { paper1: 250, paper2: 50, paper3: 300 } as const;
 const GRAND_TOTAL = MAX.paper1 + MAX.paper2 + MAX.paper3;
-const LEADERBOARD_SIZE = 100;
+// The full leaderboard is returned; this cap is only a safety valve against an unbounded payload.
+const LEADERBOARD_MAX = 5000;
 const MIN_ENTRIES_FOR_PROJECTION = 20;
 const CATEGORIES = ["UR", "ST", "SC", "PH"] as const;
 
@@ -182,7 +183,7 @@ export async function GET(req: Request) {
         const locked = !mine && !ipSubmitted && !admin;
         const fetchTop = (extra: Record<string, unknown> = {}) => CutoffPrediction.find({ exam: EXAM, hidden: false, ...extra })
             .sort({ total: -1, createdAt: 1 })
-            .limit(LEADERBOARD_SIZE)
+            .limit(LEADERBOARD_MAX)
             .select("name circle category paper1 paper2 paper3 total createdAt")
             .lean<StoredEntry[]>();
 

@@ -569,3 +569,10 @@ textarea {
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
 }
+
+/* Cut-off prediction leaderboard now renders every entry, so skip rendering
+   work for rows scrolled out of view. */
+.cop-row {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 64px;
+}
