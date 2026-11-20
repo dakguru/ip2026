@@ -239,9 +239,9 @@ export const PSGB_PDF_DATA: Record<string, Note[]> = {
         {
             "title": "Schedule of Financial Powers of Divisional Heads, Head of the Circle, etc.",
             "description": "Financial Powers of Divisional Heads and Head of Circle.",
-            "filename": "Schedule_of_Financial_Powers_Study_Notes_Updated_09-06-2026.pdf",
-            "path": "/notes/paper-3/Schedule_of_Financial_Powers_Study_Notes_Updated_09-06-2026.pdf",
-            "size": "4.7 MB",
+            "filename": "Schedule_of_Financial_Powers_Study_Notes_Updated_20-11-2026.pdf",
+            "path": "/notes/paper-3/Schedule_of_Financial_Powers_Study_Notes_Updated_20-11-2026.pdf",
+            "size": "5.1 MB",
             "color": "slate",
             "topic": "Financial & Procurement"
         },
